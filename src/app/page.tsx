@@ -148,7 +148,7 @@ export default function HomePage() {
                   Scaled Organic Revenue to $21K/Day in 4 Months
                 </h3>
                 <p className="mt-4 text-muted leading-relaxed">
-                  An e-commerce brand over-reliant on paid ads partnered with RankPilot. We deployed our AI automation engine for a full technical overhaul, rebuilt site architecture, and implemented strategic content clusters.
+                  An e-commerce brand over-reliant on paid ads partnered with ArcWave. We deployed our AI automation engine for a full technical overhaul, rebuilt site architecture, and implemented strategic content clusters.
                 </p>
                 <Link
                   href="/case-studies"

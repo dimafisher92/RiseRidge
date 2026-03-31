@@ -8,10 +8,10 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'AI SEO Tools & Features',
   description:
-    'Explore RankPilot\'s AI-powered SEO toolkit: automation engine, content intelligence, rank tracking, technical audits, backlink analysis, LLM visibility monitoring, and more.',
+    'Explore ArcWave\'s AI-powered SEO toolkit: automation engine, content intelligence, rank tracking, technical audits, backlink analysis, LLM visibility monitoring, and more.',
   alternates: { canonical: '/features' },
   openGraph: {
-    title: 'AI SEO Tools & Features | RankPilot',
+    title: 'AI SEO Tools & Features | ArcWave',
     description: 'Discover the full suite of AI-powered SEO tools that power our clients\' organic growth.',
   },
 };
@@ -218,7 +218,7 @@ export default function FeaturesPage() {
                 <ul className="mt-6 space-y-3">
                   {feature.capabilities.map((cap) => (
                     <li key={cap} className="flex items-start gap-3 text-sm text-muted">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3A0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 flex-shrink-0">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00D4AA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 flex-shrink-0">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                       {cap}
@@ -253,7 +253,7 @@ export default function FeaturesPage() {
       {/* CTA */}
       <CTASection
         heading="Ready to See These Tools in Action?"
-        description="Book a demo and discover how RankPilot's AI toolkit can transform your organic search performance."
+        description="Book a demo and discover how ArcWave's toolkit can transform your organic search performance."
         primaryLabel="Book a Demo"
       />
     </>

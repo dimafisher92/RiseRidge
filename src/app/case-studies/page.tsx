@@ -10,10 +10,10 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'SEO Case Studies & Results',
   description:
-    'Real results from real clients. See how RankPilot\'s AI-powered SEO drives revenue growth, organic traffic increases, and ranking improvements for e-commerce and growth-stage businesses.',
+    'Real results from real clients. See how ArcWave\'s AI-powered SEO drives revenue growth, organic traffic increases, and ranking improvements for e-commerce and growth-stage businesses.',
   alternates: { canonical: '/case-studies' },
   openGraph: {
-    title: 'SEO Case Studies & Results | RankPilot',
+    title: 'SEO Case Studies & Results | ArcWave',
     description: 'Proven results: $21K/day revenue, 255% organic growth, 277% revenue increase. See our AI SEO case studies.',
   },
 };
@@ -32,7 +32,7 @@ const CASE_STUDIES = [
     challenge:
       'A growing e-commerce brand was over-reliant on paid advertising with minimal organic presence. Rising CPCs were eating into margins, and the brand had no sustainable organic traffic strategy. Their site had significant technical debt, thin content, and a fragmented site architecture.',
     solution:
-      'RankPilot deployed our AI automation engine for a comprehensive technical audit, identifying and fixing 400+ critical issues in the first week. We rebuilt site architecture based on AI-driven keyword clustering, implemented strategic content silos, and launched an automated internal linking strategy that distributed authority across high-value pages.',
+      'ArcWave deployed our AI automation engine for a comprehensive technical audit, identifying and fixing 400+ critical issues in the first week. We rebuilt site architecture based on AI-driven keyword clustering, implemented strategic content silos, and launched an automated internal linking strategy that distributed authority across high-value pages.',
     results: [
       { value: '$21K/day', label: 'Peak Daily Revenue' },
       { value: '340%', label: 'Organic Traffic Growth' },
@@ -58,7 +58,7 @@ const CASE_STUDIES = [
     challenge:
       'A B2B SaaS platform had plateaued in organic growth after 3 years. Content had become stale, keyword rankings were declining, and competitors were aggressively investing in SEO. The marketing team was small and couldn\'t keep up with the volume of content needed to compete.',
     solution:
-      'RankPilot performed a full technical overhaul using our AI audit engine, then deployed our Content Intelligence platform for programmatic content creation at scale. We identified 2,000+ keyword opportunities through gap analysis, prioritized by revenue potential, and built automated content workflows that increased output by 12x while maintaining quality and brand voice.',
+      'ArcWave performed a full technical overhaul using our AI audit engine, then deployed our Content Intelligence platform for programmatic content creation at scale. We identified 2,000+ keyword opportunities through gap analysis, prioritized by revenue potential, and built automated content workflows that increased output by 12x while maintaining quality and brand voice.',
     results: [
       { value: '255%', label: 'Revenue Growth YoY' },
       { value: '420%', label: 'Top 10 Keywords' },
@@ -103,7 +103,7 @@ export default function CaseStudiesPage() {
             <span className="text-gradient-blue-cyan">Real Growth.</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            See how RankPilot&apos;s AI-powered SEO has driven measurable revenue growth for
+            See how ArcWave&apos;s AI-driven SEO has driven measurable revenue growth for
             e-commerce brands, SaaS platforms, and multi-location businesses.
           </p>
         </div>
@@ -175,7 +175,7 @@ export default function CaseStudiesPage() {
       {/* CTA */}
       <CTASection
         heading="Ready to Be Our Next Success Story?"
-        description="Book a free consultation and discover how RankPilot's AI can drive similar results for your business."
+        description="Book a free consultation and discover how ArcWave can drive similar results for your business."
         primaryLabel="Get Your Free Audit"
         secondaryLabel="Explore Our Features"
         secondaryHref="/features"

@@ -25,7 +25,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <Logo size="small" />
             <p className="mt-4 text-sm text-muted leading-relaxed max-w-xs">
-              AI-Powered SEO. Precision Navigation to the Top. Helping businesses dominate organic search with proprietary AI tooling.
+              AI-Driven SEO. Measurable Growth. We engineer organic search growth that compounds — one wave at a time.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-display font-bold text-sm text-ice mb-4">Get in Touch</h4>
-            <p className="text-sm text-muted">hello@rankpilot.ai</p>
+            <p className="text-sm text-muted">hello@arcwave.io</p>
             <div className="mt-4 flex gap-4">
               {[
                 { name: 'LinkedIn', path: 'M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.02 8h4.96v12H.02V8zm7.7 0h4.76v1.64h.07c.66-1.26 2.28-2.58 4.7-2.58C21.87 7.06 24 9.58 24 14.24V20h-4.97v-5.09c0-2.15-.77-3.62-2.7-3.62-1.47 0-2.35.99-2.73 1.95-.14.34-.18.82-.18 1.3V20H8.37c.07-12 .05-12 .05-12h-.7z' },
@@ -85,10 +85,10 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-12 border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} RankPilot. All rights reserved.
+            &copy; {new Date().getFullYear()} ArcWave. All rights reserved.
           </p>
           <p className="font-mono text-[10px] tracking-widest uppercase text-muted/60">
-            AI-Powered SEO Agency
+            AI-Driven SEO. Measurable Growth.
           </p>
         </div>
       </div>

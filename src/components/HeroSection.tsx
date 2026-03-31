@@ -15,16 +15,16 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan mb-6">
-            AI-Powered SEO Agency
+            AI-Driven SEO Agency
           </p>
           <h1 className="font-display font-[800] text-4xl sm:text-5xl md:text-7xl leading-[1.08] text-ice">
-            Precision Navigation
+            AI-Driven SEO.
             <br />
-            <span className="text-gradient-blue-cyan">to the Top</span>
+            <span className="text-gradient-blue-cyan">Measurable Growth.</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
-            RankPilot combines proprietary AI with deep SEO expertise to help e-commerce
-            and growth-stage businesses dominate organic search.
+            ArcWave combines AI-powered SEO infrastructure with hands-on strategic
+            execution to move businesses from invisible to undeniable — one wave at a time.
           </p>
         </motion.div>
 

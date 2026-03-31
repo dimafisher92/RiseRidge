@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://rankpilot.ai/sitemap.xml',
+    sitemap: 'https://arcwave.io/sitemap.xml',
   };
 }

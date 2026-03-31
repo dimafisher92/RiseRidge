@@ -12,33 +12,33 @@ export function JsonLd({
   type: JsonLdType;
   breadcrumbs?: BreadcrumbItem[];
 }) {
-  const baseUrl = 'https://rankpilot.ai';
+  const baseUrl = 'https://arcwave.io';
 
   const schemas: Record<string, object> = {
     organization: {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'RankPilot',
+      name: 'ArcWave',
       url: baseUrl,
       logo: `${baseUrl}/logo.svg`,
       description:
-        'AI-Powered SEO agency helping e-commerce and growth-stage businesses dominate organic search with proprietary AI tooling.',
+        'AI-driven SEO agency that engineers organic search growth. We combine AI-powered SEO infrastructure with hands-on strategic execution to move businesses from invisible to undeniable.',
       sameAs: [
-        'https://linkedin.com/company/rankpilot',
-        'https://twitter.com/rankpilot',
+        'https://linkedin.com/company/arcwave',
+        'https://twitter.com/arcwave',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        email: 'hello@rankpilot.ai',
+        email: 'hello@arcwave.io',
         contactType: 'sales',
       },
     },
     website: {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'RankPilot',
+      name: 'ArcWave',
       url: baseUrl,
-      description: 'AI-Powered SEO. Precision Navigation to the Top.',
+      description: 'AI-Driven SEO. Measurable Growth.',
       potentialAction: {
         '@type': 'SearchAction',
         target: `${baseUrl}/search?q={search_term_string}`,
