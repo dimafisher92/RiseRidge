@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import GlowHero from '@/components/ui/hero-1';
+import { useAuditPopup } from './AuditPopup';
 
 function ElegantShape({
   className,
@@ -72,6 +73,7 @@ function ElegantShape({
 }
 
 export function HeroSection() {
+  const { open: openAuditPopup } = useAuditPopup();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Gradient backdrop */}
@@ -147,12 +149,12 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link
-            href="/#contact"
+          <button
+            onClick={openAuditPopup}
             className="rounded-lg bg-electric px-8 py-4 font-body font-medium text-white text-lg transition-all duration-300 hover:bg-signal hover:glow-blue"
           >
             Get Your Free Audit
-          </Link>
+          </button>
           <Link
             href="/case-studies"
             className="rounded-lg border border-border px-8 py-4 font-body font-medium text-ice text-lg transition-all duration-300 hover:border-electric hover:text-electric"
