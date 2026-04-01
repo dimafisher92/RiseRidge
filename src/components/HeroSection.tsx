@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { AnimatedBackground } from './AnimatedBackground';
+import GlowHero from '@/components/ui/hero-1';
 
 export function HeroSection() {
   return (
@@ -17,11 +18,11 @@ export function HeroSection() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan mb-6">
             AI-Driven SEO Agency
           </p>
-          <h1 className="font-display font-[800] text-4xl sm:text-5xl md:text-7xl leading-[1.08] text-ice">
-            AI-Driven SEO.
-            <br />
-            <span className="text-gradient-blue-cyan">Measurable Growth.</span>
-          </h1>
+          <GlowHero
+            label="AI-Driven SEO."
+            glowText="Measurable Growth."
+            glowTextSize="xl"
+          />
           <p className="mt-6 text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
             ArcWave combines AI-powered SEO infrastructure with hands-on strategic
             execution to move businesses from invisible to undeniable — one wave at a time.
