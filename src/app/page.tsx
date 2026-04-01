@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { HeroGeometric } from '@/components/ui/shape-landing-hero';
+import { HeroSection } from '@/components/HeroSection';
 import { StatsBar } from '@/components/StatsBar';
 import { SectionLabel } from '@/components/SectionLabel';
 import { FeatureCard } from '@/components/FeatureCard';
@@ -70,7 +70,7 @@ export default function HomePage() {
       <JsonLd type="website" />
 
       {/* Hero */}
-      <HeroGeometric badge="Kokonut UI" title1="Elevate Your" title2="Digital Vision" />
+      <HeroSection />
 
       {/* Stats */}
       <StatsBar />
