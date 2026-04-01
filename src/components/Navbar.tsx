@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Logo } from './Logo';
+import { useAuditPopup } from './AuditPopup';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -16,6 +17,7 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const pathname = usePathname();
+  const { open: openAuditPopup } = useAuditPopup();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -61,12 +63,12 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-4">
-          <Link
-            href="/#contact"
+          <button
+            onClick={openAuditPopup}
             className="hidden md:inline-flex rounded-lg bg-electric px-5 py-2.5 text-sm font-body font-medium text-white transition-all duration-300 hover:bg-signal hover:glow-blue"
           >
             Get Free Audit
-          </Link>
+          </button>
 
           {/* Mobile hamburger */}
           <button
@@ -121,13 +123,12 @@ export function Navbar() {
                 </li>
               ))}
               <li className="mt-2">
-                <Link
-                  href="/#contact"
-                  onClick={() => setMobileOpen(false)}
-                  className="block rounded-lg bg-electric px-5 py-3 text-center text-sm font-medium text-white"
+                <button
+                  onClick={() => { setMobileOpen(false); openAuditPopup(); }}
+                  className="block w-full rounded-lg bg-electric px-5 py-3 text-center text-sm font-medium text-white"
                 >
                   Get Free Audit
-                </Link>
+                </button>
               </li>
             </ul>
           </motion.div>

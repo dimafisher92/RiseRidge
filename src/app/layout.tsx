@@ -4,6 +4,7 @@ import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
+import { AuditPopupProvider } from '@/components/AuditPopup';
 
 const inter = localFont({
   src: './fonts/GeistVF.woff',
@@ -58,13 +59,15 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-void text-ice font-body antialiased">
-        <a href="#main-content" className="skip-to-content">
-          Skip to main content
-        </a>
-        <JsonLd type="organization" />
-        <Navbar />
-        <main id="main-content">{children}</main>
-        <Footer />
+        <AuditPopupProvider>
+          <a href="#main-content" className="skip-to-content">
+            Skip to main content
+          </a>
+          <JsonLd type="organization" />
+          <Navbar />
+          <main id="main-content">{children}</main>
+          <Footer />
+        </AuditPopupProvider>
       </body>
     </html>
   );
