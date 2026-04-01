@@ -6,6 +6,7 @@ import { FeatureCard } from '@/components/FeatureCard';
 import { CTASection } from '@/components/CTASection';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { JsonLd } from '@/components/JsonLd';
+import TestimonialsSection from '@/components/ui/testimonial-v2';
 
 const SERVICES = [
   {
@@ -177,6 +178,9 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialsSection />
 
       {/* Trust Badges */}
       <section className="border-t border-border py-16" aria-label="Trusted by leading brands">
