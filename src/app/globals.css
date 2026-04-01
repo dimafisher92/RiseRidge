@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
-/* ===== Brand Design System ===== */
+/* ===== Brand Design System — ArcWave ===== */
 @theme {
   /* Colors */
-  --color-electric: #0066FF;
-  --color-signal: #3385FF;
-  --color-cyan: #00D4FF;
-  --color-navy: #0D1F3C;
-  --color-surface: #14181F;
-  --color-void: #09090B;
-  --color-ice: #F4F6FA;
-  --color-muted: #8892A4;
-  --color-gold: #F5A623;
-  --color-border: #1E2530;
-  --color-danger: #FF4757;
-  --color-success: #22D3A0;
+  --color-electric: #00C2FF;
+  --color-signal: #0088CC;
+  --color-cyan: #00C2FF;
+  --color-navy: #0A1628;
+  --color-surface: #0F1D2E;
+  --color-void: #060E18;
+  --color-ice: #F0F8FF;
+  --color-muted: #6B7280;
+  --color-gold: #FF8C42;
+  --color-border: #1B3A5C;
+  --color-danger: #FF8C42;
+  --color-success: #00D4AA;
 
-  /* Fonts — using local Geist fonts with system fallbacks */
-  --font-display: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, "Courier New", monospace;
-  --font-body: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  /* Fonts — Inter + JetBrains Mono with system fallbacks */
+  --font-display: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-body: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* ===== Base ===== */
@@ -44,7 +44,7 @@ a {
 
 /* ===== Utility Classes ===== */
 .text-gradient-blue-cyan {
-  background: linear-gradient(135deg, #3385FF 0%, #00D4FF 100%);
+  background: linear-gradient(135deg, #0088CC 0%, #00C2FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -52,17 +52,17 @@ a {
 
 .animated-grid-bg {
   background-image:
-    linear-gradient(rgba(0, 102, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 102, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(0, 194, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 194, 255, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 .glow-blue {
-  box-shadow: 0 0 20px rgba(0, 102, 255, 0.4), 0 0 60px rgba(0, 102, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 194, 255, 0.4), 0 0 60px rgba(0, 194, 255, 0.1);
 }
 
 .glow-cyan {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.08);
+  box-shadow: 0 0 20px rgba(0, 194, 255, 0.3), 0 0 60px rgba(0, 194, 255, 0.08);
 }
 
 /* Skip to content for accessibility */

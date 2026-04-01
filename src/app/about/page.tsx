@@ -6,13 +6,13 @@ import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'About RankPilot — AI SEO Experts',
+  title: 'About ArcWave — AI-Driven SEO Agency',
   description:
-    'RankPilot is a B2B AI SEO agency helping e-commerce and growth-stage businesses dominate organic search. Learn about our mission, values, and what sets us apart.',
+    'ArcWave engineers organic search growth that compounds. AI-powered SEO infrastructure with hands-on strategic execution. Learn about our mission and values.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About RankPilot — AI SEO Experts',
-    description: 'We don\'t guess. We navigate. Meet the AI SEO agency built for measurable growth.',
+    title: 'About ArcWave — AI-Driven SEO Agency',
+    description: 'We engineer organic search growth that compounds. Meet the AI SEO agency built for measurable growth.',
   },
 };
 
@@ -75,7 +75,7 @@ const DIFFERENTIATORS = [
 ];
 
 const MILESTONES = [
-  { year: '2022', title: 'Founded', description: 'RankPilot launched with a mission to bring AI-powered precision to SEO.' },
+  { year: '2022', title: 'Founded', description: 'ArcWave launched with a mission to engineer organic search growth that compounds.' },
   { year: '2023', title: 'AI Engine v1', description: 'Released our first AI SEO automation engine, serving 50+ clients.' },
   { year: '2024', title: '$25M+ in Client Revenue', description: 'Crossed $25M in cumulative revenue generated for our clients.' },
   { year: '2025', title: 'LLM Visibility Launch', description: 'Pioneered AI search visibility monitoring across ChatGPT, Claude, Gemini, and Perplexity.' },
@@ -105,8 +105,8 @@ export default function AboutPage() {
             <span className="text-gradient-blue-cyan">We Navigate.</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            RankPilot is a B2B AI SEO agency that turns artificial intelligence into your unfair
-            SEO advantage. We deliver measurable ranking results — not vanity metrics, not vague strategies.
+            ArcWave engineers organic search growth that compounds. We combine AI-powered SEO
+            infrastructure with hands-on strategic execution to move businesses from invisible to undeniable.
           </p>
         </div>
       </section>
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 <p className="mt-6 text-muted leading-relaxed max-w-2xl">
                   In a world of cookie-cutter SEO, we built something different. Our proprietary AI platform
                   doesn&apos;t just recommend changes — it identifies, generates, and deploys optimizations
-                  automatically. We&apos;re the co-pilot your marketing team didn&apos;t know it needed.
+                  automatically. Your growth arc starts here.
                 </p>
               </div>
             </div>
@@ -160,13 +160,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose RankPilot */}
+      {/* Why Choose ArcWave */}
       <section className="py-24" aria-labelledby="why-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="03" text="Differentiators" />
             <h2 id="why-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
-              Why Choose RankPilot
+              Why Choose ArcWave
             </h2>
             <p className="mt-4 text-muted max-w-2xl">
               We&apos;re not another SEO agency. Here&apos;s what makes us fundamentally different.
@@ -221,8 +221,8 @@ export default function AboutPage() {
 
       {/* CTA */}
       <CTASection
-        heading="Let's Navigate Your Growth Together"
-        description="Ready to see what AI-powered SEO can do for your business? Let's talk."
+        heading="Let's Engineer Your Growth Together"
+        description="Ready to see what AI-driven SEO can do for your business? Let's talk."
         primaryLabel="Start a Conversation"
         secondaryLabel="View Case Studies"
         secondaryHref="/case-studies"

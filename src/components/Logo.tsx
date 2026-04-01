@@ -6,7 +6,7 @@ export function Logo({ size = 'default' }: { size?: 'small' | 'default' | 'large
   const h = dimensions[size];
 
   return (
-    <Link href="/" className="flex items-center gap-2.5" aria-label="RankPilot Home">
+    <Link href="/" className="flex items-center gap-2.5" aria-label="ArcWave Home">
       <svg
         width={h}
         height={h}
@@ -17,12 +17,12 @@ export function Logo({ size = 'default' }: { size?: 'small' | 'default' | 'large
       >
         <defs>
           <linearGradient id="logo-grad" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0066FF" />
-            <stop offset="100%" stopColor="#00D4FF" />
+            <stop offset="0%" stopColor="#0088CC" />
+            <stop offset="100%" stopColor="#00C2FF" />
           </linearGradient>
           <linearGradient id="logo-bg" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0D1F3C" />
-            <stop offset="100%" stopColor="#14181F" />
+            <stop offset="0%" stopColor="#0A1628" />
+            <stop offset="100%" stopColor="#0F1D2E" />
           </linearGradient>
         </defs>
         <rect width="72" height="72" rx="18" fill="url(#logo-bg)" />
@@ -33,11 +33,11 @@ export function Logo({ size = 'default' }: { size?: 'small' | 'default' | 'large
         <rect x="30" y="39" width="5" height="13" rx="2" fill="url(#logo-grad)" opacity="0.75" />
         <rect x="38" y="33" width="5" height="19" rx="2" fill="url(#logo-grad)" />
         <path d="M47 20L52 36L47 28L36 24L47 20Z" fill="url(#logo-grad)" />
-        <circle cx="36" cy="36" r="3" fill="#00D4FF" />
+        <circle cx="36" cy="36" r="3" fill="#00C2FF" />
       </svg>
       <span className={`font-display font-[800] ${textSize[size]} tracking-tight leading-none`}>
-        <span className="text-ice">Rank</span>
-        <span className="text-gradient-blue-cyan">Pilot</span>
+        <span className="text-ice">Arc</span>
+        <span className="text-gradient-blue-cyan">Wave</span>
       </span>
     </Link>
   );

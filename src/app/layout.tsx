@@ -5,41 +5,41 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
 
-const geistSans = localFont({
+const inter = localFont({
   src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
+  variable: '--font-inter',
   weight: '100 900',
   display: 'swap',
 });
 
-const geistMono = localFont({
+const jetbrainsMono = localFont({
   src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
+  variable: '--font-jetbrains-mono',
   weight: '100 900',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rankpilot.ai'),
+  metadataBase: new URL('https://arcwave.io'),
   title: {
-    default: 'RankPilot — AI-Powered SEO Agency',
-    template: '%s | RankPilot',
+    default: 'ArcWave — AI-Driven SEO. Measurable Growth.',
+    template: '%s | ArcWave',
   },
   description:
-    'RankPilot combines proprietary AI with deep SEO expertise to help e-commerce and growth-stage businesses dominate organic search. Get measurable ranking results.',
+    'ArcWave combines AI-powered SEO infrastructure with hands-on strategic execution to move businesses from invisible to undeniable. Measurable organic search growth.',
   openGraph: {
-    title: 'RankPilot — AI-Powered SEO Agency',
+    title: 'ArcWave — AI-Driven SEO. Measurable Growth.',
     description:
-      'AI-Powered SEO. Precision Navigation to the Top. Dominate organic search with proprietary AI tooling.',
+      'AI-Driven SEO. Measurable Growth. We engineer organic search growth that compounds.',
     type: 'website',
-    siteName: 'RankPilot',
+    siteName: 'ArcWave',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RankPilot — AI-Powered SEO Agency',
+    title: 'ArcWave — AI-Driven SEO. Measurable Growth.',
     description:
-      'AI-Powered SEO. Precision Navigation to the Top.',
+      'AI-Driven SEO. Measurable Growth.',
   },
   robots: {
     index: true,
@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-void text-ice font-body antialiased">
         <a href="#main-content" className="skip-to-content">
