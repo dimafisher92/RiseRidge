@@ -5,6 +5,7 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { StatsBar } from '@/components/StatsBar';
 import { CTASection } from '@/components/CTASection';
+import { BookingButton } from '@/components/BookingButton';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
@@ -127,12 +128,11 @@ export default function RankOnAIPage() {
             instead of Google. Is your brand visible when AI answers questions about your industry?
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/#contact"
+            <BookingButton
               className="rounded-lg bg-electric px-8 py-3.5 font-body font-medium text-white transition-all duration-300 hover:bg-signal hover:glow-blue"
             >
               Check Your AI Visibility
-            </Link>
+            </BookingButton>
             <Link
               href="/features"
               className="rounded-lg border border-border px-8 py-3.5 font-body font-medium text-ice transition-all duration-300 hover:border-electric hover:text-electric"
