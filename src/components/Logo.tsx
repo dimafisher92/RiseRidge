@@ -1,12 +1,18 @@
 import Link from 'next/link';
+import { useId } from 'react';
 
 export function Logo({ size = 'default' }: { size?: 'small' | 'default' | 'large' }) {
+  const uid = useId().replace(/:/g, '');
   const dimensions = { small: 28, default: 36, large: 48 };
-  const textSize = { small: 'text-lg', default: 'text-xl', large: 'text-2xl' };
+  const textSize = { small: 'text-base', default: 'text-lg', large: 'text-2xl' };
   const h = dimensions[size];
 
+  const gMark = `gm-${uid}`;
+  const gHighlight = `gh-${uid}`;
+
   return (
-    <Link href="/" className="flex items-center gap-2.5" aria-label="ArcWave Home">
+    <Link href="/" className="flex items-center gap-3" aria-label="ArcWave Home">
+      {/* AW ribbon mark — no background box, mark fills the square */}
       <svg
         width={h}
         height={h}
@@ -16,28 +22,70 @@ export function Logo({ size = 'default' }: { size?: 'small' | 'default' | 'large
         aria-hidden="true"
       >
         <defs>
-          <linearGradient id="logo-grad" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0088CC" />
-            <stop offset="100%" stopColor="#00C2FF" />
+          {/* Main gradient: dark navy → mid blue → teal → cyan, left-to-right */}
+          <linearGradient id={gMark} x1="4" y1="36" x2="68" y2="36" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stopColor="#1A2E78" />
+            <stop offset="32%"  stopColor="#2563EB" />
+            <stop offset="68%"  stopColor="#0EA5C9" />
+            <stop offset="100%" stopColor="#06C8D4" />
           </linearGradient>
-          <linearGradient id="logo-bg" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0A1628" />
-            <stop offset="100%" stopColor="#0F1D2E" />
+          {/* Highlight overlay: lighter edge simulating 3-D ribbon fold */}
+          <linearGradient id={gHighlight} x1="4" y1="36" x2="68" y2="36" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stopColor="#4A72E8" stopOpacity="0" />
+            <stop offset="50%"  stopColor="#60C8E8" stopOpacity="0.55" />
+            <stop offset="100%" stopColor="#80EEF8" stopOpacity="0.35" />
           </linearGradient>
         </defs>
-        <rect width="72" height="72" rx="18" fill="url(#logo-bg)" />
-        <rect width="72" height="72" rx="18" fill="url(#logo-grad)" opacity="0.15" />
-        <circle cx="36" cy="36" r="20" stroke="url(#logo-grad)" strokeWidth="1.5" fill="none" opacity="0.4" />
-        <circle cx="36" cy="36" r="13" stroke="url(#logo-grad)" strokeWidth="1.5" fill="none" opacity="0.6" />
-        <rect x="22" y="44" width="5" height="8" rx="2" fill="url(#logo-grad)" opacity="0.5" />
-        <rect x="30" y="39" width="5" height="13" rx="2" fill="url(#logo-grad)" opacity="0.75" />
-        <rect x="38" y="33" width="5" height="19" rx="2" fill="url(#logo-grad)" />
-        <path d="M47 20L52 36L47 28L36 24L47 20Z" fill="url(#logo-grad)" />
-        <circle cx="36" cy="36" r="3" fill="#00C2FF" />
+
+        {/* ── Letter A ── */}
+        {/* Left leg + right leg of A, meeting at apex */}
+        <path
+          d="M 6 66 L 22 6 L 38 66"
+          stroke={`url(#${gMark})`}
+          strokeWidth="7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* A crossbar */}
+        <line
+          x1="14" y1="40"
+          x2="30" y2="40"
+          stroke={`url(#${gMark})`}
+          strokeWidth="6"
+          strokeLinecap="round"
+        />
+
+        {/* ── Letter W ── (shares bottom-right of A, flows right) */}
+        <path
+          d="M 38 66 L 49 18 L 56 44 L 64 10 L 70 66"
+          stroke={`url(#${gMark})`}
+          strokeWidth="7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        {/* Ribbon highlight — thin bright edge on top of main paths */}
+        <path
+          d="M 6 66 L 22 6 L 38 66"
+          stroke={`url(#${gHighlight})`}
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M 38 66 L 49 18 L 56 44 L 64 10 L 70 66"
+          stroke={`url(#${gHighlight})`}
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
-      <span className={`font-display font-[800] ${textSize[size]} tracking-tight leading-none`}>
-        <span className="text-ice">Arc</span>
-        <span className="text-gradient-blue-cyan">Wave</span>
+
+      {/* Wordmark */}
+      <span
+        className={`font-display font-[500] ${textSize[size]} tracking-[0.18em] leading-none text-white uppercase select-none`}
+      >
+        ArcWave
       </span>
     </Link>
   );

@@ -1,0 +1,17 @@
+{
+  "name": "ArcWave",
+  "short_name": "ArcWave",
+  "description": "AI-Driven SEO. Measurable Growth.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060E18",
+  "theme_color": "#060E18",
+  "icons": [
+    {
+      "src": "/logos/arcwave-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
