@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 110" fill="none">
+  <defs>
+    <linearGradient id="gm" x1="49" y1="36" x2="151" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#1A2E78"/>
+      <stop offset="32%"  stop-color="#2563EB"/>
+      <stop offset="68%"  stop-color="#0EA5C9"/>
+      <stop offset="100%" stop-color="#06C8D4"/>
+    </linearGradient>
+    <linearGradient id="gh" x1="49" y1="36" x2="151" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#4A72E8" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#60C8E8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#80EEF8" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <!-- AW mark, centered horizontally -->
+  <path d="M 55 66 L 71 6 L 87 66" stroke="url(#gm)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="63" y1="40" x2="79" y2="40" stroke="url(#gm)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 87 66 L 98 18 L 105 44 L 113 10 L 119 66" stroke="url(#gm)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 55 66 L 71 6 L 87 66" stroke="url(#gh)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 87 66 L 98 18 L 105 44 L 113 10 L 119 66" stroke="url(#gh)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- ARCWAVE wordmark in dark navy, centered below mark -->
+  <text x="100" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="500" letter-spacing="5" fill="#1A2E78">ARCWAVE</text>
+</svg>
