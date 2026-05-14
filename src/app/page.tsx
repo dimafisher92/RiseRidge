@@ -7,6 +7,7 @@ import { CTASection } from '@/components/CTASection';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { JsonLd } from '@/components/JsonLd';
 import TestimonialsSection from '@/components/ui/testimonial-v2';
+import { VideoTestimonials } from '@/components/VideoTestimonials';
 
 const SERVICES = [
   {
@@ -181,6 +182,9 @@ export default function HomePage() {
 
       {/* Testimonials */}
       <TestimonialsSection />
+
+      {/* Video Testimonials */}
+      <VideoTestimonials />
 
       {/* Trust Badges */}
       <section className="border-t border-border py-16" aria-label="Trusted by leading brands">
