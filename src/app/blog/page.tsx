@@ -20,10 +20,16 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
-  const result = await client.queries.postConnection({ sort: 'date' });
-  const posts = (result.data.postConnection.edges ?? [])
-    .map((edge) => edge!.node!)
-    .reverse();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let posts: any[] = [];
+  try {
+    const result = await client.queries.postConnection({ sort: 'date' });
+    posts = (result.data.postConnection.edges ?? [])
+      .map((edge) => edge!.node!)
+      .reverse();
+  } catch {
+    // TinaCloud not yet indexed — render empty state
+  }
 
   return (
     <>

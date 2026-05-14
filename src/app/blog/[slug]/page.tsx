@@ -12,10 +12,15 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const result = await client.queries.postConnection();
-  return (result.data.postConnection.edges ?? []).map((edge) => ({
-    slug: edge!.node!._sys.filename,
-  }));
+  try {
+    const result = await client.queries.postConnection();
+    return (result.data.postConnection.edges ?? []).map((edge) => ({
+      slug: edge!.node!._sys.filename,
+    }));
+  } catch {
+    // TinaCloud not yet indexed — pages will be generated on-demand at runtime
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
