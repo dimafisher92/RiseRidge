@@ -68,12 +68,12 @@ const STEPS = [
 ];
 
 const LOGOS = [
-  { src: '/logo1.webp', alt: 'Client brand logo', w: 615, h: 100 },
-  { src: '/logo2.avif', alt: 'Client brand logo', w: 120, h: 30 },
-  { src: '/logo3.avif', alt: 'Client brand logo', w: 500, h: 104 },
-  { src: '/logo4.avif', alt: 'Client brand logo', w: 500, h: 84 },
-  { src: '/logo5.webp', alt: 'Client brand logo', w: 180, h: 47 },
-  { src: '/logo6.png', alt: 'Client brand logo', w: 253, h: 35 },
+  { src: '/logo1.webp', alt: 'Client brand logo', w: 615, h: 100, opaque: false },
+  { src: '/logo2.avif', alt: 'Client brand logo', w: 120, h: 30,  opaque: false },
+  { src: '/logo3.avif', alt: 'Client brand logo', w: 500, h: 104, opaque: true  },
+  { src: '/logo4.avif', alt: 'Client brand logo', w: 500, h: 84,  opaque: true  },
+  { src: '/logo5.webp', alt: 'Client brand logo', w: 180, h: 47,  opaque: false },
+  { src: '/logo6.png',  alt: 'Client brand logo', w: 253, h: 35,  opaque: false },
 ];
 
 export default function HomePage() {
@@ -205,40 +205,52 @@ export default function HomePage() {
 
           {/* Award badge */}
           <ScrollReveal className="flex justify-center mb-12">
-            <div className="flex items-center gap-5 rounded-xl border border-border bg-navy/60 p-4 pr-8 hover:border-electric/40 transition-all duration-300">
-              <div className="relative h-24 w-[72px] shrink-0 overflow-hidden rounded-lg border border-border">
+            <div className="flex items-center gap-6 rounded-xl border border-border bg-navy/60 p-5 pr-10 hover:border-electric/40 transition-all duration-300">
+              <div className="relative h-48 w-[140px] shrink-0 overflow-hidden rounded-lg border border-border">
                 <Image
                   src="/award2.png"
                   alt="TOP USA Awards trophy presented to ArcWave"
                   fill
-                  sizes="72px"
+                  sizes="140px"
                   className="object-cover"
                 />
               </div>
               <div>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-gold">
+                <span className="font-mono text-xs uppercase tracking-wider text-gold">
                   Award-Winning
                 </span>
-                <p className="mt-1 font-display font-bold text-ice text-sm">
+                <p className="mt-2 font-display font-bold text-ice text-base">
                   TOP 100 USA Entrepreneurs
                 </p>
-                <p className="mt-0.5 text-xs text-muted">TOP USA Awards · 2023</p>
+                <p className="mt-1 text-sm text-muted">TOP USA Awards · 2023</p>
               </div>
             </div>
           </ScrollReveal>
 
           {/* Client logos */}
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
-            {LOGOS.map((logo) => (
-              <Image
-                key={logo.src}
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.w}
-                height={logo.h}
-                className="h-7 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-90 transition-opacity duration-300"
-              />
-            ))}
+            {LOGOS.map((logo) =>
+              logo.opaque ? (
+                <span key={logo.src} className="inline-flex items-center justify-center bg-white/10 rounded px-3 py-2 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.w}
+                    height={logo.h}
+                    className="h-7 w-auto object-contain"
+                  />
+                </span>
+              ) : (
+                <Image
+                  key={logo.src}
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.w}
+                  height={logo.h}
+                  className="h-7 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-90 transition-opacity duration-300"
+                />
+              )
+            )}
           </div>
         </div>
       </section>
