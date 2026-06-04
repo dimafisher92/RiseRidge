@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { HeroSection } from '@/components/HeroSection';
 import { StatsBar } from '@/components/StatsBar';
 import { SectionLabel } from '@/components/SectionLabel';
@@ -64,6 +65,15 @@ const STEPS = [
     title: 'Dominate',
     description: 'Watch your rankings climb as our AI continuously optimizes, monitors, and adapts your SEO strategy in real-time.',
   },
+];
+
+const LOGOS = [
+  { src: '/logo1.webp', alt: 'Client brand logo', w: 615, h: 100 },
+  { src: '/logo2.avif', alt: 'Client brand logo', w: 120, h: 30 },
+  { src: '/logo3.avif', alt: 'Client brand logo', w: 500, h: 104 },
+  { src: '/logo4.avif', alt: 'Client brand logo', w: 500, h: 84 },
+  { src: '/logo5.webp', alt: 'Client brand logo', w: 180, h: 47 },
+  { src: '/logo6.png', alt: 'Client brand logo', w: 253, h: 35 },
 ];
 
 export default function HomePage() {
@@ -187,16 +197,47 @@ export default function HomePage() {
       <VideoTestimonials />
 
       {/* Trust Badges */}
-      <section className="border-t border-border py-16" aria-label="Trusted by leading brands">
+      <section className="border-t border-border py-16" aria-label="Award-winning and trusted by leading brands">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-8">
+          <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-10">
             Trusted by Growth-Stage Brands
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
-            {['TechScale', 'GrowthLab', 'NovaBrand', 'PixelForge', 'DataCore', 'ShopNova'].map((name) => (
-              <div key={name} className="font-display font-bold text-xl text-ice/60">
-                {name}
+
+          {/* Award badge */}
+          <ScrollReveal className="flex justify-center mb-12">
+            <div className="flex items-center gap-5 rounded-xl border border-border bg-navy/60 p-4 pr-8 hover:border-electric/40 transition-all duration-300">
+              <div className="relative h-24 w-[72px] shrink-0 overflow-hidden rounded-lg border border-border">
+                <Image
+                  src="/award2.png"
+                  alt="TOP USA Awards trophy presented to ArcWave"
+                  fill
+                  sizes="72px"
+                  className="object-cover"
+                />
               </div>
+              <div>
+                <span className="font-mono text-[11px] uppercase tracking-wider text-gold">
+                  Award-Winning
+                </span>
+                <p className="mt-1 font-display font-bold text-ice text-sm">
+                  TOP 100 USA Entrepreneurs
+                </p>
+                <p className="mt-0.5 text-xs text-muted">TOP USA Awards · 2023</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Client logos */}
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+            {LOGOS.map((logo) => (
+              <Image
+                key={logo.src}
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.w}
+                height={logo.h}
+                className="h-7 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-90 transition-opacity duration-300"
+              />
             ))}
           </div>
         </div>
