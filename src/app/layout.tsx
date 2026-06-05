@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -64,6 +65,16 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <Script
+          nowprocket=""
+          nitro-exclude=""
+          id="sa-dynamic-optimization"
+          data-uuid="69c19330-9b18-47eb-a773-170b1a8b2e2e"
+          src="https://seo.gsmgrowthagency.com/scripts/dynamic_optimization.js"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className="bg-void text-ice font-body antialiased">
         <a href="#main-content" className="skip-to-content">
           Skip to main content
