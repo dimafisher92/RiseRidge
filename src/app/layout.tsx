@@ -34,12 +34,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'ArcWave',
     locale: 'en_US',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ArcWave — AI-Driven SEO. Measurable Growth.',
     description:
       'AI-Driven SEO. Measurable Growth.',
+    images: ['/og-image.jpg'],
   },
   icons: {
     icon: '/icon.svg',
@@ -62,6 +64,19 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
+        <script
+          id="sa-dynamic-optimization"
+          // @ts-expect-error custom attributes required by GSM pixel
+          nowprocket=""
+          nitro-exclude=""
+          data-uuid="69c19330-9b18-47eb-a773-170b1a8b2e2e"
+          dangerouslySetInnerHTML={{
+            __html: `var script=document.createElement("script");script.setAttribute("nowprocket","");script.setAttribute("nitro-exclude","");script.src="https://seo.gsmgrowthagency.com/scripts/dynamic_optimization.js";script.dataset.uuid="69c19330-9b18-47eb-a773-170b1a8b2e2e";script.id="sa-dynamic-optimization-loader";document.head.appendChild(script);`,
+          }}
+        />
+      </head>
       <body className="bg-void text-ice font-body antialiased">
         <a href="#main-content" className="skip-to-content">
           Skip to main content

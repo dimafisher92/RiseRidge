@@ -20,7 +20,7 @@ export function JsonLd({
       '@type': 'Organization',
       name: 'ArcWave',
       url: baseUrl,
-      logo: `${baseUrl}/logos/arcwave-icon.svg`,
+      logo: `${baseUrl}/logos/logo-icon.png`,
       description:
         'AI-driven SEO agency that engineers organic search growth. We combine AI-powered SEO infrastructure with hands-on strategic execution to move businesses from invisible to undeniable.',
       sameAs: [

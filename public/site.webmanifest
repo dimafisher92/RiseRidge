@@ -8,10 +8,10 @@
   "theme_color": "#060E18",
   "icons": [
     {
-      "src": "/logos/arcwave-icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "/logos/logo-icon.png",
+      "sizes": "692x256",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
