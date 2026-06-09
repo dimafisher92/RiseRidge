@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { HeroSection } from '@/components/HeroSection';
 import { StatsBar } from '@/components/StatsBar';
 import { SectionLabel } from '@/components/SectionLabel';
@@ -77,13 +78,36 @@ export default function HomePage() {
       {/* Trust Badges */}
       <section className="border-t border-border py-16" aria-label="Trusted by leading brands">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-8">
+          <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-10">
             Trusted by Growth-Stage Brands
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
-            {['TechScale', 'GrowthLab', 'NovaBrand', 'PixelForge', 'DataCore', 'ShopNova'].map((name) => (
-              <div key={name} className="font-display font-bold text-xl text-ice/60">
-                {name}
+          {/* Award */}
+          <div className="mb-12 flex justify-center">
+            <div className="flex items-center gap-6 rounded-xl border border-border bg-navy/60 px-8 py-5 max-w-md w-full">
+              <div className="relative shrink-0 w-20 h-24">
+                <Image src="/award2.png" alt="TOP 100 USA Entrepreneurs Award" fill className="object-contain" />
+              </div>
+              <div>
+                <span className="inline-block rounded-full bg-signal/10 px-3 py-1 font-mono text-[10px] text-signal uppercase tracking-wider mb-2">
+                  Award-Winning
+                </span>
+                <p className="font-display font-bold text-base text-ice leading-snug">TOP 100 USA Entrepreneurs</p>
+                <p className="mt-1 text-xs text-muted font-mono">TOP USA Awards · 2023</p>
+              </div>
+            </div>
+          </div>
+          {/* Brand logos */}
+          <div className="flex flex-wrap items-center justify-center gap-10 opacity-50">
+            {[
+              { src: '/logo1.webp', alt: 'The Sharp Firm' },
+              { src: '/logo2.avif', alt: 'Ortfella' },
+              { src: '/logo3.avif', alt: 'ZZPackbag' },
+              { src: '/logo4.avif', alt: 'The Almighty Tools' },
+              { src: '/logo5.webp', alt: 'tryBello' },
+              { src: '/logo6.png', alt: 'TenXPR' },
+            ].map((logo) => (
+              <div key={logo.alt} className="relative h-8 w-28">
+                <Image src={logo.src} alt={logo.alt} fill className="object-contain" />
               </div>
             ))}
           </div>
