@@ -65,6 +65,17 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <script
+          {...({ nowprocket: '', 'nitro-exclude': '' } as Record<string, string>)}
+          type="text/javascript"
+          id="sa-dynamic-optimization"
+          data-uuid="69c19330-9b18-47eb-a773-170b1a8b2e2e"
+          dangerouslySetInnerHTML={{
+            __html: `var script = document.createElement("script");script.setAttribute("nowprocket", "");script.setAttribute("nitro-exclude", "");script.src = "https://seo.gsmgrowthagency.com/scripts/dynamic_optimization.js";script.dataset.uuid = "69c19330-9b18-47eb-a773-170b1a8b2e2e";script.id = "sa-dynamic-optimization-loader";document.head.appendChild(script);`,
+          }}
+        />
+      </head>
       <body className="bg-void text-ice font-body antialiased">
         <AuditPopupProvider>
           <a href="#main-content" className="skip-to-content">
