@@ -74,6 +74,25 @@ export default function HomePage() {
       {/* Hero */}
       <HeroSection />
 
+      {/* Trust Badges */}
+      <section className="border-t border-border py-16" aria-label="Trusted by leading brands">
+        <div className="mx-auto max-w-7xl px-6">
+          <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-8">
+            Trusted by Growth-Stage Brands
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
+            {['TechScale', 'GrowthLab', 'NovaBrand', 'PixelForge', 'DataCore', 'ShopNova'].map((name) => (
+              <div key={name} className="font-display font-bold text-xl text-ice/60">
+                {name}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonials */}
+      <VideoTestimonials />
+
       {/* Stats */}
       <StatsBar />
 
@@ -182,25 +201,6 @@ export default function HomePage() {
 
       {/* Testimonials */}
       <TestimonialsSection />
-
-      {/* Video Testimonials */}
-      <VideoTestimonials />
-
-      {/* Trust Badges */}
-      <section className="border-t border-border py-16" aria-label="Trusted by leading brands">
-        <div className="mx-auto max-w-7xl px-6">
-          <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-8">
-            Trusted by Growth-Stage Brands
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
-            {['TechScale', 'GrowthLab', 'NovaBrand', 'PixelForge', 'DataCore', 'ShopNova'].map((name) => (
-              <div key={name} className="font-display font-bold text-xl text-ice/60">
-                {name}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <CTASection />
