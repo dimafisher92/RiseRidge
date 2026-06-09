@@ -67,6 +67,15 @@ const STEPS = [
   },
 ];
 
+const LOGOS = [
+  { src: '/logo1.webp', alt: 'Client brand logo', w: 615, h: 100, opaque: false },
+  { src: '/logo2.avif', alt: 'Client brand logo', w: 120, h: 30,  opaque: false },
+  { src: '/logo3.avif', alt: 'Client brand logo', w: 500, h: 104, opaque: true  },
+  { src: '/logo4.avif', alt: 'Client brand logo', w: 500, h: 84,  opaque: true  },
+  { src: '/logo5.webp', alt: 'Client brand logo', w: 180, h: 47,  opaque: false },
+  { src: '/logo6.png',  alt: 'Client brand logo', w: 253, h: 35,  opaque: false },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -76,40 +85,60 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Trust Badges */}
-      <section className="border-t border-border py-16" aria-label="Trusted by leading brands">
+      <section className="border-t border-border py-16" aria-label="Award-winning and trusted by leading brands">
         <div className="mx-auto max-w-7xl px-6">
           <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-10">
             Trusted by Growth-Stage Brands
           </p>
-          {/* Award */}
-          <div className="mb-12 flex justify-center">
-            <div className="flex items-center gap-6 rounded-xl border border-border bg-navy/60 px-8 py-5 max-w-md w-full">
-              <div className="relative shrink-0 w-20 h-24">
-                <Image src="/award2.png" alt="TOP 100 USA Entrepreneurs Award" fill className="object-contain" />
+
+          {/* Award badge */}
+          <ScrollReveal className="flex justify-center mb-12">
+            <div className="flex items-center gap-6 rounded-xl border border-border bg-navy/60 p-5 pr-10 hover:border-electric/40 transition-all duration-300">
+              <div className="relative h-48 w-[140px] shrink-0 overflow-hidden rounded-lg border border-border">
+                <Image
+                  src="/award2.png"
+                  alt="TOP USA Awards trophy presented to ArcWave"
+                  fill
+                  sizes="140px"
+                  className="object-cover"
+                />
               </div>
               <div>
-                <span className="inline-block rounded-full bg-signal/10 px-3 py-1 font-mono text-[10px] text-signal uppercase tracking-wider mb-2">
+                <span className="font-mono text-xs uppercase tracking-wider text-gold">
                   Award-Winning
                 </span>
-                <p className="font-display font-bold text-base text-ice leading-snug">TOP 100 USA Entrepreneurs</p>
-                <p className="mt-1 text-xs text-muted font-mono">TOP USA Awards · 2023</p>
+                <p className="mt-2 font-display font-bold text-ice text-base">
+                  TOP 100 USA Entrepreneurs
+                </p>
+                <p className="mt-1 text-sm text-muted">TOP USA Awards · 2023</p>
               </div>
             </div>
-          </div>
-          {/* Brand logos */}
-          <div className="flex flex-wrap items-center justify-center gap-10 opacity-50">
-            {[
-              { src: '/logo1.webp', alt: 'The Sharp Firm' },
-              { src: '/logo2.avif', alt: 'Ortfella' },
-              { src: '/logo3.avif', alt: 'ZZPackbag' },
-              { src: '/logo4.avif', alt: 'The Almighty Tools' },
-              { src: '/logo5.webp', alt: 'tryBello' },
-              { src: '/logo6.png', alt: 'TenXPR' },
-            ].map((logo) => (
-              <div key={logo.alt} className="relative h-8 w-28">
-                <Image src={logo.src} alt={logo.alt} fill className="object-contain" />
-              </div>
-            ))}
+          </ScrollReveal>
+
+          {/* Client logos */}
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+            {LOGOS.map((logo) =>
+              logo.opaque ? (
+                <span key={logo.src} className="inline-flex items-center justify-center bg-white/10 rounded px-3 py-2 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.w}
+                    height={logo.h}
+                    className="h-7 w-auto object-contain"
+                  />
+                </span>
+              ) : (
+                <Image
+                  key={logo.src}
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.w}
+                  height={logo.h}
+                  className="h-7 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-90 transition-opacity duration-300"
+                />
+              )
+            )}
           </div>
         </div>
       </section>
