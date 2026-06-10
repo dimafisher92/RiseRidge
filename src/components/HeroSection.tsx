@@ -163,6 +163,19 @@ export function HeroSection() {
           </Link>
         </motion.div>
 
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-5 text-sm text-muted"
+        >
+          Curious where you stand?{' '}
+          <Link href="/seo-checker" className="text-electric underline-offset-4 hover:underline">
+            Try our free SEO checker
+          </Link>{' '}
+          — instant results, no sign-up to start.
+        </motion.p>
+
         {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
