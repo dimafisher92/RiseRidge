@@ -106,6 +106,29 @@ export async function fetchTargetHtml(input: string): Promise<FetchedPage> {
   return { html, finalUrl: res.url || url };
 }
 
+// Lightweight fetch for small auxiliary files (robots.txt, llms.txt).
+// Returns text on success, null on any failure or timeout — never throws.
+export async function fetchAuxText(origin: string, path: string): Promise<string | null> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 3000);
+  try {
+    const url = new URL(path, origin).toString();
+    const res = await fetch(url, {
+      method: 'GET',
+      redirect: 'follow',
+      signal: controller.signal,
+      headers: { 'User-Agent': USER_AGENT, Accept: 'text/plain,*/*' },
+    });
+    if (!res.ok) return null;
+    const text = await res.text();
+    return text.slice(0, 100_000);
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 // Read the response body up to a byte cap, then stop. Avoids loading huge pages
 // fully into memory; the parser only needs the document head + visible body.
 async function readCapped(res: Response, maxBytes: number): Promise<string> {

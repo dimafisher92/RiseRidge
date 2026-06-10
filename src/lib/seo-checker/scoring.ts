@@ -3,10 +3,11 @@ import { runChecks } from './checks';
 import { apexDomain, getAllowlist } from './config';
 
 const CATEGORY_META: Record<CategoryId, { label: string; weight: number }> = {
-  onpage: { label: 'On-Page', weight: 0.3 },
-  content: { label: 'Content', weight: 0.25 },
-  technical: { label: 'Technical', weight: 0.25 },
-  links: { label: 'Links', weight: 0.2 },
+  onpage: { label: 'On-Page', weight: 0.25 },
+  content: { label: 'Content', weight: 0.20 },
+  technical: { label: 'Technical', weight: 0.20 },
+  links: { label: 'Links', weight: 0.15 },
+  aivisibility: { label: 'AI Visibility', weight: 0.20 },
 };
 
 const SEARCH_ATLAS_FLOOR = 85;

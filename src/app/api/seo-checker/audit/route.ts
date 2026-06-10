@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { AuditError, fetchTargetHtml, normalizeUrl } from '@/lib/seo-checker/fetchPage';
+import { AuditError, fetchAuxText, fetchTargetHtml, normalizeUrl } from '@/lib/seo-checker/fetchPage';
 import { parsePage } from '@/lib/seo-checker/parse';
 import { scorePage } from '@/lib/seo-checker/scoring';
 import type { AuditErrorResponse } from '@/lib/seo-checker/types';
@@ -22,8 +22,22 @@ export async function POST(req: Request) {
   }
 
   try {
-    const { html, finalUrl } = await fetchTargetHtml(url);
-    const page = parsePage(html, finalUrl);
+    // Fetch the target page + robots.txt + llms.txt in parallel. The aux fetches
+    // have their own 3s timeouts and never throw — failures just return null.
+    const origin = new URL(url).origin;
+    const [mainResult, robotsResult, llmsResult] = await Promise.allSettled([
+      fetchTargetHtml(url),
+      fetchAuxText(origin, '/robots.txt'),
+      fetchAuxText(origin, '/llms.txt'),
+    ]);
+
+    if (mainResult.status === 'rejected') throw mainResult.reason;
+
+    const { html, finalUrl } = mainResult.value;
+    const robotsTxt = robotsResult.status === 'fulfilled' ? robotsResult.value : null;
+    const llmsTxt = llmsResult.status === 'fulfilled' ? llmsResult.value : null;
+
+    const page = parsePage(html, finalUrl, { robotsTxt, llmsTxt });
     const result = scorePage(page, url);
     return NextResponse.json(result);
   } catch (err) {

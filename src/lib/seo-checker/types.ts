@@ -2,16 +2,16 @@
 // The audit engine is fully deterministic — no AI, no external scoring APIs.
 
 export type CheckStatus = 'pass' | 'warn' | 'fail';
-export type CategoryId = 'onpage' | 'content' | 'technical' | 'links';
+export type CategoryId = 'onpage' | 'content' | 'technical' | 'links' | 'aivisibility';
 export type ScoreBand = 'low' | 'medium' | 'high';
 
 export interface CheckResult {
-  id: string; // stable id, e.g. 'title-length'
+  id: string;
   category: CategoryId;
   label: string; // friendly, always visible
   status: CheckStatus;
-  earned: number; // points earned
-  max: number; // points possible
+  earned: number;
+  max: number;
   explanation: string; // plain-language meaning (gated/blurred)
   benefit?: string; // present when status !== 'pass' (gated/blurred)
   detail?: string; // observed value, e.g. "58 characters"
@@ -19,20 +19,20 @@ export interface CheckResult {
 
 export interface CategoryScore {
   id: CategoryId;
-  label: string; // "On-Page"
+  label: string;
   score: number; // 0-100
   checks: CheckResult[];
 }
 
 export interface AuditResult {
-  url: string; // normalized input
-  finalUrl: string; // after redirects
-  fetchedAt: string; // ISO timestamp
+  url: string;
+  finalUrl: string;
+  fetchedAt: string;
   overallScore: number; // 0-100
   band: ScoreBand;
   categories: CategoryScore[];
   searchAtlasManaged: boolean;
-  summary: string; // one friendly sentence headline (gated)
+  summary: string; // gated
 }
 
 export type AuditErrorCode =
@@ -45,7 +45,7 @@ export type AuditErrorCode =
 
 export interface AuditErrorResponse {
   error: AuditErrorCode;
-  message: string; // friendly, business-language
+  message: string;
 }
 
 export interface LeadPayload {
@@ -57,8 +57,12 @@ export interface LeadPayload {
   timestamp: string;
 }
 
-// Normalized representation of the fetched page, produced by parse.ts and
-// consumed by the deterministic checks.
+export interface AiBotsResult {
+  allowed: string[];
+  blocked: string[];
+}
+
+// Normalized representation of the fetched page, produced by parse.ts.
 export interface PageData {
   finalUrl: string;
   isHttps: boolean;
@@ -66,19 +70,29 @@ export interface PageData {
   metaDescription: string | null;
   h1s: string[];
   h2s: string[];
+  h3s: string[];
   canonical: string | null;
   ogTags: Record<string, string>;
   twitterTags: Record<string, string>;
-  robotsMeta: string | null; // lowercased content of <meta name="robots">
+  robotsMeta: string | null;
   hasViewport: boolean;
-  jsonLdCount: number; // parseable JSON-LD blocks
+  jsonLdCount: number;
+  jsonLdTypes: string[]; // @type values from all parseable JSON-LD blocks
   internalLinks: number;
   externalLinks: number;
-  emptyAnchors: number; // href missing / '#' only / javascript:
+  emptyAnchors: number;
   totalLinks: number;
   imagesTotal: number;
   imagesWithAlt: number;
   wordCount: number;
-  avgSentenceLength: number; // words per sentence (readability proxy)
+  avgSentenceLength: number;
   searchAtlasDetected: boolean;
+  // AI Visibility fields
+  llmsTxtPresent: boolean | null; // null = could not check
+  aiBotsResult: AiBotsResult | null; // null = robots.txt not available
+  hasFaqSchema: boolean;
+  hasHowToSchema: boolean;
+  hasAuthorMarkup: boolean;
+  entitySchemaTypes: string[]; // detected rich entity types (org, person, product…)
+  questionHeadings: number; // H2/H3 containing a '?'
 }

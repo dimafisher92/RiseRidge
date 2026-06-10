@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { CheckCircle2, AlertTriangle, XCircle, Sparkles } from 'lucide-react';
+import { CheckCircle2, AlertTriangle, XCircle, Sparkles, Bot } from 'lucide-react';
 import type { AuditResult, CheckResult, CheckStatus } from '@/lib/seo-checker/types';
 import { ScoreGauge } from './ScoreGauge';
 import { LeadGate } from './LeadGate';
@@ -66,15 +66,30 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
         </div>
 
         {/* Category sub-scores */}
-        <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {result.categories.map((cat) => (
-            <div key={cat.id} className="rounded-xl border border-border bg-void/40 p-4 text-center">
-              <p className="font-mono text-[10px] uppercase tracking-[2px] text-muted">{cat.label}</p>
-              <p className={`mt-1 font-display font-[800] text-2xl tabular-nums ${catColor(cat.score)}`}>
-                {cat.score}
-              </p>
-            </div>
-          ))}
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          {result.categories.map((cat) => {
+            const isAi = cat.id === 'aivisibility';
+            return (
+              <div
+                key={cat.id}
+                className={`rounded-xl border p-4 text-center ${
+                  isAi
+                    ? 'border-electric/40 bg-electric/5'
+                    : 'border-border bg-void/40'
+                }`}
+              >
+                <div className="flex items-center justify-center gap-1">
+                  {isAi && <Bot size={10} className="text-electric" />}
+                  <p className={`font-mono text-[10px] uppercase tracking-[2px] ${isAi ? 'text-electric' : 'text-muted'}`}>
+                    {cat.label}
+                  </p>
+                </div>
+                <p className={`mt-1 font-display font-[800] text-2xl tabular-nums ${catColor(cat.score)}`}>
+                  {cat.score}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -83,20 +98,39 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
         {locked && <LeadGate url={result.finalUrl} score={result.overallScore} onUnlock={onUnlock} />}
 
         <div className={locked ? 'pointer-events-none' : ''}>
-          {result.categories.map((cat) => (
-            <section key={cat.id} className="mt-6 first:mt-0">
-              <div className="mb-3 flex items-center gap-3">
-                <h3 className="font-display font-[800] text-lg text-ice">{cat.label}</h3>
-                <span className="h-px flex-1 bg-border" />
-                <span className={`font-mono text-sm tabular-nums ${catColor(cat.score)}`}>{cat.score}/100</span>
-              </div>
-              <ul className="space-y-3">
-                {cat.checks.map((check) => (
-                  <FindingRow key={check.id} check={check} locked={locked} />
-                ))}
-              </ul>
-            </section>
-          ))}
+          {result.categories.map((cat) => {
+            const isAi = cat.id === 'aivisibility';
+            return (
+              <section
+                key={cat.id}
+                className={`mt-6 first:mt-0 ${isAi ? 'rounded-2xl border border-electric/20 bg-electric/5 p-4 sm:p-6' : ''}`}
+              >
+                <div className="mb-3 flex items-center gap-3">
+                  {isAi && <Bot size={16} className="shrink-0 text-electric" />}
+                  <h3 className={`font-display font-[800] text-lg ${isAi ? 'text-electric' : 'text-ice'}`}>
+                    {cat.label}
+                  </h3>
+                  {isAi && (
+                    <span className="rounded-full border border-electric/40 bg-electric/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide text-electric">
+                      NEW
+                    </span>
+                  )}
+                  <span className="h-px flex-1 bg-border" />
+                  <span className={`font-mono text-sm tabular-nums ${catColor(cat.score)}`}>{cat.score}/100</span>
+                </div>
+                {isAi && (
+                  <p className="mb-4 text-xs text-muted">
+                    AI search tools like ChatGPT, Perplexity, and Google AI Overview increasingly drive discovery. These checks measure how well your site is positioned to appear in AI-generated answers.
+                  </p>
+                )}
+                <ul className="space-y-3">
+                  {cat.checks.map((check) => (
+                    <FindingRow key={check.id} check={check} locked={locked} />
+                  ))}
+                </ul>
+              </section>
+            );
+          })}
         </div>
       </div>
 

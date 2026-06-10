@@ -8,13 +8,13 @@ import { Logo } from './Logo';
 import { useAuditPopup } from './AuditPopup';
 
 const NAV_LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/features', label: 'Features' },
-  { href: '/rank-on-ai', label: 'Rank on AI' },
-  { href: '/seo-checker', label: 'Free SEO Check' },
-  { href: '/case-studies', label: 'Case Studies' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/about', label: 'About' },
+  { href: '/', label: 'Home', highlight: false },
+  { href: '/features', label: 'Features', highlight: false },
+  { href: '/rank-on-ai', label: 'Rank on AI', highlight: false },
+  { href: '/seo-checker', label: 'Free SEO Check', highlight: true },
+  { href: '/case-studies', label: 'Case Studies', highlight: false },
+  { href: '/blog', label: 'Blog', highlight: false },
+  { href: '/about', label: 'About', highlight: false },
 ];
 
 export function Navbar() {
@@ -41,25 +41,39 @@ export function Navbar() {
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map(({ href, label }) => (
+          {NAV_LINKS.map(({ href, label, highlight }) => (
             <li key={href}>
-              <Link
-                href={href}
-                className={`relative font-body text-sm transition-colors duration-200 ${
-                  pathname === href
-                    ? 'text-electric'
-                    : 'text-muted hover:text-ice'
-                }`}
-                aria-current={pathname === href ? 'page' : undefined}
-              >
-                {label}
-                {pathname === href && (
-                  <motion.span
-                    layoutId="nav-underline"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-electric rounded-full"
-                  />
-                )}
-              </Link>
+              {highlight ? (
+                <Link
+                  href={href}
+                  className={`inline-flex items-center rounded-full border px-3.5 py-1 font-body text-sm font-medium transition-all duration-200 ${
+                    pathname === href
+                      ? 'border-electric bg-electric/15 text-electric'
+                      : 'border-electric/50 text-electric hover:border-electric hover:bg-electric/10'
+                  }`}
+                  aria-current={pathname === href ? 'page' : undefined}
+                >
+                  {label}
+                </Link>
+              ) : (
+                <Link
+                  href={href}
+                  className={`relative font-body text-sm transition-colors duration-200 ${
+                    pathname === href
+                      ? 'text-electric'
+                      : 'text-muted hover:text-ice'
+                  }`}
+                  aria-current={pathname === href ? 'page' : undefined}
+                >
+                  {label}
+                  {pathname === href && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-electric rounded-full"
+                    />
+                  )}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -108,13 +122,17 @@ export function Navbar() {
             className="md:hidden overflow-hidden border-t border-border bg-surface"
           >
             <ul className="flex flex-col gap-1 p-6">
-              {NAV_LINKS.map(({ href, label }) => (
+              {NAV_LINKS.map(({ href, label, highlight }) => (
                 <li key={href}>
                   <Link
                     href={href}
                     onClick={() => setMobileOpen(false)}
                     className={`block py-3 px-4 rounded-lg font-body text-base transition-colors ${
-                      pathname === href
+                      highlight
+                        ? pathname === href
+                          ? 'text-electric bg-electric/15 font-medium'
+                          : 'text-electric bg-electric/5 font-medium hover:bg-electric/10'
+                        : pathname === href
                         ? 'text-electric bg-electric/10'
                         : 'text-muted hover:text-ice hover:bg-white/5'
                     }`}

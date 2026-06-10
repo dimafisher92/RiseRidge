@@ -140,6 +140,48 @@ export const CHECK_COPY: Record<string, CheckCopy> = {
     benefit:
       'What you gain if ArcWave fixes this: a clean, trustworthy linking structure that improves both experience and rankings.',
   },
+
+  // ---- AI Visibility ----
+  'ai-robots-access': {
+    label: 'AI crawler access',
+    pass: 'AI search bots can crawl and index your site freely.',
+    issue:
+      'Your robots.txt is blocking one or more AI search bots (like ChatGPT, Perplexity, or Claude). These tools drive discovery for millions of users — blocking them means your business cannot appear in AI-powered answers.',
+    benefit:
+      'What you gain if ArcWave fixes this: your site becomes eligible to be cited and recommended by AI search tools, opening a fast-growing traffic channel.',
+  },
+  'ai-llms-txt': {
+    label: 'AI content guidance (llms.txt)',
+    pass: 'Your site has an llms.txt file that guides AI tools on what to read.',
+    issue:
+      'A llms.txt file is a new standard that tells AI assistants and crawlers exactly what your business does and which content matters most. Without one, AI tools have to guess — and often get it wrong.',
+    benefit:
+      'What you gain if ArcWave adds this: AI assistants get accurate, curated information about your business, making them far more likely to recommend you.',
+  },
+  'ai-faq-schema': {
+    label: 'Q&A structured data',
+    pass: 'Your page uses FAQ or HowTo schema that AI can parse directly.',
+    issue:
+      'FAQ and HowTo structured data let AI engines pull your answers directly into their responses. Without it, AI tools may miss your expertise even when you have the right content.',
+    benefit:
+      'What you gain if ArcWave adds this: your answers can be surfaced verbatim in AI search results and voice assistants — zero-click authority.',
+  },
+  'ai-author-markup': {
+    label: 'Expert authorship signals',
+    pass: 'Your content is attributed to a named author, signalling trust to AI systems.',
+    issue:
+      'AI systems and Google\'s quality algorithms favour content with clear authorship — it signals expertise and accountability. Your content currently has no named author attribution.',
+    benefit:
+      'What you gain if ArcWave fixes this: stronger E-E-A-T signals that help both AI and Google treat your content as authoritative.',
+  },
+  'ai-entity-clarity': {
+    label: 'Business identity for AI',
+    pass: 'Your page includes structured data that clearly identifies your business entity to AI.',
+    issue:
+      'AI systems build knowledge graphs from structured data. Without entity schema (Organization, LocalBusiness, Person, etc.), AI tools struggle to connect your content to a real, trustworthy business.',
+    benefit:
+      'What you gain if ArcWave adds this: a clear digital identity that AI systems can reliably reference, boosting your visibility in AI-generated answers.',
+  },
 };
 
 export function copyFor(id: string): CheckCopy {
