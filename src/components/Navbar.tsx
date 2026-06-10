@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/features', label: 'Features' },
   { href: '/rank-on-ai', label: 'Rank on AI' },
+  { href: '/seo-checker', label: 'Free SEO Check' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
