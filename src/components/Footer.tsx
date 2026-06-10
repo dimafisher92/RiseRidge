@@ -5,6 +5,7 @@ const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/features', label: 'Features' },
   { href: '/rank-on-ai', label: 'Rank on AI' },
+  { href: '/seo-checker', label: 'Free SEO Checker' },
   { href: '/about', label: 'About' },
   { href: '/case-studies', label: 'Case Studies' },
 ];

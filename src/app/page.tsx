@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { HeroSection } from '@/components/HeroSection';
 import { StatsBar } from '@/components/StatsBar';
 import { SectionLabel } from '@/components/SectionLabel';
@@ -66,6 +67,15 @@ const STEPS = [
   },
 ];
 
+const LOGOS = [
+  { src: '/logo1.webp', alt: 'Client brand logo', w: 615, h: 100, opaque: false },
+  { src: '/logo2.avif', alt: 'Client brand logo', w: 120, h: 30,  opaque: false },
+  { src: '/logo3.avif', alt: 'Client brand logo', w: 500, h: 104, opaque: true  },
+  { src: '/logo4.avif', alt: 'Client brand logo', w: 500, h: 84,  opaque: true  },
+  { src: '/logo5.webp', alt: 'Client brand logo', w: 180, h: 47,  opaque: false },
+  { src: '/logo6.png',  alt: 'Client brand logo', w: 253, h: 35,  opaque: false },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -73,6 +83,68 @@ export default function HomePage() {
 
       {/* Hero */}
       <HeroSection />
+
+      {/* Trust Badges */}
+      <section className="border-t border-border py-16" aria-label="Award-winning and trusted by leading brands">
+        <div className="mx-auto max-w-7xl px-6">
+          <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-10">
+            Trusted by Growth-Stage Brands
+          </p>
+
+          {/* Award badge */}
+          <ScrollReveal className="flex justify-center mb-12">
+            <div className="flex items-center gap-6 rounded-xl border border-border bg-navy/60 p-5 pr-10 hover:border-electric/40 transition-all duration-300">
+              <div className="relative h-48 w-[140px] shrink-0 overflow-hidden rounded-lg border border-border">
+                <Image
+                  src="/award2.png"
+                  alt="TOP USA Awards trophy presented to ArcWave"
+                  fill
+                  sizes="140px"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <span className="font-mono text-xs uppercase tracking-wider text-gold">
+                  Award-Winning
+                </span>
+                <p className="mt-2 font-display font-bold text-ice text-base">
+                  TOP 100 USA Entrepreneurs
+                </p>
+                <p className="mt-1 text-sm text-muted">TOP USA Awards · 2023</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Client logos */}
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+            {LOGOS.map((logo) =>
+              logo.opaque ? (
+                <span key={logo.src} className="inline-flex items-center justify-center bg-white/10 rounded px-3 py-2 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.w}
+                    height={logo.h}
+                    className="h-7 w-auto object-contain"
+                  />
+                </span>
+              ) : (
+                <Image
+                  key={logo.src}
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.w}
+                  height={logo.h}
+                  className="h-7 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-90 transition-opacity duration-300"
+                />
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonials */}
+      <VideoTestimonials />
 
       {/* Stats */}
       <StatsBar />
@@ -182,25 +254,6 @@ export default function HomePage() {
 
       {/* Testimonials */}
       <TestimonialsSection />
-
-      {/* Video Testimonials */}
-      <VideoTestimonials />
-
-      {/* Trust Badges */}
-      <section className="border-t border-border py-16" aria-label="Trusted by leading brands">
-        <div className="mx-auto max-w-7xl px-6">
-          <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-8">
-            Trusted by Growth-Stage Brands
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
-            {['TechScale', 'GrowthLab', 'NovaBrand', 'PixelForge', 'DataCore', 'ShopNova'].map((name) => (
-              <div key={name} className="font-display font-bold text-xl text-ice/60">
-                {name}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <CTASection />

@@ -80,3 +80,77 @@ a {
 .skip-to-content:focus {
   left: 0;
 }
+
+/* ===== Print / Save-as-PDF styles for the SEO checker report ===== */
+.print-only {
+  display: none;
+}
+.print-watermark {
+  display: none;
+}
+
+@media print {
+  /* Hide site chrome and interactive-only elements */
+  header[role="banner"],
+  footer,
+  .skip-to-content,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Force a clean light document */
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* Remove the lead-gate blur so the unlocked report prints in full */
+  .print-report * {
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+
+  /* Show the print-only logo header */
+  .print-only {
+    display: flex !important;
+  }
+
+  /* Make cards readable on white paper */
+  .print-report .bg-surface\/60,
+  .print-report .bg-surface\/40,
+  .print-report .bg-void\/40,
+  .print-report .bg-navy\/60 {
+    background: #ffffff !important;
+    border-color: #d1d5db !important;
+  }
+  .print-report .text-ice {
+    color: #111111 !important;
+  }
+  .print-report .text-muted {
+    color: #4b5563 !important;
+  }
+
+  /* Diagonal repeating watermark behind the report */
+  .print-watermark {
+    display: block !important;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url('/logos/logo-horizontal.png');
+    background-repeat: repeat;
+    background-size: 240px auto;
+    opacity: 0.06;
+    transform: rotate(-30deg) scale(1.4);
+  }
+
+  .print-report {
+    position: relative;
+    z-index: 1;
+  }
+
+  @page {
+    margin: 14mm;
+  }
+}
