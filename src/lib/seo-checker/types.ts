@@ -55,6 +55,12 @@ export interface LeadPayload {
   url: string;
   score: number;
   timestamp: string;
+  // Optional client-gathered analytics (best-effort).
+  userAgent?: string;
+  language?: string;
+  timezone?: string;
+  screen?: string;
+  referrer?: string;
 }
 
 export interface AiBotsResult {

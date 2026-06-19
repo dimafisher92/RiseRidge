@@ -30,10 +30,24 @@ export function LeadGate({ url, score, onUnlock }: LeadGateProps) {
 
     setSubmitting(true);
     try {
+      // Best-effort client analytics — wrapped so nothing here can block submit.
+      let meta: Record<string, string> = {};
+      try {
+        meta = {
+          userAgent: navigator.userAgent,
+          language: navigator.language,
+          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+          screen: `${window.screen.width}x${window.screen.height}`,
+          referrer: document.referrer,
+        };
+      } catch {
+        // ignore — analytics are optional
+      }
+
       await fetch('/api/seo-checker/lead/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone, url, score }),
+        body: JSON.stringify({ name, email, phone, url, score, ...meta }),
       });
     } catch {
       // best-effort; ignore network errors and unlock anyway
