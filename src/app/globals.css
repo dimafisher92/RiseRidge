@@ -180,9 +180,9 @@ a {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background-image: url('/icon.svg');
+    background-image: url('/logos/riseridge/png/monogram-fullcolor.png');
     background-repeat: repeat;
-    background-size: 140px auto;
+    background-size: 150px auto;
     opacity: 0.05;
     transform: rotate(-30deg) scale(1.4);
   }

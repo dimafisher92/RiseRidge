@@ -33,10 +33,7 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
     <div className="print-report relative mx-auto max-w-4xl">
       {/* Print-only header (logo) — hidden on screen, shown in the PDF */}
       <div className="print-only mb-6 hidden items-center justify-between border-b border-gray-200 pb-4">
-        <span className="flex items-center gap-2">
-          <Image src="/icon.svg" alt="RiseRidge" width={32} height={32} style={{ height: 28, width: 28 }} />
-          <span className="font-display text-lg font-semibold text-gray-900">RISERIDGE</span>
-        </span>
+        <Image src="/logos/riseridge/png/lockup-horizontal.png" alt="RiseRidge" width={2019} height={566} style={{ height: 44, width: 'auto' }} />
         <span className="text-xs text-gray-500">SEO Report · riseridge.io</span>
       </div>
       {/* Print-only diagonal watermark */}
