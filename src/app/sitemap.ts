@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { client } from '../../tina/__generated__/client';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://arcwave.io';
+  const baseUrl = 'https://riseridge.io';
 
   let blogEntries: MetadataRoute.Sitemap = [];
   try {

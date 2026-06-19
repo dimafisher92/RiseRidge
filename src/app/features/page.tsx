@@ -8,10 +8,10 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'AI SEO Tools & Features',
   description:
-    'Explore ArcWave\'s AI-powered SEO toolkit: automation engine, content intelligence, rank tracking, technical audits, backlink analysis, LLM visibility monitoring, and more.',
+    'Explore RiseRidge\'s AI-powered SEO toolkit: automation engine, content intelligence, rank tracking, technical audits, backlink analysis, LLM visibility monitoring, and more.',
   alternates: { canonical: '/features' },
   openGraph: {
-    title: 'AI SEO Tools & Features | ArcWave',
+    title: 'AI SEO Tools & Features | RiseRidge',
     description: 'Discover the full suite of AI-powered SEO tools that power our clients\' organic growth.',
   },
 };
@@ -218,7 +218,7 @@ export default function FeaturesPage() {
                 <ul className="mt-6 space-y-3">
                   {feature.capabilities.map((cap) => (
                     <li key={cap} className="flex items-start gap-3 text-sm text-muted">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00D4AA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 flex-shrink-0">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E3A2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 flex-shrink-0">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                       {cap}
@@ -253,7 +253,7 @@ export default function FeaturesPage() {
       {/* CTA */}
       <CTASection
         heading="Ready to See These Tools in Action?"
-        description="Book a demo and discover how ArcWave's toolkit can transform your organic search performance."
+        description="Book a demo and discover how RiseRidge's toolkit can transform your organic search performance."
         primaryLabel="Book a Demo"
       />
     </>

@@ -10,10 +10,10 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'SEO Case Studies & Results',
   description:
-    'Real results from real clients. See how ArcWave\'s AI-powered SEO drives revenue growth, organic traffic increases, and ranking improvements for e-commerce and growth-stage businesses.',
+    'Real results from real clients. See how RiseRidge\'s AI-powered SEO drives revenue growth, organic traffic increases, and ranking improvements for e-commerce and growth-stage businesses.',
   alternates: { canonical: '/case-studies' },
   openGraph: {
-    title: 'SEO Case Studies & Results | ArcWave',
+    title: 'SEO Case Studies & Results | RiseRidge',
     description: 'Proven results: $21K/day revenue, 255% organic growth, 277% revenue increase. See our AI SEO case studies.',
   },
 };
@@ -32,7 +32,7 @@ const CASE_STUDIES = [
     challenge:
       'A growing e-commerce brand was over-reliant on paid advertising with minimal organic presence. Rising CPCs were eating into margins, and the brand had no sustainable organic traffic strategy. Their site had significant technical debt, thin content, and a fragmented site architecture.',
     solution:
-      'ArcWave deployed our AI automation engine for a comprehensive technical audit, identifying and fixing 400+ critical issues in the first week. We rebuilt site architecture based on AI-driven keyword clustering, implemented strategic content silos, and launched an automated internal linking strategy that distributed authority across high-value pages.',
+      'RiseRidge deployed our AI automation engine for a comprehensive technical audit, identifying and fixing 400+ critical issues in the first week. We rebuilt site architecture based on AI-driven keyword clustering, implemented strategic content silos, and launched an automated internal linking strategy that distributed authority across high-value pages.',
     results: [
       { value: '$21K/day', label: 'Peak Daily Revenue' },
       { value: '340%', label: 'Organic Traffic Growth' },
@@ -58,7 +58,7 @@ const CASE_STUDIES = [
     challenge:
       'A B2B SaaS platform had plateaued in organic growth after 3 years. Content had become stale, keyword rankings were declining, and competitors were aggressively investing in SEO. The marketing team was small and couldn\'t keep up with the volume of content needed to compete.',
     solution:
-      'ArcWave performed a full technical overhaul using our AI audit engine, then deployed our Content Intelligence platform for programmatic content creation at scale. We identified 2,000+ keyword opportunities through gap analysis, prioritized by revenue potential, and built automated content workflows that increased output by 12x while maintaining quality and brand voice.',
+      'RiseRidge performed a full technical overhaul using our AI audit engine, then deployed our Content Intelligence platform for programmatic content creation at scale. We identified 2,000+ keyword opportunities through gap analysis, prioritized by revenue potential, and built automated content workflows that increased output by 12x while maintaining quality and brand voice.',
     results: [
       { value: '255%', label: 'Revenue Growth YoY' },
       { value: '420%', label: 'Top 10 Keywords' },
@@ -84,7 +84,7 @@ const CASE_STUDIES = [
     challenge:
       'A brand operating in a restricted advertising niche had extremely limited paid marketing options. With only 1,717 monthly organic sessions and 34 checkouts, the business had almost no scalable growth channel.',
     solution:
-      'ArcWave built a full organic growth strategy tailored to restricted-niche compliance, deploying AI-driven keyword targeting, content authority building, and technical SEO optimization to capture search demand competitors couldn\'t reach through paid channels.',
+      'RiseRidge built a full organic growth strategy tailored to restricted-niche compliance, deploying AI-driven keyword targeting, content authority building, and technical SEO optimization to capture search demand competitors couldn\'t reach through paid channels.',
     results: [
       { value: '+969%', label: 'Organic Sessions' },
       { value: '+1200%', label: 'Checkouts Growth' },
@@ -97,7 +97,7 @@ const CASE_STUDIES = [
     challenge:
       'An e-commerce brand needed rapid, measurable SEO results to justify shifting budget from paid channels. With a $67 AOV and moderate traffic, even small conversion improvements could meaningfully impact revenue.',
     solution:
-      'ArcWave executed a focused 60-day sprint using AI-powered on-page optimization, add-to-cart funnel improvements, and structured content enhancements. Organic sessions grew 15% while add-to-cart rate improved 9%, compounding into a 39% checkout increase.',
+      'RiseRidge executed a focused 60-day sprint using AI-powered on-page optimization, add-to-cart funnel improvements, and structured content enhancements. Organic sessions grew 15% while add-to-cart rate improved 9%, compounding into a 39% checkout increase.',
     results: [
       { value: '+39%', label: 'Checkouts Growth' },
       { value: '$44.9K/yr', label: 'Organic Revenue Run-Rate' },
@@ -110,7 +110,7 @@ const CASE_STUDIES = [
     challenge:
       'A DTC e-commerce brand with a $122 AOV needed to reduce dependence on paid acquisition and build a sustainable organic revenue channel. Despite decent add-to-cart rates, organic traffic was underperforming relative to market potential.',
     solution:
-      'Over a 90-day engagement, ArcWave deployed comprehensive technical SEO fixes, AI-driven content strategy, and conversion funnel optimization. Organic sessions grew 93%, add-to-cart rate improved 11%, and reached checkouts increased 140% — all while maintaining the store\'s 2.5% conversion rate and $122 AOV.',
+      'Over a 90-day engagement, RiseRidge deployed comprehensive technical SEO fixes, AI-driven content strategy, and conversion funnel optimization. Organic sessions grew 93%, add-to-cart rate improved 11%, and reached checkouts increased 140% — all while maintaining the store\'s 2.5% conversion rate and $122 AOV.',
     results: [
       { value: '+93%', label: 'Organic Sessions' },
       { value: '+140%', label: 'Checkouts Growth' },
@@ -142,7 +142,7 @@ export default function CaseStudiesPage() {
             <span className="text-gradient-blue-cyan">Real Growth.</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            See how ArcWave&apos;s AI-driven SEO has driven measurable revenue growth for
+            See how RiseRidge&apos;s AI-driven SEO has driven measurable revenue growth for
             e-commerce brands, SaaS platforms, and multi-location businesses.
           </p>
         </div>
@@ -214,7 +214,7 @@ export default function CaseStudiesPage() {
       {/* CTA */}
       <CTASection
         heading="Ready to Be Our Next Success Story?"
-        description="Book a free consultation and discover how ArcWave can drive similar results for your business."
+        description="Book a free consultation and discover how RiseRidge can drive similar results for your business."
         primaryLabel="Get Your Free Audit"
         secondaryLabel="Explore Our Features"
         secondaryHref="/features"

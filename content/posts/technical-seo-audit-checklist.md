@@ -4,7 +4,7 @@ excerpt: "A comprehensive technical SEO audit covers hundreds of signals. Here's
 date: "2025-02-18T09:00:00.000Z"
 category: "Technical SEO"
 author:
-  name: "ArcWave Team"
+  name: "RiseRidge Team"
 coverImage: ""
 ---
 

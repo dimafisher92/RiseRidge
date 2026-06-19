@@ -33,8 +33,11 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
     <div className="print-report relative mx-auto max-w-4xl">
       {/* Print-only header (logo) — hidden on screen, shown in the PDF */}
       <div className="print-only mb-6 hidden items-center justify-between border-b border-gray-200 pb-4">
-        <Image src="/logos/logo-horizontal.png" alt="ArcWave" width={1040} height={128} style={{ height: 32, width: 'auto' }} />
-        <span className="text-xs text-gray-500">SEO Report · arcwave.io</span>
+        <span className="flex items-center gap-2">
+          <Image src="/icon.svg" alt="RiseRidge" width={32} height={32} style={{ height: 28, width: 28 }} />
+          <span className="font-display text-lg font-semibold text-gray-900">RISERIDGE</span>
+        </span>
+        <span className="text-xs text-gray-500">SEO Report · riseridge.io</span>
       </div>
       {/* Print-only diagonal watermark */}
       <div className="print-watermark" aria-hidden="true" />
@@ -53,7 +56,7 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
 
             {result.searchAtlasManaged && (
               <span className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-success/40 bg-success/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-success">
-                <Sparkles size={12} /> Optimized by ArcWave
+                <Sparkles size={12} /> Optimized by RiseRidge
               </span>
             )}
 
@@ -139,7 +142,7 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
         <div className="mt-10 flex flex-col items-center justify-between gap-4 rounded-2xl border border-border bg-navy/60 p-6 sm:flex-row">
           <div className="text-center sm:text-left">
             <p className="font-display font-[700] text-ice">Want us to fix these for you?</p>
-            <p className="text-sm text-muted">ArcWave turns this report into ranked pages and real customers.</p>
+            <p className="text-sm text-muted">RiseRidge turns this report into ranked pages and real customers.</p>
           </div>
           <div className="flex items-center gap-3">
             <PdfButton />

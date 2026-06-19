@@ -6,12 +6,12 @@ import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'About ArcWave — AI-Driven SEO Agency',
+  title: 'About RiseRidge — AI-Driven SEO Agency',
   description:
-    'ArcWave engineers organic search growth that compounds. AI-powered SEO infrastructure with hands-on strategic execution. Learn about our mission and values.',
+    'RiseRidge engineers organic search growth that compounds. AI-powered SEO infrastructure with hands-on strategic execution. Learn about our mission and values.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About ArcWave — AI-Driven SEO Agency',
+    title: 'About RiseRidge — AI-Driven SEO Agency',
     description: 'We engineer organic search growth that compounds. Meet the AI SEO agency built for measurable growth.',
   },
 };
@@ -75,7 +75,7 @@ const DIFFERENTIATORS = [
 ];
 
 const MILESTONES = [
-  { year: '2022', title: 'Founded', description: 'ArcWave launched with a mission to engineer organic search growth that compounds.' },
+  { year: '2022', title: 'Founded', description: 'RiseRidge launched with a mission to engineer organic search growth that compounds.' },
   { year: '2023', title: 'AI Engine v1', description: 'Released our first AI SEO automation engine, serving 50+ clients.' },
   { year: '2024', title: '$25M+ in Client Revenue', description: 'Crossed $25M in cumulative revenue generated for our clients.' },
   { year: '2025', title: 'LLM Visibility Launch', description: 'Pioneered AI search visibility monitoring across ChatGPT, Claude, Gemini, and Perplexity.' },
@@ -105,7 +105,7 @@ export default function AboutPage() {
             <span className="text-gradient-blue-cyan">We Navigate.</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            ArcWave engineers organic search growth that compounds. We combine AI-powered SEO
+            RiseRidge engineers organic search growth that compounds. We combine AI-powered SEO
             infrastructure with hands-on strategic execution to move businesses from invisible to undeniable.
           </p>
         </div>
@@ -160,13 +160,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose ArcWave */}
+      {/* Why Choose RiseRidge */}
       <section className="py-24" aria-labelledby="why-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="03" text="Differentiators" />
             <h2 id="why-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
-              Why Choose ArcWave
+              Why Choose RiseRidge
             </h2>
             <p className="mt-4 text-muted max-w-2xl">
               We&apos;re not another SEO agency. Here&apos;s what makes us fundamentally different.

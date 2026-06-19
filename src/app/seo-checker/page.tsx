@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'Get a free, instant SEO health check for any website. See your score and a plain-English breakdown of what to fix and why it matters for your business — no jargon, no sign-up to start.',
   alternates: { canonical: '/seo-checker' },
   openGraph: {
-    title: 'Free SEO Website Checker | ArcWave',
+    title: 'Free SEO Website Checker | RiseRidge',
     description:
       'Instantly audit any website and discover what is holding back your search rankings — explained in plain business language.',
   },
@@ -50,7 +50,7 @@ export default function SeoCheckerPage() {
 
       <CTASection
         heading="Turn your report into rankings"
-        description="ArcWave fixes every issue in your report and engineers the organic growth that brings real customers."
+        description="RiseRidge fixes every issue in your report and engineers the organic growth that brings real customers."
         primaryLabel="Get Your Free Strategy Call"
         secondaryLabel="See Our Results"
         secondaryHref="/case-studies"

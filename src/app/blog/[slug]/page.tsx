@@ -30,11 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     });
     const post = result.data.post;
     return {
-      title: `${post.title} | ArcWave Blog`,
+      title: `${post.title} | RiseRidge Blog`,
       description: post.excerpt,
       alternates: { canonical: `/blog/${params.slug}` },
       openGraph: {
-        title: `${post.title} | ArcWave`,
+        title: `${post.title} | RiseRidge`,
         description: post.excerpt,
         type: 'article',
         publishedTime: post.date,
@@ -143,7 +143,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <CTASection
         heading="Want Results Like These?"
-        description="Let ArcWave's AI-powered SEO put your business on page one — and keep it there."
+        description="Let RiseRidge's AI-powered SEO put your business on page one — and keep it there."
         primaryLabel="Get Your Free Audit"
         secondaryLabel="Read More Posts"
         secondaryHref="/blog"

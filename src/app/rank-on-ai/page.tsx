@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'Optimize your brand visibility across AI search platforms like ChatGPT, Claude, Gemini, and Perplexity. Monitor, measure, and improve how AI recommends your business.',
   alternates: { canonical: '/rank-on-ai' },
   openGraph: {
-    title: 'Rank on AI Search — LLM Visibility | ArcWave',
+    title: 'Rank on AI Search — LLM Visibility | RiseRidge',
     description: 'The future of search is AI. Make sure your brand is visible when AI answers questions about your industry.',
   },
 };
@@ -172,7 +172,7 @@ export default function RankOnAIPage() {
                     'Most competitors haven\'t started optimizing for AI yet',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-muted">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8C42" strokeWidth="2" className="mt-0.5 flex-shrink-0">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A9874E" strokeWidth="2" className="mt-0.5 flex-shrink-0">
                         <circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" />
                       </svg>
                       {item}
@@ -186,7 +186,7 @@ export default function RankOnAIPage() {
                 <h3 className="font-display font-bold text-xl text-ice mb-4">The Opportunity</h3>
                 <p className="text-muted leading-relaxed">
                   Brands that optimize for AI visibility now will capture an outsized share of this
-                  emerging channel. ArcWave&apos;s LLM Visibility Monitor gives you the tools to
+                  emerging channel. RiseRidge&apos;s LLM Visibility Monitor gives you the tools to
                   track, optimize, and measure your AI search presence.
                 </p>
                 <ul className="mt-6 space-y-3">
@@ -197,7 +197,7 @@ export default function RankOnAIPage() {
                     'Benchmark against competitors in AI search results',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-muted">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00D4AA" strokeWidth="2" className="mt-0.5 flex-shrink-0">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E3A2E" strokeWidth="2" className="mt-0.5 flex-shrink-0">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                       {item}
@@ -210,7 +210,7 @@ export default function RankOnAIPage() {
         </div>
       </section>
 
-      {/* How ArcWave Helps — 3-Step Process */}
+      {/* How RiseRidge Helps — 3-Step Process */}
       <section className="border-t border-border bg-surface/30 py-24" aria-labelledby="process-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
@@ -230,7 +230,7 @@ export default function RankOnAIPage() {
                     <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {step.details.map((detail) => (
                         <li key={detail} className="flex items-start gap-2 text-sm text-muted">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" strokeWidth="2" className="mt-0.5 flex-shrink-0">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1E3A2E" strokeWidth="2" className="mt-0.5 flex-shrink-0">
                             <polyline points="20 6 9 17 4 12" />
                           </svg>
                           {detail}

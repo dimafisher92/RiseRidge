@@ -2,199 +2,119 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
-import GlowHero from '@/components/ui/hero-1';
 import { useAuditPopup } from './AuditPopup';
 
-function ElegantShape({
-  className,
-  delay = 0,
-  width = 400,
-  height = 100,
-  rotate = 0,
-  gradient = 'from-electric/[0.08]',
-}: {
-  className?: string;
-  delay?: number;
-  width?: number;
-  height?: number;
-  rotate?: number;
-  gradient?: string;
-}) {
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: -150,
-        rotate: rotate - 15,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        rotate: rotate,
-      }}
-      transition={{
-        duration: 2.4,
-        delay,
-        ease: [0.23, 0.86, 0.39, 0.96],
-        opacity: { duration: 1.2 },
-      }}
-      className={cn('absolute', className)}
-    >
-      <motion.div
-        animate={{
-          y: [0, 15, 0],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: 'easeInOut',
-        }}
-        style={{
-          width,
-          height,
-        }}
-        className="relative"
-      >
-        <div
-          className={cn(
-            'absolute inset-0 rounded-full',
-            'bg-gradient-to-r to-transparent',
-            gradient,
-            'backdrop-blur-[2px] border-2 border-electric/[0.15]',
-            'shadow-[0_8px_32px_0_rgba(0,194,255,0.1)]',
-            'after:absolute after:inset-0 after:rounded-full',
-            'after:bg-[radial-gradient(circle_at_50%_50%,rgba(0,194,255,0.2),transparent_70%)]'
-          )}
-        />
-      </motion.div>
-    </motion.div>
-  );
-}
+const TRUST_PILLS = [
+  'Free 20-min audit',
+  'Month-to-month, no lock-in',
+  'First results in ~90 days',
+];
 
 export function HeroSection() {
   const { open: openAuditPopup } = useAuditPopup();
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Gradient backdrop */}
-      <div className="absolute inset-0 bg-gradient-to-br from-electric/[0.05] via-transparent to-cyan/[0.05] blur-3xl" />
 
-      {/* Animated geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <ElegantShape
-          delay={0.3}
-          width={600}
-          height={140}
-          rotate={12}
-          gradient="from-electric/[0.15]"
-          className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
+  return (
+    <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden pt-28 pb-20">
+      {/* Animated ridgeline backdrop */}
+      <svg
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-[60%] w-full"
+        viewBox="0 0 1440 400"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <motion.path
+          d="M0,320 L180,250 L340,300 L520,180 L700,240 L880,120 L1080,210 L1280,90 L1440,160"
+          fill="none"
+          stroke="#1E3A2E"
+          strokeWidth="1.5"
+          strokeOpacity="0.18"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2.4, ease: [0.16, 1, 0.3, 1] }}
         />
-        <ElegantShape
-          delay={0.5}
-          width={500}
-          height={120}
-          rotate={-15}
-          gradient="from-signal/[0.15]"
-          className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
+        <motion.path
+          d="M0,360 L200,300 L380,340 L560,250 L760,300 L960,200 L1160,280 L1360,170 L1440,220"
+          fill="none"
+          stroke="#A9874E"
+          strokeWidth="1.5"
+          strokeOpacity="0.22"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         />
-        <ElegantShape
-          delay={0.4}
-          width={300}
-          height={80}
-          rotate={-8}
-          gradient="from-cyan/[0.15]"
-          className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
-        />
-        <ElegantShape
-          delay={0.6}
-          width={200}
-          height={60}
-          rotate={20}
-          gradient="from-gold/[0.15]"
-          className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
-        />
-        <ElegantShape
-          delay={0.7}
-          width={150}
-          height={40}
-          rotate={-25}
-          gradient="from-electric/[0.10]"
-          className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
-        />
-      </div>
+      </svg>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan mb-6">
-            AI-Driven SEO Agency
+          <p className="font-mono text-[11px] uppercase tracking-[0.26em] text-brass mb-7">
+            AI-Driven SEO Agency · Est 2020
           </p>
-          <GlowHero
-            label="AI-Driven SEO."
-            glowText="Measurable Growth."
-            glowTextSize="xl"
-          />
-          <p className="mt-6 text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
-            ArcWave combines AI-powered SEO infrastructure with hands-on strategic
-            execution to move businesses from invisible to undeniable — one wave at a time.
+          <h1 className="font-display font-semibold leading-[0.98] text-ink text-5xl sm:text-6xl md:text-7xl">
+            AI-Driven SEO.
+            <br />
+            Measurable <span className="italic text-brass">growth.</span>
+          </h1>
+          <p className="mx-auto mt-7 max-w-2xl text-lg md:text-xl text-body leading-relaxed">
+            RiseRidge pairs AI-powered SEO infrastructure with hands-on strategy to move
+            businesses from invisible to undeniable — and prove every gain in the numbers.
           </p>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
             onClick={openAuditPopup}
-            className="rounded-lg bg-electric px-8 py-4 font-body font-medium text-white text-lg transition-all duration-300 hover:bg-signal hover:glow-blue"
+            className="rounded-[3px] bg-forest px-8 py-4 font-body font-medium text-on-dark text-base transition-all duration-300 hover:bg-forest-hover hover:glow-blue"
           >
             Get Your Free Audit
           </button>
           <Link
             href="/case-studies"
-            className="rounded-lg border border-border px-8 py-4 font-body font-medium text-ice text-lg transition-all duration-300 hover:border-electric hover:text-electric"
+            className="rounded-[3px] border border-ink/15 px-8 py-4 font-body font-medium text-ink text-base transition-all duration-300 hover:border-forest hover:text-forest"
           >
-            See Our Results
+            See Our Results ↗
           </Link>
         </motion.div>
+
+        {/* Trust pills */}
+        <motion.ul
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm text-body"
+        >
+          {TRUST_PILLS.map((pill) => (
+            <li key={pill} className="inline-flex items-center gap-2">
+              <span className="text-brass" aria-hidden="true">✓</span>
+              {pill}
+            </li>
+          ))}
+        </motion.ul>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-5 text-sm text-muted"
+          transition={{ duration: 0.8, delay: 0.55 }}
+          className="mt-8 text-sm text-subtle"
         >
           Curious where you stand?{' '}
-          <Link href="/seo-checker" className="text-electric underline-offset-4 hover:underline">
+          <Link
+            href="/seo-checker"
+            className="font-medium text-forest underline underline-offset-4 decoration-brass/40 hover:text-brass transition-colors"
+          >
             Try our free SEO checker
           </Link>{' '}
           — instant results, no sign-up to start.
         </motion.p>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-            className="w-6 h-10 rounded-full border-2 border-muted/30 flex items-start justify-center p-1.5"
-          >
-            <div className="w-1 h-2 rounded-full bg-electric" />
-          </motion.div>
-        </motion.div>
       </div>
-
-      {/* Top/bottom fade */}
-      <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-void/80 pointer-events-none" />
     </section>
   );
 }

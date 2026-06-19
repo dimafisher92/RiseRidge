@@ -46,7 +46,7 @@ export function AuditLoader({ url }: { url: string }) {
             >
               <span
                 className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${
-                  done ? 'bg-success/15 text-success' : current ? 'bg-electric/15 text-electric' : 'bg-white/5 text-muted'
+                  done ? 'bg-success/15 text-success' : current ? 'bg-electric/15 text-electric' : 'bg-ink/5 text-muted'
                 }`}
               >
                 {done ? (

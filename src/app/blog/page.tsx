@@ -8,14 +8,14 @@ import { JsonLd } from '@/components/JsonLd';
 import { BlogCard } from '@/components/BlogCard';
 
 export const metadata: Metadata = {
-  title: 'SEO Blog & Insights | ArcWave',
+  title: 'SEO Blog & Insights | RiseRidge',
   description:
-    'Expert insights on AI-powered SEO, content strategy, technical optimization, and search visibility. Written by the ArcWave team.',
+    'Expert insights on AI-powered SEO, content strategy, technical optimization, and search visibility. Written by the RiseRidge team.',
   alternates: { canonical: '/blog' },
   openGraph: {
-    title: 'SEO Blog & Insights | ArcWave',
+    title: 'SEO Blog & Insights | RiseRidge',
     description:
-      'Expert insights on AI-powered SEO, content strategy, and search visibility from the ArcWave team.',
+      'Expert insights on AI-powered SEO, content strategy, and search visibility from the RiseRidge team.',
   },
 };
 
@@ -49,7 +49,7 @@ export default async function BlogPage() {
             Insights & Strategy
           </p>
           <h1 className="font-display font-[800] text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
-            The ArcWave{' '}
+            The RiseRidge{' '}
             <span className="text-gradient-blue-cyan">SEO Blog</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">

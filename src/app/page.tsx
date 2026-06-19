@@ -18,7 +18,7 @@ const SERVICES = [
       </svg>
     ),
     title: 'AI SEO Automation',
-    description: 'Our AI engine identifies technical issues, generates optimized fixes, and deploys changes automatically — no manual intervention needed.',
+    description: 'Our engine identifies technical issues, generates optimized fixes, and deploys changes automatically — no manual intervention needed.',
   },
   {
     icon: (
@@ -84,33 +84,33 @@ export default function HomePage() {
       {/* Hero */}
       <HeroSection />
 
-      {/* Trust Badges */}
-      <section className="border-t border-border py-16" aria-label="Award-winning and trusted by leading brands">
+      {/* Award + Trusted brands */}
+      <section className="border-y border-line bg-panel py-16" aria-label="Award-winning and trusted by leading brands">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="text-center text-xs text-muted uppercase tracking-widest font-mono mb-10">
-            Trusted by Growth-Stage Brands
+          <p className="text-center text-[10.5px] text-subtle uppercase tracking-[0.2em] font-mono mb-10">
+            Trusted by growth-stage brands
           </p>
 
           {/* Award badge */}
           <ScrollReveal className="flex justify-center mb-12">
-            <div className="flex items-center gap-6 rounded-xl border border-border bg-navy/60 p-5 pr-10 hover:border-electric/40 transition-all duration-300">
-              <div className="relative h-48 w-[140px] shrink-0 overflow-hidden rounded-lg border border-border">
+            <div className="flex items-center gap-6 rounded-[6px] border border-line bg-white p-5 pr-10 shadow-[0_10px_34px_rgba(21,20,15,0.05)] hover:shadow-[0_16px_44px_rgba(21,20,15,0.10)] transition-all duration-[400ms]">
+              <div className="relative h-48 w-[140px] shrink-0 overflow-hidden rounded-[5px] border border-line">
                 <Image
                   src="/award2.png"
-                  alt="TOP USA Awards trophy presented to ArcWave"
+                  alt="TOP USA Awards trophy presented to RiseRidge"
                   fill
                   sizes="140px"
                   className="object-cover"
                 />
               </div>
               <div>
-                <span className="font-mono text-xs uppercase tracking-wider text-gold">
-                  Award-Winning
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-brass">
+                  Award-winning
                 </span>
-                <p className="mt-2 font-display font-bold text-ice text-base">
+                <p className="mt-2 font-display font-semibold text-ink text-xl">
                   TOP 100 USA Entrepreneurs
                 </p>
-                <p className="mt-1 text-sm text-muted">TOP USA Awards · 2023</p>
+                <p className="mt-1 text-sm text-subtle">TOP USA Awards · 2023</p>
               </div>
             </div>
           </ScrollReveal>
@@ -119,7 +119,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
             {LOGOS.map((logo) =>
               logo.opaque ? (
-                <span key={logo.src} className="inline-flex items-center justify-center bg-white/10 rounded px-3 py-2 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <span key={logo.src} className="inline-flex items-center justify-center rounded px-3 py-2 opacity-70 hover:opacity-100 transition-opacity duration-300">
                   <Image
                     src={logo.src}
                     alt={logo.alt}
@@ -135,7 +135,7 @@ export default function HomePage() {
                   alt={logo.alt}
                   width={logo.w}
                   height={logo.h}
-                  className="h-7 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-90 transition-opacity duration-300"
+                  className="h-7 w-auto object-contain brightness-0 opacity-45 hover:opacity-75 transition-opacity duration-300"
                 />
               )
             )}
@@ -154,10 +154,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="01" text="Services" />
-            <h2 id="services-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
-              AI-Powered SEO Solutions
+            <h2 id="services-heading" className="mt-4 font-display font-semibold text-4xl md:text-5xl text-ink">
+              AI-powered SEO solutions, end to end.
             </h2>
-            <p className="mt-4 text-muted max-w-2xl">
+            <p className="mt-4 text-body max-w-2xl">
               From technical audits to content strategy, our AI-powered toolkit handles every aspect of your organic growth.
             </p>
           </ScrollReveal>
@@ -166,39 +166,49 @@ export default function HomePage() {
               <FeatureCard key={service.title} {...service} index={i} />
             ))}
           </div>
-          <ScrollReveal delay={0.3} className="mt-8 text-center">
+          <ScrollReveal delay={0.3} className="mt-8">
             <Link
               href="/features"
-              className="inline-flex items-center gap-2 text-sm text-electric hover:text-signal transition-colors font-medium"
+              className="inline-flex items-center gap-2 text-sm font-medium text-forest hover:text-brass transition-colors"
             >
-              Explore all features
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-              </svg>
+              Explore all features ↗
             </Link>
           </ScrollReveal>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="border-t border-border bg-surface/30 py-24" aria-labelledby="process-heading">
+      <section className="border-t border-line bg-panel py-24" aria-labelledby="process-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="02" text="Process" />
-            <h2 id="process-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
-              How It Works
+            <h2 id="process-heading" className="mt-4 font-display font-semibold text-4xl md:text-5xl text-ink">
+              How it works
             </h2>
           </ScrollReveal>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {STEPS.map((step, i) => (
-              <ScrollReveal key={step.number} delay={i * 0.15}>
-                <div className="relative p-8 rounded-xl border border-border bg-navy/40 hover:border-electric/30 transition-all duration-300">
-                  <span className="font-mono text-4xl font-bold text-electric/20">{step.number}</span>
-                  <h3 className="mt-2 font-display font-bold text-xl text-ice">{step.title}</h3>
-                  <p className="mt-3 text-sm text-muted leading-relaxed">{step.description}</p>
-                </div>
-              </ScrollReveal>
-            ))}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {STEPS.map((step, i) => {
+              const isForest = i === 2;
+              return (
+                <ScrollReveal key={step.number} delay={i * 0.15}>
+                  <div
+                    className={`relative h-full rounded-[6px] border p-8 transition-all duration-[400ms] ${
+                      isForest
+                        ? 'border-forest bg-forest'
+                        : 'border-line bg-white shadow-[0_10px_34px_rgba(21,20,15,0.05)]'
+                    }`}
+                  >
+                    <span className="font-mono text-sm text-brass">{step.number}</span>
+                    <h3 className={`mt-3 font-display font-semibold text-2xl ${isForest ? 'text-on-dark' : 'text-ink'}`}>
+                      {step.title}
+                    </h3>
+                    <p className={`mt-3 text-sm leading-relaxed ${isForest ? 'text-on-dark-muted' : 'text-body'}`}>
+                      {step.description}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -208,42 +218,39 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="03" text="Results" />
-            <h2 id="featured-case-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
-              Proven Results
+            <h2 id="featured-case-heading" className="mt-4 font-display font-semibold text-4xl md:text-5xl text-ink">
+              Proven results
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <div className="mt-12 rounded-2xl border border-border bg-navy/60 p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="mt-12 rounded-[6px] border border-line bg-white p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center shadow-[0_10px_34px_rgba(21,20,15,0.05)]">
               <div>
-                <span className="inline-block rounded-full bg-electric/10 px-3 py-1 font-mono text-xs text-electric uppercase tracking-wider">
-                  E-Commerce
+                <span className="inline-block rounded-full border border-tag-border bg-tag-bg px-3 py-1 font-mono text-[11px] text-forest uppercase tracking-[0.14em]">
+                  E-commerce
                 </span>
-                <h3 className="mt-4 font-display font-bold text-2xl text-ice">
-                  Scaled Organic Revenue to $21K/Day in 4 Months
+                <h3 className="mt-4 font-display font-semibold text-3xl text-ink leading-tight">
+                  Scaled organic revenue to $21K/day in 4 months.
                 </h3>
-                <p className="mt-4 text-muted leading-relaxed">
-                  An e-commerce brand over-reliant on paid ads partnered with ArcWave. We deployed our AI automation engine for a full technical overhaul, rebuilt site architecture, and implemented strategic content clusters.
+                <p className="mt-4 text-body leading-relaxed">
+                  An e-commerce brand over-reliant on paid ads partnered with RiseRidge. We deployed our AI automation engine for a full technical overhaul, rebuilt site architecture, and implemented strategic content clusters.
                 </p>
                 <Link
                   href="/case-studies"
-                  className="mt-6 inline-flex items-center gap-2 text-sm text-electric hover:text-signal transition-colors font-medium"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-forest hover:text-brass transition-colors"
                 >
-                  Read all case studies
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-                  </svg>
+                  Read all case studies ↗
                 </Link>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '$21K/day', label: 'Peak Revenue' },
-                  { value: '340%', label: 'Traffic Growth' },
-                  { value: '4 mo', label: 'Time to Results' },
-                  { value: '#1-3', label: 'Avg Position' },
+                  { value: '$21K/day', label: 'Peak revenue' },
+                  { value: '340%', label: 'Traffic growth' },
+                  { value: '4 mo', label: 'Time to results' },
+                  { value: '#1–3', label: 'Avg position' },
                 ].map((stat) => (
-                  <div key={stat.label} className="rounded-lg bg-surface/80 p-5 text-center border border-border">
-                    <div className="font-mono text-xl font-bold text-gold">{stat.value}</div>
-                    <div className="mt-1 text-[10px] text-muted uppercase tracking-wider font-mono">{stat.label}</div>
+                  <div key={stat.label} className="rounded-[6px] bg-panel p-5 text-center border border-line">
+                    <div className="font-display text-2xl font-semibold text-brass">{stat.value}</div>
+                    <div className="mt-1 text-[10px] text-subtle uppercase tracking-[0.14em] font-mono">{stat.label}</div>
                   </div>
                 ))}
               </div>

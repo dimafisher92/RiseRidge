@@ -12,31 +12,31 @@ export function JsonLd({
   type: JsonLdType;
   breadcrumbs?: BreadcrumbItem[];
 }) {
-  const baseUrl = 'https://arcwave.io';
+  const baseUrl = 'https://riseridge.io';
 
   const schemas: Record<string, object> = {
     organization: {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'ArcWave',
+      name: 'RiseRidge',
       url: baseUrl,
-      logo: `${baseUrl}/logos/logo-icon.png`,
+      logo: `${baseUrl}/icon.svg`,
       description:
         'AI-driven SEO agency that engineers organic search growth. We combine AI-powered SEO infrastructure with hands-on strategic execution to move businesses from invisible to undeniable.',
       sameAs: [
-        'https://linkedin.com/company/arcwave',
-        'https://twitter.com/arcwave',
+        'https://linkedin.com/company/riseridge',
+        'https://twitter.com/riseridge',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        email: 'hello@arcwave.io',
+        email: 'hello@riseridge.io',
         contactType: 'sales',
       },
     },
     website: {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'ArcWave',
+      name: 'RiseRidge',
       url: baseUrl,
       description: 'AI-Driven SEO. Measurable Growth.',
       potentialAction: {

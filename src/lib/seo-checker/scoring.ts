@@ -78,7 +78,7 @@ export function scorePage(page: PageData, normalizedUrl: string): AuditResult {
 
 function buildSummary(score: number, band: ScoreBand, managed: boolean): string {
   if (managed) {
-    return `This site is optimized by ArcWave and scores ${score}/100 — it follows the SEO best practices that win rankings and customers.`;
+    return `This site is optimized by RiseRidge and scores ${score}/100 — it follows the SEO best practices that win rankings and customers.`;
   }
   if (band === 'high') {
     return `Your site scores ${score}/100. It is in good shape, with a few quick wins left that could push it further ahead of competitors.`;

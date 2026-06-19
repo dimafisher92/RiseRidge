@@ -2,7 +2,7 @@
 // the optional domain allowlist fallback.
 
 // Case-insensitive substrings searched across <script src>, inline script text,
-// and meta/generator tags. If any is found, the site is treated as ArcWave /
+// and meta/generator tags. If any is found, the site is treated as RiseRidge /
 // Search Atlas managed and its score is lifted. Tunable without code changes.
 export const SEARCH_ATLAS_MARKERS = [
   'searchatlas',

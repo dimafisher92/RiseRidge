@@ -33,9 +33,9 @@ function VideoCard({ src, label, index }: { src: string; label: string; index: n
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       viewport={{ once: true, margin: '-60px' }}
-      className="relative rounded-2xl border border-border bg-navy/60 overflow-hidden group hover:border-electric/40 transition-all duration-300"
+      className="relative rounded-[6px] border border-line bg-white overflow-hidden group shadow-[0_10px_34px_rgba(21,20,15,0.05)] hover:shadow-[0_16px_44px_rgba(21,20,15,0.10)] transition-all duration-[400ms]"
     >
-      <div className="relative aspect-[9/16] w-full bg-surface/80">
+      <div className="relative aspect-[9/16] w-full bg-panel">
         <video
           ref={videoRef}
           src={src}
@@ -49,12 +49,12 @@ function VideoCard({ src, label, index }: { src: string; label: string; index: n
         <button
           onClick={toggle}
           aria-label={playing ? `Pause ${label}` : `Play ${label}`}
-          className="absolute inset-0 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-electric/60"
+          className="absolute inset-0 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brass/60"
         >
           <motion.div
             animate={{ opacity: playing ? 0 : 1, scale: playing ? 0.8 : 1 }}
             transition={{ duration: 0.2 }}
-            className="flex items-center justify-center w-16 h-16 rounded-full bg-electric/90 shadow-lg group-hover:bg-electric transition-colors duration-200"
+            className="flex items-center justify-center w-16 h-16 rounded-full bg-forest/95 shadow-lg group-hover:bg-forest transition-colors duration-200"
           >
             <svg
               width="26"
@@ -74,7 +74,7 @@ function VideoCard({ src, label, index }: { src: string; label: string; index: n
           <button
             onClick={toggle}
             aria-label={`Pause ${label}`}
-            className="absolute bottom-4 right-4 flex items-center justify-center w-9 h-9 rounded-full bg-navy/80 border border-border hover:bg-navy transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-electric/60"
+            className="absolute bottom-4 right-4 flex items-center justify-center w-9 h-9 rounded-full bg-ink/80 hover:bg-ink transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brass/60"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="white" aria-hidden="true">
               <rect x="5" y="3" width="4" height="18" rx="1" />
@@ -91,19 +91,19 @@ export function VideoTestimonials() {
   return (
     <section
       aria-labelledby="video-reviews-heading"
-      className="border-t border-border py-24"
+      className="border-t border-line bg-canvas py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
         <ScrollReveal>
           <SectionLabel number="05" text="Video Reviews" />
           <h2
             id="video-reviews-heading"
-            className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice"
+            className="mt-4 font-display font-semibold text-4xl md:text-5xl text-ink"
           >
-            Hear It From Our Clients
+            Hear it from our clients
           </h2>
-          <p className="mt-4 text-muted max-w-2xl">
-            Real results, real voices. Watch our clients share their experience working with ArcWave.
+          <p className="mt-4 text-body max-w-2xl">
+            Real results, real voices. Watch our clients share their experience working with RiseRidge.
           </p>
         </ScrollReveal>
 
