@@ -34,7 +34,7 @@ export default function SeoCheckerPage() {
           <div className="flex justify-center">
             <SectionLabel number="00" text="Free Tool" />
           </div>
-          <h1 className="mt-6 font-display font-[800] text-4xl leading-tight text-ice md:text-6xl">
+          <h1 className="mt-6 font-display font-semibold text-4xl leading-tight text-ice md:text-6xl">
             Free <span className="text-gradient-blue-cyan">SEO Website Checker</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted">

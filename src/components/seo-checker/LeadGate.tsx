@@ -49,7 +49,7 @@ export function LeadGate({ url, score, onUnlock }: LeadGateProps) {
         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-electric/10 text-electric">
           <Lock size={22} />
         </div>
-        <h3 className="text-center font-display font-[800] text-xl text-ice">
+        <h3 className="text-center font-display font-semibold text-xl text-ice">
           Unlock your full SEO report
         </h3>
         <p className="mt-2 text-center text-sm text-muted">

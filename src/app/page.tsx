@@ -3,45 +3,54 @@ import Image from 'next/image';
 import { HeroSection } from '@/components/HeroSection';
 import { StatsBar } from '@/components/StatsBar';
 import { SectionLabel } from '@/components/SectionLabel';
-import { FeatureCard } from '@/components/FeatureCard';
 import { CTASection } from '@/components/CTASection';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { JsonLd } from '@/components/JsonLd';
+import { FAQ } from '@/components/FAQ';
 import TestimonialsSection from '@/components/ui/testimonial-v2';
 import { VideoTestimonials } from '@/components/VideoTestimonials';
 
 const SERVICES = [
   {
+    number: '01',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
+      <svg viewBox="0 0 60 32" width="56" height="30" aria-hidden="true">
+        <circle cx="30" cy="16" r="13" fill="none" stroke="#1E3A2E" strokeWidth="2" />
+        <circle cx="30" cy="16" r="4" fill="#A9874E" />
       </svg>
     ),
     title: 'AI SEO Automation',
     description: 'Our engine identifies technical issues, generates optimized fixes, and deploys changes automatically — no manual intervention needed.',
   },
   {
+    number: '02',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
+      <svg viewBox="0 0 60 32" width="56" height="30" aria-hidden="true">
+        <polyline points="2,28 18,16 30,21 46,5 58,12" fill="none" stroke="#1E3A2E" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
       </svg>
     ),
     title: 'Content Intelligence',
     description: 'AI-powered content creation, topic clusters, and editorial planning that builds topical authority and drives organic traffic.',
   },
   {
+    number: '03',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+      <svg viewBox="0 0 60 32" width="56" height="30" aria-hidden="true">
+        <rect x="2" y="20" width="9" height="10" fill="#1E3A2E" />
+        <rect x="15" y="14" width="9" height="16" fill="#1E3A2E" />
+        <rect x="28" y="8" width="9" height="22" fill="#1E3A2E" />
+        <rect x="41" y="3" width="9" height="27" fill="#A9874E" />
       </svg>
     ),
     title: 'Rank Tracking & Analytics',
     description: 'Real-time keyword position monitoring, competitor tracking, and actionable insights powered by AI-driven analytics.',
   },
   {
+    number: '04',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" />
+      <svg viewBox="0 0 60 32" width="40" height="30" aria-hidden="true">
+        <circle cx="24" cy="14" r="10" fill="none" stroke="#1E3A2E" strokeWidth="2" />
+        <line x1="31" y1="21" x2="40" y2="30" stroke="#A9874E" strokeWidth="2.5" strokeLinecap="round" />
       </svg>
     ),
     title: 'Technical SEO Audits',
@@ -152,28 +161,34 @@ export default function HomePage() {
       {/* Services Overview */}
       <section className="py-24" aria-labelledby="services-heading">
         <div className="mx-auto max-w-7xl px-6">
-          <ScrollReveal>
-            <SectionLabel number="01" text="Services" />
-            <h2 id="services-heading" className="mt-4 font-display font-semibold text-4xl md:text-5xl text-ink">
-              AI-powered SEO solutions, end to end.
-            </h2>
-            <p className="mt-4 text-body max-w-2xl">
-              From technical audits to content strategy, our AI-powered toolkit handles every aspect of your organic growth.
-            </p>
-          </ScrollReveal>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SERVICES.map((service, i) => (
-              <FeatureCard key={service.title} {...service} index={i} />
-            ))}
-          </div>
-          <ScrollReveal delay={0.3} className="mt-8">
+          <ScrollReveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <SectionLabel number="01" text="Services" />
+              <h2 id="services-heading" className="mt-4 font-display font-medium text-4xl md:text-5xl leading-[1.02] text-ink max-w-xl">
+                AI-powered SEO solutions, end to end.
+              </h2>
+            </div>
             <Link
               href="/features"
-              className="inline-flex items-center gap-2 text-sm font-medium text-forest hover:text-brass transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-forest hover:text-brass transition-colors pb-2 shrink-0"
             >
               Explore all features ↗
             </Link>
           </ScrollReveal>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {SERVICES.map((service, i) => (
+              <ScrollReveal key={service.title} delay={i * 0.1}>
+                <div className="group h-full rounded-[5px] border border-line bg-white p-9 shadow-[0_10px_34px_rgba(21,20,15,0.05)] transition-all duration-[400ms] ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-1 hover:shadow-[0_16px_44px_rgba(21,20,15,0.10)]">
+                  <div className="flex items-start justify-between">
+                    <span className="font-mono text-xs text-brass">{service.number}</span>
+                    {service.icon}
+                  </div>
+                  <h3 className="mt-6 font-display font-semibold text-3xl text-ink">{service.title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-body">{service.description}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -261,6 +276,9 @@ export default function HomePage() {
 
       {/* Testimonials */}
       <TestimonialsSection />
+
+      {/* FAQ */}
+      <FAQ />
 
       {/* CTA */}
       <CTASection />

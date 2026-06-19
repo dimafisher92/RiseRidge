@@ -78,7 +78,7 @@ export function ScoreGauge({
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span
-          className={`font-display font-[800] text-5xl tabular-nums transition-all ${
+          className={`font-display font-semibold text-5xl tabular-nums transition-all ${
             blurred ? 'blur-md select-none' : ''
           }`}
           style={{ color }}

@@ -190,7 +190,7 @@ export default function FeaturesPage() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan mb-6">
             Our Toolkit
           </p>
-          <h1 className="font-display font-[800] text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
+          <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
             AI SEO Tools Built for{' '}
             <span className="text-gradient-blue-cyan">Results</span>
           </h1>
@@ -211,7 +211,7 @@ export default function FeaturesPage() {
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
               <ScrollReveal className={i % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <SectionLabel number={feature.number} text={feature.label} />
-                <h2 id={`feature-${feature.number}-heading`} className="mt-4 font-display font-[800] text-2xl md:text-3xl text-ice">
+                <h2 id={`feature-${feature.number}-heading`} className="mt-4 font-display font-semibold text-2xl md:text-3xl text-ice">
                   {feature.title}
                 </h2>
                 <p className="mt-4 text-muted leading-relaxed">{feature.description}</p>

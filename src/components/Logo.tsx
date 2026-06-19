@@ -25,7 +25,7 @@ export function Logo({
         aria-hidden="true"
       >
         <span
-          className="font-display font-bold leading-none flex items-end"
+          className="font-display font-semibold leading-none flex items-end"
           style={{ fontSize: s.mono }}
         >
           <span className="text-forest" style={{ marginRight: '-0.30em' }}>R</span>

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useAuditPopup } from './AuditPopup';
 
 const TRUST_PILLS = [
-  'Free 20-min audit',
+  'Free audit',
   'Month-to-month, no lock-in',
   'First results in ~90 days',
 ];
@@ -89,10 +89,13 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm text-body"
+          className="mt-9 flex flex-wrap items-center justify-center gap-3 text-sm text-body"
         >
           {TRUST_PILLS.map((pill) => (
-            <li key={pill} className="inline-flex items-center gap-2">
+            <li
+              key={pill}
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-panel px-5 py-2.5"
+            >
               <span className="text-brass" aria-hidden="true">✓</span>
               {pill}
             </li>

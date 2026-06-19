@@ -137,7 +137,7 @@ export default function CaseStudiesPage() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan mb-6">
             Proven Results
           </p>
-          <h1 className="font-display font-[800] text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
+          <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
             Real Results.{' '}
             <span className="text-gradient-blue-cyan">Real Growth.</span>
           </h1>
@@ -156,7 +156,7 @@ export default function CaseStudiesPage() {
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="01" text="Case Studies" />
-            <h2 id="case-studies-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
+            <h2 id="case-studies-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               Client Success Stories
             </h2>
             <p className="mt-4 text-muted max-w-2xl">
@@ -177,7 +177,7 @@ export default function CaseStudiesPage() {
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="02" text="Methodology" />
-            <h2 id="methodology-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
+            <h2 id="methodology-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               How We Drive These Results
             </h2>
           </ScrollReveal>
@@ -202,7 +202,7 @@ export default function CaseStudiesPage() {
               <ScrollReveal key={item.step} delay={i * 0.15}>
                 <div className="rounded-xl border border-border bg-navy/40 p-8 h-full">
                   <span className="font-mono text-4xl font-bold text-electric/20">{item.step}</span>
-                  <h3 className="mt-3 font-display font-bold text-xl text-ice">{item.title}</h3>
+                  <h3 className="mt-3 font-display font-semibold text-xl text-ice">{item.title}</h3>
                   <p className="mt-3 text-sm text-muted leading-relaxed">{item.description}</p>
                 </div>
               </ScrollReveal>

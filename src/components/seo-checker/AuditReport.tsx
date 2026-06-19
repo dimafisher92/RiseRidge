@@ -50,7 +50,7 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
             <p className="font-mono text-[11px] uppercase tracking-[3px] text-electric">
               SEO Health Score
             </p>
-            <h2 className="mt-1 break-all font-display font-[800] text-2xl text-ice">
+            <h2 className="mt-1 break-all font-display font-semibold text-2xl text-ice">
               {displayHost}
             </h2>
 
@@ -87,7 +87,7 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
                     {cat.label}
                   </p>
                 </div>
-                <p className={`mt-1 font-display font-[800] text-2xl tabular-nums ${catColor(cat.score)}`}>
+                <p className={`mt-1 font-display font-semibold text-2xl tabular-nums ${catColor(cat.score)}`}>
                   {cat.score}
                 </p>
               </div>
@@ -110,7 +110,7 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
               >
                 <div className="mb-3 flex items-center gap-3">
                   {isAi && <Bot size={16} className="shrink-0 text-electric" />}
-                  <h3 className={`font-display font-[800] text-lg ${isAi ? 'text-electric' : 'text-ice'}`}>
+                  <h3 className={`font-display font-semibold text-lg ${isAi ? 'text-electric' : 'text-ice'}`}>
                     {cat.label}
                   </h3>
                   {isAi && (
@@ -141,7 +141,7 @@ export function AuditReport({ result, locked, onUnlock, onReset }: AuditReportPr
       {!locked && (
         <div className="mt-10 flex flex-col items-center justify-between gap-4 rounded-2xl border border-border bg-navy/60 p-6 sm:flex-row">
           <div className="text-center sm:text-left">
-            <p className="font-display font-[700] text-ice">Want us to fix these for you?</p>
+            <p className="font-display font-semibold text-ice">Want us to fix these for you?</p>
             <p className="text-sm text-muted">RiseRidge turns this report into ranked pages and real customers.</p>
           </div>
           <div className="flex items-center gap-3">

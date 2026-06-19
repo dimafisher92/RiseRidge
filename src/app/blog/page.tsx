@@ -48,7 +48,7 @@ export default async function BlogPage() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-electric mb-6">
             Insights & Strategy
           </p>
-          <h1 className="font-display font-[800] text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
+          <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
             The RiseRidge{' '}
             <span className="text-gradient-blue-cyan">SEO Blog</span>
           </h1>
@@ -66,7 +66,7 @@ export default async function BlogPage() {
             <SectionLabel number="01" text="Latest Articles" />
             <h2
               id="blog-posts-heading"
-              className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice"
+              className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice"
             >
               Fresh From the Team
             </h2>

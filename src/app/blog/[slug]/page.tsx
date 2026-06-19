@@ -91,7 +91,7 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="inline-block rounded-full bg-electric/10 px-3 py-1 font-mono text-xs text-electric uppercase tracking-wider">
               {post.category}
             </span>
-            <h1 className="mt-6 font-display font-[800] text-3xl sm:text-4xl md:text-5xl leading-[1.1] text-ice">
+            <h1 className="mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl leading-[1.1] text-ice">
               {post.title}
             </h1>
             <p className="mt-5 text-lg text-muted leading-relaxed max-w-2xl mx-auto">
