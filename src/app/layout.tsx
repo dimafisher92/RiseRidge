@@ -20,14 +20,12 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'RiseRidge',
     locale: 'en_US',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'RiseRidge — AI-Driven SEO. Measurable Growth.',
     description:
       'AI-Driven SEO. Measurable growth.',
-    images: ['/og-image.jpg'],
   },
   icons: {
     icon: '/icon.png',
