@@ -3,9 +3,9 @@
 import { useEffect, useState } from 'react';
 
 function colorForScore(score: number): string {
-  if (score >= 80) return '#00D4AA'; // success
-  if (score >= 50) return '#FF8C42'; // gold
-  return '#FF5470'; // low / danger
+  if (score >= 80) return '#1E3A2E'; // forest — good
+  if (score >= 50) return '#A9874E'; // brass — needs work
+  return '#C0492F'; // warm red — poor
 }
 
 interface ScoreGaugeProps {
@@ -60,7 +60,7 @@ export function ScoreGauge({
           cy={size / 2}
           r={radius}
           fill="none"
-          stroke="#1B3A5C"
+          stroke="#e6e0d2"
           strokeWidth={stroke}
         />
         <circle
@@ -78,7 +78,7 @@ export function ScoreGauge({
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span
-          className={`font-display font-[800] text-5xl tabular-nums transition-all ${
+          className={`font-display font-semibold text-5xl tabular-nums transition-all ${
             blurred ? 'blur-md select-none' : ''
           }`}
           style={{ color }}

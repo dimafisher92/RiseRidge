@@ -1,10 +1,10 @@
 ---
-title: "The ArcWave Content Cluster Framework for 2025"
+title: "The RiseRidge Content Cluster Framework for 2025"
 excerpt: "How AI-driven topic clustering and search-intent mapping compound into organic revenue — a step-by-step playbook for growth-stage brands."
 date: "2025-03-12T09:00:00.000Z"
 category: "SEO Strategy"
 author:
-  name: "ArcWave Team"
+  name: "RiseRidge Team"
 coverImage: ""
 ---
 
@@ -54,7 +54,7 @@ These pages funnel traffic to the pillar and then to product pages, creating a c
 
 Content clusters require continuous maintenance — refreshing data, updating rankings, fixing internal links as new pages are added. This is where most brands fail.
 
-ArcWave's AI automation engine monitors your entire cluster in real-time, flagging:
+RiseRidge's AI automation engine monitors your entire cluster in real-time, flagging:
 
 - Pages losing keyword positions
 - Internal linking gaps as content is published

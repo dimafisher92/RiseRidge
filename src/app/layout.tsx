@@ -1,52 +1,31 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
 import { AuditPopupProvider } from '@/components/AuditPopup';
 
-const inter = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-inter',
-  weight: '100 900',
-  display: 'swap',
-});
-
-const jetbrainsMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-jetbrains-mono',
-  weight: '100 900',
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
-  metadataBase: new URL('https://arcwave.io'),
+  metadataBase: new URL('https://riseridge.io'),
   title: {
-    default: 'ArcWave — AI-Driven SEO. Measurable Growth.',
-    template: '%s | ArcWave',
+    default: 'RiseRidge — AI-Driven SEO. Measurable Growth.',
+    template: '%s | RiseRidge',
   },
   description:
-    'ArcWave combines AI-powered SEO infrastructure with hands-on strategic execution to move businesses from invisible to undeniable. Measurable organic search growth.',
+    'RiseRidge pairs AI-powered SEO infrastructure with hands-on strategy to move businesses from invisible to undeniable — and prove every gain in the numbers.',
   openGraph: {
-    title: 'ArcWave — AI-Driven SEO. Measurable Growth.',
+    title: 'RiseRidge — AI-Driven SEO. Measurable Growth.',
     description:
-      'AI-Driven SEO. Measurable Growth. We engineer organic search growth that compounds.',
+      'AI-Driven SEO. Measurable growth. We engineer organic search growth that compounds.',
     type: 'website',
-    siteName: 'ArcWave',
+    siteName: 'RiseRidge',
     locale: 'en_US',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ArcWave — AI-Driven SEO. Measurable Growth.',
+    title: 'RiseRidge — AI-Driven SEO. Measurable Growth.',
     description:
-      'AI-Driven SEO. Measurable Growth.',
-    images: ['/og-image.jpg'],
-  },
-  icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
+      'AI-Driven SEO. Measurable growth.',
   },
   manifest: '/site.webmanifest',
   robots: {
@@ -61,11 +40,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable}`}
-    >
-      <body className="bg-void text-ice font-body antialiased">
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="bg-canvas text-body font-body antialiased">
         <AuditPopupProvider>
           <a href="#main-content" className="skip-to-content">
             Skip to main content

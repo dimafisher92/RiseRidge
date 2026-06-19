@@ -3,7 +3,7 @@ import type { AuditErrorCode } from './types';
 const TIMEOUT_MS = 9000;
 const MAX_BYTES = 3 * 1024 * 1024; // 3 MB cap
 const USER_AGENT =
-  'Mozilla/5.0 (compatible; ArcWaveSEOChecker/1.0; +https://arcwave.io/seo-checker)';
+  'Mozilla/5.0 (compatible; RiseRidgeSEOChecker/1.0; +https://riseridge.io/seo-checker)';
 
 export class AuditError extends Error {
   code: AuditErrorCode;

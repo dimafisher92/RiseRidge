@@ -1,15 +1,15 @@
 {
-  "name": "ArcWave",
-  "short_name": "ArcWave",
+  "name": "RiseRidge",
+  "short_name": "RiseRidge",
   "description": "AI-Driven SEO. Measurable Growth.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#060E18",
-  "theme_color": "#060E18",
+  "background_color": "#FBFAF7",
+  "theme_color": "#1E3A2E",
   "icons": [
     {
-      "src": "/logos/logo-icon.png",
-      "sizes": "692x256",
+      "src": "/icon.png",
+      "sizes": "566x369",
       "type": "image/png",
       "purpose": "any"
     }
