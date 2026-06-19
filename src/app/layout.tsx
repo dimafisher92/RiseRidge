@@ -27,11 +27,6 @@ export const metadata: Metadata = {
     description:
       'AI-Driven SEO. Measurable growth.',
   },
-  icons: {
-    icon: '/icon.png',
-    shortcut: '/icon.png',
-    apple: '/icon.png',
-  },
   manifest: '/site.webmanifest',
   robots: {
     index: true,
