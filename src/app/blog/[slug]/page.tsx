@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: post.excerpt,
         type: 'article',
         publishedTime: post.date,
-        images: post.coverImage ? [{ url: post.coverImage }] : [{ url: '/og-image.jpg' }],
+        ...(post.coverImage ? { images: [{ url: post.coverImage }] } : {}),
       },
     };
   } catch {
@@ -81,6 +81,18 @@ export default async function BlogPostPage({ params }: Props) {
           { name: 'Blog', href: '/blog' },
           { name: post.title, href: `/blog/${params.slug}` },
         ]}
+      />
+      <JsonLd
+        type="article"
+        article={{
+          title: post.title,
+          description: post.excerpt,
+          url: `/blog/${params.slug}`,
+          datePublished: post.date,
+          authorName: post.author?.name ?? undefined,
+          image: post.coverImage || undefined,
+          section: post.category ?? undefined,
+        }}
       />
 
       <article>

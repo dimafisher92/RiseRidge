@@ -89,6 +89,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd type="website" />
+      <JsonLd type="service" />
 
       {/* Hero */}
       <HeroSection />

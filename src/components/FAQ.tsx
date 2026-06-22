@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollReveal } from './ScrollReveal';
+import { JsonLd } from './JsonLd';
 
 const FAQS = [
   {
@@ -32,6 +33,10 @@ export function FAQ() {
 
   return (
     <section className="py-24" aria-labelledby="faq-heading">
+      <JsonLd
+        type="faq"
+        faqs={FAQS.map((item) => ({ question: item.q, answer: item.a }))}
+      />
       <div className="mx-auto max-w-[900px] px-6">
         <ScrollReveal className="text-center mb-10">
           <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-brass">FAQ</p>
