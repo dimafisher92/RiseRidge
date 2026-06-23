@@ -17,7 +17,7 @@ interface Testimonial {
 // --- Data ---
 const testimonials: Testimonial[] = [
   {
-    text: "ArcWave's AI-driven SEO completely transformed our organic presence. We went from page 3 to dominating the top 3 positions in under 4 months.",
+    text: "RiseRidge's AI-driven SEO completely transformed our organic presence. We went from page 3 to dominating the top 3 positions in under 4 months.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
     name: "Briana Patton",
     role: "VP of Marketing",
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     role: "Content Director",
   },
   {
-    text: "We replaced three SEO tools with ArcWave. The real-time rank tracking and automated optimizations saved us 20+ hours per week.",
+    text: "We replaced three SEO tools with RiseRidge. The real-time rank tracking and automated optimizations saved us 20+ hours per week.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150",
     name: "Omar Raza",
     role: "CEO",
@@ -47,13 +47,13 @@ const testimonials: Testimonial[] = [
     role: "Growth Lead",
   },
   {
-    text: "ArcWave's approach to technical SEO is next-level. Automated schema markup, internal linking fixes, and crawl optimization — all handled by their AI.",
+    text: "RiseRidge's approach to technical SEO is next-level. Automated schema markup, internal linking fixes, and crawl optimization — all handled by their AI.",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150&h=150",
     name: "Aliza Khan",
     role: "Digital Strategist",
   },
   {
-    text: "Our e-commerce store saw a 340% increase in organic traffic after switching to ArcWave. The ROI speaks for itself.",
+    text: "Our e-commerce store saw a 340% increase in organic traffic after switching to RiseRidge. The ROI speaks for itself.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150",
     name: "Farhan Siddiqui",
     role: "E-commerce Director",
@@ -65,7 +65,7 @@ const testimonials: Testimonial[] = [
     role: "Operations Manager",
   },
   {
-    text: "ArcWave helped us dominate local search results across 15 locations. Their AI handles what used to take our entire marketing team.",
+    text: "RiseRidge helped us dominate local search results across 15 locations. Their AI handles what used to take our entire marketing team.",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150&h=150",
     name: "Hassan Ali",
     role: "Head of Acquisition",
@@ -114,11 +114,11 @@ const TestimonialsColumn = (props: {
                     y: -8,
                     transition: { type: "spring", stiffness: 400, damping: 17 }
                   }}
-                  className="p-8 rounded-xl border border-border bg-navy/60 max-w-xs w-full transition-all duration-300 cursor-default select-none group focus:outline-none focus:ring-2 focus:ring-electric/30 hover:border-electric/40"
+                  className="p-8 rounded-[6px] border border-line bg-white max-w-xs w-full shadow-[0_10px_34px_rgba(21,20,15,0.05)] transition-all duration-300 cursor-default select-none group focus:outline-none focus:ring-2 focus:ring-brass/30 hover:shadow-[0_16px_44px_rgba(21,20,15,0.10)]"
                 >
                   <blockquote className="m-0 p-0">
-                    <p className="text-muted leading-relaxed font-normal text-sm m-0">
-                      {text}
+                    <p className="font-display text-lg italic text-body leading-relaxed font-normal m-0">
+                      “{text}”
                     </p>
                     <footer className="flex items-center gap-3 mt-5">
                       <Image
@@ -126,13 +126,13 @@ const TestimonialsColumn = (props: {
                         height={40}
                         src={image}
                         alt={`Avatar of ${name}`}
-                        className="h-10 w-10 rounded-full object-cover ring-2 ring-border group-hover:ring-electric/30 transition-all duration-300 ease-in-out"
+                        className="h-10 w-10 rounded-full object-cover ring-2 ring-line group-hover:ring-brass/40 transition-all duration-300 ease-in-out"
                       />
                       <div className="flex flex-col">
-                        <cite className="font-display font-semibold not-italic tracking-tight leading-5 text-ice">
+                        <cite className="font-display font-semibold not-italic tracking-tight leading-5 text-ink">
                           {name}
                         </cite>
-                        <span className="text-xs leading-5 tracking-tight text-muted mt-0.5">
+                        <span className="text-xs leading-5 tracking-tight text-subtle mt-0.5">
                           {role}
                         </span>
                       </div>
@@ -152,7 +152,7 @@ const TestimonialsSection = () => {
   return (
     <section
       aria-labelledby="testimonials-heading"
-      className="border-t border-border bg-surface/30 py-24 relative overflow-hidden"
+      className="border-t border-line bg-panel py-24 relative overflow-hidden"
     >
       <motion.div
         initial={{ opacity: 0, y: 50, rotate: -2 }}
@@ -168,10 +168,10 @@ const TestimonialsSection = () => {
         <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto mb-16">
           <ScrollReveal>
             <SectionLabel number="04" text="Testimonials" />
-            <h2 id="testimonials-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
-              What Our Clients Say
+            <h2 id="testimonials-heading" className="mt-4 font-display font-semibold text-4xl md:text-5xl text-ink">
+              What our clients say
             </h2>
-            <p className="mt-4 text-muted max-w-sm text-center">
+            <p className="mt-4 text-body max-w-sm text-center">
               Discover how growth-stage brands scale their organic presence with AI-powered SEO.
             </p>
           </ScrollReveal>

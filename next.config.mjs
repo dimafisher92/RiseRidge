@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'assets.tina.io',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 };

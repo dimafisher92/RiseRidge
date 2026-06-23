@@ -1,25 +1,44 @@
 @import "tailwindcss";
 
-/* ===== Brand Design System — ArcWave ===== */
+/* ===== Brand Design System — RiseRidge ===== */
 @theme {
-  /* Colors */
-  --color-electric: #00C2FF;
-  --color-signal: #0088CC;
-  --color-cyan: #00C2FF;
-  --color-navy: #0A1628;
-  --color-surface: #0F1D2E;
-  --color-void: #060E18;
-  --color-ice: #F0F8FF;
-  --color-muted: #6B7280;
-  --color-gold: #FF8C42;
-  --color-border: #1B3A5C;
-  --color-danger: #FF8C42;
-  --color-success: #00D4AA;
+  /* --- RiseRidge palette --- */
+  --color-canvas: #FBFAF7;       /* warm off-white page bg */
+  --color-panel: #F4F0E8;        /* muted panel / alternating sections / cards */
+  --color-forest: #1E3A2E;       /* primary brand green */
+  --color-forest-hover: #15291F; /* primary button hover */
+  --color-brass: #A9874E;        /* gold accent */
+  --color-brass-hover: #967640;  /* brass button hover */
+  --color-ink: #15140F;          /* near-black headings / darkest sections */
+  --color-body: #56514a;         /* paragraph text */
+  --color-subtle: #8a8276;       /* captions / meta */
+  --color-on-dark: #F4F0E8;      /* light text on dark */
+  --color-on-dark-muted: #9fb0a3;/* muted light text on forest */
+  --color-on-ink-muted: #c9c1b2; /* muted light text on ink */
+  --color-line: #e6e0d2;         /* warm hairline border */
+  --color-line-dark: #2c4a3c;    /* divider on forest */
+  --color-ink-line: #2a271e;     /* divider on ink */
+  --color-tag-bg: #eef4ef;       /* pill tag bg */
+  --color-tag-border: #cfe0d4;   /* pill tag border */
 
-  /* Fonts — Inter + JetBrains Mono with system fallbacks */
-  --font-display: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-  --font-body: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* --- Legacy token remaps (so existing classes adopt the new theme) --- */
+  --color-electric: #1E3A2E;   /* forest — primary brand */
+  --color-signal: #15291F;     /* forest hover */
+  --color-cyan: #A9874E;       /* brass — eyebrows / accents */
+  --color-navy: #FFFFFF;       /* crisp card surface on canvas */
+  --color-surface: #F4F0E8;    /* panel */
+  --color-void: #FBFAF7;       /* canvas / body bg */
+  --color-ice: #15140F;        /* ink — primary text */
+  --color-muted: #6b6459;      /* muted text */
+  --color-gold: #A9874E;       /* brass accent (stat figures) */
+  --color-border: #e6e0d2;     /* warm border */
+  --color-danger: #A9874E;
+  --color-success: #1E3A2E;
+
+  /* Fonts — Cormorant Garamond (serif) + Hanken Grotesk (sans) + Space Mono */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Mono', 'JetBrains Mono', 'Consolas', monospace;
 }
 
 /* ===== Base ===== */
@@ -31,10 +50,16 @@ body {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-void);
-  color: var(--color-ice);
+  background-color: var(--color-canvas);
+  color: var(--color-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Serif headings, tightened leading per brand */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
 }
 
 a {
@@ -43,26 +68,40 @@ a {
 }
 
 /* ===== Utility Classes ===== */
+
+/* Repurposed: serif italic brass emphasis used in page hero highlight spans */
 .text-gradient-blue-cyan {
-  background: linear-gradient(135deg, #0088CC 0%, #00C2FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-brass);
+  font-style: italic;
 }
 
+/* Warm hairline grid used on light hero/CTA backgrounds */
 .animated-grid-bg {
   background-image:
-    linear-gradient(rgba(0, 194, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 194, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(30, 58, 46, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 58, 46, 0.05) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
+/* Soft brand lift used on button hovers */
 .glow-blue {
-  box-shadow: 0 0 20px rgba(0, 194, 255, 0.4), 0 0 60px rgba(0, 194, 255, 0.1);
+  box-shadow: 0 10px 28px rgba(30, 58, 46, 0.22);
 }
 
 .glow-cyan {
-  box-shadow: 0 0 20px rgba(0, 194, 255, 0.3), 0 0 60px rgba(0, 194, 255, 0.08);
+  box-shadow: 0 10px 28px rgba(169, 135, 78, 0.22);
+}
+
+/* Brass scroll-progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--color-brass);
+  z-index: 60;
+  transition: width 0.1s linear;
 }
 
 /* Skip to content for accessibility */
@@ -72,11 +111,88 @@ a {
   top: 0;
   z-index: 999;
   padding: 0.5rem 1rem;
-  background: var(--color-electric);
-  color: white;
+  background: var(--color-forest);
+  color: var(--color-on-dark);
   font-size: 0.875rem;
 }
 
 .skip-to-content:focus {
   left: 0;
+}
+
+/* ===== Print / Save-as-PDF styles for the SEO checker report ===== */
+.print-only {
+  display: none;
+}
+.print-watermark {
+  display: none;
+}
+
+@media print {
+  /* Hide site chrome and interactive-only elements */
+  header[role="banner"],
+  footer,
+  .skip-to-content,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Force a clean light document */
+  html,
+  body {
+    background: #ffffff !important;
+    color: #15140f !important;
+  }
+
+  /* Remove the lead-gate blur so the unlocked report prints in full */
+  .print-report * {
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+
+  /* Show the print-only logo header */
+  .print-only {
+    display: flex !important;
+  }
+
+  /* Make cards readable on white paper */
+  .print-report .bg-surface\/60,
+  .print-report .bg-surface\/40,
+  .print-report .bg-void\/40,
+  .print-report .bg-navy\/60,
+  .print-report .bg-white {
+    background: #ffffff !important;
+    border-color: #e6e0d2 !important;
+  }
+  .print-report .text-ice,
+  .print-report .text-ink {
+    color: #15140f !important;
+  }
+  .print-report .text-muted,
+  .print-report .text-body {
+    color: #56514a !important;
+  }
+
+  /* Diagonal repeating watermark behind the report */
+  .print-watermark {
+    display: block !important;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url('/logos/riseridge/png/monogram-fullcolor.png');
+    background-repeat: repeat;
+    background-size: 150px auto;
+    opacity: 0.05;
+    transform: rotate(-30deg) scale(1.4);
+  }
+
+  .print-report {
+    position: relative;
+    z-index: 1;
+  }
+
+  @page {
+    margin: 14mm;
+  }
 }

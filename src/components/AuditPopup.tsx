@@ -70,12 +70,12 @@ export function AuditPopupProvider({ children }: { children: React.ReactNode }) 
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-2xl rounded-2xl border border-border bg-surface overflow-hidden"
+              className="relative w-full max-w-2xl rounded-[6px] border border-line bg-panel overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={close}
-                className="absolute top-3 right-3 z-10 rounded-full p-2 text-muted transition-colors hover:text-ice hover:bg-white/10"
+                className="absolute top-3 right-3 z-10 rounded-full p-2 text-subtle transition-colors hover:text-ink hover:bg-black/5"
                 aria-label="Close"
               >
                 <X size={20} />

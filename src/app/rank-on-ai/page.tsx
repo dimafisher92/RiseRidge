@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'Optimize your brand visibility across AI search platforms like ChatGPT, Claude, Gemini, and Perplexity. Monitor, measure, and improve how AI recommends your business.',
   alternates: { canonical: '/rank-on-ai' },
   openGraph: {
-    title: 'Rank on AI Search — LLM Visibility | ArcWave',
+    title: 'Rank on AI Search — LLM Visibility | RiseRidge',
     description: 'The future of search is AI. Make sure your brand is visible when AI answers questions about your industry.',
   },
 };
@@ -119,7 +119,7 @@ export default function RankOnAIPage() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan mb-6">
             The New Frontier
           </p>
-          <h1 className="font-display font-[800] text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
+          <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
             The Future of Search{' '}
             <span className="text-gradient-blue-cyan">is AI</span>
           </h1>
@@ -151,29 +151,30 @@ export default function RankOnAIPage() {
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="01" text="The Shift" />
-            <h2 id="why-matters-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
-              Why AI Search Visibility Matters
+            <h2 id="why-matters-heading" className="mt-4 font-display font-medium text-4xl md:text-5xl text-ink">
+              Why AI search visibility matters
             </h2>
           </ScrollReveal>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ScrollReveal>
-              <div className="rounded-xl border border-border bg-navy/60 p-8">
-                <h3 className="font-display font-bold text-xl text-ice mb-4">The Problem</h3>
-                <p className="text-muted leading-relaxed">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            {/* The problem — panel */}
+            <ScrollReveal className="h-full">
+              <div className="h-full rounded-[6px] border border-line bg-panel p-8">
+                <h3 className="font-display font-semibold text-2xl text-ink mb-4">The problem</h3>
+                <p className="text-body leading-relaxed">
                   Traditional SEO focuses on Google&apos;s blue links. But AI assistants synthesize information
                   differently — they don&apos;t show 10 results, they give one answer. If your brand isn&apos;t
                   part of that answer, you&apos;re invisible to a rapidly growing segment of searchers.
                 </p>
                 <ul className="mt-6 space-y-3">
                   {[
-                    'AI assistants give one synthesized answer, not 10 links',
-                    'Users trust AI responses more than traditional search ads',
+                    'AI gives one synthesized answer, not 10 links',
+                    'Users trust AI responses more than ads',
                     'AI search is growing 5x year-over-year',
-                    'Most competitors haven\'t started optimizing for AI yet',
+                    "Most competitors haven't started optimizing",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-muted">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8C42" strokeWidth="2" className="mt-0.5 flex-shrink-0">
-                        <circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" />
+                    <li key={item} className="flex items-start gap-3 text-sm text-body">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A9874E" strokeWidth="2" className="mt-0.5 flex-shrink-0">
+                        <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
                       </svg>
                       {item}
                     </li>
@@ -181,23 +182,24 @@ export default function RankOnAIPage() {
                 </ul>
               </div>
             </ScrollReveal>
-            <ScrollReveal delay={0.15}>
-              <div className="rounded-xl border border-electric/30 bg-navy/60 p-8">
-                <h3 className="font-display font-bold text-xl text-ice mb-4">The Opportunity</h3>
-                <p className="text-muted leading-relaxed">
+            {/* The opportunity — forest */}
+            <ScrollReveal delay={0.15} className="h-full">
+              <div className="h-full rounded-[6px] border border-forest bg-forest p-8">
+                <h3 className="font-display font-semibold text-2xl text-on-dark mb-4">The opportunity</h3>
+                <p className="text-on-dark-muted leading-relaxed">
                   Brands that optimize for AI visibility now will capture an outsized share of this
-                  emerging channel. ArcWave&apos;s LLM Visibility Monitor gives you the tools to
+                  emerging channel. RiseRidge&apos;s LLM Visibility Monitor gives you the tools to
                   track, optimize, and measure your AI search presence.
                 </p>
                 <ul className="mt-6 space-y-3">
                   {[
-                    'Monitor brand mentions across ChatGPT, Claude, Gemini, Perplexity',
-                    'Track visibility scores and sentiment in real-time',
-                    'Identify which sources AI cites — and become one of them',
-                    'Benchmark against competitors in AI search results',
+                    'Monitor mentions across ChatGPT, Claude, Gemini, Perplexity',
+                    'Track visibility scores and sentiment in real time',
+                    'Identify which sources AI cites — and become one',
+                    'Benchmark against competitors in AI results',
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-muted">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00D4AA" strokeWidth="2" className="mt-0.5 flex-shrink-0">
+                    <li key={item} className="flex items-start gap-3 text-sm text-on-dark-muted">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A9874E" strokeWidth="2" className="mt-0.5 flex-shrink-0">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                       {item}
@@ -210,12 +212,12 @@ export default function RankOnAIPage() {
         </div>
       </section>
 
-      {/* How ArcWave Helps — 3-Step Process */}
+      {/* How RiseRidge Helps — 3-Step Process */}
       <section className="border-t border-border bg-surface/30 py-24" aria-labelledby="process-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="02" text="Our Process" />
-            <h2 id="process-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
+            <h2 id="process-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               How We Improve Your AI Visibility
             </h2>
           </ScrollReveal>
@@ -225,12 +227,12 @@ export default function RankOnAIPage() {
                 <div className="rounded-xl border border-border bg-navy/40 p-8 md:p-10 grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8">
                   <div className="font-mono text-5xl font-bold text-electric/20">{step.number}</div>
                   <div>
-                    <h3 className="font-display font-bold text-2xl text-ice">{step.title}</h3>
+                    <h3 className="font-display font-semibold text-2xl text-ice">{step.title}</h3>
                     <p className="mt-3 text-muted leading-relaxed">{step.description}</p>
                     <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {step.details.map((detail) => (
                         <li key={detail} className="flex items-start gap-2 text-sm text-muted">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" strokeWidth="2" className="mt-0.5 flex-shrink-0">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1E3A2E" strokeWidth="2" className="mt-0.5 flex-shrink-0">
                             <polyline points="20 6 9 17 4 12" />
                           </svg>
                           {detail}
@@ -250,7 +252,7 @@ export default function RankOnAIPage() {
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="03" text="Benefits" />
-            <h2 id="benefits-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
+            <h2 id="benefits-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               Why Optimize for AI Search Now
             </h2>
           </ScrollReveal>
@@ -261,7 +263,7 @@ export default function RankOnAIPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-electric/10 text-electric mb-4">
                     {benefit.icon}
                   </div>
-                  <h3 className="font-display font-bold text-lg text-ice">{benefit.title}</h3>
+                  <h3 className="font-display font-semibold text-lg text-ice">{benefit.title}</h3>
                   <p className="mt-2 text-sm text-muted leading-relaxed">{benefit.description}</p>
                 </div>
               </ScrollReveal>

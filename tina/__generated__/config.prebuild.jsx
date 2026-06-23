@@ -34,7 +34,7 @@ var config_default = defineConfig({
         },
         defaultItem: () => ({
           date: (/* @__PURE__ */ new Date()).toISOString(),
-          author: { name: "ArcWave Team" }
+          author: { name: "RiseRidge Team" }
         }),
         fields: [
           {

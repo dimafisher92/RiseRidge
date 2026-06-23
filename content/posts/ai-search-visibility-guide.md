@@ -4,7 +4,7 @@ excerpt: "AI Overviews, Search Generative Experience, and Perplexity are changin
 date: "2025-04-02T09:00:00.000Z"
 category: "AI & Search"
 author:
-  name: "ArcWave Team"
+  name: "RiseRidge Team"
 coverImage: ""
 ---
 
@@ -38,7 +38,7 @@ These systems share common characteristics:
 - They favor content that is easy to parse and excerpt
 - They penalize thin, SEO-stuffed content more aggressively than traditional search
 
-**The ArcWave approach:** We treat AI search engines as a separate but related signal in our optimization strategy. Pages optimized for AI search tend to also perform better in traditional search — because the signals overlap: clarity, authority, and comprehensive coverage.
+**The RiseRidge approach:** We treat AI search engines as a separate but related signal in our optimization strategy. Pages optimized for AI search tend to also perform better in traditional search — because the signals overlap: clarity, authority, and comprehensive coverage.
 
 ## The Role of Entity SEO
 
@@ -70,4 +70,4 @@ The fundamental goal hasn't changed: be the most authoritative, trustworthy, and
 
 Mediocre content no longer ranks. AI systems are better than any prior generation of search at detecting thin content, recognizing genuine expertise, and surfacing the sources that most comprehensively serve user intent.
 
-At ArcWave, our AI SEO engine is built for this new reality. We optimize for traditional search signals and AI search signals simultaneously — because in 2025, they're increasingly the same thing.
+At RiseRidge, our AI SEO engine is built for this new reality. We optimize for traditional search signals and AI search signals simultaneously — because in 2025, they're increasingly the same thing.

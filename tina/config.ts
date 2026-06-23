@@ -38,7 +38,7 @@ export default defineConfig({
         },
         defaultItem: () => ({
           date: new Date().toISOString(),
-          author: { name: 'ArcWave Team' },
+          author: { name: 'RiseRidge Team' },
         }),
         fields: [
           {

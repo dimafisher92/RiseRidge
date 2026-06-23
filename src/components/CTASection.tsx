@@ -18,22 +18,21 @@ export function CTASection({
 }) {
   const { open: openAuditPopup } = useAuditPopup();
   return (
-    <section className="relative overflow-hidden border-t border-border bg-navy py-24" aria-label="Call to action">
-      <div className="animated-grid-bg absolute inset-0 opacity-30" aria-hidden="true" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-electric/10 blur-[120px]" aria-hidden="true" />
+    <section className="relative overflow-hidden bg-ink py-28" aria-label="Call to action">
+      <div className="animated-grid-bg absolute inset-0 opacity-[0.15]" aria-hidden="true" />
       <div className="relative mx-auto max-w-3xl px-6 text-center">
-        <h2 className="font-display font-[800] text-3xl md:text-5xl text-ice">{heading}</h2>
-        <p className="mt-4 text-lg text-muted">{description}</p>
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <h2 className="font-display font-semibold text-4xl md:text-5xl text-on-dark leading-[1.05]">{heading}</h2>
+        <p className="mt-5 text-lg text-on-ink-muted">{description}</p>
+        <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={openAuditPopup}
-            className="rounded-lg bg-electric px-8 py-3.5 font-body font-medium text-white transition-all duration-300 hover:bg-signal hover:glow-blue"
+            className="rounded-[3px] bg-brass px-8 py-3.5 font-body font-medium text-ink transition-all duration-300 hover:bg-brass-hover"
           >
             {primaryLabel}
           </button>
           <Link
             href={secondaryHref}
-            className="rounded-lg border border-border px-8 py-3.5 font-body font-medium text-ice transition-all duration-300 hover:border-electric hover:text-electric"
+            className="rounded-[3px] border border-on-dark/25 px-8 py-3.5 font-body font-medium text-on-dark transition-all duration-300 hover:border-brass hover:text-brass"
           >
             {secondaryLabel}
           </Link>
