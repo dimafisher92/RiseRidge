@@ -27,6 +27,32 @@ const AGGREGATE_STATS = [
 
 const CASE_STUDIES = [
   {
+    tag: 'Catering & Events',
+    title: '+76% Local Map Visibility for a Catering Service Company in 90 Days',
+    challenge:
+      'A catering service company with an excellent reputation — a flawless 5.0-star rating across 117 reviews — was effectively invisible to anyone who didn\'t already know its name. The website scored just 61/100 on technical health with generic page titles, missing structured data, and over a thousand small issues. Commercial terms like "wedding catering" and "catering services" sat on pages 4–5 of Google, and their Google Maps presence was barely registering.',
+    solution:
+      'RiseRidge ran a three-phase engagement. First, we rebuilt the technical foundation — 1,100+ fixes across all 67 pages with unique, keyword-rich titles, full structured-data markup, corrected internal links, and full re-indexing. Next, we dominated the local map by optimizing the Google Business Profile, building consistent local signals, and publishing a steady cadence of city-targeted content. Finally, we pushed commercial keywords upward, with many priority terms climbing 20–35 positions in three months.',
+    results: [
+      { value: '+76%', label: 'Local Map Visibility' },
+      { value: '+37%', label: 'Visits From Maps' },
+      { value: '61→92', label: 'Site Health Score' },
+    ],
+  },
+  {
+    tag: 'Hospitality',
+    title: '14.9x More Organic Visitors for a Beachfront Resort in 90 Days',
+    challenge:
+      'A beachfront resort was almost impossible to discover online — you could only find it on Google if you already knew the exact web address. An audit revealed 1,100+ technical issues blocking crawling and ranking, a website health score of just 50/100 with only ~10 pages optimized, brand-only visibility, and no Search Console or Analytics tracking in place. In a full quarter the site appeared in Google ~3,000 times and earned just 43 visits.',
+    solution:
+      'RiseRidge deployed an AI-accelerated program across three pillars. We fixed the technical foundation — resolving nearly 2,000 issues, rewriting every title and meta description, bringing all 77 pages to a flawless state, and deploying structured data so Google and AI assistants understand the business. We created discovery content (location and activity guides plus hundreds of Q&A sections), and we built local presence and measurement, connecting Search Console and Analytics and growing the local map score from 1.3 to 3.4.',
+    results: [
+      { value: '×14.9', label: 'Organic Visitors' },
+      { value: '×8.8', label: 'Search Impressions' },
+      { value: '50→94', label: 'Site Health Score' },
+    ],
+  },
+  {
     tag: 'E-Commerce',
     title: 'Scaling Organic Revenue to $21K/Day in Just 4 Months',
     challenge:
@@ -142,8 +168,8 @@ export default function CaseStudiesPage() {
             <span className="text-gradient-blue-cyan">Real Growth.</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            See how RiseRidge&apos;s AI-driven SEO has driven measurable revenue growth for
-            e-commerce brands, SaaS platforms, and multi-location businesses.
+            See how RiseRidge&apos;s AI-driven SEO has driven measurable growth for
+            e-commerce brands, SaaS platforms, hospitality, and local service businesses.
           </p>
         </div>
       </section>
