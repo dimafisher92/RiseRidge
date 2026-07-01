@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: post.excerpt,
         type: 'article',
         publishedTime: post.date,
-        ...(post.coverImagePath ? { images: [{ url: post.coverImagePath }] } : {}),
+        ...(post.coverImage ? { images: [{ url: post.coverImage }] } : {}),
       },
     };
   } catch {
@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
           url: `/blog/${params.slug}`,
           datePublished: post.date,
           authorName: post.author?.name ?? undefined,
-          image: post.coverImagePath || undefined,
+          image: post.coverImage || undefined,
           section: post.category ?? undefined,
         }}
       />
@@ -126,12 +126,12 @@ export default async function BlogPostPage({ params }: Props) {
         </section>
 
         {/* Hero image */}
-        {post.coverImagePath && (
+        {post.coverImage && (
           <section className="pb-16">
             <div className="mx-auto max-w-4xl px-6">
               <div className="aspect-[16/9] w-full overflow-hidden rounded-[6px] border border-border bg-surface">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={post.coverImagePath} alt="" className="h-full w-full object-cover" />
+                <img src={post.coverImage} alt="" className="h-full w-full object-cover" />
               </div>
             </div>
           </section>

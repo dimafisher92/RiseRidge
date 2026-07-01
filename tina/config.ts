@@ -95,12 +95,6 @@ export default defineConfig({
             label: 'Cover Image',
           },
           {
-            type: 'string',
-            name: 'coverImagePath',
-            label: 'Cover Image Path',
-            description: 'Path to an image already in /public, e.g. /blog/my-post-hero.svg. Used instead of Cover Image because Tina media sync is not set up for this project.',
-          },
-          {
             type: 'rich-text',
             name: 'body',
             label: 'Body',

@@ -98,7 +98,6 @@ type Post implements Node & Document {
   category: String!
   author: PostAuthor
   coverImage: String
-  coverImagePath: String
   body: JSON
   id: ID!
   _sys: SystemInfo!
@@ -144,7 +143,6 @@ input PostFilter {
   category: StringFilter
   author: PostAuthorFilter
   coverImage: ImageFilter
-  coverImagePath: StringFilter
   body: RichTextFilter
 }
 
@@ -189,7 +187,6 @@ input PostMutation {
   category: String
   author: PostAuthorMutation
   coverImage: String
-  coverImagePath: String
   body: JSON
 }
 

@@ -5,7 +5,7 @@ date: "2025-02-18T09:00:00.000Z"
 category: "Technical SEO"
 author:
   name: "RiseRidge Team"
-coverImagePath: "/blog/technical-seo-audit-checklist-hero.svg"
+coverImage: "/blog/technical-seo-audit-checklist-hero.svg"
 ---
 
 ## Why Technical SEO Is the Foundation

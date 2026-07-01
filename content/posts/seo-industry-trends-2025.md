@@ -5,7 +5,7 @@ date: "2026-01-20T09:00:00.000Z"
 category: "Industry Insights"
 author:
   name: "RiseRidge Team"
-coverImagePath: "/blog/seo-industry-trends-2025-hero.svg"
+coverImage: "/blog/seo-industry-trends-2025-hero.svg"
 ---
 
 ## Search Is Being Redrawn, Not Replaced
