@@ -9,5 +9,6 @@ fragment PostParts on Post {
     name
   }
   coverImage
+  coverImagePath
   body
 }

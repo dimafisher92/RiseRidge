@@ -5,7 +5,7 @@ date: "2025-03-12T09:00:00.000Z"
 category: "SEO Strategy"
 author:
   name: "RiseRidge Team"
-coverImage: "/blog/seo-content-clusters-2025-hero.svg"
+coverImagePath: "/blog/seo-content-clusters-2025-hero.svg"
 ---
 
 ## Why Content Clusters Still Dominate Organic Growth

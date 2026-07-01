@@ -86,10 +86,15 @@ var config_default = defineConfig({
             ]
           },
           {
-            type: "string",
+            type: "image",
             name: "coverImage",
+            label: "Cover Image"
+          },
+          {
+            type: "string",
+            name: "coverImagePath",
             label: "Cover Image Path",
-            description: "Path to an image already in /public, e.g. /blog/my-post-hero.svg. Tina media sync is not set up for this project, so this field does not use the image picker."
+            description: "Path to an image already in /public, e.g. /blog/my-post-hero.svg. Used instead of Cover Image because Tina media sync is not set up for this project."
           },
           {
             type: "rich-text",

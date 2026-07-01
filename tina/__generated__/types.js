@@ -17,6 +17,7 @@ export const PostPartsFragmentDoc = gql`
     name
   }
   coverImage
+  coverImagePath
   body
 }
     `;

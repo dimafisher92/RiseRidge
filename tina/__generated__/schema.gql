@@ -98,6 +98,7 @@ type Post implements Node & Document {
   category: String!
   author: PostAuthor
   coverImage: String
+  coverImagePath: String
   body: JSON
   id: ID!
   _sys: SystemInfo!
@@ -123,6 +124,13 @@ input PostAuthorFilter {
   name: StringFilter
 }
 
+input ImageFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
 input RichTextFilter {
   startsWith: String
   eq: String
@@ -135,7 +143,8 @@ input PostFilter {
   date: DatetimeFilter
   category: StringFilter
   author: PostAuthorFilter
-  coverImage: StringFilter
+  coverImage: ImageFilter
+  coverImagePath: StringFilter
   body: RichTextFilter
 }
 
@@ -180,6 +189,7 @@ input PostMutation {
   category: String
   author: PostAuthorMutation
   coverImage: String
+  coverImagePath: String
   body: JSON
 }
 

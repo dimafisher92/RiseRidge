@@ -5,7 +5,7 @@ date: "2025-10-14T09:00:00.000Z"
 category: "Case Studies"
 author:
   name: "RiseRidge Team"
-coverImage: "/blog/seo-case-studies-lessons-learned-hero.svg"
+coverImagePath: "/blog/seo-case-studies-lessons-learned-hero.svg"
 ---
 
 ## Different Industries, One Repeating Pattern

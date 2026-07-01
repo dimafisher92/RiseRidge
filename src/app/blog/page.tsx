@@ -86,7 +86,7 @@ export default async function BlogPage() {
                   date={post.date}
                   category={post.category}
                   authorName={post.author?.name}
-                  coverImage={post.coverImage}
+                  coverImage={post.coverImagePath}
                   index={i}
                 />
               ))}
