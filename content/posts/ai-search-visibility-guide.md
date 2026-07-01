@@ -1,11 +1,11 @@
 ---
-title: "How AI Is Reshaping Search Visibility in 2025"
-excerpt: "AI Overviews, Search Generative Experience, and Perplexity are changing how people find answers. Here's how to stay visible as search evolves."
-date: "2025-04-02T09:00:00.000Z"
-category: "AI & Search"
+title: How AI Is Reshaping Search Visibility in 2025
+excerpt: 'AI Overviews, Search Generative Experience, and Perplexity are changing how people find answers. Here''s how to stay visible as search evolves.'
+date: 2025-04-02T09:00:00.000Z
+category: AI & Search
 author:
-  name: "RiseRidge Team"
-coverImage: "/blog/ai-search-visibility-guide-hero.svg"
+  name: RiseRidge Team
+coverImage: /uploads/aisearchvisibilityguidehero.svg
 ---
 
 ## The Search Landscape Has Fundamentally Changed
@@ -33,10 +33,10 @@ Beyond Google, AI-native search engines are growing rapidly. Perplexity processe
 
 These systems share common characteristics:
 
-- They prefer authoritative, well-sourced content
-- They cite specific pages and quote directly
-- They favor content that is easy to parse and excerpt
-- They penalize thin, SEO-stuffed content more aggressively than traditional search
+* They prefer authoritative, well-sourced content
+* They cite specific pages and quote directly
+* They favor content that is easy to parse and excerpt
+* They penalize thin, SEO-stuffed content more aggressively than traditional search
 
 **The RiseRidge approach:** We treat AI search engines as a separate but related signal in our optimization strategy. Pages optimized for AI search tend to also perform better in traditional search — because the signals overlap: clarity, authority, and comprehensive coverage.
 
@@ -46,11 +46,11 @@ AI systems understand the web through entities — named things: people, places,
 
 **Entity optimization tactics:**
 
-- Maintain a consistent NAP (Name, Address, Phone) across all web properties
-- Build your Google Knowledge Panel through Wikipedia, Wikidata, and authoritative mentions
-- Get cited on high-authority reference sites in your industry
-- Implement Organization schema markup with complete details
-- Ensure your brand appears consistently across news coverage, social profiles, and industry directories
+* Maintain a consistent NAP (Name, Address, Phone) across all web properties
+* Build your Google Knowledge Panel through Wikipedia, Wikidata, and authoritative mentions
+* Get cited on high-authority reference sites in your industry
+* Implement Organization schema markup with complete details
+* Ensure your brand appears consistently across news coverage, social profiles, and industry directories
 
 ## Content That Wins in an AI-First World
 
