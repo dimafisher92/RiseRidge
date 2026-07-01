@@ -1,11 +1,11 @@
 ---
-title: "SEO in 2026: Five Shifts Reshaping How Growth-Stage Brands Compete"
-excerpt: "Zero-click search, AI answer engines, and shrinking organic real estate aren't hypothetical anymore. Here's what's actually changing — and what still works."
-date: "2026-01-20T09:00:00.000Z"
-category: "Industry Insights"
+title: 'SEO in 2026: Five Shifts Reshaping How Growth-Stage Brands Compete'
+excerpt: 'Zero-click search, AI answer engines, and shrinking organic real estate aren''t hypothetical anymore. Here''s what''s actually changing — and what still works.'
+date: 2026-01-20T09:00:00.000Z
+category: Industry Insights
 author:
-  name: "RiseRidge Team"
-coverImage: "/blog/seo-industry-trends-2025-hero.svg"
+  name: RiseRidge Team
+coverImage: /uploads/seoindustrytrends2025hero.svg
 ---
 
 ## Search Is Being Redrawn, Not Replaced
