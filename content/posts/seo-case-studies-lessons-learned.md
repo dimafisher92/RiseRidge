@@ -1,11 +1,11 @@
 ---
-title: "What Our SEO Case Studies Actually Teach About Compounding Growth"
-excerpt: "From a catering company to a beachfront resort to a 9-figure e-commerce brand, the wins look different on the surface. The underlying pattern is always the same."
-date: "2025-10-14T09:00:00.000Z"
-category: "Case Studies"
+title: What Our SEO Case Studies Actually Teach About Compounding Growth
+excerpt: 'From a catering company to a beachfront resort to a 9-figure e-commerce brand, the wins look different on the surface. The underlying pattern is always the same.'
+date: 2025-10-14T09:00:00.000Z
+category: Case Studies
 author:
-  name: "RiseRidge Team"
-coverImage: "/blog/seo-case-studies-lessons-learned-hero.svg"
+  name: RiseRidge Team
+coverImage: /uploads/seocasestudieslessonslearnedhero.svg
 ---
 
 ## Different Industries, One Repeating Pattern
