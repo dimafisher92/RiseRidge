@@ -125,6 +125,18 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Hero image */}
+        {post.coverImage && (
+          <section className="pb-16">
+            <div className="mx-auto max-w-4xl px-6">
+              <div className="aspect-[16/9] w-full overflow-hidden rounded-[6px] border border-border bg-surface">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={post.coverImage} alt="" className="h-full w-full object-cover" />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Body */}
         <section className="pb-24">
           <div className="mx-auto max-w-3xl px-6">

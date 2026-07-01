@@ -5,7 +5,7 @@ date: "2025-04-02T09:00:00.000Z"
 category: "AI & Search"
 author:
   name: "RiseRidge Team"
-coverImage: ""
+coverImage: "/blog/ai-search-visibility-guide-hero.svg"
 ---
 
 ## The Search Landscape Has Fundamentally Changed
