@@ -12,8 +12,9 @@ export default defineConfig({
 
   media: {
     tina: {
-      mediaRoot: 'uploads',
+      mediaRoot: '',
       publicFolder: 'public',
+      static: false,
     },
   },
 
@@ -89,9 +90,10 @@ export default defineConfig({
             ],
           },
           {
-            type: 'image',
+            type: 'string',
             name: 'coverImage',
-            label: 'Cover Image',
+            label: 'Cover Image Path',
+            description: 'Path to an image already in /public, e.g. /blog/my-post-hero.svg. Tina media sync is not set up for this project, so this field does not use the image picker.',
           },
           {
             type: 'rich-text',

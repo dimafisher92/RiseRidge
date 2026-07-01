@@ -123,13 +123,6 @@ input PostAuthorFilter {
   name: StringFilter
 }
 
-input ImageFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-  in: [String]
-}
-
 input RichTextFilter {
   startsWith: String
   eq: String
@@ -142,7 +135,7 @@ input PostFilter {
   date: DatetimeFilter
   category: StringFilter
   author: PostAuthorFilter
-  coverImage: ImageFilter
+  coverImage: StringFilter
   body: RichTextFilter
 }
 

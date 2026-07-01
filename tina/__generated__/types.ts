@@ -203,13 +203,6 @@ export type PostAuthorFilter = {
   name?: InputMaybe<StringFilter>;
 };
 
-export type ImageFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
 export type RichTextFilter = {
   startsWith?: InputMaybe<Scalars['String']['input']>;
   eq?: InputMaybe<Scalars['String']['input']>;
@@ -222,7 +215,7 @@ export type PostFilter = {
   date?: InputMaybe<DatetimeFilter>;
   category?: InputMaybe<StringFilter>;
   author?: InputMaybe<PostAuthorFilter>;
-  coverImage?: InputMaybe<ImageFilter>;
+  coverImage?: InputMaybe<StringFilter>;
   body?: InputMaybe<RichTextFilter>;
 };
 

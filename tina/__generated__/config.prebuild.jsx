@@ -1,7 +1,7 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
 var config_default = defineConfig({
-  branch: process.env.NEXT_PUBLIC_TINA_BRANCH ?? process.env.GITHUB_BRANCH ?? "claude/rankpilot-website-bnnCr",
+  branch: process.env.NEXT_PUBLIC_TINA_BRANCH ?? process.env.VERCEL_GIT_COMMIT_REF ?? process.env.GITHUB_BRANCH ?? "claude/rankpilot-website-bnnCr",
   clientId: "57325307-e3e1-49db-b176-8eb56885a07b",
   token: "36967b0ae5c8c132e8c10d871c99725063a814ef",
   build: {
@@ -10,8 +10,9 @@ var config_default = defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "uploads",
-      publicFolder: "public"
+      mediaRoot: "",
+      publicFolder: "public",
+      static: false
     }
   },
   search: {
@@ -85,9 +86,10 @@ var config_default = defineConfig({
             ]
           },
           {
-            type: "image",
+            type: "string",
             name: "coverImage",
-            label: "Cover Image"
+            label: "Cover Image Path",
+            description: "Path to an image already in /public, e.g. /blog/my-post-hero.svg. Tina media sync is not set up for this project, so this field does not use the image picker."
           },
           {
             type: "rich-text",
