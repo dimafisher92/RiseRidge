@@ -1,11 +1,11 @@
 ---
-title: "How RiseRidge Builds AI-Assisted Content at Scale Without Sacrificing Quality"
-excerpt: "Publishing more content isn't the goal — publishing the right content, faster, without the usual quality tradeoffs. Here's the production system behind it."
-date: "2025-07-22T09:00:00.000Z"
-category: "Content Marketing"
+title: How RiseRidge Builds AI-Assisted Content at Scale Without Sacrificing Quality
+excerpt: 'Publishing more content isn''t the goal — publishing the right content, faster, without the usual quality tradeoffs. Here''s the production system behind it.'
+date: 2025-07-22T09:00:00.000Z
+category: Content Marketing
 author:
-  name: "RiseRidge Team"
-coverImage: "/blog/ai-content-production-at-scale-hero.svg"
+  name: RiseRidge Team
+coverImage: /uploads/aicontentproductionatscalehero.svg
 ---
 
 ## The False Choice Between Speed and Quality
@@ -18,10 +18,10 @@ That's not what AI-assisted content production is supposed to look like. At Rise
 
 Every piece starts with a brief, not a prompt. Before content is drafted, our system pulls together:
 
-- Search intent data for the target keyword cluster (what searchers actually want to see)
-- Competitor content gaps — what's ranking, and what it's missing
-- Internal linking opportunities from existing pillar and cluster pages
-- Subject-matter input from the client where domain expertise matters
+* Search intent data for the target keyword cluster (what searchers actually want to see)
+* Competitor content gaps — what's ranking, and what it's missing
+* Internal linking opportunities from existing pillar and cluster pages
+* Subject-matter input from the client where domain expertise matters
 
 This is the step most AI-generated content skips entirely, and it's the reason so much of it reads as hollow. Content without a research foundation has nothing original to say.
 
@@ -31,10 +31,10 @@ Once the brief is set, AI accelerates the first draft — structuring the piece,
 
 **What our editors are checking for on every piece:**
 
-- Does this reflect real expertise, or just plausible-sounding generalities?
-- Are the examples specific and defensible, not vague filler?
-- Does the structure actually answer the searcher's question in the first few paragraphs?
-- Is the brand voice consistent with everything else the client publishes?
+* Does this reflect real expertise, or just plausible-sounding generalities?
+* Are the examples specific and defensible, not vague filler?
+* Does the structure actually answer the searcher's question in the first few paragraphs?
+* Is the brand voice consistent with everything else the client publishes?
 
 Content that doesn't clear this bar gets sent back before it ever reaches a live URL.
 
