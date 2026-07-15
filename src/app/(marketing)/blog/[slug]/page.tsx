@@ -1,49 +1,38 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { client } from '../../../../../tina/__generated__/client';
+import { getPostBySlug, getPostSlugs } from '@/lib/blog';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
-import { TinaRichText } from '@/components/TinaRichText';
+import { Markdown } from '@/components/Markdown';
 
 interface Props {
   params: { slug: string };
 }
 
-export async function generateStaticParams() {
-  try {
-    const result = await client.queries.postConnection();
-    return (result.data.postConnection.edges ?? []).map((edge) => ({
-      slug: edge!.node!._sys.filename,
-    }));
-  } catch {
-    // TinaCloud not yet indexed — pages will be generated on-demand at runtime
-    return [];
-  }
+// Only pre-rendered slugs are valid; unknown ones 404 (no runtime fs read).
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getPostSlugs().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  try {
-    const result = await client.queries.post({
-      relativePath: `${params.slug}.md`,
-    });
-    const post = result.data.post;
-    return {
-      title: `${post.title} | RiseRidge Blog`,
+export function generateMetadata({ params }: Props): Metadata {
+  const post = getPostBySlug(params.slug);
+  if (!post) return {};
+  return {
+    title: `${post.title} | RiseRidge Blog`,
+    description: post.excerpt,
+    alternates: { canonical: `/blog/${params.slug}` },
+    openGraph: {
+      title: `${post.title} | RiseRidge`,
       description: post.excerpt,
-      alternates: { canonical: `/blog/${params.slug}` },
-      openGraph: {
-        title: `${post.title} | RiseRidge`,
-        description: post.excerpt,
-        type: 'article',
-        publishedTime: post.date,
-        ...(post.coverImage ? { images: [{ url: post.coverImage }] } : {}),
-      },
-    };
-  } catch {
-    return {};
-  }
+      type: 'article',
+      publishedTime: post.date,
+      ...(post.coverImage ? { images: [{ url: post.coverImage }] } : {}),
+    },
+  };
 }
 
 function formatDate(iso: string) {
@@ -54,23 +43,15 @@ function formatDate(iso: string) {
   });
 }
 
-function estimateReadTime(body: unknown): string {
-  const text = JSON.stringify(body ?? '');
-  const words = text.split(/\s+/).length;
+function estimateReadTime(body: string): string {
+  const words = body.trim().split(/\s+/).length;
   const minutes = Math.max(1, Math.round(words / 200));
   return `${minutes} min read`;
 }
 
-export default async function BlogPostPage({ params }: Props) {
-  let post;
-  try {
-    const result = await client.queries.post({
-      relativePath: `${params.slug}.md`,
-    });
-    post = result.data.post;
-  } catch {
-    notFound();
-  }
+export default function BlogPostPage({ params }: Props) {
+  const post = getPostBySlug(params.slug);
+  if (!post) notFound();
 
   return (
     <>
@@ -89,7 +70,7 @@ export default async function BlogPostPage({ params }: Props) {
           description: post.excerpt,
           url: `/blog/${params.slug}`,
           datePublished: post.date,
-          authorName: post.author?.name ?? undefined,
+          authorName: post.authorName ?? undefined,
           image: post.coverImage || undefined,
           section: post.category ?? undefined,
         }}
@@ -112,9 +93,9 @@ export default async function BlogPostPage({ params }: Props) {
 
             {/* Meta row */}
             <div className="mt-8 flex items-center justify-center gap-4 flex-wrap font-mono text-xs text-muted">
-              {post.author?.name && (
+              {post.authorName && (
                 <>
-                  <span>{post.author.name}</span>
+                  <span>{post.authorName}</span>
                   <span className="text-border">·</span>
                 </>
               )}
@@ -142,8 +123,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="mx-auto max-w-3xl px-6">
             <div className="border-t border-border pt-12">
               {post.body ? (
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                <TinaRichText content={post.body as any} />
+                <Markdown content={post.body} />
               ) : (
                 <p className="text-muted">No content yet.</p>
               )}
