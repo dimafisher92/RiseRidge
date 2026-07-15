@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { client } from '../../../../tina/__generated__/client';
+import { client } from '../../../../../tina/__generated__/client';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';

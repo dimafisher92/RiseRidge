@@ -1,9 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
-import { JsonLd } from '@/components/JsonLd';
-import { AuditPopupProvider } from '@/components/AuditPopup';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://riseridge.io'),
@@ -57,17 +53,7 @@ export default function RootLayout({
           src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vc2VvLnJpc2VyaWRnZS5pby9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gImY2MGQ3NjUwLTU2NTYtNDcxYi1iZmUxLTU4MWNmYjZhYTM2MCI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="
         ></script>
       </head>
-      <body className="bg-canvas text-body font-body antialiased">
-        <AuditPopupProvider>
-          <a href="#main-content" className="skip-to-content">
-            Skip to main content
-          </a>
-          <JsonLd type="organization" />
-          <Navbar />
-          <main id="main-content">{children}</main>
-          <Footer />
-        </AuditPopupProvider>
-      </body>
+      <body className="bg-canvas text-body font-body antialiased">{children}</body>
     </html>
   );
 }
