@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { client } from '../../../tina/__generated__/client';
+import { client } from '../../../../tina/__generated__/client';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { SectionLabel } from '@/components/SectionLabel';
 import { ScrollReveal } from '@/components/ScrollReveal';

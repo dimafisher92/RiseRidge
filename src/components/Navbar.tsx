@@ -87,7 +87,14 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <Link
+            href="/login/"
+            className="hidden md:inline-flex rounded-[3px] border border-forest/40 px-4 py-2.5 text-sm font-body font-medium text-forest transition-all duration-200 hover:border-forest hover:bg-forest/5"
+          >
+            Client Login
+          </Link>
+
           <button
             onClick={openAuditPopup}
             className="hidden md:inline-flex rounded-[3px] bg-forest px-5 py-2.5 text-sm font-body font-medium text-on-dark transition-all duration-300 hover:bg-forest-hover hover:glow-blue"
@@ -151,6 +158,15 @@ export function Navbar() {
                   </Link>
                 </li>
               ))}
+              <li className="mt-2">
+                <Link
+                  href="/login/"
+                  onClick={() => setMobileOpen(false)}
+                  className="block w-full rounded-[3px] border border-forest/40 px-5 py-3 text-center text-sm font-medium text-forest hover:bg-forest/5"
+                >
+                  Client Login
+                </Link>
+              </li>
               <li className="mt-2">
                 <button
                   onClick={() => { setMobileOpen(false); openAuditPopup(); }}
