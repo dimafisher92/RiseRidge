@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# portal seed output (generated, may contain temp credentials)
+scripts/seed-output.json

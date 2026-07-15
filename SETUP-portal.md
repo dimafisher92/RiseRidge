@@ -47,21 +47,36 @@ NEXT_PUBLIC_SITE_URL=https://riseridge.io   # no trailing slash
   Optionally brand them. For real sending volume, configure a custom SMTP sender
   under **Project Settings → Auth → SMTP** (the built-in sender is rate-limited).
 
-## 5. Seed the first admin
+## 5. Seed the first admin (+ demo data) — scripted
 
-Invites create **client** users by default. To make yourself an admin:
+> **Run the scripts from your own machine.** Claude Code's cloud session cannot
+> reach Supabase (its egress policy blocks `*.supabase.co` and
+> `api.supabase.com`), so the migration, seeding, and verification must be run
+> where Supabase is reachable — your laptop or CI.
 
-1. Create a user for yourself — easiest via **Authentication → Users → Add user**
-   (set a password), or sign yourself an invite.
-2. In the SQL editor, promote that user:
+With the migration applied (step 2) and env set:
 
-   ```sql
-   update public.profiles
-   set role = 'admin', client_id = null
-   where id = (select id from auth.users where email = 'you@riseridge.io');
-   ```
+```bash
+set -a; source .env.local; set +a        # loads NEXT_PUBLIC_SUPABASE_URL, keys
+node scripts/seed-portal.mjs             # admin + demo client + client login + report + a 2nd client
+node scripts/verify-rls.mjs              # cross-client RLS safety check (gating)
+```
 
-3. Sign in at `/login/`. Admins land on the admin workspace (`/portal/admin/`).
+`seed-portal.mjs` creates the admin (`dimafisher92@gmail.com`), a **Demo Store**
+client with a login (`dimafisher92+demo@gmail.com`) and a published report, and a
+second client for the isolation test. It prints temporary passwords and writes
+them to `scripts/seed-output.json` (gitignored). Change passwords on first login.
+
+Prefer to do it by hand? Create a user via **Authentication → Users → Add user**,
+then in the SQL editor:
+
+```sql
+update public.profiles
+set role = 'admin', client_id = null
+where id = (select id from auth.users where email = 'you@riseridge.io');
+```
+
+Sign in at `/login/`. Admins land on the admin workspace (`/portal/admin/`).
 
 ## 6. Verify end-to-end
 
