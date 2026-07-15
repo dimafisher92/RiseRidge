@@ -186,7 +186,7 @@ export default function CaseStudiesPage() {
       {/* Aggregate Stats */}
       <StatsBar stats={AGGREGATE_STATS} />
 
-      {/* Featured Case Study — TwoPackBag two-store organic growth */}
+      {/* Featured Case Study — travel-bag store two-store organic growth */}
       <section className="py-24" aria-labelledby="featured-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
@@ -201,8 +201,8 @@ export default function CaseStudiesPage() {
               &ldquo;Is it the ads &mdash; or the SEO?&rdquo; We doubled organic revenue and proved it.
             </h2>
             <p className="mt-4 max-w-3xl text-muted leading-relaxed">
-              A DTC travel-gear brand runs two Shopify stores &mdash; an English/US flagship
-              (twopackbag.com) and a Spanish/LATAM sister site (the2packbag.com). The founder asked a
+              A DTC travel-bag store runs two Shopify stores &mdash; an English/US flagship
+              and a Spanish/LATAM sister site. The founder asked a
               fair question: how much of the recent growth was really SEO, and how much was simply a
               bigger ad budget? We answered with numbers advertising cannot produce &mdash; every
               figure below is drawn from Google Search Console and Shopify&rsquo;s organic-only channel,
@@ -218,7 +218,7 @@ export default function CaseStudiesPage() {
                 <p className="text-sm text-body leading-relaxed">
                   Growth was climbing, but paid and organic were tangled together in the reporting, so
                   the SEO investment couldn&rsquo;t be defended on its own merits. A near-identical third
-                  domain used for Google Ads (trythe2packbag.com) was also splitting ranking power with
+                  domain used for Google Ads was also splitting ranking power with
                   the flagship. We needed to isolate organic performance and prove causation, not just
                   correlation.
                 </p>
@@ -281,9 +281,9 @@ export default function CaseStudiesPage() {
                 <thead>
                   <tr className="border-b border-line font-mono text-[10px] uppercase tracking-[0.14em] text-subtle">
                     <th className="py-3 px-5 font-normal">Organic-only metric</th>
-                    <th className="py-3 px-5 font-normal">twopackbag.com (EN)</th>
+                    <th className="py-3 px-5 font-normal">US store (EN)</th>
                     <th className="py-3 px-5 text-right font-normal">Δ</th>
-                    <th className="py-3 px-5 font-normal">the2packbag.com (ES)</th>
+                    <th className="py-3 px-5 font-normal">LATAM store (ES)</th>
                     <th className="py-3 px-5 text-right font-normal">Δ</th>
                   </tr>
                 </thead>

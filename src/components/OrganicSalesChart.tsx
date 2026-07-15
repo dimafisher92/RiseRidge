@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 /**
  * Faithful recreation of the client's Shopify "Total sales (last click) · Organic"
- * report for twopackbag.com — organic-only channel, paid advertising excluded.
+ * report for the travel-bag store — organic-only channel, paid advertising excluded.
  *
  * Current period : Apr 15 – Jul 14, 2026  → $73,896.70
  * Comparison     : Jan 14 – Apr 14, 2026  → $35,409.94  (+109%)
