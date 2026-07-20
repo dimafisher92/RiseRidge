@@ -28,7 +28,7 @@ export default async function PortalLayout({
           <Logo onDark />
         </Link>
         <PortalNav items={items} />
-        <div className="mt-auto pt-6 font-mono text-[10px] uppercase tracking-[0.14em] text-on-dark-muted">
+        <div className="mt-auto pt-6 font-mono text-[10px] uppercase tracking-[0.14em] text-on-dark/60">
           {isAdmin ? 'Admin workspace' : 'Client portal'}
         </div>
       </aside>

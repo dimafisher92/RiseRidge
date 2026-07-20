@@ -3,29 +3,14 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Loader2, Plus, Trash2 } from 'lucide-react';
-import type { MetricUnit } from '@/lib/supabase/types';
 
 const inputCls =
   'w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-subtle focus:border-forest focus:outline-none';
-const labelCls = 'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] text-subtle';
+const labelCls = 'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] text-body';
 
-type MetricRow = {
-  label: string;
-  currentValue: string;
-  priorValue: string;
-  unit: MetricUnit;
-  higherIsBetter: boolean;
-  decimals: string;
-};
+type HighlightRow = { label: string; value: string; note: string; positive: boolean };
 
-const emptyRow = (): MetricRow => ({
-  label: '',
-  currentValue: '',
-  priorValue: '',
-  unit: 'number',
-  higherIsBetter: true,
-  decimals: '0',
-});
+const emptyHighlight = (): HighlightRow => ({ label: '', value: '', note: '', positive: true });
 
 export function ReportUploadForm({ clients }: { clients: { id: string; name: string }[] }) {
   const router = useRouter();
@@ -33,17 +18,16 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
   const [title, setTitle] = useState('');
   const [periodStart, setPeriodStart] = useState('');
   const [periodEnd, setPeriodEnd] = useState('');
-  const [compareStart, setCompareStart] = useState('');
-  const [compareEnd, setCompareEnd] = useState('');
   const [summary, setSummary] = useState('');
-  const [metrics, setMetrics] = useState<MetricRow[]>([emptyRow()]);
+  const [reportBody, setReportBody] = useState('');
+  const [highlights, setHighlights] = useState<HighlightRow[]>([emptyHighlight()]);
   const [files, setFiles] = useState<File[]>([]);
   const [publishNow, setPublishNow] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  function updateRow(i: number, patch: Partial<MetricRow>) {
-    setMetrics((rows) => rows.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
+  function updateHighlight(i: number, patch: Partial<HighlightRow>) {
+    setHighlights((rows) => rows.map((r, idx) => (idx === i ? { ...r, ...patch } : r)));
   }
 
   async function onSubmit(e: React.FormEvent) {
@@ -51,11 +35,9 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
     setError(null);
     if (!clientId) return setError('Select a client.');
     if (!title.trim()) return setError('Enter a report title.');
-    if (!periodStart || !periodEnd) return setError('Set the reporting period.');
 
     setBusy(true);
     try {
-      // 1) create the draft report + metrics
       const createRes = await fetch('/api/portal/admin/reports/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -63,20 +45,12 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
           clientId,
           title,
           summary,
+          body: reportBody,
           periodStart,
           periodEnd,
-          compareStart,
-          compareEnd,
-          metrics: metrics
-            .filter((m) => m.label.trim())
-            .map((m) => ({
-              label: m.label,
-              currentValue: m.currentValue,
-              priorValue: m.priorValue,
-              unit: m.unit,
-              higherIsBetter: m.higherIsBetter,
-              decimals: Number(m.decimals) || 0,
-            })),
+          highlights: highlights
+            .filter((h) => h.label.trim() && h.value.trim())
+            .map((h) => ({ label: h.label, value: h.value, note: h.note, positive: h.positive })),
         }),
       });
       const created = await createRes.json();
@@ -86,14 +60,10 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
       }
       const reportId: string = created.reportId;
 
-      // 2) upload screenshots (if any)
       if (files.length > 0) {
         const fd = new FormData();
         files.forEach((f) => fd.append('files', f));
-        const upRes = await fetch(`/api/portal/admin/reports/${reportId}/screenshots/`, {
-          method: 'POST',
-          body: fd,
-        });
+        const upRes = await fetch(`/api/portal/admin/reports/${reportId}/screenshots/`, { method: 'POST', body: fd });
         if (!upRes.ok) {
           const up = await upRes.json().catch(() => ({}));
           setError(`Report saved, but screenshot upload failed: ${up.detail || up.error || 'unknown error'}.`);
@@ -101,7 +71,6 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
         }
       }
 
-      // 3) publish (optional)
       if (publishNow) {
         const pubRes = await fetch(`/api/portal/admin/reports/${reportId}/publish/`, { method: 'POST' });
         if (!pubRes.ok) {
@@ -133,75 +102,54 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
         </div>
         <div className="sm:col-span-2">
           <label className={labelCls} htmlFor="r-title">Title</label>
-          <input id="r-title" className={inputCls} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="June 2026 Performance" />
+          <input id="r-title" className={inputCls} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Bi-weekly SEO update — July 16" />
         </div>
         <div>
-          <label className={labelCls} htmlFor="r-ps">Period start</label>
+          <label className={labelCls} htmlFor="r-ps">Period start (optional)</label>
           <input id="r-ps" type="date" className={inputCls} value={periodStart} onChange={(e) => setPeriodStart(e.target.value)} />
         </div>
         <div>
-          <label className={labelCls} htmlFor="r-pe">Period end</label>
+          <label className={labelCls} htmlFor="r-pe">Period end (optional)</label>
           <input id="r-pe" type="date" className={inputCls} value={periodEnd} onChange={(e) => setPeriodEnd(e.target.value)} />
         </div>
-        <div>
-          <label className={labelCls} htmlFor="r-cs">Comparison start (optional)</label>
-          <input id="r-cs" type="date" className={inputCls} value={compareStart} onChange={(e) => setCompareStart(e.target.value)} />
-        </div>
-        <div>
-          <label className={labelCls} htmlFor="r-ce">Comparison end (optional)</label>
-          <input id="r-ce" type="date" className={inputCls} value={compareEnd} onChange={(e) => setCompareEnd(e.target.value)} />
-        </div>
         <div className="sm:col-span-2">
-          <label className={labelCls} htmlFor="r-summary">Summary</label>
-          <textarea id="r-summary" className={`${inputCls} min-h-[90px]`} value={summary} onChange={(e) => setSummary(e.target.value)} placeholder="A short written summary the client sees first." />
+          <label className={labelCls} htmlFor="r-summary">Short summary (shown on the dashboard)</label>
+          <textarea id="r-summary" className={`${inputCls} min-h-[70px]`} value={summary} onChange={(e) => setSummary(e.target.value)} placeholder="One or two sentences the client sees first." />
         </div>
       </section>
 
-      {/* Metric rows */}
+      {/* Highlights — flexible headline numbers */}
       <section className="space-y-3">
         <div className="flex items-center justify-between">
-          <h2 className="font-display text-lg font-semibold text-ink">Metrics</h2>
-          <button type="button" className="inline-flex items-center gap-1 text-sm text-brass hover:underline" onClick={() => setMetrics((r) => [...r, emptyRow()])}>
-            <Plus className="h-4 w-4" aria-hidden /> Add metric
+          <h2 className="font-display text-lg font-semibold text-ink">Highlights</h2>
+          <button type="button" className="inline-flex items-center gap-1 text-sm text-brass hover:underline" onClick={() => setHighlights((r) => [...r, emptyHighlight()])}>
+            <Plus className="h-4 w-4" aria-hidden /> Add highlight
           </button>
         </div>
-        <p className="text-xs text-subtle">Enter raw numbers only (e.g. 73896.7, 5.78). Deltas are computed for you.</p>
+        <p className="text-xs text-body">A few key numbers to feature this period — any format (e.g. &ldquo;35,100&rdquo;, &ldquo;+149%&rdquo;, &ldquo;$336,249&rdquo;, &ldquo;position 1.4&rdquo;). Optional.</p>
 
-        <div className="space-y-3">
-          {metrics.map((m, i) => (
+        <div className="space-y-2">
+          {highlights.map((h, i) => (
             <div key={i} className="grid grid-cols-1 gap-2 rounded-lg border border-line p-3 sm:grid-cols-12 sm:items-end">
               <div className="sm:col-span-3">
                 <label className={labelCls}>Label</label>
-                <input className={inputCls} value={m.label} onChange={(e) => updateRow(i, { label: e.target.value })} placeholder="Total sales" />
+                <input className={inputCls} value={h.label} onChange={(e) => updateHighlight(i, { label: e.target.value })} placeholder="Total Impressions" />
               </div>
-              <div className="sm:col-span-2">
-                <label className={labelCls}>Current</label>
-                <input className={inputCls} inputMode="decimal" value={m.currentValue} onChange={(e) => updateRow(i, { currentValue: e.target.value })} placeholder="73896.7" />
+              <div className="sm:col-span-3">
+                <label className={labelCls}>Value</label>
+                <input className={inputCls} value={h.value} onChange={(e) => updateHighlight(i, { value: e.target.value })} placeholder="35,100" />
               </div>
-              <div className="sm:col-span-2">
-                <label className={labelCls}>Prior</label>
-                <input className={inputCls} inputMode="decimal" value={m.priorValue} onChange={(e) => updateRow(i, { priorValue: e.target.value })} placeholder="35409.94" />
-              </div>
-              <div className="sm:col-span-2">
-                <label className={labelCls}>Unit</label>
-                <select className={inputCls} value={m.unit} onChange={(e) => updateRow(i, { unit: e.target.value as MetricUnit })}>
-                  <option value="number">Number</option>
-                  <option value="currency">Currency</option>
-                  <option value="percent">Percent</option>
-                  <option value="duration_s">Duration (s)</option>
-                </select>
-              </div>
-              <div className="sm:col-span-1">
-                <label className={labelCls}>Dec.</label>
-                <input className={inputCls} inputMode="numeric" value={m.decimals} onChange={(e) => updateRow(i, { decimals: e.target.value })} />
+              <div className="sm:col-span-4">
+                <label className={labelCls}>Note (optional)</label>
+                <input className={inputCls} value={h.note} onChange={(e) => updateHighlight(i, { note: e.target.value })} placeholder="+149% vs prior period" />
               </div>
               <div className="flex items-center gap-2 sm:col-span-2">
                 <label className="flex items-center gap-2 text-xs text-body">
-                  <input type="checkbox" checked={m.higherIsBetter} onChange={(e) => updateRow(i, { higherIsBetter: e.target.checked })} />
-                  Higher is better
+                  <input type="checkbox" checked={h.positive} onChange={(e) => updateHighlight(i, { positive: e.target.checked })} />
+                  Positive
                 </label>
-                {metrics.length > 1 && (
-                  <button type="button" aria-label="Remove metric" className="text-subtle hover:text-[#a23b3b]" onClick={() => setMetrics((r) => r.filter((_, idx) => idx !== i))}>
+                {highlights.length > 1 && (
+                  <button type="button" aria-label="Remove highlight" className="text-subtle hover:text-[#a23b3b]" onClick={() => setHighlights((r) => r.filter((_, idx) => idx !== i))}>
                     <Trash2 className="h-4 w-4" aria-hidden />
                   </button>
                 )}
@@ -209,6 +157,22 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Body — free-form write-up */}
+      <section className="space-y-2">
+        <h2 className="font-display text-lg font-semibold text-ink">Report write-up</h2>
+        <p className="text-xs text-body">
+          Paste or write the full report. Markdown works — use <code className="font-mono">## Heading</code>,
+          <code className="font-mono"> - bullet</code>, and <code className="font-mono">**bold**</code>. This is where the flexible,
+          week-specific detail goes.
+        </p>
+        <textarea
+          className={`${inputCls} min-h-[280px] font-mono text-[13px] leading-relaxed`}
+          value={reportBody}
+          onChange={(e) => setReportBody(e.target.value)}
+          placeholder={'## Search Performance\n- Total Clicks: 29\n- Total Impressions: 35,100\n- Average Position: 18.5\n\n## Completed Optimizations\n- Title Tags: 85/85 — fully complete\n...'}
+        />
       </section>
 
       {/* Screenshots */}
@@ -221,7 +185,7 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
           onChange={(e) => setFiles(Array.from(e.target.files ?? []))}
           className="block w-full text-sm text-body file:mr-4 file:rounded-lg file:border-0 file:bg-forest file:px-4 file:py-2 file:text-sm file:font-semibold file:text-on-dark hover:file:bg-forest-hover"
         />
-        {files.length > 0 && <p className="text-xs text-subtle">{files.length} file(s) selected.</p>}
+        {files.length > 0 && <p className="text-xs text-body">{files.length} file(s) selected.</p>}
       </section>
 
       <div className="flex flex-wrap items-center gap-4 border-t border-line pt-4">

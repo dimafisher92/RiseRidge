@@ -8,7 +8,7 @@ import type { ClientUser } from '@/lib/portal/admin';
 
 const inputCls =
   'w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-subtle focus:border-forest focus:outline-none';
-const labelCls = 'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] text-subtle';
+const labelCls = 'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] text-body';
 const cardCls = 'rounded-[10px] border border-line bg-white p-6';
 const btnCls =
   'inline-flex items-center justify-center gap-2 rounded-lg bg-forest px-4 py-2 text-sm font-semibold text-on-dark hover:bg-forest-hover disabled:opacity-60';

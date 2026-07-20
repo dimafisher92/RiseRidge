@@ -15,7 +15,7 @@ export default async function AdminHome() {
           <h1 className="mt-1 font-display text-3xl font-semibold text-ink md:text-4xl">Clients</h1>
         </div>
         <div className="flex flex-wrap gap-3">
-          <Link href="/portal/admin/reports/new/" className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-medium text-body hover:border-brass hover:text-brass">
+          <Link href="/portal/admin/reports/new/" className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-medium text-ink hover:border-brass hover:text-brass">
             <Plus className="h-4 w-4" aria-hidden /> New report
           </Link>
           <Link href="/portal/admin/clients/new/" className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-on-dark hover:bg-forest-hover">
@@ -45,7 +45,7 @@ export default async function AdminHome() {
                 <tr key={c.id} className="border-b border-line/60 last:border-0">
                   <td className="px-5 py-3">
                     <span className="font-medium text-ink">{c.name}</span>
-                    <span className="ml-2 font-mono text-[10px] uppercase tracking-[0.14em] text-subtle">{c.slug}</span>
+                    <span className="ml-2 font-mono text-[10px] uppercase tracking-[0.14em] text-body">{c.slug}</span>
                   </td>
                   <td className="px-5 py-3">
                     <span className={c.status === 'active' ? 'text-forest' : 'text-subtle'}>{c.status}</span>
