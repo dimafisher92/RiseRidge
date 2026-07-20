@@ -9,6 +9,7 @@
   --color-forest-hover: #15291F; /* primary button hover */
   --color-brass: #A9874E;        /* gold accent */
   --color-brass-hover: #967640;  /* brass button hover */
+  --color-brass-text: #7A5E2E;   /* darker gold for text/links on light bg (AA ≥ 4.5:1) */
   --color-ink: #15140F;          /* near-black headings / darkest sections */
   --color-body: #56514a;         /* paragraph text */
   --color-subtle: #8a8276;       /* captions / meta */

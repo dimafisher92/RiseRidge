@@ -22,7 +22,7 @@ export default async function ReportsPage() {
       <div className="max-w-xl">
         <h1 className="font-display text-3xl font-semibold text-ink">Reports</h1>
         <p className="mt-3 text-body">
-          Admins manage reports from the <a className="text-brass underline" href="/portal/admin/">admin area</a>.
+          Admins manage reports from the <a className="text-brass-text underline" href="/portal/admin/">admin area</a>.
         </p>
       </div>
     );
@@ -44,7 +44,7 @@ export default async function ReportsPage() {
   return (
     <div className="space-y-8">
       <header>
-        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass">Report history</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass-text">Report history</p>
         <h1 className="mt-1 font-display text-3xl font-semibold text-ink md:text-4xl">Your reports</h1>
       </header>
 

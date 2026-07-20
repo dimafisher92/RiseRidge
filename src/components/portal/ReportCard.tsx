@@ -30,7 +30,7 @@ export function ReportCard({
       </div>
       <h3 className="mt-2 font-display text-xl font-semibold text-ink">{title}</h3>
       {highlight && <p className="mt-1 text-sm text-body">{highlight}</p>}
-      <span className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.14em] text-brass">
+      <span className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-brass-text">
         View report
         <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden />
       </span>

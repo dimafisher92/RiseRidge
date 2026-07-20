@@ -67,7 +67,7 @@ export default async function DashboardPage() {
   return (
     <div className="space-y-10">
       <header>
-        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass">Dashboard</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass-text">Dashboard</p>
         <h1 className="mt-1 font-display text-3xl font-semibold text-ink md:text-4xl">{client.name}</h1>
       </header>
 

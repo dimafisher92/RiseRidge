@@ -44,7 +44,7 @@ export default async function ReportDetailPage({ params }: { params: { id: strin
       <div className="no-print">
         <Link
           href="/portal/reports/"
-          className="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.14em] text-body hover:text-brass"
+          className="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.14em] text-body hover:text-brass-text"
         >
           <ArrowLeft className="h-3.5 w-3.5" aria-hidden /> All reports
         </Link>

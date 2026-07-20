@@ -11,14 +11,14 @@ export default async function AdminHome() {
     <div className="space-y-8">
       <header className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass">Admin</p>
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass-text">Admin</p>
           <h1 className="mt-1 font-display text-3xl font-semibold text-ink md:text-4xl">Clients</h1>
         </div>
         <div className="flex flex-wrap gap-3">
           <Link href="/portal/admin/reports/new/" className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-medium text-ink hover:border-brass hover:text-brass">
             <Plus className="h-4 w-4" aria-hidden /> New report
           </Link>
-          <Link href="/portal/admin/clients/new/" className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-on-dark hover:bg-forest-hover">
+          <Link href="/portal/admin/clients/new/" className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-white hover:bg-forest-hover">
             <Plus className="h-4 w-4" aria-hidden /> New client
           </Link>
         </div>
@@ -52,7 +52,7 @@ export default async function AdminHome() {
                   </td>
                   <td className="px-5 py-3 text-sm text-subtle">{c.slack_channel_url ? 'linked' : '—'}</td>
                   <td className="px-5 py-3 text-right">
-                    <Link href={`/portal/admin/clients/${c.id}/`} className="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.14em] text-brass hover:underline">
+                    <Link href={`/portal/admin/clients/${c.id}/`} className="inline-flex items-center gap-1 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-brass-text hover:underline">
                       Manage <ArrowRight className="h-3.5 w-3.5" aria-hidden />
                     </Link>
                   </td>

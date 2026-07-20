@@ -70,7 +70,7 @@ export function LoginForm() {
       className="w-full space-y-4"
       noValidate
     >
-      <div className="flex items-center gap-2 text-brass">
+      <div className="flex items-center gap-2 text-brass-text">
         <Lock className="h-4 w-4" aria-hidden />
         <span className="font-mono text-[11px] uppercase tracking-[0.18em]">
           {mode === 'login' ? 'Client sign in' : 'Reset password'}
