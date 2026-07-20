@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 import { requireSession } from '@/lib/portal/session';
-import { listPublishedReports, getMetricsForReports } from '@/lib/portal/reports';
-import { topPositiveMovers } from '@/lib/portal/trends';
+import { listPublishedReports, getHighlightsForReports } from '@/lib/portal/reports';
 import { ReportCard } from '@/components/portal/ReportCard';
-import type { ReportMetric } from '@/lib/supabase/types';
+import type { ReportHighlight } from '@/lib/supabase/types';
 
 export const dynamic = 'force-dynamic';
 export const metadata: Metadata = { title: 'Reports' };
 
-function periodRange(start: string, end: string) {
+function periodRange(start: string | null, end: string | null) {
+  if (!start || !end) return '';
   const fmt = (d: string) =>
     new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   return `${fmt(start)} – ${fmt(end)}`;
@@ -29,19 +29,16 @@ export default async function ReportsPage() {
   }
 
   const reports = await listPublishedReports(client.id);
-  const metrics = await getMetricsForReports(reports.map((r) => r.id));
+  const highlights = await getHighlightsForReports(reports.map((r) => r.id));
 
-  const byReport = new Map<string, ReportMetric[]>();
-  for (const m of metrics) {
-    const arr = byReport.get(m.report_id) ?? [];
-    arr.push(m);
-    byReport.set(m.report_id, arr);
+  const firstHighlight = new Map<string, ReportHighlight>();
+  for (const h of highlights) {
+    if (!firstHighlight.has(h.report_id)) firstHighlight.set(h.report_id, h);
   }
 
-  const highlightFor = (reportId: string): string | null => {
-    const top = topPositiveMovers(byReport.get(reportId) ?? [], 1)[0];
-    if (!top) return null;
-    return top.formattedDelta ? `${top.label} ${top.formattedDelta}` : `${top.label} ${top.formattedCurrent}`;
+  const teaser = (reportId: string): string | null => {
+    const h = firstHighlight.get(reportId);
+    return h ? `${h.label}: ${h.value}` : null;
   };
 
   return (
@@ -62,8 +59,8 @@ export default async function ReportsPage() {
               key={r.id}
               id={r.id}
               title={r.title}
-              periodLabel={periodRange(r.period_start, r.period_end)}
-              highlight={highlightFor(r.id)}
+              periodLabel={periodRange(r.period_start, r.period_end) || 'Report'}
+              highlight={teaser(r.id)}
               isLatest={i === 0}
             />
           ))}

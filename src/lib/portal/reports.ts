@@ -56,6 +56,28 @@ export async function getMetricsForReports(reportIds: string[]) {
   return data ?? [];
 }
 
+export async function getReportHighlights(reportId: string) {
+  const supabase = createClient();
+  const { data } = await supabase
+    .from('report_highlights')
+    .select('*')
+    .eq('report_id', reportId)
+    .order('sort_order', { ascending: true });
+  return data ?? [];
+}
+
+// Batched highlights for a set of reports (history list teasers).
+export async function getHighlightsForReports(reportIds: string[]) {
+  if (reportIds.length === 0) return [];
+  const supabase = createClient();
+  const { data } = await supabase
+    .from('report_highlights')
+    .select('*')
+    .in('report_id', reportIds)
+    .order('sort_order', { ascending: true });
+  return data ?? [];
+}
+
 export async function getReportScreenshots(reportId: string) {
   const supabase = createClient();
   const { data } = await supabase

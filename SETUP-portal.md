@@ -17,10 +17,15 @@ Follow these steps to go live.
 
 ## 2. Apply the database schema
 
-Run the migration in `supabase/migrations/0001_portal_init.sql`, either:
+Run **both** migration files in `supabase/migrations/` in order — `0001_portal_init.sql`
+then `0002_flexible_reports.sql` — either:
 
-- **SQL editor:** paste the file contents and run, or
+- **SQL editor:** paste each file's contents and run, in order, or
 - **CLI:** `supabase link --project-ref <ref>` then `supabase db push`.
+
+`0002` makes reports flexible: a free-form markdown body + a list of headline
+highlights (label + value as text), with period dates optional. Reports are no
+longer tied to a fixed set of KPIs.
 
 This creates the tables (`clients`, `profiles`, `reports`, `report_metrics`,
 `report_screenshots`, `notifications_log`), the private `report-assets` Storage

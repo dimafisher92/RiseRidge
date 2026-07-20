@@ -1,26 +1,16 @@
 import { NextResponse } from 'next/server';
 import { requireAdminApi } from '@/lib/portal/api-auth';
 import { createAdminClient } from '@/lib/supabase/admin';
-import { slugify } from '@/lib/portal/site';
-import type { MetricUnit } from '@/lib/supabase/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const UNITS: MetricUnit[] = ['number', 'currency', 'percent', 'duration_s'];
+type HighlightInput = { label?: unknown; value?: unknown; note?: unknown; positive?: unknown };
 
-type MetricInput = {
-  label?: unknown;
-  key?: unknown;
-  currentValue?: unknown;
-  priorValue?: unknown;
-  unit?: unknown;
-  higherIsBetter?: unknown;
-  decimals?: unknown;
-};
-
-// Create a draft report and its metric rows. Screenshots and publishing are
-// separate calls (upload, then publish).
+// Create a draft report. Reports are free-form: a markdown `body`, an optional
+// short `summary`, and a flexible list of headline `highlights` (label + value
+// as text — no fixed KPI schema, since the numbers vary week to week).
+// Screenshots and publishing are separate calls.
 export async function POST(req: Request) {
   const guard = await requireAdminApi();
   if (!guard.ok) return guard.response;
@@ -35,49 +25,23 @@ export async function POST(req: Request) {
   const clientId = String(body.clientId ?? '').trim();
   const title = String(body.title ?? '').trim();
   const summary = String(body.summary ?? '').trim() || null;
-  const periodStart = String(body.periodStart ?? '').trim();
-  const periodEnd = String(body.periodEnd ?? '').trim();
-  const compareStart = String(body.compareStart ?? '').trim() || null;
-  const compareEnd = String(body.compareEnd ?? '').trim() || null;
-  const rawMetrics = Array.isArray(body.metrics) ? (body.metrics as MetricInput[]) : [];
+  const reportBody = String(body.body ?? '').trim() || null;
+  const periodStart = String(body.periodStart ?? '').trim() || null;
+  const periodEnd = String(body.periodEnd ?? '').trim() || null;
+  const rawHighlights = Array.isArray(body.highlights) ? (body.highlights as HighlightInput[]) : [];
 
   if (!clientId) return NextResponse.json({ error: 'missing_client' }, { status: 400 });
   if (!title) return NextResponse.json({ error: 'missing_title' }, { status: 400 });
-  if (!periodStart || !periodEnd) return NextResponse.json({ error: 'missing_period' }, { status: 400 });
 
-  // Normalise + validate metric rows.
-  const usedKeys = new Set<string>();
-  const metrics = [];
-  for (let i = 0; i < rawMetrics.length; i++) {
-    const m = rawMetrics[i];
-    const label = String(m.label ?? '').trim();
-    if (!label) continue;
-    const current = Number(m.currentValue);
-    if (!Number.isFinite(current)) {
-      return NextResponse.json({ error: 'invalid_metric', detail: `"${label}" has a non-numeric current value` }, { status: 400 });
-    }
-    const priorRaw = m.priorValue;
-    const prior =
-      priorRaw === '' || priorRaw === null || priorRaw === undefined ? null : Number(priorRaw);
-    if (prior !== null && !Number.isFinite(prior)) {
-      return NextResponse.json({ error: 'invalid_metric', detail: `"${label}" has a non-numeric prior value` }, { status: 400 });
-    }
-    const unit = (UNITS.includes(m.unit as MetricUnit) ? m.unit : 'number') as MetricUnit;
-    let key = String(m.key ?? '').trim() || slugify(label) || `metric-${i + 1}`;
-    while (usedKeys.has(key)) key = `${key}-${i + 1}`;
-    usedKeys.add(key);
-
-    metrics.push({
-      key,
-      label,
-      current_value: current,
-      prior_value: prior,
-      unit,
-      higher_is_better: m.higherIsBetter !== false,
-      decimals: Number.isFinite(Number(m.decimals)) ? Math.max(0, Math.min(4, Number(m.decimals))) : 0,
+  const highlights = rawHighlights
+    .map((h, i) => ({
+      label: String(h.label ?? '').trim(),
+      value: String(h.value ?? '').trim(),
+      note: String(h.note ?? '').trim() || null,
+      positive: h.positive !== false,
       sort_order: i,
-    });
-  }
+    }))
+    .filter((h) => h.label && h.value);
 
   const admin = createAdminClient();
 
@@ -87,25 +51,24 @@ export async function POST(req: Request) {
       client_id: clientId,
       title,
       summary,
+      body: reportBody,
       period_start: periodStart,
       period_end: periodEnd,
-      compare_start: compareStart,
-      compare_end: compareEnd,
       status: 'draft',
       created_by: guard.ctx.profile.id,
     })
-    .select('*')
+    .select('id')
     .single();
 
   if (rErr || !report) {
     return NextResponse.json({ error: 'create_failed', detail: rErr?.message }, { status: 500 });
   }
 
-  if (metrics.length > 0) {
-    const rows = metrics.map((m) => ({ ...m, report_id: report.id }));
-    const { error: mErr } = await admin.from('report_metrics').insert(rows);
-    if (mErr) {
-      return NextResponse.json({ error: 'metrics_failed', detail: mErr.message, reportId: report.id }, { status: 500 });
+  if (highlights.length > 0) {
+    const rows = highlights.map((h) => ({ ...h, report_id: report.id }));
+    const { error: hErr } = await admin.from('report_highlights').insert(rows);
+    if (hErr) {
+      return NextResponse.json({ error: 'highlights_failed', detail: hErr.message, reportId: report.id }, { status: 500 });
     }
   }
 

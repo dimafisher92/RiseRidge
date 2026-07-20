@@ -39,13 +39,25 @@ export type Report = {
   client_id: string;
   title: string;
   summary: string | null;
-  period_start: string;
-  period_end: string;
+  body: string | null; // free-form markdown write-up
+  period_start: string | null;
+  period_end: string | null;
   compare_start: string | null;
   compare_end: string | null;
   status: ReportStatus;
   published_at: string | null;
   created_by: string | null;
+  created_at: string;
+};
+
+export type ReportHighlight = {
+  id: string;
+  report_id: string;
+  label: string;
+  value: string; // free text — any format the week calls for
+  note: string | null;
+  positive: boolean;
+  sort_order: number;
   created_at: string;
 };
 
@@ -101,6 +113,7 @@ export type Database = {
       profiles: Table<Profile>;
       reports: Table<Report>;
       report_metrics: Table<ReportMetric>;
+      report_highlights: Table<ReportHighlight>;
       report_screenshots: Table<ReportScreenshot>;
       notifications_log: Table<NotificationLog>;
     };

@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { requireSession } from '@/lib/portal/session';
-import { getLatestPublishedReport, getReportMetrics } from '@/lib/portal/reports';
-import { topPositiveMovers, buildDashboardSummary } from '@/lib/portal/trends';
-import { TrendTiles } from '@/components/portal/TrendTiles';
+import { getLatestPublishedReport, getReportHighlights } from '@/lib/portal/reports';
+import { HighlightTiles } from '@/components/portal/HighlightTiles';
 import { SlackButton } from '@/components/portal/SlackButton';
 
 export const dynamic = 'force-dynamic';
 
-function periodRange(start: string, end: string) {
+function periodRange(start: string | null, end: string | null) {
+  if (!start || !end) return null;
   const fmt = (d: string) =>
     new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   return `${fmt(start)} – ${fmt(end)}`;
@@ -17,7 +17,6 @@ function periodRange(start: string, end: string) {
 export default async function DashboardPage() {
   const { profile, client } = await requireSession();
 
-  // Admins have no client of their own — point them to the admin workspace.
   if (profile.role === 'admin' && !client) {
     return (
       <div className="max-w-xl space-y-4">
@@ -40,8 +39,7 @@ export default async function DashboardPage() {
       <div className="max-w-xl">
         <h1 className="font-display text-3xl font-semibold text-ink">Welcome</h1>
         <p className="mt-3 text-body">
-          Your account isn&apos;t linked to a client workspace yet. Please contact your RiseRidge
-          representative.
+          Your account isn&apos;t linked to a client workspace yet. Please contact your RiseRidge representative.
         </p>
       </div>
     );
@@ -63,9 +61,8 @@ export default async function DashboardPage() {
     );
   }
 
-  const metrics = await getReportMetrics(report.id);
-  const movers = topPositiveMovers(metrics, 4);
-  const autoSummary = buildDashboardSummary(movers, report);
+  const highlights = await getReportHighlights(report.id);
+  const period = periodRange(report.period_start, report.period_end);
 
   return (
     <div className="space-y-10">
@@ -82,9 +79,9 @@ export default async function DashboardPage() {
               Latest report
             </span>
             <h2 className="mt-2 font-display text-2xl font-semibold text-ink">{report.title}</h2>
-            <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-subtle">
-              {periodRange(report.period_start, report.period_end)}
-            </p>
+            {period && (
+              <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-body">{period}</p>
+            )}
           </div>
           <div className="flex flex-col items-end gap-3">
             <Link
@@ -98,20 +95,17 @@ export default async function DashboardPage() {
         </div>
       </section>
 
-      {/* Summary */}
-      <section className="max-w-3xl space-y-3">
-        <h2 className="font-display text-xl font-semibold text-ink">Summary</h2>
-        {report.summary && <p className="text-body leading-relaxed">{report.summary}</p>}
-        <p className="rounded-lg border-l-2 border-brass bg-panel/50 px-4 py-3 text-sm text-body">
-          {autoSummary}
-        </p>
-      </section>
+      {report.summary && (
+        <section className="max-w-3xl space-y-3">
+          <h2 className="font-display text-xl font-semibold text-ink">Summary</h2>
+          <p className="text-body leading-relaxed">{report.summary}</p>
+        </section>
+      )}
 
-      {/* Trending up */}
-      {movers.length > 0 && (
+      {highlights.length > 0 && (
         <section className="space-y-4">
-          <h2 className="font-display text-xl font-semibold text-ink">What&apos;s trending up</h2>
-          <TrendTiles movers={movers} />
+          <h2 className="font-display text-xl font-semibold text-ink">Highlights</h2>
+          <HighlightTiles highlights={highlights} />
         </section>
       )}
     </div>

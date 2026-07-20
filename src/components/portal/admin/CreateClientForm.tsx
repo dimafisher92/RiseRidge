@@ -6,7 +6,7 @@ import { Loader2 } from 'lucide-react';
 
 const inputCls =
   'w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-subtle focus:border-forest focus:outline-none';
-const labelCls = 'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] text-subtle';
+const labelCls = 'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] text-body';
 
 export function CreateClientForm() {
   const router = useRouter();

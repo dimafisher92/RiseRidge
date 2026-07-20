@@ -46,8 +46,8 @@ export function PortalNav({
           className={cn(
             'block rounded-lg px-3 py-2 text-sm transition-colors',
             isActive(it.href)
-              ? 'bg-on-dark/10 font-medium text-on-dark'
-              : 'text-on-dark-muted hover:bg-on-dark/5 hover:text-on-dark',
+              ? 'bg-white/15 font-semibold text-on-dark'
+              : 'font-medium text-on-dark/80 hover:bg-white/10 hover:text-on-dark',
           )}
         >
           {it.label}
