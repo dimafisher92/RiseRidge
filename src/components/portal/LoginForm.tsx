@@ -53,7 +53,7 @@ export function LoginForm() {
     setSubmitting(true);
     try {
       const supabase = createClient();
-      const redirectTo = `${window.location.origin}/auth/callback/?next=/portal/dashboard/`;
+      const redirectTo = `${window.location.origin}/auth/callback/?next=/reset-password/`;
       await supabase.auth.resetPasswordForEmail(email.trim(), { redirectTo });
       // Always show the same message regardless of whether the email exists.
       setNotice('If an account exists for that email, a reset link is on its way.');

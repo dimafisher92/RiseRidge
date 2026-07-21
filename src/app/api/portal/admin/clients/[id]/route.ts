@@ -63,7 +63,7 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
   if (action === 'reset_password') {
     const email = String(body.email ?? '').trim();
     if (!EMAIL_RE.test(email)) return NextResponse.json({ error: 'invalid_email' }, { status: 400 });
-    const redirectTo = `${getSiteUrl()}/auth/callback/?next=/portal/dashboard/`;
+    const redirectTo = `${getSiteUrl()}/auth/callback/?next=/reset-password/`;
     const { error } = await admin.auth.resetPasswordForEmail(email, { redirectTo });
     if (error) return NextResponse.json({ error: 'reset_failed', detail: error.message }, { status: 500 });
     return NextResponse.json({ ok: true });
