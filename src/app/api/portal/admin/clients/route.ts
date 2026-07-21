@@ -8,6 +8,18 @@ export const dynamic = 'force-dynamic';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// A GoTrue invite fails when the email already belongs to an account. Detect
+// that case so callers can react (roll back / clear message) rather than
+// treating it as a generic send failure.
+function isEmailInUse(err: unknown): boolean {
+  const e = err as { code?: string; status?: number; message?: string } | null;
+  return (
+    e?.code === 'email_exists' ||
+    e?.status === 422 ||
+    /already .*(registered|exists)/i.test(e?.message ?? '')
+  );
+}
+
 // Create a client account and invite its first user by email.
 export async function POST(req: Request) {
   const guard = await requireAdminApi();
@@ -53,8 +65,15 @@ export async function POST(req: Request) {
   });
 
   if (iErr) {
-    // The client row exists but the invite failed — surface it so the admin can
-    // retry from the manage page.
+    // The email already belongs to an account (e.g. this admin's own email). We
+    // can't create a second account or downgrade the existing one, so undo the
+    // orphan client row and tell the admin to use a different email.
+    if (isEmailInUse(iErr)) {
+      await admin.from('clients').delete().eq('id', client.id);
+      return NextResponse.json({ error: 'email_in_use' }, { status: 409 });
+    }
+    // Other invite failures (e.g. email delivery) — keep the client so the invite
+    // can be retried from the manage page, but surface that it didn't send.
     return NextResponse.json({ ok: true, clientId: client.id, invited: false, inviteError: iErr.message });
   }
 

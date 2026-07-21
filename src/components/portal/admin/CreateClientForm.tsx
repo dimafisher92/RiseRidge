@@ -36,7 +36,9 @@ export function CreateClientForm() {
             ? 'A client with that slug already exists — try a different name.'
             : data.error === 'invalid_email'
               ? 'Enter a valid contact email.'
-              : 'Could not create the client. Please try again.',
+              : data.error === 'email_in_use'
+                ? 'That email already has an account, so it can’t be invited as a client. Use a different email — an admin’s own email can’t also be a client.'
+                : 'Could not create the client. Please try again.',
         );
         return;
       }

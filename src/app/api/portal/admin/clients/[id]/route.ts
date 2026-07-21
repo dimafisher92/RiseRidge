@@ -50,7 +50,13 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
       data: { role: 'client', client_id: params.id, full_name: fullName || null },
       redirectTo,
     });
-    if (error) return NextResponse.json({ error: 'invite_failed', detail: error.message }, { status: 500 });
+    if (error) {
+      const e = error as { code?: string; status?: number; message?: string };
+      if (e.code === 'email_exists' || e.status === 422 || /already .*(registered|exists)/i.test(e.message ?? '')) {
+        return NextResponse.json({ error: 'email_in_use' }, { status: 409 });
+      }
+      return NextResponse.json({ error: 'invite_failed', detail: error.message }, { status: 500 });
+    }
     return NextResponse.json({ ok: true });
   }
 

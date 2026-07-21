@@ -41,7 +41,11 @@ export function ManageClientForm({ client, users }: { client: Client; users: Cli
     const { ok, data } = await patchClient(client.id, payload);
     setBusy(null);
     if (!ok) {
-      setFeedback({ kind: 'err', text: data.detail || data.error || 'Action failed.' });
+      const text =
+        data.error === 'email_in_use'
+          ? 'That email already has an account and can’t be invited again. Use a different email.'
+          : data.detail || data.error || 'Action failed.';
+      setFeedback({ kind: 'err', text });
       return;
     }
     setFeedback({ kind: 'ok', text: successText });
