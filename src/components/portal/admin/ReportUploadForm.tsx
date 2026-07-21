@@ -183,7 +183,7 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
           accept="image/*"
           multiple
           onChange={(e) => setFiles(Array.from(e.target.files ?? []))}
-          className="block w-full text-sm text-body file:mr-4 file:rounded-lg file:border-0 file:bg-forest file:px-4 file:py-2 file:text-sm file:font-semibold file:text-on-dark hover:file:bg-forest-hover"
+          className="block w-full text-sm text-body file:mr-4 file:rounded-lg file:border-0 file:bg-forest file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-forest-hover"
         />
         {files.length > 0 && <p className="text-xs text-body">{files.length} file(s) selected.</p>}
       </section>
@@ -197,7 +197,7 @@ export function ReportUploadForm({ clients }: { clients: { id: string; name: str
         <button
           type="submit"
           disabled={busy}
-          className="ml-auto inline-flex items-center justify-center gap-2 rounded-lg bg-forest px-5 py-2.5 text-sm font-semibold text-on-dark hover:bg-forest-hover disabled:opacity-60"
+          className="ml-auto inline-flex items-center justify-center gap-2 rounded-lg bg-forest px-5 py-2.5 text-sm font-semibold text-white hover:bg-forest-hover disabled:opacity-60"
         >
           {busy && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
           {publishNow ? 'Save & publish' : 'Save draft'}

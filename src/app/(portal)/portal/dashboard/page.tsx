@@ -26,7 +26,7 @@ export default async function DashboardPage() {
         </p>
         <Link
           href="/portal/admin/"
-          className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-on-dark hover:bg-forest-hover"
+          className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-white hover:bg-forest-hover"
         >
           Go to admin <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>
@@ -86,7 +86,7 @@ export default async function DashboardPage() {
           <div className="flex flex-col items-end gap-3">
             <Link
               href={`/portal/reports/${report.id}/`}
-              className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-on-dark hover:bg-forest-hover"
+              className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-white hover:bg-forest-hover"
             >
               View report <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>

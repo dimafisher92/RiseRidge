@@ -115,7 +115,7 @@ export function LoginForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-forest px-4 py-3 text-sm font-semibold text-on-dark transition-colors hover:bg-forest-hover disabled:opacity-60"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-forest px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-forest-hover disabled:opacity-60"
       >
         {submitting && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
         {mode === 'login' ? 'Sign in' : 'Send reset link'}

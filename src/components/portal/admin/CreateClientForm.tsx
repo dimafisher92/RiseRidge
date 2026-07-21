@@ -79,7 +79,7 @@ export function CreateClientForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="inline-flex items-center justify-center gap-2 rounded-lg bg-forest px-5 py-2.5 text-sm font-semibold text-on-dark hover:bg-forest-hover disabled:opacity-60"
+        className="inline-flex items-center justify-center gap-2 rounded-lg bg-forest px-5 py-2.5 text-sm font-semibold text-white hover:bg-forest-hover disabled:opacity-60"
       >
         {submitting && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
         Create client &amp; send invite

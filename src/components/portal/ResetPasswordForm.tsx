@@ -59,7 +59,13 @@ export function ResetPasswordForm() {
       const supabase = createClient();
       const { error } = await supabase.auth.updateUser({ password });
       if (error) {
-        setError('Could not update the password — the reset link may have expired. Request a new one.');
+        // Surface the real reason: a stale/again-used link produces an "Auth
+        // session missing" / expired error, while Supabase may also reject a
+        // password identical to the current one.
+        const msg = /session|expired|not authenticated|missing/i.test(error.message)
+          ? 'This reset link has expired or was already used. Request a new one from the sign-in page.'
+          : `Could not update the password: ${error.message}`;
+        setError(msg);
         return;
       }
       setDone(true);

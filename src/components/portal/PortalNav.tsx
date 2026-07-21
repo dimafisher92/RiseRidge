@@ -47,7 +47,7 @@ export function PortalNav({
             'block rounded-lg px-3 py-2 text-sm transition-colors',
             isActive(it.href)
               ? 'bg-white/20 font-semibold text-white'
-              : 'font-medium text-on-dark hover:bg-white/10 hover:text-white',
+              : 'font-medium text-white/80 hover:bg-white/10 hover:text-white',
           )}
         >
           {it.label}
