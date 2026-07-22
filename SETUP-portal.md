@@ -48,9 +48,47 @@ NEXT_PUBLIC_SITE_URL=https://riseridge.io   # no trailing slash
 - **Redirect URLs (allow list):** add `https://riseridge.io/auth/callback/`
   (and `http://localhost:3000/auth/callback/` for local dev). The trailing slash
   matters — the app uses `trailingSlash: true`.
-- **Email templates:** the default invite / reset / email-change templates work.
-  Optionally brand them. For real sending volume, configure a custom SMTP sender
-  under **Project Settings → Auth → SMTP** (the built-in sender is rate-limited).
+
+### 4a. Email templates — REQUIRED (fixes "reset link just goes to /login")
+
+**Do not keep the default templates.** The default reset/invite templates use
+`{{ .ConfirmationURL }}`, which is a one-time **PKCE `code`** link. That link
+fails — and dumps the user on `/login/?error=auth` — whenever it's opened on a
+different device/browser than it was requested from, or when a mail provider's
+link scanner (Gmail does this) opens it first and burns the one-time token.
+
+Replace the link with the **`token_hash`** format, which our `/auth/callback/`
+route verifies server-side with no PKCE `code_verifier` needed (works
+cross-device and survives prefetch). Copy the ready-made bodies from
+`supabase/templates/` in this repo:
+
+- **Authentication → Emails → "Reset Password"** → paste `supabase/templates/recovery.html`.
+  Its link is:
+  ```
+  {{ .SiteURL }}/auth/callback/?token_hash={{ .TokenHash }}&type=recovery&next=/reset-password/
+  ```
+- **Authentication → Emails → "Invite user"** → paste `supabase/templates/invite.html`
+  (same fix, `type=invite`).
+
+After saving, request a fresh reset email (old links won't be reissued) and the
+link will land on `/reset-password/` with a valid recovery session. A link that
+is genuinely expired/used now shows a clear message on the sign-in page and opens
+the "request a new link" form automatically, instead of a bare `?error=auth`.
+
+### 4b. Sender name & address — set to "RiseRidge" (custom SMTP)
+
+The built-in Supabase mailer always sends as **`Supabase Auth
+<noreply@mail.app.supabase.io>`** — that name/address can't be changed, and it's
+rate-limited and prone to spam foldering. To send as **RiseRidge**, configure
+custom SMTP under **Project Settings → Authentication → SMTP Settings**:
+
+1. Create a sender in an email provider (Resend, Postmark, SendGrid, Amazon SES…)
+   and verify the `riseridge.io` domain (SPF/DKIM) so mail isn't marked External.
+2. In Supabase SMTP Settings, enable custom SMTP and set:
+   - **Sender name:** `RiseRidge`
+   - **Sender email:** e.g. `noreply@riseridge.io`
+   - Host / port / username / password from your provider.
+3. Save and send a test reset — the email now shows **RiseRidge** as the sender.
 
 ## 5. Seed the first admin (+ demo data) — scripted
 

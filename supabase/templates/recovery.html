@@ -1,0 +1,22 @@
+<!--
+  Supabase → Authentication → Emails → "Reset Password" template.
+
+  Paste the markup below into the dashboard template body. The important part is
+  the link: it points straight at our /auth/callback/ route with `token_hash`
+  (not the default `{{ .ConfirmationURL }}`). token_hash uses verifyOtp on the
+  server, which needs no PKCE code_verifier — so the link works when opened on a
+  different device/browser and survives a mail client pre-scanning it. The
+  default ConfirmationURL uses the one-time PKCE `code` flow, which is what was
+  dumping users on /login/?error=auth.
+
+  Requires: Site URL = https://riseridge.io and Redirect URLs allow-list
+  includes https://riseridge.io/auth/callback/ (see SETUP-portal.md → step 4).
+-->
+<h2>Reset your RiseRidge password</h2>
+<p>We received a request to reset your password. Choose a new one using the link below.</p>
+<p>
+  <a href="{{ .SiteURL }}/auth/callback/?token_hash={{ .TokenHash }}&type=recovery&next=/reset-password/">
+    Reset password
+  </a>
+</p>
+<p>This link can be used once and expires shortly. If you didn’t request this, you can safely ignore this email.</p>
