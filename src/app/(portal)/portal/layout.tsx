@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic';
 export default async function PortalLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const { profile, client } = await requireSession();
+  const { profile, client, email } = await requireSession();
   const isAdmin = profile.role === 'admin';
 
   const items: PortalNavItem[] = [
@@ -19,6 +19,13 @@ export default async function PortalLayout({
   ];
 
   const accountName = client?.name ?? (isAdmin ? 'RiseRidge Admin' : profile.full_name ?? 'Your account');
+
+  // Identity shown next to Sign out: who is actually logged in (distinct from the
+  // workspace/client name on the left).
+  const roleLabel = isAdmin ? 'Admin' : 'Client';
+  const accountPrimary = profile.full_name ?? email ?? 'Account';
+  const accountSecondary =
+    profile.full_name && email ? `${roleLabel} · ${email}` : roleLabel;
 
   return (
     <div className="flex min-h-screen bg-canvas">
@@ -35,11 +42,19 @@ export default async function PortalLayout({
 
       {/* Main column */}
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="no-print flex h-16 items-center justify-between border-b border-line bg-white px-6">
+        <header className="no-print flex h-16 items-center justify-between gap-3 border-b border-line bg-white px-4 sm:px-6">
           <div className="min-w-0">
             <p className="truncate font-display text-lg font-semibold text-ink">{accountName}</p>
           </div>
-          <SignOutButton />
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="min-w-0 max-w-[38vw] text-right sm:max-w-[280px]">
+              <p className="truncate text-sm font-medium leading-tight text-ink">{accountPrimary}</p>
+              <p className="truncate font-mono text-[10px] uppercase leading-tight tracking-[0.14em] text-subtle">
+                {accountSecondary}
+              </p>
+            </div>
+            <SignOutButton />
+          </div>
         </header>
 
         {/* Mobile nav */}
