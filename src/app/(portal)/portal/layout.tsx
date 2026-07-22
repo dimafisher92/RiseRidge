@@ -30,7 +30,7 @@ export default async function PortalLayout({
   return (
     <div className="flex min-h-screen bg-canvas">
       {/* Sidebar (desktop) */}
-      <aside className="no-print hidden w-60 shrink-0 flex-col bg-forest px-5 py-6 md:flex">
+      <aside className="no-print hidden w-60 shrink-0 flex-col bg-forest px-5 py-6 text-white md:flex">
         <Link href="/portal/dashboard/" aria-label="Portal home" className="mb-8 inline-block">
           <Logo onDark />
         </Link>
