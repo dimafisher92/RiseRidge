@@ -5,6 +5,7 @@ import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { StatsBar } from '@/components/StatsBar';
 import { CaseStudyCard } from '@/components/CaseStudyCard';
 import { OrganicSalesChart } from '@/components/OrganicSalesChart';
+import { LocalRankingChart } from '@/components/LocalRankingChart';
 import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 
@@ -304,11 +305,108 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
+      {/* Featured Case Study — local service, auto glass, Charlotte NC */}
+      <section className="border-t border-border py-24" aria-labelledby="featured-local-heading">
+        <div className="mx-auto max-w-7xl px-6">
+          <ScrollReveal>
+            <SectionLabel number="02" text="Featured Case Study" />
+            <span className="mt-4 inline-block rounded-full border border-tag-border bg-tag-bg px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-forest">
+              Local Service · Auto Glass · Charlotte, NC
+            </span>
+            <h2
+              id="featured-local-heading"
+              className="mt-4 max-w-3xl font-display font-semibold text-3xl md:text-4xl text-ink leading-snug"
+            >
+              From invisible to page one &mdash; 71 phone calls in a local shop&rsquo;s first 90 days.
+            </h2>
+            <p className="mt-4 max-w-3xl text-muted leading-relaxed">
+              A mobile auto-glass &amp; windshield-repair shop in Charlotte, NC came to us effectively
+              invisible in Google. Every one of its ten pages was missing the titles, descriptions, image
+              labels and structured data search engines rely on &mdash; and nothing was being measured at
+              all. We rebuilt the foundation, then turned that visibility into phone calls. Every figure
+              below is drawn from Google Search Console and the business&rsquo;s Google Business Profile.
+            </p>
+          </ScrollReveal>
+
+          <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
+            {/* Left: the story */}
+            <ScrollReveal className="space-y-6">
+              <div>
+                <h3 className="font-mono text-[11px] text-brass uppercase tracking-[0.16em] mb-1">The Challenge</h3>
+                <p className="text-sm text-body leading-relaxed">
+                  The site sat in the middle of page two &mdash; an average Google position of 15.5, where
+                  almost no one looks. An audit surfaced 114 technical faults, a site-health score of zero,
+                  empty page titles and descriptions across all ten pages, 39 unlabelled photos, and no
+                  analytics connected at all &mdash; so no one could see what search was doing for the
+                  business.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-mono text-[11px] text-brass uppercase tracking-[0.16em] mb-1">What We Did</h3>
+                <p className="text-sm text-body leading-relaxed">
+                  We rewrote titles and descriptions on all 10 pages, labelled all 39 images, and coded the
+                  shop&rsquo;s services, phone and Charlotte address into every page as structured data. We
+                  cleared 114 technical faults &mdash; site health from 0 to 91/100 at a 92% fix rate &mdash;
+                  connected Search Console, launched six local landing pages, and started a weekly cadence of
+                  articles and Google Business posts.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-mono text-[11px] text-brass uppercase tracking-[0.16em] mb-1">
+                  The Result That Pays the Bills
+                </h3>
+                <p className="text-sm text-body leading-relaxed">
+                  Average position climbed from 15.5 to 10.1 &mdash; page two to the top of page one &mdash;
+                  and 519 of the 1,000 terms we track most closely now sit in Google&rsquo;s top ten. But the
+                  number the shop floor feels is this: the Google Business Profile turned{' '}
+                  <strong className="text-ink">1,747 views into 82 website clicks and 71 phone calls</strong>{' '}
+                  in 90 days, backed by a 5.0 rating across 138 reviews.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 border-t border-line pt-6">
+                {[
+                  { value: '15.5 → 10.1', label: 'Avg Google Position' },
+                  { value: '71', label: 'Calls From Listing' },
+                  { value: '519', label: 'Keywords In Top 10' },
+                ].map((r) => (
+                  <div key={r.label} className="text-center">
+                    <div className="font-display text-2xl font-semibold text-brass">{r.value}</div>
+                    <div className="mt-1 text-[10px] text-subtle uppercase tracking-[0.14em] font-mono">{r.label}</div>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            {/* Right: the ranking-climb chart + Google Business Profile tiles */}
+            <ScrollReveal delay={0.15} className="space-y-4">
+              <LocalRankingChart />
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {[
+                  { value: '1,747', label: 'Times Seen' },
+                  { value: '82', label: 'Website Clicks' },
+                  { value: '71', label: 'Phone Calls' },
+                  { value: '5.0★', label: '138 Reviews' },
+                ].map((t) => (
+                  <div key={t.label} className="rounded-[10px] border border-line bg-white p-4 text-center">
+                    <div className="font-display text-2xl font-semibold text-forest">{t.value}</div>
+                    <div className="mt-1 font-mono text-[9px] uppercase tracking-[0.12em] text-subtle">{t.label}</div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-center font-mono text-[10px] uppercase tracking-[0.14em] text-subtle">
+                Google Business Profile &middot; 90-day window
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies */}
       <section className="border-t border-border py-24" aria-labelledby="case-studies-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <SectionLabel number="02" text="Case Studies" />
+            <SectionLabel number="03" text="Case Studies" />
             <h2 id="case-studies-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               Client Success Stories
             </h2>
@@ -329,7 +427,7 @@ export default function CaseStudiesPage() {
       <section className="border-t border-border bg-surface/30 py-24" aria-labelledby="methodology-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <SectionLabel number="03" text="Methodology" />
+            <SectionLabel number="04" text="Methodology" />
             <h2 id="methodology-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               How We Drive These Results
             </h2>
