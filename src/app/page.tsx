@@ -76,13 +76,32 @@ const STEPS = [
   },
 ];
 
+/**
+ * Client logos.
+ *
+ * `mode` picks the monochrome treatment so every mark reads at the same weight
+ * on the warm panel background:
+ *   - 'mask'  → flattened to a solid silhouette. Only for single-tone marks;
+ *               it is the only option for light/white marks, which would vanish
+ *               under multiply.
+ *   - 'blend' → desaturated and multiplied into the panel. Keeps internal detail
+ *               (knocked-out type, illustrations) and makes baked-in white
+ *               backgrounds disappear instead of showing as a white box.
+ * `box` is tuned per aspect ratio so squarer marks are not dwarfed by the wide
+ * wordmarks; all of them are centred in a shared 48px row.
+ */
 const LOGOS = [
-  { src: '/logo1.webp', alt: 'Client brand logo', w: 615, h: 100, opaque: false },
-  { src: '/logo2.avif', alt: 'Client brand logo', w: 120, h: 30,  opaque: false },
-  { src: '/logo3.avif', alt: 'Client brand logo', w: 500, h: 104, opaque: true  },
-  { src: '/logo4.avif', alt: 'Client brand logo', w: 500, h: 84,  opaque: true  },
-  { src: '/logo5.webp', alt: 'Client brand logo', w: 180, h: 47,  opaque: false },
-  { src: '/logo6.png',  alt: 'Client brand logo', w: 253, h: 35,  opaque: false },
+  { src: '/logo1.webp',  alt: 'The Sharp Firm',           w: 615, h: 100, box: 'h-7',  mode: 'mask'  },
+  { src: '/logo2.avif',  alt: 'Ortfolia',                 w: 120, h: 30,  box: 'h-8',  mode: 'blend' },
+  { src: '/logo3.avif',  alt: 'ZPackbag',                 w: 500, h: 104, box: 'h-7',  mode: 'blend' },
+  { src: '/logo4.avif',  alt: 'The Almighty Tools',       w: 500, h: 84,  box: 'h-7',  mode: 'blend' },
+  { src: '/logo5.webp',  alt: 'try Bello',                w: 180, h: 47,  box: 'h-9',  mode: 'mask'  },
+  { src: '/logo6.png',   alt: 'Tenxpr',                   w: 253, h: 35,  box: 'h-6',  mode: 'blend' },
+  { src: '/logo10.png',  alt: 'SnapTax',                  w: 257, h: 75,  box: 'h-9',  mode: 'blend' },
+  { src: '/logo11.avif', alt: 'DropperBottles.com',       w: 222, h: 98,  box: 'h-11', mode: 'blend' },
+  { src: '/logo12.avif', alt: 'omGhee',                   w: 172, h: 60,  box: 'h-10', mode: 'blend' },
+  { src: '/logo13.avif', alt: 'Grazly',                   w: 202, h: 80,  box: 'h-10', mode: 'blend' },
+  { src: '/logo14.avif', alt: 'The Safe Dog Chew Company', w: 190, h: 64, box: 'h-10', mode: 'blend' },
 ];
 
 export default function HomePage() {
@@ -126,29 +145,22 @@ export default function HomePage() {
           </ScrollReveal>
 
           {/* Client logos */}
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
-            {LOGOS.map((logo) =>
-              logo.opaque ? (
-                <span key={logo.src} className="inline-flex items-center justify-center rounded px-3 py-2 opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={logo.w}
-                    height={logo.h}
-                    className="h-7 w-auto object-contain"
-                  />
-                </span>
-              ) : (
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-12 sm:gap-y-8">
+            {LOGOS.map((logo) => (
+              <span key={logo.src} className="flex h-12 items-center justify-center">
                 <Image
-                  key={logo.src}
                   src={logo.src}
-                  alt={logo.alt}
+                  alt={`${logo.alt} logo`}
                   width={logo.w}
                   height={logo.h}
-                  className="h-7 w-auto object-contain brightness-0 opacity-45 hover:opacity-75 transition-opacity duration-300"
+                  className={`w-auto max-w-[42vw] object-contain transition-opacity duration-300 ${logo.box} ${
+                    logo.mode === 'mask'
+                      ? 'brightness-0 opacity-55 hover:opacity-85'
+                      : 'grayscale opacity-55 mix-blend-multiply hover:opacity-85'
+                  }`}
                 />
-              )
-            )}
+              </span>
+            ))}
           </div>
         </div>
       </section>
