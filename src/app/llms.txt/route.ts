@@ -1,4 +1,4 @@
-import { client } from '../../../tina/__generated__/client';
+import { getAllPosts } from '@/lib/blog';
 
 const baseUrl = 'https://riseridge.io';
 
@@ -8,17 +8,11 @@ export const revalidate = 86400; // 24h
 export const dynamic = 'force-static';
 
 export async function GET() {
-  let posts: { title: string; excerpt: string; slug: string }[] = [];
-  try {
-    const result = await client.queries.postConnection({ sort: 'date' });
-    posts = (result.data.postConnection.edges ?? []).map((edge) => ({
-      title: edge!.node!.title,
-      excerpt: edge!.node!.excerpt,
-      slug: edge!.node!._sys.filename,
-    }));
-  } catch {
-    // TinaCloud unreachable at build time — emit core content only.
-  }
+  const posts = getAllPosts().map((post) => ({
+    title: post.title,
+    excerpt: post.excerpt,
+    slug: post.slug,
+  }));
 
   const blogSection =
     posts.length > 0
