@@ -1,0 +1,19 @@
+<!--
+  Supabase → Authentication → Emails → "Invite user" template.
+
+  Same fix as recovery.html: link straight to /auth/callback/ with `token_hash`
+  (type=invite) instead of the default `{{ .ConfirmationURL }}`, so invites work
+  across devices/browsers and survive mail-scanner prefetch. After verifying, the
+  invitee lands on /reset-password/ to set their initial password.
+
+  Requires: Site URL = https://riseridge.io and Redirect URLs allow-list
+  includes https://riseridge.io/auth/callback/ (see SETUP-portal.md → step 4).
+-->
+<h2>You’ve been invited to the RiseRidge client portal</h2>
+<p>Your RiseRidge account is ready. Set your password to sign in and view your SEO results.</p>
+<p>
+  <a href="{{ .SiteURL }}/auth/callback/?token_hash={{ .TokenHash }}&type=invite&next=/reset-password/">
+    Accept invite &amp; set password
+  </a>
+</p>
+<p>This link can be used once and expires shortly. If you weren’t expecting this, you can ignore this email.</p>
