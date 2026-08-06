@@ -6,10 +6,10 @@ import { TinaMarkdown, type TinaMarkdownContent } from 'tinacms/dist/rich-text';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const components: Record<string, (props: any) => JSX.Element | null> = {
   h2: ({ children }: { children?: React.ReactNode }) => (
-    <h2 className="font-display font-[800] text-2xl text-ice mt-12 mb-5 leading-snug">{children}</h2>
+    <h2 className="font-display font-semibold text-2xl text-ice mt-12 mb-5 leading-snug">{children}</h2>
   ),
   h3: ({ children }: { children?: React.ReactNode }) => (
-    <h3 className="font-display font-bold text-xl text-ice mt-8 mb-3 leading-snug">{children}</h3>
+    <h3 className="font-display font-semibold text-xl text-ice mt-8 mb-3 leading-snug">{children}</h3>
   ),
   h4: ({ children }: { children?: React.ReactNode }) => (
     <h4 className="font-display font-semibold text-lg text-ice mt-6 mb-2">{children}</h4>

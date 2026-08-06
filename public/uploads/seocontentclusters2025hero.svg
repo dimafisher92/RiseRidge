@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Hub-and-spoke content cluster diagram">
+  <rect width="1200" height="630" fill="#FBFAF7"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#A9874E"/>
+
+  <rect x="56" y="54" width="64" height="64" rx="8" fill="none" stroke="rgba(21,20,15,0.15)" stroke-width="2"/>
+  <text x="70" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#1E3A2E">R<tspan fill="#A9874E" dx="-11">R</tspan></text>
+
+  <g stroke="#cfe0d4" stroke-width="2">
+    <line x1="600" y1="340" x2="780" y2="340"/>
+    <line x1="600" y1="340" x2="690" y2="496"/>
+    <line x1="600" y1="340" x2="510" y2="496"/>
+    <line x1="600" y1="340" x2="420" y2="340"/>
+    <line x1="600" y1="340" x2="510" y2="184"/>
+    <line x1="600" y1="340" x2="690" y2="184"/>
+  </g>
+
+  <circle cx="780" cy="340" r="24" fill="#F4F0E8" stroke="#A9874E" stroke-width="3"/>
+  <circle cx="690" cy="496" r="24" fill="#F4F0E8" stroke="#A9874E" stroke-width="3"/>
+  <circle cx="510" cy="496" r="24" fill="#F4F0E8" stroke="#A9874E" stroke-width="3"/>
+  <circle cx="420" cy="340" r="24" fill="#F4F0E8" stroke="#A9874E" stroke-width="3"/>
+  <circle cx="510" cy="184" r="24" fill="#F4F0E8" stroke="#A9874E" stroke-width="3"/>
+  <circle cx="690" cy="184" r="24" fill="#F4F0E8" stroke="#A9874E" stroke-width="3"/>
+
+  <circle cx="600" cy="340" r="52" fill="#1E3A2E"/>
+  <circle cx="600" cy="340" r="52" fill="none" stroke="#A9874E" stroke-width="3"/>
+</svg>

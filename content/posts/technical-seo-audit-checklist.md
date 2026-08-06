@@ -1,11 +1,11 @@
 ---
-title: "The 2025 Technical SEO Audit Checklist (AI-Accelerated)"
-excerpt: "A comprehensive technical SEO audit covers hundreds of signals. Here's the prioritized checklist our AI engine uses — and how to fix what it finds."
-date: "2025-02-18T09:00:00.000Z"
-category: "Technical SEO"
+title: The 2025 Technical SEO Audit Checklist (AI-Accelerated)
+excerpt: A comprehensive technical SEO audit covers hundreds of signals. Here's the prioritized checklist our AI engine uses — and how to fix what it finds.
+date: 2025-02-18T09:00:00.000Z
+category: Technical SEO
 author:
-  name: "ArcWave Team"
-coverImage: ""
+  name: RiseRidge Team
+coverImage: /uploads/technicalseoauditchecklisthero.svg
 ---
 
 ## Why Technical SEO Is the Foundation
@@ -44,12 +44,12 @@ Search engines must be able to crawl and index your pages before rankings are po
 
 Duplicate content is one of the most common technical issues we find. Sources include:
 
-- WWW vs. non-WWW versions of URLs
-- HTTP vs. HTTPS versions
-- Trailing slash vs. no trailing slash
-- URL parameters (`?sort=price`, `?ref=banner`)
-- Printer-friendly page versions
-- Paginated series without proper rel="prev/next"
+* WWW vs. non-WWW versions of URLs
+* HTTP vs. HTTPS versions
+* Trailing slash vs. no trailing slash
+* URL parameters (`?sort=price`, `?ref=banner`)
+* Printer-friendly page versions
+* Paginated series without proper rel="prev/next"
 
 Every duplicate URL dilutes your link equity. The fix is consistently implementing canonical tags and 301 redirects to your preferred URL format.
 
@@ -70,10 +70,10 @@ Structured data helps search engines understand your content and can unlock rich
 
 **Schema types to implement by site type:**
 
-- **E-commerce:** Product, Offer, Review, BreadcrumbList
-- **Blog:** Article, BlogPosting, BreadcrumbList
-- **Local business:** LocalBusiness, OpeningHours, Review
-- **SaaS:** Organization, WebSite, FAQPage, SoftwareApplication
+* **E-commerce:** Product, Offer, Review, BreadcrumbList
+* **Blog:** Article, BlogPosting, BreadcrumbList
+* **Local business:** LocalBusiness, OpeningHours, Review
+* **SaaS:** Organization, WebSite, FAQPage, SoftwareApplication
 
 Our AI automatically generates and validates schema markup for every page type, then monitors for errors in Google's Rich Results Test.
 
@@ -83,11 +83,11 @@ Beyond Core Web Vitals, overall page speed impacts bounce rate and conversions.
 
 **Quick wins:**
 
-- Enable Gzip/Brotli compression on your server
-- Implement browser caching with appropriate cache-control headers
-- Minify CSS, JavaScript, and HTML
-- Lazy-load images below the fold
-- Serve next-gen image formats (WebP, AVIF)
+* Enable Gzip/Brotli compression on your server
+* Implement browser caching with appropriate cache-control headers
+* Minify CSS, JavaScript, and HTML
+* Lazy-load images below the fold
+* Serve next-gen image formats (WebP, AVIF)
 
 ## The AI Advantage in Technical SEO
 

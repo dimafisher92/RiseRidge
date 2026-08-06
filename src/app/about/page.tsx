@@ -6,12 +6,12 @@ import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'About ArcWave — AI-Driven SEO Agency',
+  title: 'About RiseRidge — AI-Driven SEO Agency',
   description:
-    'ArcWave engineers organic search growth that compounds. AI-powered SEO infrastructure with hands-on strategic execution. Learn about our mission and values.',
+    'RiseRidge engineers organic search growth that compounds. AI-powered SEO infrastructure with hands-on strategic execution. Learn about our mission and values.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About ArcWave — AI-Driven SEO Agency',
+    title: 'About RiseRidge — AI-Driven SEO Agency',
     description: 'We engineer organic search growth that compounds. Meet the AI SEO agency built for measurable growth.',
   },
 };
@@ -75,7 +75,7 @@ const DIFFERENTIATORS = [
 ];
 
 const MILESTONES = [
-  { year: '2022', title: 'Founded', description: 'ArcWave launched with a mission to engineer organic search growth that compounds.' },
+  { year: '2022', title: 'Founded', description: 'RiseRidge launched with a mission to engineer organic search growth that compounds.' },
   { year: '2023', title: 'AI Engine v1', description: 'Released our first AI SEO automation engine, serving 50+ clients.' },
   { year: '2024', title: '$25M+ in Client Revenue', description: 'Crossed $25M in cumulative revenue generated for our clients.' },
   { year: '2025', title: 'LLM Visibility Launch', description: 'Pioneered AI search visibility monitoring across ChatGPT, Claude, Gemini, and Perplexity.' },
@@ -100,12 +100,12 @@ export default function AboutPage() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan mb-6">
             About Us
           </p>
-          <h1 className="font-display font-[800] text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
+          <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
             We Don&apos;t Guess.{' '}
             <span className="text-gradient-blue-cyan">We Navigate.</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            ArcWave engineers organic search growth that compounds. We combine AI-powered SEO
+            RiseRidge engineers organic search growth that compounds. We combine AI-powered SEO
             infrastructure with hands-on strategic execution to move businesses from invisible to undeniable.
           </p>
         </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
               <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-electric/10 blur-[100px]" aria-hidden="true" />
               <div className="relative">
                 <SectionLabel number="01" text="Mission" />
-                <h2 id="mission-heading" className="mt-4 font-display font-[800] text-2xl md:text-4xl text-ice max-w-3xl leading-tight">
+                <h2 id="mission-heading" className="mt-4 font-display font-semibold text-2xl md:text-4xl text-ice max-w-3xl leading-tight">
                   We help e-commerce and growth-stage businesses{' '}
                   <span className="text-gradient-blue-cyan">dominate organic search</span>{' '}
                   using proprietary AI tooling.
@@ -140,7 +140,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="02" text="Values" />
-            <h2 id="values-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
+            <h2 id="values-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               What Drives Us
             </h2>
           </ScrollReveal>
@@ -151,7 +151,7 @@ export default function AboutPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-electric/10 text-electric mb-4">
                     {value.icon}
                   </div>
-                  <h3 className="font-display font-bold text-lg text-ice">{value.title}</h3>
+                  <h3 className="font-display font-semibold text-lg text-ice">{value.title}</h3>
                   <p className="mt-2 text-sm text-muted leading-relaxed">{value.description}</p>
                 </div>
               </ScrollReveal>
@@ -160,13 +160,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose ArcWave */}
+      {/* Why Choose RiseRidge */}
       <section className="py-24" aria-labelledby="why-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="03" text="Differentiators" />
-            <h2 id="why-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
-              Why Choose ArcWave
+            <h2 id="why-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
+              Why Choose RiseRidge
             </h2>
             <p className="mt-4 text-muted max-w-2xl">
               We&apos;re not another SEO agency. Here&apos;s what makes us fundamentally different.
@@ -178,7 +178,7 @@ export default function AboutPage() {
                 <div className="flex gap-4 items-start p-6 rounded-xl border border-border hover:border-electric/30 transition-all duration-300">
                   <span className="font-mono text-sm text-electric font-bold mt-1">0{i + 1}</span>
                   <div>
-                    <h3 className="font-display font-bold text-lg text-ice">{diff.title}</h3>
+                    <h3 className="font-display font-semibold text-lg text-ice">{diff.title}</h3>
                     <p className="mt-2 text-sm text-muted leading-relaxed">{diff.description}</p>
                   </div>
                 </div>
@@ -193,7 +193,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl px-6">
           <ScrollReveal>
             <SectionLabel number="04" text="Journey" />
-            <h2 id="timeline-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
+            <h2 id="timeline-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               Our Story
             </h2>
           </ScrollReveal>
@@ -208,7 +208,7 @@ export default function AboutPage() {
                       <span className="font-mono text-xs text-electric font-bold">{milestone.year}</span>
                     </div>
                     <div className="pt-3">
-                      <h3 className="font-display font-bold text-lg text-ice">{milestone.title}</h3>
+                      <h3 className="font-display font-semibold text-lg text-ice">{milestone.title}</h3>
                       <p className="mt-1 text-sm text-muted">{milestone.description}</p>
                     </div>
                   </div>

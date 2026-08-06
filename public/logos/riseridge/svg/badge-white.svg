@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 380" width="340" height="380">
+  <defs></defs>
+  <rect x="2" y="2" width="336" height="376" fill="none" stroke="#A9874E" stroke-width="2"></rect>
+  <text x="104" y="240" font-family="&#39;Cormorant Garamond&#39;,Georgia,serif" font-weight="600" font-size="220" letter-spacing="-66" fill="#F4F0E8">R</text>
+  <text x="170" y="240" font-family="&#39;Cormorant Garamond&#39;,Georgia,serif" font-weight="600" font-size="220" letter-spacing="-66" fill="#A9874E">R</text>
+  <line x1="116" y1="282" x2="224" y2="282" stroke="#A9874E" stroke-width="2"></line>
+  <text x="170" y="330" font-family="&#39;Space Mono&#39;,monospace" font-weight="400" font-size="18" text-anchor="middle" letter-spacing="7" fill="#F4F0E8">EST · 2020</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Dotted globe diagram representing global search industry trends">
+  <rect width="1200" height="630" fill="#FBFAF7"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#A9874E"/>
+
+  <rect x="56" y="54" width="64" height="64" rx="8" fill="none" stroke="rgba(21,20,15,0.15)" stroke-width="2"/>
+  <text x="70" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#1E3A2E">R<tspan fill="#A9874E" dx="-11">R</tspan></text>
+
+  <circle cx="560" cy="350" r="180" fill="none" stroke="#e6e0d2" stroke-width="2"/>
+  <ellipse cx="560" cy="350" rx="180" ry="70" fill="none" stroke="#e6e0d2" stroke-width="2"/>
+  <ellipse cx="560" cy="350" rx="70" ry="180" fill="none" stroke="#e6e0d2" stroke-width="2"/>
+  <line x1="380" y1="350" x2="740" y2="350" stroke="#e6e0d2" stroke-width="2"/>
+
+  <g fill="#1E3A2E">
+    <circle cx="500" cy="260" r="6"/>
+    <circle cx="620" cy="270" r="6"/>
+    <circle cx="460" cy="330" r="6"/>
+    <circle cx="600" cy="400" r="6"/>
+    <circle cx="520" cy="440" r="6"/>
+  </g>
+  <g fill="#A9874E">
+    <circle cx="560" cy="240" r="8"/>
+    <circle cx="660" cy="340" r="8"/>
+    <circle cx="470" cy="420" r="8"/>
+  </g>
+
+  <polyline points="820,470 880,410 940,430 1000,320 1060,220" fill="none" stroke="#15140F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1060 220 l32 -4 l-12 30 Z" fill="#15140F"/>
+</svg>

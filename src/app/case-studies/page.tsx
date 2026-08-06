@@ -10,10 +10,10 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'SEO Case Studies & Results',
   description:
-    'Real results from real clients. See how ArcWave\'s AI-powered SEO drives revenue growth, organic traffic increases, and ranking improvements for e-commerce and growth-stage businesses.',
+    'Real results from real clients. See how RiseRidge\'s AI-powered SEO drives revenue growth, organic traffic increases, and ranking improvements for e-commerce and growth-stage businesses.',
   alternates: { canonical: '/case-studies' },
   openGraph: {
-    title: 'SEO Case Studies & Results | ArcWave',
+    title: 'SEO Case Studies & Results | RiseRidge',
     description: 'Proven results: $21K/day revenue, 255% organic growth, 277% revenue increase. See our AI SEO case studies.',
   },
 };
@@ -27,12 +27,38 @@ const AGGREGATE_STATS = [
 
 const CASE_STUDIES = [
   {
+    tag: 'Catering & Events',
+    title: '+76% Local Map Visibility for a Catering Service Company in 90 Days',
+    challenge:
+      'A catering service company with an excellent reputation — a flawless 5.0-star rating across 117 reviews — was effectively invisible to anyone who didn\'t already know its name. The website scored just 61/100 on technical health with generic page titles, missing structured data, and over a thousand small issues. Commercial terms like "wedding catering" and "catering services" sat on pages 4–5 of Google, and their Google Maps presence was barely registering.',
+    solution:
+      'RiseRidge ran a three-phase engagement. First, we rebuilt the technical foundation — 1,100+ fixes across all 67 pages with unique, keyword-rich titles, full structured-data markup, corrected internal links, and full re-indexing. Next, we dominated the local map by optimizing the Google Business Profile, building consistent local signals, and publishing a steady cadence of city-targeted content. Finally, we pushed commercial keywords upward, with many priority terms climbing 20–35 positions in three months.',
+    results: [
+      { value: '+76%', label: 'Local Map Visibility' },
+      { value: '+37%', label: 'Visits From Maps' },
+      { value: '61→92', label: 'Site Health Score' },
+    ],
+  },
+  {
+    tag: 'Hospitality',
+    title: '14.9x More Organic Visitors for a Beachfront Resort in 90 Days',
+    challenge:
+      'A beachfront resort was almost impossible to discover online — you could only find it on Google if you already knew the exact web address. An audit revealed 1,100+ technical issues blocking crawling and ranking, a website health score of just 50/100 with only ~10 pages optimized, brand-only visibility, and no Search Console or Analytics tracking in place. In a full quarter the site appeared in Google ~3,000 times and earned just 43 visits.',
+    solution:
+      'RiseRidge deployed an AI-accelerated program across three pillars. We fixed the technical foundation — resolving nearly 2,000 issues, rewriting every title and meta description, bringing all 77 pages to a flawless state, and deploying structured data so Google and AI assistants understand the business. We created discovery content (location and activity guides plus hundreds of Q&A sections), and we built local presence and measurement, connecting Search Console and Analytics and growing the local map score from 1.3 to 3.4.',
+    results: [
+      { value: '×14.9', label: 'Organic Visitors' },
+      { value: '×8.8', label: 'Search Impressions' },
+      { value: '50→94', label: 'Site Health Score' },
+    ],
+  },
+  {
     tag: 'E-Commerce',
     title: 'Scaling Organic Revenue to $21K/Day in Just 4 Months',
     challenge:
       'A growing e-commerce brand was over-reliant on paid advertising with minimal organic presence. Rising CPCs were eating into margins, and the brand had no sustainable organic traffic strategy. Their site had significant technical debt, thin content, and a fragmented site architecture.',
     solution:
-      'ArcWave deployed our AI automation engine for a comprehensive technical audit, identifying and fixing 400+ critical issues in the first week. We rebuilt site architecture based on AI-driven keyword clustering, implemented strategic content silos, and launched an automated internal linking strategy that distributed authority across high-value pages.',
+      'RiseRidge deployed our AI automation engine for a comprehensive technical audit, identifying and fixing 400+ critical issues in the first week. We rebuilt site architecture based on AI-driven keyword clustering, implemented strategic content silos, and launched an automated internal linking strategy that distributed authority across high-value pages.',
     results: [
       { value: '$21K/day', label: 'Peak Daily Revenue' },
       { value: '340%', label: 'Organic Traffic Growth' },
@@ -58,7 +84,7 @@ const CASE_STUDIES = [
     challenge:
       'A B2B SaaS platform had plateaued in organic growth after 3 years. Content had become stale, keyword rankings were declining, and competitors were aggressively investing in SEO. The marketing team was small and couldn\'t keep up with the volume of content needed to compete.',
     solution:
-      'ArcWave performed a full technical overhaul using our AI audit engine, then deployed our Content Intelligence platform for programmatic content creation at scale. We identified 2,000+ keyword opportunities through gap analysis, prioritized by revenue potential, and built automated content workflows that increased output by 12x while maintaining quality and brand voice.',
+      'RiseRidge performed a full technical overhaul using our AI audit engine, then deployed our Content Intelligence platform for programmatic content creation at scale. We identified 2,000+ keyword opportunities through gap analysis, prioritized by revenue potential, and built automated content workflows that increased output by 12x while maintaining quality and brand voice.',
     results: [
       { value: '255%', label: 'Revenue Growth YoY' },
       { value: '420%', label: 'Top 10 Keywords' },
@@ -84,7 +110,7 @@ const CASE_STUDIES = [
     challenge:
       'A brand operating in a restricted advertising niche had extremely limited paid marketing options. With only 1,717 monthly organic sessions and 34 checkouts, the business had almost no scalable growth channel.',
     solution:
-      'ArcWave built a full organic growth strategy tailored to restricted-niche compliance, deploying AI-driven keyword targeting, content authority building, and technical SEO optimization to capture search demand competitors couldn\'t reach through paid channels.',
+      'RiseRidge built a full organic growth strategy tailored to restricted-niche compliance, deploying AI-driven keyword targeting, content authority building, and technical SEO optimization to capture search demand competitors couldn\'t reach through paid channels.',
     results: [
       { value: '+969%', label: 'Organic Sessions' },
       { value: '+1200%', label: 'Checkouts Growth' },
@@ -97,7 +123,7 @@ const CASE_STUDIES = [
     challenge:
       'An e-commerce brand needed rapid, measurable SEO results to justify shifting budget from paid channels. With a $67 AOV and moderate traffic, even small conversion improvements could meaningfully impact revenue.',
     solution:
-      'ArcWave executed a focused 60-day sprint using AI-powered on-page optimization, add-to-cart funnel improvements, and structured content enhancements. Organic sessions grew 15% while add-to-cart rate improved 9%, compounding into a 39% checkout increase.',
+      'RiseRidge executed a focused 60-day sprint using AI-powered on-page optimization, add-to-cart funnel improvements, and structured content enhancements. Organic sessions grew 15% while add-to-cart rate improved 9%, compounding into a 39% checkout increase.',
     results: [
       { value: '+39%', label: 'Checkouts Growth' },
       { value: '$44.9K/yr', label: 'Organic Revenue Run-Rate' },
@@ -110,7 +136,7 @@ const CASE_STUDIES = [
     challenge:
       'A DTC e-commerce brand with a $122 AOV needed to reduce dependence on paid acquisition and build a sustainable organic revenue channel. Despite decent add-to-cart rates, organic traffic was underperforming relative to market potential.',
     solution:
-      'Over a 90-day engagement, ArcWave deployed comprehensive technical SEO fixes, AI-driven content strategy, and conversion funnel optimization. Organic sessions grew 93%, add-to-cart rate improved 11%, and reached checkouts increased 140% — all while maintaining the store\'s 2.5% conversion rate and $122 AOV.',
+      'Over a 90-day engagement, RiseRidge deployed comprehensive technical SEO fixes, AI-driven content strategy, and conversion funnel optimization. Organic sessions grew 93%, add-to-cart rate improved 11%, and reached checkouts increased 140% — all while maintaining the store\'s 2.5% conversion rate and $122 AOV.',
     results: [
       { value: '+93%', label: 'Organic Sessions' },
       { value: '+140%', label: 'Checkouts Growth' },
@@ -137,13 +163,13 @@ export default function CaseStudiesPage() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan mb-6">
             Proven Results
           </p>
-          <h1 className="font-display font-[800] text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
+          <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
             Real Results.{' '}
             <span className="text-gradient-blue-cyan">Real Growth.</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            See how ArcWave&apos;s AI-driven SEO has driven measurable revenue growth for
-            e-commerce brands, SaaS platforms, and multi-location businesses.
+            See how RiseRidge&apos;s AI-driven SEO has driven measurable growth for
+            e-commerce brands, SaaS platforms, hospitality, and local service businesses.
           </p>
         </div>
       </section>
@@ -156,7 +182,7 @@ export default function CaseStudiesPage() {
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="01" text="Case Studies" />
-            <h2 id="case-studies-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
+            <h2 id="case-studies-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               Client Success Stories
             </h2>
             <p className="mt-4 text-muted max-w-2xl">
@@ -177,7 +203,7 @@ export default function CaseStudiesPage() {
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <SectionLabel number="02" text="Methodology" />
-            <h2 id="methodology-heading" className="mt-4 font-display font-[800] text-3xl md:text-4xl text-ice">
+            <h2 id="methodology-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               How We Drive These Results
             </h2>
           </ScrollReveal>
@@ -202,7 +228,7 @@ export default function CaseStudiesPage() {
               <ScrollReveal key={item.step} delay={i * 0.15}>
                 <div className="rounded-xl border border-border bg-navy/40 p-8 h-full">
                   <span className="font-mono text-4xl font-bold text-electric/20">{item.step}</span>
-                  <h3 className="mt-3 font-display font-bold text-xl text-ice">{item.title}</h3>
+                  <h3 className="mt-3 font-display font-semibold text-xl text-ice">{item.title}</h3>
                   <p className="mt-3 text-sm text-muted leading-relaxed">{item.description}</p>
                 </div>
               </ScrollReveal>
@@ -214,7 +240,7 @@ export default function CaseStudiesPage() {
       {/* CTA */}
       <CTASection
         heading="Ready to Be Our Next Success Story?"
-        description="Book a free consultation and discover how ArcWave can drive similar results for your business."
+        description="Book a free consultation and discover how RiseRidge can drive similar results for your business."
         primaryLabel="Get Your Free Audit"
         secondaryLabel="Explore Our Features"
         secondaryHref="/features"

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Ascending bar chart representing compounding organic growth">
+  <rect width="1200" height="630" fill="#FBFAF7"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#A9874E"/>
+
+  <rect x="56" y="54" width="64" height="64" rx="8" fill="none" stroke="rgba(21,20,15,0.15)" stroke-width="2"/>
+  <text x="70" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#1E3A2E">R<tspan fill="#A9874E" dx="-11">R</tspan></text>
+
+  <line x1="380" y1="470" x2="820" y2="470" stroke="#e6e0d2" stroke-width="2"/>
+
+  <g>
+    <rect x="400" y="410" width="56" height="60" rx="4" fill="#cfe0d4"/>
+    <rect x="480" y="370" width="56" height="100" rx="4" fill="#A9874E" opacity="0.55"/>
+    <rect x="560" y="320" width="56" height="150" rx="4" fill="#1E3A2E" opacity="0.7"/>
+    <rect x="640" y="250" width="56" height="220" rx="4" fill="#A9874E"/>
+    <rect x="720" y="180" width="56" height="290" rx="4" fill="#1E3A2E"/>
+  </g>
+
+  <polyline points="428,410 508,370 588,320 668,250 748,180" fill="none" stroke="#15140F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#15140F">
+    <circle cx="428" cy="410" r="6"/>
+    <circle cx="508" cy="370" r="6"/>
+    <circle cx="588" cy="320" r="6"/>
+    <circle cx="668" cy="250" r="6"/>
+    <circle cx="748" cy="180" r="6"/>
+  </g>
+  <path d="M748 180 l30 -8 l-8 30 Z" fill="#15140F"/>
+</svg>

@@ -1,7 +1,7 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
 var config_default = defineConfig({
-  branch: process.env.NEXT_PUBLIC_TINA_BRANCH ?? process.env.GITHUB_BRANCH ?? "claude/rankpilot-website-bnnCr",
+  branch: process.env.NEXT_PUBLIC_TINA_BRANCH ?? process.env.VERCEL_GIT_COMMIT_REF ?? process.env.GITHUB_BRANCH ?? "claude/rankpilot-website-bnnCr",
   clientId: "57325307-e3e1-49db-b176-8eb56885a07b",
   token: "36967b0ae5c8c132e8c10d871c99725063a814ef",
   build: {
@@ -10,8 +10,9 @@ var config_default = defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "uploads",
-      publicFolder: "public"
+      mediaRoot: "",
+      publicFolder: "public",
+      static: false
     }
   },
   search: {
@@ -34,7 +35,7 @@ var config_default = defineConfig({
         },
         defaultItem: () => ({
           date: (/* @__PURE__ */ new Date()).toISOString(),
-          author: { name: "ArcWave Team" }
+          author: { name: "RiseRidge Team" }
         }),
         fields: [
           {

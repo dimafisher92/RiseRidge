@@ -30,15 +30,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     });
     const post = result.data.post;
     return {
-      title: `${post.title} | ArcWave Blog`,
+      title: `${post.title} | RiseRidge Blog`,
       description: post.excerpt,
       alternates: { canonical: `/blog/${params.slug}` },
       openGraph: {
-        title: `${post.title} | ArcWave`,
+        title: `${post.title} | RiseRidge`,
         description: post.excerpt,
         type: 'article',
         publishedTime: post.date,
-        images: post.coverImage ? [{ url: post.coverImage }] : [{ url: '/og-image.jpg' }],
+        ...(post.coverImage ? { images: [{ url: post.coverImage }] } : {}),
       },
     };
   } catch {
@@ -82,6 +82,18 @@ export default async function BlogPostPage({ params }: Props) {
           { name: post.title, href: `/blog/${params.slug}` },
         ]}
       />
+      <JsonLd
+        type="article"
+        article={{
+          title: post.title,
+          description: post.excerpt,
+          url: `/blog/${params.slug}`,
+          datePublished: post.date,
+          authorName: post.author?.name ?? undefined,
+          image: post.coverImage || undefined,
+          section: post.category ?? undefined,
+        }}
+      />
 
       <article>
         {/* Hero header */}
@@ -91,7 +103,7 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="inline-block rounded-full bg-electric/10 px-3 py-1 font-mono text-xs text-electric uppercase tracking-wider">
               {post.category}
             </span>
-            <h1 className="mt-6 font-display font-[800] text-3xl sm:text-4xl md:text-5xl leading-[1.1] text-ice">
+            <h1 className="mt-6 font-display font-semibold text-3xl sm:text-4xl md:text-5xl leading-[1.1] text-ice">
               {post.title}
             </h1>
             <p className="mt-5 text-lg text-muted leading-relaxed max-w-2xl mx-auto">
@@ -112,6 +124,18 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {/* Hero image */}
+        {post.coverImage && (
+          <section className="pb-16">
+            <div className="mx-auto max-w-4xl px-6">
+              <div className="aspect-[16/9] w-full overflow-hidden rounded-[6px] border border-border bg-surface">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={post.coverImage} alt="" className="h-full w-full object-cover" />
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Body */}
         <section className="pb-24">
@@ -143,7 +167,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <CTASection
         heading="Want Results Like These?"
-        description="Let ArcWave's AI-powered SEO put your business on page one — and keep it there."
+        description="Let RiseRidge's AI-powered SEO put your business on page one — and keep it there."
         primaryLabel="Get Your Free Audit"
         secondaryLabel="Read More Posts"
         secondaryHref="/blog"
