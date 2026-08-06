@@ -1,21 +1,15 @@
 import type { MetadataRoute } from 'next';
-import { client } from '../../tina/__generated__/client';
+import { getAllPosts } from '@/lib/blog';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://riseridge.io';
 
-  let blogEntries: MetadataRoute.Sitemap = [];
-  try {
-    const result = await client.queries.postConnection({ sort: 'date' });
-    blogEntries = (result.data.postConnection.edges ?? []).map((edge) => ({
-      url: `${baseUrl}/blog/${edge!.node!._sys.filename}`,
-      lastModified: new Date(edge!.node!.date),
-      changeFrequency: 'weekly' as const,
-      priority: 0.6,
-    }));
-  } catch {
-    // gracefully skip blog entries if TinaCloud is unreachable at build time
-  }
+  const blogEntries: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
 
   return [
     {

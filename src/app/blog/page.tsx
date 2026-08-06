@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { client } from '../../../tina/__generated__/client';
+import { getAllPosts } from '@/lib/blog';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { SectionLabel } from '@/components/SectionLabel';
 import { ScrollReveal } from '@/components/ScrollReveal';
@@ -19,17 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function BlogPage() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let posts: any[] = [];
-  try {
-    const result = await client.queries.postConnection({ sort: 'date' });
-    posts = (result.data.postConnection.edges ?? [])
-      .map((edge) => edge!.node!)
-      .reverse();
-  } catch {
-    // TinaCloud not yet indexed — render empty state
-  }
+export default function BlogPage() {
+  const posts = getAllPosts();
 
   return (
     <>
@@ -79,13 +70,13 @@ export default async function BlogPage() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post, i) => (
                 <BlogCard
-                  key={post._sys.filename}
-                  slug={post._sys.filename}
+                  key={post.slug}
+                  slug={post.slug}
                   title={post.title}
                   excerpt={post.excerpt}
                   date={post.date}
                   category={post.category}
-                  authorName={post.author?.name}
+                  authorName={post.authorName}
                   coverImage={post.coverImage}
                   index={i}
                 />
