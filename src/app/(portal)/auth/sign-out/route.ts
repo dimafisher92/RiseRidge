@@ -1,0 +1,12 @@
+import { NextResponse } from 'next/server';
+import { createClient } from '@/lib/supabase/server';
+
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
+export async function POST(request: Request) {
+  const supabase = createClient();
+  await supabase.auth.signOut();
+  // 303 so the browser issues a GET to the login page after the POST.
+  return NextResponse.redirect(new URL('/login/', request.url), { status: 303 });
+}

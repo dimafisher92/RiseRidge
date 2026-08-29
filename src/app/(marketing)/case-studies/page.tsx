@@ -4,8 +4,17 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { StatsBar } from '@/components/StatsBar';
 import { CaseStudyCard } from '@/components/CaseStudyCard';
+import { OrganicSalesChart } from '@/components/OrganicSalesChart';
 import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
+
+const BOTH_STORES = [
+  { metric: 'GSC organic clicks', en: '2,887 → 5,940', enDelta: '+106%', es: '397 → 1,149', esDelta: '+189%' },
+  { metric: 'GSC organic impressions', en: '19.7K → 47.3K', enDelta: '+140%', es: '3.1K → 9.9K', esDelta: '+215%' },
+  { metric: 'Shopify organic revenue', en: '$35.7K → $72.1K', enDelta: '+102%', es: '$12.6K → $21.7K', esDelta: '+72%' },
+  { metric: 'Shopify organic sessions', en: '6,546 → 11,061', enDelta: '+69%', es: '3,110 → 6,140', esDelta: '+97%' },
+  { metric: 'Avg. position · product page', en: '7.2 → 4.7', enDelta: '', es: '8.9 → 5.0', esDelta: '' },
+];
 
 export const metadata: Metadata = {
   title: 'SEO Case Studies & Results',
@@ -177,11 +186,129 @@ export default function CaseStudiesPage() {
       {/* Aggregate Stats */}
       <StatsBar stats={AGGREGATE_STATS} />
 
-      {/* Case Studies */}
-      <section className="py-24" aria-labelledby="case-studies-heading">
+      {/* Featured Case Study — travel-bag store two-store organic growth */}
+      <section className="py-24" aria-labelledby="featured-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <SectionLabel number="01" text="Case Studies" />
+            <SectionLabel number="01" text="Featured Case Study" />
+            <span className="mt-4 inline-block rounded-full border border-tag-border bg-tag-bg px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-forest">
+              E-Commerce · Two Shopify Stores
+            </span>
+            <h2
+              id="featured-heading"
+              className="mt-4 max-w-3xl font-display font-semibold text-3xl md:text-4xl text-ink leading-snug"
+            >
+              &ldquo;Is it the ads &mdash; or the SEO?&rdquo; We doubled organic revenue and proved it.
+            </h2>
+            <p className="mt-4 max-w-3xl text-muted leading-relaxed">
+              A DTC travel-bag store runs two Shopify stores &mdash; an English/US flagship
+              and a Spanish/LATAM sister site. The founder asked a
+              fair question: how much of the recent growth was really SEO, and how much was simply a
+              bigger ad budget? We answered with numbers advertising cannot produce &mdash; every
+              figure below is drawn from Google Search Console and Shopify&rsquo;s organic-only channel,
+              which structurally exclude paid traffic.
+            </p>
+          </ScrollReveal>
+
+          <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
+            {/* Left: the story */}
+            <ScrollReveal className="space-y-6">
+              <div>
+                <h3 className="font-mono text-[11px] text-brass uppercase tracking-[0.16em] mb-1">The Challenge</h3>
+                <p className="text-sm text-body leading-relaxed">
+                  Growth was climbing, but paid and organic were tangled together in the reporting, so
+                  the SEO investment couldn&rsquo;t be defended on its own merits. A near-identical third
+                  domain used for Google Ads was also splitting ranking power with
+                  the flagship. We needed to isolate organic performance and prove causation, not just
+                  correlation.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-mono text-[11px] text-brass uppercase tracking-[0.16em] mb-1">What We Did</h3>
+                <p className="text-sm text-body leading-relaxed">
+                  On the flagship: 221 on-page fixes across all 54 pages, product &amp; review schema on
+                  7 product pages, and full internal linking (46/46) funnelling authority to the money
+                  page. On the Spanish store: a full technical audit, semantic foundation (28/28),
+                  canonicals (5/5), Open Graph, and four LATAM-targeted blog posts. We also pointed
+                  canonicals plus a site-wide noindex from the ads store to the flagship &mdash; so paid
+                  protects, rather than cannibalises, organic.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-mono text-[11px] text-brass uppercase tracking-[0.16em] mb-1">
+                  The Clearest Proof It&rsquo;s SEO
+                </h3>
+                <p className="text-sm text-body leading-relaxed">
+                  Rich product snippets (price + &ldquo;In Stock&rdquo; shown directly in Google) exist
+                  only because we deployed structured data. That single change took product-snippet
+                  impressions from <strong className="text-ink">866 to 34,257</strong> and clicks from{' '}
+                  <strong className="text-ink">48 to 1,943</strong>. No ad budget can generate an organic
+                  rich snippet &mdash; it is earned purely through on-page SEO.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 border-t border-line pt-6">
+                {[
+                  { value: '+102%', label: 'Flagship Organic Revenue' },
+                  { value: '+106% / +189%', label: 'Organic Clicks · EN / ES' },
+                  { value: '34,257', label: 'Rich-Snippet Impressions' },
+                ].map((r) => (
+                  <div key={r.label} className="text-center">
+                    <div className="font-display text-2xl font-semibold text-brass">{r.value}</div>
+                    <div className="mt-1 text-[10px] text-subtle uppercase tracking-[0.14em] font-mono">{r.label}</div>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            {/* Right: the Shopify organic-sales chart (recreated from the client report) */}
+            <ScrollReveal delay={0.15}>
+              <OrganicSalesChart />
+              <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.14em] text-subtle">
+                Flagship organic-channel revenue &middot; paid campaigns filtered out
+              </p>
+            </ScrollReveal>
+          </div>
+
+          {/* Both stores at a glance */}
+          <ScrollReveal className="mt-14">
+            <h3 className="font-display font-semibold text-2xl text-ink">Both stores at a glance</h3>
+            <p className="mt-2 text-sm text-muted">
+              Organic-only metrics, pre-SEO baseline &rarr; current period. Paid advertising excluded by design.
+            </p>
+            <div className="mt-6 overflow-x-auto rounded-[10px] border border-line bg-white">
+              <table className="w-full min-w-[640px] border-collapse text-left">
+                <thead>
+                  <tr className="border-b border-line font-mono text-[10px] uppercase tracking-[0.14em] text-subtle">
+                    <th className="py-3 px-5 font-normal">Organic-only metric</th>
+                    <th className="py-3 px-5 font-normal">US store (EN)</th>
+                    <th className="py-3 px-5 text-right font-normal">Δ</th>
+                    <th className="py-3 px-5 font-normal">LATAM store (ES)</th>
+                    <th className="py-3 px-5 text-right font-normal">Δ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {BOTH_STORES.map((row) => (
+                    <tr key={row.metric} className="border-b border-line/60 last:border-0">
+                      <td className="py-3 px-5 text-sm text-body">{row.metric}</td>
+                      <td className="py-3 px-5 text-sm text-ink tabular-nums">{row.en}</td>
+                      <td className="py-3 px-5 text-right text-sm font-semibold text-forest tabular-nums">{row.enDelta}</td>
+                      <td className="py-3 px-5 text-sm text-ink tabular-nums">{row.es}</td>
+                      <td className="py-3 px-5 text-right text-sm font-semibold text-forest tabular-nums">{row.esDelta}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="border-t border-border py-24" aria-labelledby="case-studies-heading">
+        <div className="mx-auto max-w-7xl px-6">
+          <ScrollReveal>
+            <SectionLabel number="02" text="Case Studies" />
             <h2 id="case-studies-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               Client Success Stories
             </h2>
@@ -202,7 +329,7 @@ export default function CaseStudiesPage() {
       <section className="border-t border-border bg-surface/30 py-24" aria-labelledby="methodology-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <SectionLabel number="02" text="Methodology" />
+            <SectionLabel number="03" text="Methodology" />
             <h2 id="methodology-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               How We Drive These Results
             </h2>
