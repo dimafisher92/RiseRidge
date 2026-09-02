@@ -4,17 +4,24 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { StatsBar } from '@/components/StatsBar';
 import { CaseStudyCard } from '@/components/CaseStudyCard';
+import {
+  FeaturedCaseStudy,
+  EvidenceCard,
+  CaseStudyTable,
+  CaseStudyStatGrid,
+} from '@/components/FeaturedCaseStudy';
+import { ComparisonBarsChart, PositionTrendChart } from '@/components/CaseStudyCharts';
 import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'SEO Case Studies & Results',
   description:
-    'Real results from real clients. See how RiseRidge\'s AI-powered SEO drives revenue growth, organic traffic increases, and ranking improvements for e-commerce and growth-stage businesses.',
+    'Real results from real clients. See how RiseRidge\'s AI-powered SEO drives revenue growth, organic traffic increases, and ranking improvements — including +102% organic revenue across two Shopify stores and 71 phone calls for a local auto-glass shop.',
   alternates: { canonical: '/case-studies' },
   openGraph: {
     title: 'SEO Case Studies & Results | RiseRidge',
-    description: 'Proven results: $21K/day revenue, 255% organic growth, 277% revenue increase. See our AI SEO case studies.',
+    description: 'Proven results: +102% Shopify organic revenue, page-one rankings for local service, $21K/day peak revenue. See our AI SEO case studies.',
   },
 };
 
@@ -24,6 +31,68 @@ const AGGREGATE_STATS = [
   { value: '250+', label: 'Clients Served' },
   { value: '97%', label: 'Client Retention' },
 ];
+
+const SHOPIFY_STUDY = {
+  number: '01',
+  category: 'E-Commerce · Two Shopify Stores',
+  headingId: 'featured-shopify',
+  title: '“Is it the ads — or the SEO?” We doubled organic revenue and proved it.',
+  intro:
+    'A DTC travel-bag store runs two Shopify stores — an English/US flagship and a Spanish/LATAM sister site. The founder asked a fair question: how much of the recent growth was really SEO, and how much was simply a bigger ad budget? We answered with numbers advertising cannot produce — every figure below is drawn from Google Search Console and Shopify’s organic-only channel, which structurally exclude paid traffic.',
+  sections: [
+    {
+      heading: 'The Challenge',
+      body:
+        'Growth was climbing, but paid and organic were tangled together in the reporting, so the SEO investment couldn’t be defended on its own merits. A near-identical third domain used for Google Ads was also splitting ranking power with the flagship. We needed to isolate organic performance and prove causation, not just correlation.',
+    },
+    {
+      heading: 'What We Did',
+      body:
+        'On the flagship: 221 on-page fixes across all 54 pages, product & review schema on 7 product pages, and full internal linking (46/46) funnelling authority to the money page. On the Spanish store: a full technical audit, semantic foundation (28/28), canonicals (5/5), Open Graph, and four LATAM-targeted blog posts. We also pointed canonicals plus a site-wide noindex from the ads store to the flagship — so paid protects, rather than cannibalises, organic.',
+    },
+    {
+      heading: 'The Clearest Proof It’s SEO',
+      body:
+        'Rich product snippets (price + “In Stock” shown directly in Google) exist only because we deployed structured data. That single change took product-snippet impressions from 866 to 34,257 and clicks from 48 to 1,943. No ad budget can generate an organic rich snippet — it is earned purely through on-page SEO.',
+    },
+  ],
+  metrics: [
+    { value: '+102%', label: 'Flagship Organic Revenue' },
+    { value: '+106% / +189%', label: 'Organic Clicks · EN / ES' },
+    { value: '34,257', label: 'Rich-Snippet Impressions' },
+  ],
+};
+
+const AUTO_GLASS_STUDY = {
+  number: '02',
+  category: 'Local Service · Auto Glass · Charlotte, NC',
+  headingId: 'featured-auto-glass',
+  title: 'From invisible to page one — 71 phone calls in a local shop’s first 90 days.',
+  intro:
+    'A mobile auto-glass & windshield-repair shop in Charlotte, NC came to us effectively invisible in Google. Every one of its ten pages was missing the titles, descriptions, image labels and structured data search engines rely on — and nothing was being measured at all. We rebuilt the foundation, then turned that visibility into phone calls. Every figure below is drawn from Google Search Console and the business’s Google Business Profile.',
+  sections: [
+    {
+      heading: 'The Challenge',
+      body:
+        'The site sat in the middle of page two — an average Google position of 15.5, where almost no one looks. An audit surfaced 114 technical faults, a site-health score of zero, empty page titles and descriptions across all ten pages, 39 unlabelled photos, and no analytics connected at all — so no one could see what search was doing for the business.',
+    },
+    {
+      heading: 'What We Did',
+      body:
+        'We rewrote titles and descriptions on all 10 pages, labelled all 39 images, and coded the shop’s services, phone and Charlotte address into every page as structured data. We cleared 114 technical faults — site health from 0 to 91/100 at a 92% fix rate — connected Search Console, launched six local landing pages, and started a weekly cadence of articles and Google Business posts.',
+    },
+    {
+      heading: 'The Result That Pays the Bills',
+      body:
+        'Average position climbed from 15.5 to 10.1 — page two to the top of page one — and 519 of the 1,000 terms we track most closely now sit in Google’s top ten. But the number the shop floor feels is this: the Google Business Profile turned 1,747 views into 82 website clicks and 71 phone calls in 90 days, backed by a 5.0 rating across 138 reviews.',
+    },
+  ],
+  metrics: [
+    { value: '15.5 → 10.1', label: 'Avg Google Position' },
+    { value: '71', label: 'Calls From Listing' },
+    { value: '519', label: 'Keywords In Top 10' },
+  ],
+};
 
 const CASE_STUDIES = [
   {
@@ -177,13 +246,131 @@ export default function CaseStudiesPage() {
       {/* Aggregate Stats */}
       <StatsBar stats={AGGREGATE_STATS} />
 
+      {/* Featured Case Study 01 — Two Shopify stores */}
+      <FeaturedCaseStudy {...SHOPIFY_STUDY}>
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <EvidenceCard
+            title="Total sales — last click"
+            subtitle="Shopify · Organic traffic · paid excluded"
+            badge="↗ +109%"
+          >
+            <ComparisonBarsChart
+              axisTicks={['$80K', '$60K', '$40K', '$20K', '$0K']}
+              max={80000}
+              seriesLabel="Organic"
+              bars={[
+                {
+                  value: 35409.94,
+                  display: '$35,409.94',
+                  caption: 'Jan 14 – Apr 14, 2026',
+                },
+                {
+                  value: 73896.7,
+                  display: '$73,896.70',
+                  caption: 'Apr 15 – Jul 14, 2026',
+                  current: true,
+                },
+              ]}
+            />
+          </EvidenceCard>
+
+          <EvidenceCard
+            title="Flagship organic channel"
+            subtitle="Apr 15 – Jul 14, 2026 vs. prior period"
+            footnote="Flagship organic-channel revenue · paid campaigns filtered out"
+          >
+            <CaseStudyTable
+              columns={['Metric', 'Apr–Jul', 'Prior', 'Change']}
+              accentColumns={[3]}
+              rows={[
+                ['Total sales (last click)', '$73,896.70', '$35,409.94', '+109%'],
+                ['Sessions', '11,343', '6,515', '+75%'],
+                ['Conversion rate', '5.78%', '4.83%', '+19%'],
+              ]}
+            />
+          </EvidenceCard>
+        </div>
+
+        <div className="mt-6">
+          <EvidenceCard
+            title="Both stores at a glance"
+            subtitle="Pre-SEO baseline → current period"
+            footnote="Organic-only metrics · paid advertising excluded by design"
+          >
+            <CaseStudyTable
+              columns={['Organic-only metric', 'US store (EN)', 'Δ', 'LATAM store (ES)', 'Δ']}
+              accentColumns={[2, 4]}
+              rows={[
+                ['GSC organic clicks', '2,887 → 5,940', '+106%', '397 → 1,149', '+189%'],
+                ['GSC organic impressions', '19.7K → 47.3K', '+140%', '3.1K → 9.9K', '+215%'],
+                ['Shopify organic revenue', '$35.7K → $72.1K', '+102%', '$12.6K → $21.7K', '+72%'],
+                ['Shopify organic sessions', '6,546 → 11,061', '+69%', '3,110 → 6,140', '+97%'],
+                ['Avg. position · product page', '7.2 → 4.7', '—', '8.9 → 5.0', '—'],
+              ]}
+            />
+          </EvidenceCard>
+        </div>
+      </FeaturedCaseStudy>
+
+      {/* Featured Case Study 02 — Local auto glass */}
+      <FeaturedCaseStudy {...AUTO_GLASS_STUDY} tone="panel">
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <EvidenceCard
+            title="Average position in Google"
+            subtitle="Search Console · a lower position number is better"
+            badge="15.5 → 10.1"
+          >
+            <PositionTrendChart
+              domain={[9.6, 16]}
+              threshold={{ value: 10, label: 'Page one · top 10' }}
+              points={[
+                { value: 15.5, display: '15.5', date: '4 May' },
+                { value: 12.0, display: '12.0', date: '1 Jun' },
+                { value: 10.6, display: '10.6', date: '24 Jun' },
+                { value: 10.1, display: '10.1', date: '21 Jul' },
+              ]}
+            />
+          </EvidenceCard>
+
+          <EvidenceCard
+            title="90 days of search performance"
+            subtitle="Google Search Console"
+            footnote="Organic visits and impressions · brand and non-brand combined"
+          >
+            <CaseStudyTable
+              columns={['Month', 'Visits', 'Impressions', 'Avg pos.']}
+              totalRow
+              rows={[
+                ['May', '69', '13,138', '14.1'],
+                ['June', '90', '16,252', '11.4'],
+                ['July (1–21)', '49', '10,995', '10.8'],
+                ['90-day total', '211', '41,231', '10.1'],
+              ]}
+            />
+          </EvidenceCard>
+        </div>
+
+        <div className="mt-6">
+          <EvidenceCard title="Google Business Profile" subtitle="90-day window">
+            <CaseStudyStatGrid
+              stats={[
+                { value: '1,747', label: 'Times Seen' },
+                { value: '82', label: 'Website Clicks' },
+                { value: '71', label: 'Phone Calls' },
+                { value: '5.0★', label: '138 Reviews' },
+              ]}
+            />
+          </EvidenceCard>
+        </div>
+      </FeaturedCaseStudy>
+
       {/* Case Studies */}
       <section className="py-24" aria-labelledby="case-studies-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <SectionLabel number="01" text="Case Studies" />
+            <SectionLabel number="03" text="More Case Studies" />
             <h2 id="case-studies-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
-              Client Success Stories
+              More Client Success Stories
             </h2>
             <p className="mt-4 text-muted max-w-2xl">
               Each engagement begins with our AI-powered audit and evolves into a customized strategy
@@ -202,7 +389,7 @@ export default function CaseStudiesPage() {
       <section className="border-t border-border bg-surface/30 py-24" aria-labelledby="methodology-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <SectionLabel number="02" text="Methodology" />
+            <SectionLabel number="04" text="Methodology" />
             <h2 id="methodology-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               How We Drive These Results
             </h2>
