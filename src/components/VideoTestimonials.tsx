@@ -9,6 +9,8 @@ const VIDEOS = [
   { src: '/2355555478410335139.MP4', label: 'Client Review 1' },
   { src: '/6c49bbda-14f5-4ffe-acec-aef113c3769a.MP4', label: 'Client Review 2' },
   { src: '/IMG_3091.MP4', label: 'Client Review 3' },
+  { src: '/IMG_5135.MP4', label: 'Client Review 4' },
+  { src: '/IMG_0060.MP4', label: 'Client Review 5' },
 ];
 
 function VideoCard({ src, label, index }: { src: string; label: string; index: number }) {
@@ -33,7 +35,7 @@ function VideoCard({ src, label, index }: { src: string; label: string; index: n
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       viewport={{ once: true, margin: '-60px' }}
-      className="relative rounded-[6px] border border-line bg-white overflow-hidden group shadow-[0_10px_34px_rgba(21,20,15,0.05)] hover:shadow-[0_16px_44px_rgba(21,20,15,0.10)] transition-all duration-[400ms]"
+      className="relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] rounded-[6px] border border-line bg-white overflow-hidden group shadow-[0_10px_34px_rgba(21,20,15,0.05)] hover:shadow-[0_16px_44px_rgba(21,20,15,0.10)] transition-all duration-[400ms]"
     >
       <div className="relative aspect-[9/16] w-full bg-panel">
         <video
@@ -41,6 +43,7 @@ function VideoCard({ src, label, index }: { src: string; label: string; index: n
           src={src}
           className="w-full h-full object-cover"
           playsInline
+          preload="metadata"
           onEnded={() => setPlaying(false)}
           aria-label={label}
         />
@@ -107,7 +110,7 @@ export function VideoTestimonials() {
           </p>
         </ScrollReveal>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-12 flex flex-wrap justify-center gap-6">
           {VIDEOS.map((v, i) => (
             <VideoCard key={v.src} {...v} index={i} />
           ))}
