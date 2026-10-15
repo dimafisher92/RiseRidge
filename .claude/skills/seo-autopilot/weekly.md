@@ -14,7 +14,15 @@ read-only. Skip only the planning writes.
   1. `node scripts/seo/searchatlas.mjs tools --grep "visib|llm|rank|keyword|otto|backlink" --out /tmp/sa-tools.json`
      discovers the available tools and their input schemas. The catalogue
      changes, so always discover first.
-  2. Call the relevant tools for riseridge.io with
+  2. riseridge.io projects in SearchAtlas (set up 2026-10-15):
+     - LLM Visibility: project `0a31b563-2b45-4b61-b56b-f3227373b4cd`
+       (`llmv_*` tools);
+     - Rank Tracker: project `88687`, "riseridge.io (Google US)", 27 keywords
+       (`krt_*` tools).
+
+     Use these IDs directly. If one stops resolving, find it again with
+     `llmv_list_projects` / `krt_list_projects`; never create a new project.
+  3. Call the relevant tools for riseridge.io with
      `node scripts/seo/searchatlas.mjs call <tool> '<json args>' --out /tmp/sa-<name>.json`:
      - LLM Visibility: mentions/citations per prompt and engine, plus
        competitors cited;
@@ -24,7 +32,7 @@ read-only. Skip only the planning writes.
 
      Use read-only tools only. Never call tools that create, modify, deploy
      or delete anything in SearchAtlas (e.g. OTTO deploy, project create).
-  3. If `scripts/seo/searchatlas.config.json` lists `calls`, you can run
+  4. If `scripts/seo/searchatlas.config.json` lists `calls`, you can run
      `node scripts/seo/searchatlas.mjs report --out /tmp/sa.json` instead.
 
   If it prints `skipped` or the host is blocked, use the CSV fallback:
@@ -41,6 +49,13 @@ read-only. Skip only the planning writes.
 
 ## 2. AI Visibility Log
 The tracked prompt set is `docs/ai-visibility-prompts.md`. If SearchAtlas tracks prompts that are not in that file (or misses some), report the mismatch in the Weekly Report and in Needs Human.
+
+Count only the prompts from that file. The LLM Visibility project still holds
+15 off-topic prompts that SearchAtlas generated itself and that its API refuses
+to delete. Leave them out of the AI Visibility Log and the AI mention rate, and
+do not use the project-level visibility score: it mixes in those 15 prompts.
+Compute the mention rate yourself as the share of (prompt, engine) pairs, over
+the prompts in the file, where RiseRidge is mentioned or cited.
 Add one row per (prompt, engine) from the SearchAtlas LLM Visibility data, with
 Week = this Monday. If SearchAtlas has no LLM data, skip this step and add a
 Needs Human row. Never estimate results yourself.
