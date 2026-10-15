@@ -13,6 +13,15 @@ read-only. Skip only the planning writes.
   gives keyword rankings, top-10 count, OTTO issues, new/lost backlinks, and
   **LLM Visibility** (per prompt and engine: mentioned yes/no, position, cited
   URL, competitors).
+  If it prints `skipped`, use the CSV fallback:
+  1. With the Google Drive connector, find the folder
+     "RiseRidge SEO / SearchAtlas exports".
+  2. Download the CSVs modified in the last 7 days into `/tmp/sa-exports/`.
+  3. Run `node scripts/seo/searchatlas.mjs ingest --dir /tmp/sa-exports --out /tmp/sa.json`.
+
+  If neither source has data, leave the SearchAtlas sections empty and keep
+  the Needs Human row "SearchAtlas: provide API endpoints OR a weekly CSV
+  export" open.
 - **Crawl:** `node scripts/seo/crawl.mjs --base https://riseridge.io --out /tmp/crawl.json`.
 - Daily Log rows from the last 7 days, plus the Content Calendar and Backlog
   rows changed this week.
