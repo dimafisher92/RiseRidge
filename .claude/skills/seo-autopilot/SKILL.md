@@ -35,6 +35,18 @@ exact property names from its schema.
 | Weekly Reports | `collection://6b71135d-e545-48eb-b799-20204eae2f1c` |
 | Needs Human | `collection://447a8abb-927b-4592-9798-b1fe7b90fd9b` |
 
+## SMM creatives (blog images)
+
+Blog heroes come from RiseRidge's own Instagram creatives (see `article.md`
+step 4). Both sources are **read-only** for the autopilot: never create, edit,
+comment on or change the status of anything in them.
+
+| Source | Where |
+|---|---|
+| SMM Strategist briefs (Notion) | SMM Content Calendar `collection://78ef5a4d-1f96-4277-92d7-5d134ca98e5e` (Post Concept, Hook, Format, Status, ClickUp Task) |
+| Designed files (ClickUp connector) | List "RiseRidge SMM Design" `901219238024`: attachments named `riseridge_<topic>_<date>_NN.jpg/png` |
+| Hero ledger | `content/hero-sources.json` (slug → ClickUp task; a creative is a hero only once) |
+
 ## Step 0 of every run: settings and kill-switch
 
 1. Fetch the **Autopilot Settings** page and parse its YAML block.

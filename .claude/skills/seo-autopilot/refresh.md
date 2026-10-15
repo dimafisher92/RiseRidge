@@ -11,7 +11,10 @@ Input: one SEO Backlog row. Set its Status to "In progress".
 3. Expand to ≥ 1,500 words with substantive sections, not padding. Update
    outdated years and claims, add a table or checklist where useful, add
    ≥ 3 internal links and an `## FAQ` section.
-4. Run `node scripts/seo/content-lint.mjs content/posts/<slug>.md`. A refresh
+4. If `coverImage` is still an `.svg`, look for a matching SMM creative as in
+   `article.md` step 4. If you find one, switch the hero to the new `.jpg`.
+   Leave the old `.svg` file in place.
+5. Run `node scripts/seo/content-lint.mjs content/posts/<slug>.md`. A refresh
    must pass the same rules as a new post.
 
 ## Internal-link task (Type "Internal links")
