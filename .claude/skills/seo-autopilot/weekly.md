@@ -40,6 +40,7 @@ read-only. Skip only the planning writes.
   rows changed this week.
 
 ## 2. AI Visibility Log
+The tracked prompt set is `docs/ai-visibility-prompts.md`. If SearchAtlas tracks prompts that are not in that file (or misses some), report the mismatch in the Weekly Report and in Needs Human.
 Add one row per (prompt, engine) from the SearchAtlas LLM Visibility data, with
 Week = this Monday. If SearchAtlas has no LLM data, skip this step and add a
 Needs Human row. Never estimate results yourself.

@@ -24,6 +24,7 @@ here. They are allowed in posts only with an inline link to the source.
 - Keywords tracked: 10M+
 - Award: TOP 100 USA Entrepreneurs (TOP USA Awards 2023)
 - Contact: hello@riseridge.io
+- Social profiles: Instagram only — https://www.instagram.com/riseridge_ai/ (@riseridge_ai). No LinkedIn, X/Twitter or YouTube; never link to them.
 - Founded: 2020 (confirmed by owner, 2026-10-15)
 
 ## Services
