@@ -10,7 +10,7 @@ site already has: `gray-matter` and `node-html-parser`.
 | `merge-gate.mjs` | Decides whether an autopilot PR may be auto-merged: path allowlist/denylist, size limits, max 1 autopilot merge per New York day. | git history of `origin/main` |
 | `crawl.mjs` | Technical crawl of a live or local site via its sitemap: status, redirects, title/description, canonical, H1, JSON-LD, alt text, broken internal links, robots.txt, llms.txt. Exit 2 on errors, 3 if unreachable. | network access to the site |
 | `gsc.mjs` | Google Search Console: 28-day vs previous report (striking distance, losing pages, low CTR, new queries), per-page queries, sitemap submit. | `GSC_SERVICE_ACCOUNT_JSON` + network to googleapis |
-| `searchatlas.mjs` | SearchAtlas rankings, OTTO, backlinks and LLM Visibility, via configured API endpoints (`searchatlas.config.json`) or CSV exports (`ingest --dir`). | `SEARCHATLAS_API_KEY` + configured endpoints, or CSV exports |
+| `searchatlas.mjs` | SearchAtlas rankings, OTTO, backlinks and LLM Visibility, via SearchAtlas's hosted MCP server (`tools`, `call`, `report`), or CSV exports (`ingest --dir`). | `SEARCHATLAS_API_KEY` + network access to `mcp.searchatlas.com` |
 | `indexnow.mjs` | Pings IndexNow with changed URLs. Key file: `public/<key>.txt`. | network to api.indexnow.org |
 
 Scripts whose credentials are missing print `{"skipped": "..."}` and exit 0, so

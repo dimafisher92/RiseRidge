@@ -1,13 +1,4 @@
 {
-  "_comment": "Fill apiBase and endpoint paths from your SearchAtlas account's API docs. Paths are relative to apiBase; {domain} is replaced with `domain`. Leave a path empty to skip it. auth: 'header' (uses authHeader) or 'bearer'.",
-  "apiBase": "",
-  "auth": "header",
-  "authHeader": "x-api-key",
-  "domain": "riseridge.io",
-  "endpoints": {
-    "rankings": "",
-    "llmVisibility": "",
-    "backlinks": "",
-    "ottoIssues": ""
-  }
+  "_comment": "Tool calls for `searchatlas.mjs report`. Tool names/args come from `node scripts/seo/searchatlas.mjs tools --grep <word>`. Each entry: {\"key\": \"llmVisibility\", \"tool\": \"<tool_name>\", \"args\": {...}}. Empty list = the weekly routine discovers and calls tools itself.",
+  "calls": []
 }

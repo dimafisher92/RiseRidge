@@ -9,19 +9,32 @@ read-only. Skip only the planning writes.
   impressions, CTR and position for the last 28 days vs the previous 28, plus
   top queries, top pages, striking-distance queries (pos 5–20, impressions ≥ 20),
   pages losing clicks, and high-impression/low-CTR pages.
-- **SearchAtlas:** `node scripts/seo/searchatlas.mjs report --out /tmp/sa.json`
-  gives keyword rankings, top-10 count, OTTO issues, new/lost backlinks, and
-  **LLM Visibility** (per prompt and engine: mentioned yes/no, position, cited
-  URL, competitors).
-  If it prints `skipped`, use the CSV fallback:
+- **SearchAtlas** (hosted MCP via `scripts/seo/searchatlas.mjs`; needs
+  `SEARCHATLAS_API_KEY` and network access to `mcp.searchatlas.com`):
+  1. `node scripts/seo/searchatlas.mjs tools --grep "visib|llm|rank|keyword|otto|backlink" --out /tmp/sa-tools.json`
+     discovers the available tools and their input schemas. The catalogue
+     changes, so always discover first.
+  2. Call the relevant tools for riseridge.io with
+     `node scripts/seo/searchatlas.mjs call <tool> '<json args>' --out /tmp/sa-<name>.json`:
+     - LLM Visibility: mentions/citations per prompt and engine, plus
+       competitors cited;
+     - Rank Tracker: positions and top-10 count;
+     - OTTO issues;
+     - new/lost backlinks.
+
+     Use read-only tools only. Never call tools that create, modify, deploy
+     or delete anything in SearchAtlas (e.g. OTTO deploy, project create).
+  3. If `scripts/seo/searchatlas.config.json` lists `calls`, you can run
+     `node scripts/seo/searchatlas.mjs report --out /tmp/sa.json` instead.
+
+  If it prints `skipped` or the host is blocked, use the CSV fallback:
   1. With the Google Drive connector, find the folder
      "RiseRidge SEO / SearchAtlas exports".
   2. Download the CSVs modified in the last 7 days into `/tmp/sa-exports/`.
   3. Run `node scripts/seo/searchatlas.mjs ingest --dir /tmp/sa-exports --out /tmp/sa.json`.
 
   If neither source has data, leave the SearchAtlas sections empty and keep
-  the Needs Human row "SearchAtlas: provide API endpoints OR a weekly CSV
-  export" open.
+  the Needs Human row for SearchAtlas access open.
 - **Crawl:** `node scripts/seo/crawl.mjs --base https://riseridge.io --out /tmp/crawl.json`.
 - Daily Log rows from the last 7 days, plus the Content Calendar and Backlog
   rows changed this week.
