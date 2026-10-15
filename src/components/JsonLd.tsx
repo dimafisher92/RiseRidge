@@ -69,8 +69,7 @@ export function JsonLd({
       ],
       areaServed: 'Worldwide',
       sameAs: [
-        'https://linkedin.com/company/riseridge',
-        'https://twitter.com/riseridge',
+        'https://www.instagram.com/riseridge_ai/',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
