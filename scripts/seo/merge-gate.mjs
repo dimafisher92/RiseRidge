@@ -12,6 +12,7 @@ const base = process.argv[2] && !process.argv[2].startsWith('--') ? process.argv
 const ALLOW = [
   /^content\/posts\/[a-z0-9-]+\.md$/,
   /^public\/uploads\/[a-z0-9-]+\.(svg|png|jpe?g|webp|avif)$/,
+  /^content\/hero-sources\.json$/,
   /^src\/app\/blog\/.+\.tsx?$/,
   /^src\/app\/llms\.txt\/route\.ts$/,
   /^src\/app\/llms-full\.txt\/route\.ts$/,

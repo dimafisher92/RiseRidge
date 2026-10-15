@@ -15,7 +15,7 @@ Marketing site for **riseridge.io** (AI-driven SEO agency). Next.js 14 App Route
 ## Content
 - Blog posts are markdown in `content/posts/<slug>.md`. Filename = slug = URL `/blog/<slug>/`. Never rename an existing slug.
 - Frontmatter: `title`, `excerpt`, `date`, `category` (one of the 6 in `tina/config.ts`), `author.name`, `coverImage`. Optional: `keyword` (one primary keyword per page, unique across posts), `updated` (ISO date of last substantive update).
-- Hero images: `public/uploads/<slug-without-hyphens>hero.svg`, 1200×675, brand colors.
+- Hero images: `public/uploads/<slug-without-hyphens>hero.jpg`, 1200×675, built from our own SMM creative (ClickUp "RiseRidge SMM Design") with `scripts/seo/hero-from-creative.mjs`, recorded in `content/hero-sources.json`. Fallback: `<slug-without-hyphens>hero.svg` in brand colors.
 - `src/lib/blog.ts` reads posts at build time. Sitemap, llms.txt and the blog index pick up new posts automatically.
 - Language: US English. Audience: US e-commerce/Shopify brands, local businesses, growth-stage companies.
 

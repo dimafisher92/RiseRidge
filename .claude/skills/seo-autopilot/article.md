@@ -31,7 +31,7 @@ category: <one of: SEO Strategy, Technical SEO, Content Marketing, AI & Search, 
 keyword: <target keyword>
 author:
   name: RiseRidge Team
-coverImage: /uploads/<slugwithouthyphens>hero.svg
+coverImage: /uploads/<slugwithouthyphens>hero.jpg   # .svg only for the fallback in step 4
 ---
 ```
 Body (markdown, rendered by `src/components/Markdown.tsx` with GFM):
@@ -50,10 +50,43 @@ Body (markdown, rendered by `src/components/Markdown.tsx` with GFM):
   2–4 sentence answer.
 - Close with a short CTA sentence pointing to the free audit or `/seo-checker/`.
 
-## 4. Hero image
-Create `public/uploads/<slugwithouthyphens>hero.svg` (1200×675) in the same
-style as the existing `public/uploads/*hero.svg` files. Copy the structure of
-the most recent one and change the text and motif. No external fonts or images.
+## 4. Hero image: our SMM creative first
+The hero must be one of RiseRidge's own designed creatives whenever a suitable
+one exists (sources and IDs in `SKILL.md` → "SMM creatives").
+
+1. **Find candidates.** Query the Notion SMM Content Calendar for rows with
+   Format Carousel or Static and Status Scheduled or Published. Compare their
+   Post Concept and Hook with the article's keyword and angle. Keep the rows
+   whose topic genuinely matches. A loose "it's also about AI" match is not
+   enough.
+2. **Skip used ones.** Drop any row whose ClickUp task is already in
+   `content/hero-sources.json`.
+3. **Get the file.** With the ClickUp connector, read the best match's task in
+   list "RiseRidge SMM Design" (`include: ["attachments", "custom_fields"]`).
+   Take the cover slide: the attachment ending `_01.jpg`, else `_01.png`, else
+   the first image in the "IG Media JSON" field. Its URL is
+   `https://t9012376385.p.clickup-attachments.com/t9012376385/<attachment id without extension>/<title>`.
+   Use the creative only if its ClickUp status is "completed" or "published".
+4. **Build the hero:**
+   `node scripts/seo/hero-from-creative.mjs --src <url> --slug <slug> --task <clickup task url>`.
+   This writes `public/uploads/<slugwithouthyphens>hero.jpg` (1200×675, slide
+   centred on its own background colour, so nothing gets cropped) and records
+   the slug in `content/hero-sources.json`. Set `coverImage` to the path it
+   prints, and commit both files.
+5. **Optional figures.** If 1–2 later slides of the same carousel illustrate a
+   section (a checklist, a comparison), you may embed them with
+   `--figure 1` / `--figure 2` and `![<descriptive alt text>](/uploads/<slugwithouthyphens>-fig-1.jpg)`.
+   The figure must match the paragraph it sits in. Any number on a slide follows
+   the same facts rules as text.
+6. **Record it.** Put the ClickUp task link in the PR body and in the Calendar
+   row Notes ("Hero: <link>").
+
+**Fallback** (no matching creative, ClickUp connector missing, or the
+attachment host blocked): create `public/uploads/<slugwithouthyphens>hero.svg`
+(1200×675) in the style of the existing `public/uploads/*hero.svg` files. Copy
+the structure of the most recent one and change the text and motif. No external
+fonts or images. Note "Hero: SVG fallback (<reason>)" in the Daily Log. If the
+reason is access, add the Needs Human row as in "When blocked".
 
 ## 5. Link it in
 Add one contextual link to the new post from 2–3 existing related posts. Edit a
