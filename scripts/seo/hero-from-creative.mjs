@@ -5,9 +5,10 @@
 //   node scripts/seo/hero-from-creative.mjs --src <url|file> --slug <post-slug> --task <clickup task url>
 //   node scripts/seo/hero-from-creative.mjs --src <url|file> --slug <post-slug> --figure 1
 //
-// Hero: writes public/uploads/<slugwithouthyphens>hero.jpg at 1200x675. The slide
-// is scaled to the full height and centred on a canvas filled with the slide's own
-// corner colour, so the 16:9 blog frame (object-cover) never crops its text. The
+// Hero: writes public/uploads/<slugwithouthyphens>hero.jpg at 1200x675. A ~16:9
+// source fills the frame. Any other shape is scaled to the full height and centred
+// on a blurred copy of itself, so the 16:9 blog frame (object-cover) never crops
+// its text and the sides blend with the slide's own colours. The
 // slug -> ClickUp task pair is recorded in content/hero-sources.json, and a task
 // that already supplied another post's hero is refused (no reused heroes).
 //
@@ -71,9 +72,26 @@ fs.mkdirSync(path.dirname(out), { recursive: true });
 if (figure) {
   im(input, '-resize', '1200x>', '-strip', '-interlace', 'Plane', '-quality', '82', out);
 } else {
-  const bg = im(input, '-format', '%[pixel:p{4,4}]', 'info:');
-  im(input, '-resize', '1200x675', '-background', bg, '-gravity', 'center', '-extent', '1200x675',
-    '-strip', '-interlace', 'Plane', '-quality', '82', out);
+  const enc = ['-strip', '-interlace', 'Plane', '-quality', '82', out];
+  if (Math.abs(w / h / (16 / 9) - 1) <= 0.03) {
+    // Already ~16:9 (e.g. a generated hero): fill the frame, losing at most a few pixels.
+    im(input, '-resize', '1200x675^', '-gravity', 'center', '-extent', '1200x675', ...enc);
+  } else {
+    // Square / 4:5 / 9:16 slide (or a very wide one): fit it whole, then fill the
+    // empty bands by stretching the slide's own outermost pixels outward (lightly
+    // blurred), so flat colours, gradients and photos continue without a seam.
+    const fit = path.join(tmp, 'fit.png');
+    im(input, '-resize', '1200x675', fit);
+    const [fw, fh] = im(fit, '-format', '%w %h', 'info:').split(' ').map(Number);
+    const tall = fw < 1200;
+    const gap = tall ? 1200 - fw : 675 - fh;
+    const [a, b] = [Math.floor(gap / 2), Math.ceil(gap / 2)];
+    const band = (gravity, size) =>
+      ['(', fit, '-gravity', gravity, '-crop', tall ? '2x0+0+0' : '0x2+0+0', '+repage',
+        '-resize', tall ? `${size}x${fh}!` : `${fw}x${size}!`, '-blur', '0x6', ')'];
+    im(...band(tall ? 'West' : 'North', a), fit, ...band(tall ? 'East' : 'South', b),
+      tall ? '+append' : '-append', '-resize', '1200x675!', ...enc);
+  }
   ledger[slug] = { clickupTask: task, source: path.basename(src.split('?')[0]), date: nyDate() };
   const sorted = Object.fromEntries(Object.keys(ledger).sort().map((k) => [k, ledger[k]]));
   fs.writeFileSync(LEDGER, JSON.stringify(sorted, null, 2) + '\n');
