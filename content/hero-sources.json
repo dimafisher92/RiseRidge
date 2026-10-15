@@ -1,1 +1,22 @@
-{}
+{
+  "chatgpt-recommendation-experiment": {
+    "clickupTask": "https://app.clickup.com/t/869dyz2ga",
+    "source": "riseridge_chatgpt-test_2026-07-08_s1.png",
+    "date": "2026-10-15"
+  },
+  "check-if-chatgpt-recommends-your-brand": {
+    "clickupTask": "https://app.clickup.com/t/869ee55tw",
+    "source": "riseridge_3-prompts-audit_2026-08-11_cover.png",
+    "date": "2026-10-15"
+  },
+  "query-fan-out-ai-search": {
+    "clickupTask": "https://app.clickup.com/t/869e1f4xx",
+    "source": "riseridge_query-fanout_2026-07-13_s1.png.png",
+    "date": "2026-10-15"
+  },
+  "seo-industry-trends-2025": {
+    "clickupTask": "https://app.clickup.com/t/869f21g4f",
+    "source": "riseridge_rank-1-zero-clicks_2026-09-21_01.jpg",
+    "date": "2026-10-15"
+  }
+}

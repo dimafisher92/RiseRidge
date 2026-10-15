@@ -5,7 +5,7 @@ date: 2026-08-05T09:00:00.000Z
 category: Industry Insights
 author:
   name: RiseRidge Team
-coverImage: /uploads/chatgptrecommendationexperimenthero.svg
+coverImage: /uploads/chatgptrecommendationexperimenthero.jpg
 ---
 
 We asked ChatGPT to recommend a personal injury firm 15 times — five US cities, three separate runs each. The shortlists barely moved. Ten firms were named in all three runs of their city, every answer built its list from third-party directories rather than firms' own websites, and only one national brand crossed city lines.
