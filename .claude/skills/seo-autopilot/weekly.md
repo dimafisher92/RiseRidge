@@ -50,12 +50,12 @@ read-only. Skip only the planning writes.
 ## 2. AI Visibility Log
 The tracked prompt set is `docs/ai-visibility-prompts.md`. If SearchAtlas tracks prompts that are not in that file (or misses some), report the mismatch in the Weekly Report and in Needs Human.
 
-Count only the prompts from that file. The LLM Visibility project still holds
-15 off-topic prompts that SearchAtlas generated itself and that its API refuses
-to delete. Leave them out of the AI Visibility Log and the AI mention rate, and
-do not use the project-level visibility score: it mixes in those 15 prompts.
-Compute the mention rate yourself as the share of (prompt, engine) pairs, over
-the prompts in the file, where RiseRidge is mentioned or cited.
+Count only the prompts from that file. SearchAtlas can add auto-generated
+prompts on its own, and its API cannot delete them. Leave any such prompts
+out of the AI Visibility Log and the AI mention rate. Compute the mention rate
+yourself as the share of (prompt, engine) pairs, over the prompts in the file,
+where RiseRidge is mentioned or cited. The project-level visibility score may
+be quoted only when the project's prompts exactly match the file.
 Add one row per (prompt, engine) from the SearchAtlas LLM Visibility data, with
 Week = this Monday. If SearchAtlas has no LLM data, skip this step and add a
 Needs Human row. Never estimate results yourself.
