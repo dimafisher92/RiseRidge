@@ -5,7 +5,7 @@ date: 2025-10-14T09:00:00.000Z
 category: Case Studies
 author:
   name: RiseRidge Team
-coverImage: /uploads/seocasestudieslessonslearnedhero.svg
+coverImage: /uploads/seocasestudieslessonslearnedhero.jpg
 ---
 
 ## Different Industries, One Repeating Pattern

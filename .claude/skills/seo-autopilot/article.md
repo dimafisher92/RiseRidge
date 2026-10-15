@@ -54,6 +54,10 @@ Body (markdown, rendered by `src/components/Markdown.tsx` with GFM):
 The hero must be one of RiseRidge's own designed creatives whenever a suitable
 one exists (sources and IDs in `SKILL.md` → "SMM creatives").
 
+0. **Made-for-this-post hero.** First search list "RiseRidge SMM Design" for a
+   task named `[Blog Hero] …` whose description gives this post's slug (for
+   example a hero generated in Gemini). If one exists, use its attached image
+   whatever the task's status, and go straight to step 4.
 1. **Find candidates.** Query the Notion SMM Content Calendar for rows with
    Format Carousel or Static and Status Scheduled or Published. Compare their
    Post Concept and Hook with the article's keyword and angle. Keep the rows
@@ -67,7 +71,8 @@ one exists (sources and IDs in `SKILL.md` → "SMM creatives").
    prefer .jpg over .png; for a Reel, the `_cover` image), else the first image
    in the "IG Media JSON" field. Its URL is
    `https://t9012376385.p.clickup-attachments.com/t9012376385/<attachment id without extension>/<title>`.
-   Use the creative only if its ClickUp status is "completed" or "published".
+   Use the creative only if its ClickUp status is "completed" or "published"
+   (`[Blog Hero]` tasks from step 0 are exempt).
 4. **Build the hero:**
    `node scripts/seo/hero-from-creative.mjs --src <url> --slug <slug> --task <clickup task url>`.
    This writes `public/uploads/<slugwithouthyphens>hero.jpg` (1200×675, slide

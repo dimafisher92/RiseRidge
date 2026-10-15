@@ -1,4 +1,9 @@
 {
+  "ai-content-production-at-scale": {
+    "clickupTask": "https://app.clickup.com/t/869fhw7k1",
+    "source": "ai-content-production-at-scale.jpg",
+    "date": "2026-10-15"
+  },
   "chatgpt-recommendation-experiment": {
     "clickupTask": "https://app.clickup.com/t/869dyz2ga",
     "source": "riseridge_chatgpt-test_2026-07-08_s1.png",
@@ -14,9 +19,24 @@
     "source": "riseridge_query-fanout_2026-07-13_s1.png.png",
     "date": "2026-10-15"
   },
+  "seo-case-studies-lessons-learned": {
+    "clickupTask": "https://app.clickup.com/t/869fhw7k7",
+    "source": "seo-case-studies-lessons-learned.jpg",
+    "date": "2026-10-15"
+  },
+  "seo-content-clusters-2025": {
+    "clickupTask": "https://app.clickup.com/t/869fhw7ka",
+    "source": "seo-content-clusters-2025.jpg",
+    "date": "2026-10-15"
+  },
   "seo-industry-trends-2025": {
     "clickupTask": "https://app.clickup.com/t/869f21g4f",
     "source": "riseridge_rank-1-zero-clicks_2026-09-21_01.jpg",
+    "date": "2026-10-15"
+  },
+  "technical-seo-audit-checklist": {
+    "clickupTask": "https://app.clickup.com/t/869fhw7jz",
+    "source": "technical-seo-audit-checklist.jpg",
     "date": "2026-10-15"
   }
 }
