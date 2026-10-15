@@ -5,7 +5,7 @@ date: 2026-08-04T09:00:00.000Z
 category: AI & Search
 author:
   name: RiseRidge Team
-coverImage: /uploads/checkifchatgptrecommendsyourbrandhero.svg
+coverImage: /uploads/checkifchatgptrecommendsyourbrandhero.jpg
 ---
 
 To check if ChatGPT recommends your brand, open a new chat, ask it to recommend the best providers in your category and city, and see whether you appear. Run the same prompt three times, because the answers vary. If your brand never surfaces, you are invisible at the exact moment a buyer is asking for a shortlist — and no amount of keyword ranking fixes that on its own.

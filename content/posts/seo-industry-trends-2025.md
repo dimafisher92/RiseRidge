@@ -5,7 +5,7 @@ date: 2026-01-20T09:00:00.000Z
 category: Industry Insights
 author:
   name: RiseRidge Team
-coverImage: /uploads/seoindustrytrends2025hero.svg
+coverImage: /uploads/seoindustrytrends2025hero.jpg
 ---
 
 ## Search Is Being Redrawn, Not Replaced

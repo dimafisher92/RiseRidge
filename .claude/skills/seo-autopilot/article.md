@@ -63,8 +63,9 @@ one exists (sources and IDs in `SKILL.md` → "SMM creatives").
    `content/hero-sources.json`.
 3. **Get the file.** With the ClickUp connector, read the best match's task in
    list "RiseRidge SMM Design" (`include: ["attachments", "custom_fields"]`).
-   Take the cover slide: the attachment ending `_01.jpg`, else `_01.png`, else
-   the first image in the "IG Media JSON" field. Its URL is
+   Take the cover slide: the first slide (named `_01`, `_s1`, `_01-01` or `_s-01`;
+   prefer .jpg over .png; for a Reel, the `_cover` image), else the first image
+   in the "IG Media JSON" field. Its URL is
    `https://t9012376385.p.clickup-attachments.com/t9012376385/<attachment id without extension>/<title>`.
    Use the creative only if its ClickUp status is "completed" or "published".
 4. **Build the hero:**

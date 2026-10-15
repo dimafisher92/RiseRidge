@@ -5,7 +5,7 @@ date: 2026-08-06T09:00:00.000Z
 category: SEO Strategy
 author:
   name: RiseRidge Team
-coverImage: /uploads/queryfanoutaisearchhero.svg
+coverImage: /uploads/queryfanoutaisearchhero.jpg
 ---
 
 Query fan-out is what happens when an AI search system takes a single question, decomposes it into many narrower sub-queries, runs those separately, and assembles one answer from the results. You are no longer competing for a keyword. You are competing for a dozen questions you never targeted — and being strong on one of them is not enough to appear in the final answer.
