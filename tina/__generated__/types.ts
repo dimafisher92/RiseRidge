@@ -175,6 +175,8 @@ export type Post = Node & Document & {
   title: Scalars['String']['output'];
   excerpt: Scalars['String']['output'];
   date: Scalars['String']['output'];
+  updated?: Maybe<Scalars['String']['output']>;
+  keyword?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
   author?: Maybe<PostAuthor>;
   coverImage?: Maybe<Scalars['String']['output']>;
@@ -220,6 +222,8 @@ export type PostFilter = {
   title?: InputMaybe<StringFilter>;
   excerpt?: InputMaybe<StringFilter>;
   date?: InputMaybe<DatetimeFilter>;
+  updated?: InputMaybe<DatetimeFilter>;
+  keyword?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
   author?: InputMaybe<PostAuthorFilter>;
   coverImage?: InputMaybe<ImageFilter>;
@@ -312,20 +316,22 @@ export type PostMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   excerpt?: InputMaybe<Scalars['String']['input']>;
   date?: InputMaybe<Scalars['String']['input']>;
+  updated?: InputMaybe<Scalars['String']['input']>;
+  keyword?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<PostAuthorMutation>;
   coverImage?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type PostPartsFragment = { __typename: 'Post', title: string, excerpt: string, date: string, category: string, coverImage?: string | null, body?: any | null, author?: { __typename: 'PostAuthor', name: string } | null };
+export type PostPartsFragment = { __typename: 'Post', title: string, excerpt: string, date: string, updated?: string | null, keyword?: string | null, category: string, coverImage?: string | null, body?: any | null, author?: { __typename: 'PostAuthor', name: string } | null };
 
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type PostQuery = { __typename?: 'Query', post: { __typename: 'Post', id: string, title: string, excerpt: string, date: string, category: string, coverImage?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, author?: { __typename: 'PostAuthor', name: string } | null } };
+export type PostQuery = { __typename?: 'Query', post: { __typename: 'Post', id: string, title: string, excerpt: string, date: string, updated?: string | null, keyword?: string | null, category: string, coverImage?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, author?: { __typename: 'PostAuthor', name: string } | null } };
 
 export type PostConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -337,7 +343,7 @@ export type PostConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PostConnectionQuery = { __typename?: 'Query', postConnection: { __typename?: 'PostConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PostConnectionEdges', cursor: string, node?: { __typename: 'Post', id: string, title: string, excerpt: string, date: string, category: string, coverImage?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, author?: { __typename: 'PostAuthor', name: string } | null } | null } | null> | null } };
+export type PostConnectionQuery = { __typename?: 'Query', postConnection: { __typename?: 'PostConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PostConnectionEdges', cursor: string, node?: { __typename: 'Post', id: string, title: string, excerpt: string, date: string, updated?: string | null, keyword?: string | null, category: string, coverImage?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, author?: { __typename: 'PostAuthor', name: string } | null } | null } | null> | null } };
 
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
@@ -345,6 +351,8 @@ export const PostPartsFragmentDoc = gql`
   title
   excerpt
   date
+  updated
+  keyword
   category
   author {
     __typename
@@ -467,7 +475,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/2.4/content/57325307-e3e1-49db-b176-8eb56885a07b/github/claude/rankpilot-website-bnnCr",
+        url: "https://content.tinajs.io/2.4/content/57325307-e3e1-49db-b176-8eb56885a07b/github/main",
         queries,
       })
     )

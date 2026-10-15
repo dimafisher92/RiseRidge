@@ -95,6 +95,8 @@ type Post implements Node & Document {
   title: String!
   excerpt: String!
   date: String!
+  updated: String
+  keyword: String
   category: String!
   author: PostAuthor
   coverImage: String
@@ -140,6 +142,8 @@ input PostFilter {
   title: StringFilter
   excerpt: StringFilter
   date: DatetimeFilter
+  updated: DatetimeFilter
+  keyword: StringFilter
   category: StringFilter
   author: PostAuthorFilter
   coverImage: ImageFilter
@@ -184,6 +188,8 @@ input PostMutation {
   title: String
   excerpt: String
   date: String
+  updated: String
+  keyword: String
   category: String
   author: PostAuthorMutation
   coverImage: String

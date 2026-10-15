@@ -16,6 +16,8 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   date: string; // ISO string
+  updated?: string; // ISO string of the last substantive update
+  keyword?: string; // primary target keyword (one per page)
   category: string;
   authorName?: string;
   coverImage?: string;
@@ -25,13 +27,15 @@ export type BlogPost = {
 function parsePost(filename: string): BlogPost {
   const raw = fs.readFileSync(path.join(POSTS_DIR, filename), 'utf8');
   const { data, content } = matter(raw);
-  const date =
-    data.date instanceof Date ? data.date.toISOString() : String(data.date ?? '');
+  const toIso = (v: unknown) => (v instanceof Date ? v.toISOString() : String(v ?? ''));
+  const date = toIso(data.date);
   return {
     slug: filename.replace(/\.md$/, ''),
     title: String(data.title ?? ''),
     excerpt: String(data.excerpt ?? ''),
     date,
+    updated: data.updated ? toIso(data.updated) : undefined,
+    keyword: data.keyword ? String(data.keyword) : undefined,
     category: String(data.category ?? ''),
     authorName: data.author?.name ? String(data.author.name) : undefined,
     coverImage: data.coverImage ? String(data.coverImage) : undefined,
