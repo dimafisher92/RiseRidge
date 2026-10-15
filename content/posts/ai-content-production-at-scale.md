@@ -5,7 +5,7 @@ date: 2025-07-22T09:00:00.000Z
 category: Content Marketing
 author:
   name: RiseRidge Team
-coverImage: /uploads/aicontentproductionatscalehero.svg
+coverImage: /uploads/aicontentproductionatscalehero.jpg
 ---
 
 ## The False Choice Between Speed and Quality

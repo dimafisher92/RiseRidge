@@ -5,7 +5,7 @@ date: 2025-03-12T09:00:00.000Z
 category: SEO Strategy
 author:
   name: RiseRidge Team
-coverImage: /uploads/seocontentclusters2025hero.svg
+coverImage: /uploads/seocontentclusters2025hero.jpg
 ---
 
 ## Why Content Clusters Still Dominate Organic Growth
