@@ -2,8 +2,9 @@
 import { defineConfig } from "tinacms";
 var config_default = defineConfig({
   branch: process.env.NEXT_PUBLIC_TINA_BRANCH ?? process.env.VERCEL_GIT_COMMIT_REF ?? process.env.GITHUB_BRANCH ?? "claude/rankpilot-website-bnnCr",
-  clientId: "57325307-e3e1-49db-b176-8eb56885a07b",
-  token: "36967b0ae5c8c132e8c10d871c99725063a814ef",
+  // TinaCloud credentials come from env (set in Vercel). Never hard-code them.
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
   build: {
     outputFolder: "admin",
     publicFolder: "public"
@@ -17,7 +18,7 @@ var config_default = defineConfig({
   },
   search: {
     tina: {
-      indexerToken: "bdadb52bc945b927cde5668099f2b34a0f8a69cd",
+      indexerToken: process.env.TINA_SEARCH_TOKEN,
       stopwordLanguages: ["eng"]
     },
     indexBatchSize: 100,
