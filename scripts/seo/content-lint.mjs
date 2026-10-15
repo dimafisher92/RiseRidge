@@ -99,7 +99,7 @@ const report = [];
 for (const { file, strict } of targets) {
   const errors = [];
   const warnings = [];
-  const abs = path.join(ROOT, file);
+  const abs = path.isAbsolute(file) ? file : path.join(ROOT, file);
   if (!fs.existsSync(abs)) {
     report.push({ file, errors: ['File not found'], warnings });
     errorCount++;
