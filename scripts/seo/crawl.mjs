@@ -64,12 +64,18 @@ const targets = urlsArg && urlsArg !== true
 const pages = [];
 const internalLinks = new Map(); // url -> first page that links to it
 
-async function checkPage(url) {
-  const r = await get(url);
-  const page = { url, status: r.status, errors: [], warnings: [] };
-  if (r.status >= 300 && r.status < 400) {
-    page.warnings.push(`Redirects to ${r.location}`);
-    return page;
+async function checkPage(startUrl) {
+  let url = startUrl;
+  let r = await get(url);
+  const page = { url: startUrl, status: r.status, errors: [], warnings: [] };
+  // Follow up to 3 same-site redirects; a sitemap URL that redirects is itself a problem.
+  for (let hop = 0; hop < 3 && r.status >= 300 && r.status < 400 && r.location; hop++) {
+    const next = new URL(r.location, url).toString();
+    page.warnings.push(`Redirects (${r.status}) to ${next}`);
+    url = next;
+    r = await get(url);
+    page.finalUrl = url;
+    page.status = r.status;
   }
   if (r.status !== 200) {
     page.errors.push(`HTTP ${r.status || r.error}`);
@@ -143,8 +149,11 @@ async function pool(items, fn) {
 
 pages.push(...(await pool(targets, checkPage)));
 
+const redirecting = pages.filter((p) => p.finalUrl);
+if (redirecting.length) site.warnings.push(`${redirecting.length} crawled/sitemap URLs redirect (sitemap should list final URLs, e.g. with trailing slash)`);
+
 // Broken internal links (only links not already crawled)
-const crawled = new Set(pages.map((p) => canon(p.url)));
+const crawled = new Set(pages.flatMap((p) => [canon(p.url), canon(p.finalUrl || p.url)]));
 const toCheck = [...internalLinks.keys()].filter((u) => !crawled.has(canon(u))).slice(0, 300);
 const linkResults = await pool(toCheck, async (u) => ({ u, r: await get(u, 'HEAD') }));
 for (const { u, r } of linkResults) {
