@@ -24,7 +24,7 @@ here. They are allowed in posts only with an inline link to the source.
 - Keywords tracked: 10M+
 - Award: TOP 100 USA Entrepreneurs (TOP USA Awards 2023)
 - Contact: hello@riseridge.io
-- Founding year: UNCONFIRMED (hero/footer say 2020, About page says 2022). Do not mention a founding year until confirmed.
+- Founded: 2020 (confirmed by owner, 2026-10-15)
 
 ## Services
 

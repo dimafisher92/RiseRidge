@@ -75,7 +75,7 @@ const DIFFERENTIATORS = [
 ];
 
 const MILESTONES = [
-  { year: '2022', title: 'Founded', description: 'RiseRidge launched with a mission to engineer organic search growth that compounds.' },
+  { year: '2020', title: 'Founded', description: 'RiseRidge launched with a mission to engineer organic search growth that compounds.' },
   { year: '2023', title: 'AI Engine v1', description: 'Released our first AI SEO automation engine, serving 50+ clients.' },
   { year: '2024', title: '$25M+ in Client Revenue', description: 'Crossed $25M in cumulative revenue generated for our clients.' },
   { year: '2025', title: 'LLM Visibility Launch', description: 'Pioneered AI search visibility monitoring across ChatGPT, Claude, Gemini, and Perplexity.' },
