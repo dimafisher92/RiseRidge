@@ -1,0 +1,4 @@
+{
+  "_comment": "Tool calls for `searchatlas.mjs report`. Tool names/args come from `node scripts/seo/searchatlas.mjs tools --grep <word>`. Each entry: {\"key\": \"llmVisibility\", \"tool\": \"<tool_name>\", \"args\": {...}}. Empty list = the weekly routine discovers and calls tools itself.",
+  "calls": []
+}

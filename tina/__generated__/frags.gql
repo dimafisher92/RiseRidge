@@ -3,6 +3,8 @@ fragment PostParts on Post {
   title
   excerpt
   date
+  updated
+  keyword
   category
   author {
     __typename

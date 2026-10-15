@@ -11,6 +11,8 @@ export const PostPartsFragmentDoc = gql`
   title
   excerpt
   date
+  updated
+  keyword
   category
   author {
     __typename
@@ -107,7 +109,7 @@ const generateRequester = (client) => {
 export const ExperimentalGetTinaClient = () => getSdk(
   generateRequester(
     createClient({
-      url: "https://content.tinajs.io/2.4/content/57325307-e3e1-49db-b176-8eb56885a07b/github/claude/rankpilot-website-bnnCr",
+      url: "https://content.tinajs.io/2.4/content/57325307-e3e1-49db-b176-8eb56885a07b/github/main",
       queries
     })
   )
