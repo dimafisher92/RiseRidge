@@ -44,6 +44,17 @@ read-only. Skip only the planning writes.
   If neither source has data, leave the SearchAtlas sections empty and keep
   the Needs Human row for SearchAtlas access open.
 - **Crawl:** `node scripts/seo/crawl.mjs --base https://riseridge.io --out /tmp/crawl.json`.
+- **Clarity (UX signals):** read the last 7 days of **UX Signals (Clarity)**
+  rows. Per page, sum Sessions and the click counts, and average scroll depth and
+  active time weighted by sessions. Do not call the Clarity API here: the Daily
+  Run owns the daily quota. Then join with GSC by path:
+  - **Intent mismatch** = a page with GSC clicks and, in Clarity, quickbacks on
+    ≥ 20% of sessions, or avg scroll depth < 35% on a post ≥ 1,500 words.
+    Searchers land and leave, so the page does not answer the query it ranks for.
+  - **Engagement winners** = pages with active time and scroll depth in the
+    site's top quartile. These are the internal-link targets and the format to copy.
+  - **AI referrals** = the sum of AI referral sessions from the "(site)" rows,
+    with the AI sources by name.
 - Daily Log rows from the last 7 days, plus the Content Calendar and Backlog
   rows changed this week.
 
@@ -66,13 +77,20 @@ properties from data that exists, leaving the rest empty. The page body has
 these sections:
 1. **Headline:** 3 bullets, the most important movements.
 2. **KPIs table:** this week vs last week vs 4 weeks ago (clicks, impressions,
-   avg position, top-10 keywords, AI mention rate, posts published/refreshed).
+   avg position, top-10 keywords, AI mention rate, AI-referral sessions
+   (Clarity), avg active time on blog posts (Clarity), posts
+   published/refreshed). Clarity history starts 2026-10-16. Weeks before that
+   stay empty; don't backfill them.
 3. **Shipped:** links to the PRs and pages from the Daily Log.
 4. **Winners / losers:** pages and queries.
 5. **AI visibility:** prompts where we're cited, prompts where competitors are
    cited instead, and why (which page/source won).
-6. **Plan for this week:** see step 4.
-7. **Needs human:** open items, oldest first.
+6. **UX signals (Clarity):** intent-mismatch pages, engagement winners, pages
+   with rage/dead clicks or script errors, and AI-referral sessions by source.
+   Say how many days of data the numbers cover, and treat pages with < 20
+   sessions as anecdotal.
+7. **Plan for this week:** see step 4.
+8. **Needs human:** open items, oldest first.
 
 ## 4. Plan the week
 - Make sure the next 7 days have 3 "New" Content Calendar rows (Mon/Wed/Fri),
@@ -85,10 +103,13 @@ these sections:
   Every new row needs a unique Target keyword, Cluster, Intent, Slug and Notes
   (links to include, the angle, the proof point).
 - Mark 2 SEO Backlog rows as "Next" for Tue/Thu. Prefer: pages losing clicks
-  (refresh), low CTR with high impressions (rewrite title/excerpt), then the
-  existing P0/P1 items.
-- Add new Backlog rows from crawl warnings and OTTO issues (Source "Crawl" /
-  "SearchAtlas"), deduplicated against open rows.
+  (refresh), Clarity intent-mismatch pages (refresh: put the direct answer
+  first and match the ranking query's intent), low CTR with high impressions
+  (rewrite title/excerpt), then the existing P0/P1 items.
+- Add new Backlog rows from crawl warnings, OTTO issues and Clarity signals
+  (Source "Crawl" / "SearchAtlas" / "Clarity"), deduplicated against open rows.
+  A Clarity refresh row's Details must carry the numbers (sessions, quickback %,
+  scroll depth, days covered) and the GSC queries the page ranks for.
 
 ## 5. Off-site drafts (Needs Human, max 3 per week)
 These need a human, so draft them ready to use, for example:

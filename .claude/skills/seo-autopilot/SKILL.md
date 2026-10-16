@@ -34,6 +34,7 @@ exact property names from its schema.
 | Daily Log | `collection://fe6ee613-c35a-4d90-94e1-8cbb34cf347a` |
 | Weekly Reports | `collection://6b71135d-e545-48eb-b799-20204eae2f1c` |
 | Needs Human | `collection://447a8abb-927b-4592-9798-b1fe7b90fd9b` |
+| UX Signals (Clarity) | `collection://95a7747f-a39c-40ae-8bf3-8d2632b61954` |
 
 ## SMM creatives (blog images)
 

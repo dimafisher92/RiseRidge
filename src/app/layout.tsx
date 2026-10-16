@@ -4,6 +4,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
 import { AuditPopupProvider } from '@/components/AuditPopup';
+import { ClarityScript } from '@/components/ClarityScript';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://riseridge.io'),
@@ -67,6 +68,7 @@ export default function RootLayout({
           <main id="main-content">{children}</main>
           <Footer />
         </AuditPopupProvider>
+        {process.env.VERCEL_ENV === 'production' && <ClarityScript />}
       </body>
     </html>
   );
