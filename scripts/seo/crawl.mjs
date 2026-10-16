@@ -13,12 +13,18 @@ const urlsArg = arg('urls');
 const CONCURRENCY = 4;
 const UA = 'RiseRidgeSEOAutopilot/1.0 (+https://riseridge.io)';
 
-async function get(url, method = 'GET') {
+async function get(url, method = 'GET', attempt = 1) {
   try {
     const res = await fetch(url, { method, redirect: 'manual', headers: { 'user-agent': UA } });
     const text = method === 'GET' ? await res.text() : '';
     return { status: res.status, location: res.headers.get('location'), text };
   } catch (e) {
+    // One retry for transient network errors (e.g. ECONNRESET through the sandbox
+    // proxy), so a blip is not reported as a site regression.
+    if (attempt < 2) {
+      await new Promise((r) => setTimeout(r, 1500));
+      return get(url, method, attempt + 1);
+    }
     return { status: 0, error: String(e.cause?.code || e.message), text: '' };
   }
 }

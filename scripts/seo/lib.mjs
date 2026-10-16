@@ -2,8 +2,20 @@
 // beyond what the site already installs (gray-matter, node-html-parser).
 import fs from 'node:fs';
 import path from 'node:path';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import matter from 'gray-matter';
+
+// Behind an egress proxy (Claude cloud sessions set HTTPS_PROXY), Node's built-in
+// fetch ignores the proxy unless NODE_USE_ENV_PROXY=1 is set at startup (Node >= 22.21).
+// Re-run the calling script once with it set, so every script works the same in CI,
+// locally and in the routines. No-op when there is no proxy.
+if ((process.env.HTTPS_PROXY || process.env.https_proxy) && !process.env.NODE_USE_ENV_PROXY) {
+  const r = spawnSync(process.execPath, [...process.execArgv, ...process.argv.slice(1)], {
+    stdio: 'inherit',
+    env: { ...process.env, NODE_USE_ENV_PROXY: '1', NODE_NO_WARNINGS: '1' },
+  });
+  process.exit(r.status ?? 1);
+}
 
 export const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', '..');
 export const POSTS_DIR = path.join(ROOT, 'content', 'posts');
