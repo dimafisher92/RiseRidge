@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { HeroSection } from '@/components/HeroSection';
@@ -9,6 +10,13 @@ import { JsonLd } from '@/components/JsonLd';
 import { FAQ } from '@/components/FAQ';
 import TestimonialsSection from '@/components/ui/testimonial-v2';
 import { VideoTestimonials } from '@/components/VideoTestimonials';
+
+export const metadata: Metadata = {
+  title: { absolute: 'RiseRidge — AI-Driven SEO. Measurable Growth.' },
+  description:
+    'RiseRidge pairs AI-powered SEO infrastructure with hands-on strategy to move businesses from invisible to undeniable, and proves every gain in the numbers.',
+  alternates: { canonical: '/' },
+};
 
 const SERVICES = [
   {
