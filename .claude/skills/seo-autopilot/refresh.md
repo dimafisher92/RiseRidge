@@ -6,6 +6,11 @@ Input: one SEO Backlog row. Set its Status to "In progress".
 1. If GSC is available, run `node scripts/seo/gsc.mjs page /blog/<slug>/` and use
    the page's top queries to choose sections to add. Queries in positions
    5–20 are the best opportunities.
+   Also read the page's last 14 days in **UX Signals (Clarity)**. Low scroll
+   depth means the answer sits too low: move the direct answer and the key
+   table above the fold. A high quickback share means the page misses the
+   query's intent: reshape the intro and H2s around the GSC queries. Note the
+   before-numbers in the PR body, so the next weekly report can compare.
 2. Keep the slug, the `date` and the core angle. Set `updated: <today>` and add
    a `keyword` if it is missing (check for duplicates first).
 3. Expand to ≥ 1,500 words with substantive sections, not padding. Update

@@ -3,6 +3,10 @@
 Do Step 0 from `SKILL.md` first.
 
 ## 1. Review
+- Read the last 30 days of **UX Signals (Clarity)**. For each cluster, give
+  sessions, avg active time and scroll depth on its posts, and the AI-referral
+  trend. A cluster with traffic but weak engagement needs refreshes before it
+  gets new posts.
 - Read the last 4 Weekly Reports, the AI Visibility Log trend and the 90-day
   GSC numbers (`node scripts/seo/gsc.mjs report --days 90 --out /tmp/gsc90.json`).
 - **Cluster coverage map:** for each cluster below, count live posts, refreshed
