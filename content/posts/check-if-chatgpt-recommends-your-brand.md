@@ -58,7 +58,7 @@ Three questions to answer from your notes:
 
 ## Turning the Audit Into a Fix
 
-The audit tells you where you stand. Acting on it is a separate discipline, and it splits cleanly in two.
+The audit tells you where you stand. Acting on it is a separate discipline, and it splits cleanly in two. If you run an online store, our guide to [getting a Shopify store recommended by ChatGPT](/blog/shopify-store-chatgpt-recommendations/) applies the same thinking to product data and reviews.
 
 **Off-site work** gets you considered. That means being present and accurate on the directories and review platforms your category is judged by, earning mentions in places that get cited, and building a review profile with enough depth that it reads as evidence rather than decoration.
 

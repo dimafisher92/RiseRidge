@@ -79,6 +79,6 @@ Neither number will be flattering at first. Both move in response to deliberate 
 
 Fan-out does not make technical foundations optional — a page that cannot be crawled or parsed contributes to nothing, however good the answer inside it is. It does not make authority optional either; models weight sources they have reason to trust, and that trust is built the same slow way it always was.
 
-What it changes is the unit of competition. Not the keyword. Not even the page. The question — and all the smaller questions hiding inside it.
+For store owners the sub-questions are about size, material, price and returns, which we walk through in [how to get a Shopify store recommended by ChatGPT](/blog/shopify-store-chatgpt-recommendations/). What it changes is the unit of competition. Not the keyword. Not even the page. The question — and all the smaller questions hiding inside it.
 
 If you want to see which of those questions your site currently answers, [start with an audit](/seo-checker).
