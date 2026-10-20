@@ -22,7 +22,7 @@ export function generateMetadata({ params }: Props): Metadata {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
   return {
-    title: `${post.title} | RiseRidge Blog`,
+    title: post.title,
     description: post.excerpt,
     alternates: { canonical: `/blog/${params.slug}` },
     openGraph: {

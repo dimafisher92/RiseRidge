@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { BlogCard } from '@/components/BlogCard';
 
 export const metadata: Metadata = {
-  title: 'SEO Blog & Insights | RiseRidge',
+  title: 'SEO Blog & Insights',
   description:
     'Expert insights on AI-powered SEO, content strategy, technical optimization, and search visibility. Written by the RiseRidge team.',
   alternates: { canonical: '/blog' },
