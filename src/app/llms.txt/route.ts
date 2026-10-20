@@ -31,6 +31,10 @@ export async function GET() {
 RiseRidge helps e-commerce stores, local businesses, startups, and established brands grow organic traffic and revenue through technical SEO, content intelligence, and AI search (LLM) visibility optimization. We track and improve how brands appear across Google as well as AI answer engines like ChatGPT, Claude, Gemini, and Perplexity.
 
 Key facts:
+- Founded: 2020.
+- Clients served: 250+. Client revenue generated: $25M+. Client retention: 97%. Average ROAS: 3x.
+- Who we serve: e-commerce and Shopify brands, local service businesses, and growth-stage companies.
+- Award: TOP 100 USA Entrepreneurs (TOP USA Awards 2023).
 - Service model: senior-only team, month-to-month engagements, no long-term lock-in.
 - Differentiators: proprietary AI SEO automation engine, data-driven (not opinion-driven) strategy, full-funnel focus on revenue rather than vanity metrics.
 - Proven results include scaling organic revenue to $21K/day in 4 months, 255% year-over-year organic revenue growth, and 969% organic traffic growth in a restricted niche.
@@ -54,12 +58,23 @@ Key facts:
 - [LLM Visibility Monitoring](${baseUrl}/rank-on-ai): Tracks brand visibility, sentiment, and citations across AI answer engines.
 - [Local SEO Management](${baseUrl}/features): Google Business Profile optimization and service-area targeting.
 
+## Original research
+
+- [We asked ChatGPT to recommend a lawyer 15 times](${baseUrl}/blog/chatgpt-recommendation-experiment): 15 recommendation prompts across five US cities. The same firms kept winning, and every shortlist was built from third-party directories, not the firms' own sites.
+
+## Frequently asked questions
+
+- What is RiseRidge? An AI-driven SEO agency founded in 2020 that grows organic revenue and AI search visibility. Details: [About](${baseUrl}/about).
+- Does RiseRidge require a long-term contract? No. Engagements are month-to-month.
+- How does RiseRidge improve visibility in ChatGPT, Perplexity and Google AI Overviews? It tracks which prompts mention a brand and closes the gaps with answer-first content, structured data, entity consistency, and presence on the sources AI engines cite. See [Rank on AI](${baseUrl}/rank-on-ai).
+
 ## Blog
 
 ${blogSection}
 
 ## Resources
 
+- [Full text for LLMs](${baseUrl}/llms-full.txt): Company facts plus the complete text of every blog post.
 - [Sitemap](${baseUrl}/sitemap.xml)
 - [Free SEO Checker](${baseUrl}/seo-checker)
 `;

@@ -82,6 +82,55 @@ const MILESTONES = [
   { year: '2026', title: '250+ Clients', description: 'Expanded to serve 250+ e-commerce and growth-stage businesses worldwide.' },
 ];
 
+// Plain, quotable facts for people and AI assistants. Every value comes from
+// content/facts.md; change them there first.
+const AT_A_GLANCE = [
+  { label: 'Founded', value: '2020' },
+  { label: 'Clients served', value: '250+' },
+  { label: 'Client revenue generated', value: '$25M+' },
+  { label: 'Client retention', value: '97%' },
+  { label: 'Engagements', value: 'Month-to-month, no long-term lock-in' },
+  { label: 'Award', value: 'TOP 100 USA Entrepreneurs (TOP USA Awards 2023)' },
+];
+
+const FAQS = [
+  {
+    question: 'What is RiseRidge?',
+    answer:
+      'RiseRidge is an AI-driven SEO agency founded in 2020. It combines a proprietary AI SEO automation engine with a senior-only team to grow organic traffic and revenue, and to get brands recommended in AI search by ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews.',
+  },
+  {
+    question: 'What services does RiseRidge offer?',
+    answer:
+      'AI SEO automation, content intelligence, technical SEO audits, rank tracking and analytics, LLM visibility monitoring ("Rank on AI"), and local SEO with Google Business Profile management.',
+  },
+  {
+    question: 'Who does RiseRidge work with?',
+    answer:
+      'E-commerce and Shopify brands, local service businesses and growth-stage companies. RiseRidge has served 250+ clients and helped generate $25M+ in client revenue.',
+  },
+  {
+    question: 'How does RiseRidge get brands mentioned by ChatGPT and other AI assistants?',
+    answer:
+      'RiseRidge tracks how often AI assistants recommend a brand for the prompts its buyers ask, then closes the gaps: answer-first content for the questions AI breaks a query into, structured data and a clear entity profile, and presence on the third-party sources AI engines cite.',
+  },
+  {
+    question: 'Does RiseRidge require a long-term contract?',
+    answer:
+      'No. RiseRidge works month-to-month with no long-term lock-in, and keeps 97% of its clients.',
+  },
+  {
+    question: 'What results has RiseRidge delivered?',
+    answer:
+      'Examples from anonymized client work: a DTC travel-bag brand grew flagship organic revenue by 102%, and a Charlotte, NC windshield-repair shop put 519 of its 1,000 tracked keywords into Google\'s top 10 within 90 days. More results are on the case studies page.',
+  },
+  {
+    question: 'How can I contact RiseRidge?',
+    answer:
+      'Email hello@riseridge.io, or run the free SEO checker at riseridge.io/seo-checker for an instant audit.',
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -92,6 +141,7 @@ export default function AboutPage() {
           { name: 'About', href: '/about' },
         ]}
       />
+      <JsonLd type="faq" faqs={FAQS} />
 
       {/* Hero */}
       <section className="relative overflow-hidden pt-32 pb-20">
@@ -108,6 +158,28 @@ export default function AboutPage() {
             RiseRidge engineers organic search growth that compounds. We combine AI-powered SEO
             infrastructure with hands-on strategic execution to move businesses from invisible to undeniable.
           </p>
+        </div>
+      </section>
+
+      {/* At a glance */}
+      <section className="border-t border-border py-16" aria-labelledby="glance-heading">
+        <div className="mx-auto max-w-5xl px-6">
+          <h2 id="glance-heading" className="font-display font-semibold text-2xl md:text-3xl text-ice">
+            RiseRidge at a glance
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed max-w-3xl">
+            RiseRidge is an AI-driven SEO agency. We grow organic traffic and revenue for e-commerce and
+            Shopify brands, local service businesses and growth-stage companies, and we make them visible
+            in AI search: ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews.
+          </p>
+          <dl className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {AT_A_GLANCE.map((item) => (
+              <div key={item.label} className="rounded-xl border border-border p-5">
+                <dt className="font-mono text-xs uppercase tracking-[0.14em] text-subtle">{item.label}</dt>
+                <dd className="mt-2 font-display font-semibold text-lg text-ice">{item.value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
@@ -215,6 +287,23 @@ export default function AboutPage() {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24" aria-labelledby="faq-heading">
+        <div className="mx-auto max-w-3xl px-6">
+          <h2 id="faq-heading" className="font-display font-semibold text-3xl md:text-4xl text-ice">
+            Frequently asked questions about RiseRidge
+          </h2>
+          <div className="mt-10 space-y-8">
+            {FAQS.map((faq) => (
+              <div key={faq.question}>
+                <h3 className="font-display font-semibold text-lg text-ice">{faq.question}</h3>
+                <p className="mt-2 text-muted leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
