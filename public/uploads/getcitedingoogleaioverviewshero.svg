@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="A summary answer block with three source links beneath it">
+  <rect width="1200" height="630" fill="#FBFAF7"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#A9874E"/>
+
+  <rect x="56" y="54" width="64" height="64" rx="8" fill="none" stroke="rgba(21,20,15,0.15)" stroke-width="2"/>
+  <text x="70" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#1E3A2E">R<tspan fill="#A9874E" dx="-11">R</tspan></text>
+
+  <rect x="220" y="150" width="760" height="190" rx="14" fill="#F4F0E8" stroke="#A9874E" stroke-width="3"/>
+  <rect x="252" y="184" width="300" height="16" rx="8" fill="#1E3A2E"/>
+  <rect x="252" y="222" width="696" height="12" rx="6" fill="#cfe0d4"/>
+  <rect x="252" y="252" width="640" height="12" rx="6" fill="#cfe0d4"/>
+  <rect x="252" y="282" width="560" height="12" rx="6" fill="#cfe0d4"/>
+
+  <g stroke="#A9874E" stroke-width="2" fill="none">
+    <path d="M360 340 V400"/>
+    <path d="M600 340 V400"/>
+    <path d="M840 340 V400"/>
+  </g>
+  <g fill="#1E3A2E">
+    <rect x="260" y="400" width="200" height="64" rx="10"/>
+    <rect x="500" y="400" width="200" height="64" rx="10"/>
+    <rect x="740" y="400" width="200" height="64" rx="10" fill="#A9874E"/>
+  </g>
+  <g fill="#F4F0E8">
+    <rect x="284" y="424" width="120" height="10" rx="5"/>
+    <rect x="284" y="444" width="80" height="8" rx="4" opacity="0.6"/>
+    <rect x="524" y="424" width="120" height="10" rx="5"/>
+    <rect x="524" y="444" width="80" height="8" rx="4" opacity="0.6"/>
+    <rect x="764" y="424" width="120" height="10" rx="5"/>
+    <rect x="764" y="444" width="80" height="8" rx="4" opacity="0.6"/>
+  </g>
+
+  <text x="56" y="560" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#1E3A2E">How to Get Cited in Google AI Overviews</text>
+  <text x="56" y="596" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#6b665a">riseridge.io</text>
+</svg>

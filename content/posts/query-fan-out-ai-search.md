@@ -30,7 +30,7 @@ This is also why thin comprehensiveness fails. Padding a page with every subhead
 
 ## The Zero-Click Context
 
-Fan-out matters more because the click is disappearing. Research from SparkToro's Rand Fishkin has put the share of Google searches ending without a click at roughly 68 percent — the buyer gets an answer and never visits a site.
+Fan-out matters more because the click is disappearing. Research from SparkToro's Rand Fishkin has put the share of Google searches ending without a click at roughly 68 percent — the buyer gets an answer and never visits a site. If Google's AI Overviews are where you want to be named, our guide to [getting cited in Google AI Overviews](/blog/get-cited-in-google-ai-overviews/) covers the eligibility rules and a practical checklist.
 
 When the click was the prize, being one of ten blue links had value even in position eight. When the answer is the prize, contributing to the answer is the only thing that pays. Everything else is an impression nobody acts on.
 
