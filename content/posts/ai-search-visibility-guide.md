@@ -20,7 +20,7 @@ Google's AI Overviews appear at the top of search results for an estimated 15–
 
 **The good news:** Appearing as a source *within* an AI Overview often drives more qualified traffic than a traditional rank 3–5 position. Users who see your brand cited in an AIO arrive with higher trust and intent.
 
-**How to appear in AI Overviews:**
+**How to appear in AI Overviews** (see our [step-by-step guide to getting cited in Google AI Overviews](/blog/get-cited-in-google-ai-overviews/) for the full checklist):
 
 1. **Answer questions directly.** AIO sources typically provide clear, factual, question-answering content in the first 2–3 paragraphs.
 2. **Use structured content.** Headers, bullet points, and numbered lists are more likely to be parsed and cited by AI systems.
