@@ -112,7 +112,7 @@ export default function BlogPostPage({ params }: Props) {
             <div className="mx-auto max-w-4xl px-6">
               <div className="aspect-[16/9] w-full overflow-hidden rounded-[6px] border border-border bg-surface">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={post.coverImage} alt="" className="h-full w-full object-cover" />
+                <img src={post.coverImage} alt={post.title} className="h-full w-full object-cover" />
               </div>
             </div>
           </section>
