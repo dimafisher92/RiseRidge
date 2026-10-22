@@ -36,7 +36,7 @@ export function BlogCard({ slug, title, excerpt, date, category, authorName, cov
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={coverImage}
-            alt={title}
+            alt=""
             className="h-full w-full object-cover transition-transform duration-[400ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-105"
           />
         </Link>
