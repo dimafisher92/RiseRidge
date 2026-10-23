@@ -85,6 +85,14 @@ export function Footer() {
           <p className="font-mono text-[11px] tracking-[0.1em] text-subtle">
             &copy; {new Date().getFullYear()} RiseRidge · riseridge.io
           </p>
+          <a
+            href="https://www.designrush.com/agency/search-engine-optimization"
+            target="_blank"
+            rel="noopener"
+            className="font-mono text-[11px] tracking-[0.1em] text-subtle hover:text-brass transition-colors duration-200"
+          >
+            Listed on DesignRush
+          </a>
           <p className="font-mono text-[11px] tracking-[0.1em] uppercase text-subtle">
             Privacy · Terms
           </p>
