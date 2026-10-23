@@ -76,6 +76,6 @@ Treat it as a recurring measurement instead. Same three prompts, same three runs
 
 None of this replaces search fundamentals. It sits on top of them. The brands doing well in AI answers are, almost without exception, the brands that did the unglamorous work first: clean technical foundations, genuine authority signals, and content with something in it worth quoting.
 
-What has changed is that the reward now arrives through a channel most teams are not watching. [AI search visibility](/blog/ai-search-visibility-guide) is measurable, it moves, and it responds to deliberate work — but only if someone is actually looking at it.
+What has changed is that the reward now arrives, and the discipline of earning it has a name, [generative engine optimization](/blog/what-is-generative-engine-optimization/). It arrives through a channel most teams are not watching. [AI search visibility](/blog/ai-search-visibility-guide) is measurable, it moves, and it responds to deliberate work — but only if someone is actually looking at it.
 
 If you would rather not run this manually every month, [see how we track AI visibility](/rank-on-ai) as a continuous signal rather than a one-off check.

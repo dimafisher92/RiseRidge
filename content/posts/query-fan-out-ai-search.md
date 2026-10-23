@@ -16,7 +16,7 @@ This is the mechanic behind a pattern most teams have noticed without naming: ra
 
 Nobody types "best running shoes" and stops. They ask about running shoes for flat feet, for marathon training, for wide toe boxes, under a budget, from brands that do not use leather.
 
-Traditional search matched a query to pages. AI search does something else: it reads intent, generates the set of sub-questions a thorough answer would need to cover, retrieves against each, and synthesises. The user sees one paragraph. Underneath it, ten or more retrievals happened.
+Traditional search matched a query to pages. AI search, the target of [generative engine optimization](/blog/what-is-generative-engine-optimization/), does something else: it reads intent, generates the set of sub-questions a thorough answer would need to cover, retrieves against each, and synthesises. The user sees one paragraph. Underneath it, ten or more retrievals happened.
 
 Your page was not evaluated once. It was evaluated many times, against many narrower questions, and it either had something to contribute to each or it did not.
 
