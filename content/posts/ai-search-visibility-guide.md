@@ -38,7 +38,7 @@ These systems share common characteristics:
 * They favor content that is easy to parse and excerpt
 * They penalize thin, SEO-stuffed content more aggressively than traditional search
 
-**The RiseRidge approach:** We treat AI search engines as a separate but related signal in our optimization strategy. Pages optimized for AI search tend to also perform better in traditional search — because the signals overlap: clarity, authority, and comprehensive coverage.
+**The RiseRidge approach:** We treat AI search engines (the practice is often called [generative engine optimization](/blog/what-is-generative-engine-optimization/)) as a separate but related signal in our optimization strategy. Pages optimized for AI search tend to also perform better in traditional search — because the signals overlap: clarity, authority, and comprehensive coverage.
 
 ## The Role of Entity SEO
 
