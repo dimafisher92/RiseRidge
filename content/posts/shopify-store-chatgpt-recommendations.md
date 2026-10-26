@@ -74,7 +74,7 @@ OpenAI publishes separate crawlers for separate jobs. According to OpenAI's [cra
 
 Shopify generates a default `robots.txt`. If you edited it, or if an app, CDN or security setting blocks bots, check that OAI-SearchBot is not caught by a blanket rule. A quick test: open your `robots.txt` and your CDN's bot settings and look for any rule that blocks unknown user agents.
 
-Also publish a clean sitemap (Shopify does this at `/sitemap.xml`) and, optionally, an [llms.txt file](/blog/ai-search-visibility-guide/) that points models to your most useful pages. Treat llms.txt as a small helper, not a ranking lever.
+Also publish a clean sitemap (Shopify does this at `/sitemap.xml`) and, optionally, an [llms.txt file](/blog/llms-txt-explained/) that points models to your most useful pages. Treat llms.txt as a small helper, not a ranking lever.
 
 ## What Content Gets a Store Cited, Not Just Listed?
 

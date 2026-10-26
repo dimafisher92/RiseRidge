@@ -113,7 +113,7 @@ They overlap a lot. AEO usually refers to winning direct answers such as feature
 
 ### Do I need special markup or an llms.txt file for GEO?
 
-Google states that AI features have no additional technical requirements beyond being indexed and snippet-eligible. Other engines publish less detail. Standard structured data helps machines understand a page, but it is not a guaranteed route to citations.
+Google states that AI features have no additional technical requirements beyond being indexed and snippet-eligible. Other engines publish less detail. Standard structured data helps machines understand a page, but it is not a guaranteed route to citations. Our explainer on [what llms.txt is and who actually reads it](/blog/llms-txt-explained/) covers that file in detail.
 
 ### Does GEO work for small businesses?
 
