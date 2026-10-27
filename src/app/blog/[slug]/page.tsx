@@ -30,6 +30,7 @@ export function generateMetadata({ params }: Props): Metadata {
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
+      ...(post.updated ? { modifiedTime: post.updated } : {}),
       ...(post.coverImage ? { images: [{ url: post.coverImage }] } : {}),
     },
   };
@@ -70,6 +71,7 @@ export default function BlogPostPage({ params }: Props) {
           description: post.excerpt,
           url: `/blog/${params.slug}`,
           datePublished: post.date,
+          dateModified: post.updated,
           authorName: post.authorName ?? undefined,
           image: post.coverImage || undefined,
           section: post.category ?? undefined,
@@ -100,6 +102,14 @@ export default function BlogPostPage({ params }: Props) {
                 </>
               )}
               <time dateTime={post.date}>{formatDate(post.date)}</time>
+              {post.updated && (
+                <>
+                  <span className="text-border">·</span>
+                  <span>
+                    Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+                  </span>
+                </>
+              )}
               <span className="text-border">·</span>
               <span>{estimateReadTime(post.body)}</span>
             </div>
