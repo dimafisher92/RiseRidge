@@ -27,6 +27,11 @@ interface FaqItem {
   answer: string;
 }
 
+// A byline like "RiseRidge Team" is the organization; anything else is a person.
+function isPersonAuthor(name?: string): name is string {
+  return !!name && !/riseridge|team|staff|editorial/i.test(name);
+}
+
 export function JsonLd({
   type,
   breadcrumbs,
@@ -120,11 +125,13 @@ export function JsonLd({
           image: article.image
             ? [article.image]
             : [`${baseUrl}/opengraph-image`],
-          author: {
-            '@type': 'Organization',
-            name: article.authorName || 'RiseRidge',
-            url: baseUrl,
-          },
+          author: isPersonAuthor(article.authorName)
+            ? { '@type': 'Person', name: article.authorName }
+            : {
+                '@type': 'Organization',
+                name: article.authorName || 'RiseRidge',
+                url: baseUrl,
+              },
           publisher: { '@id': `${baseUrl}/#organization` },
         }
       : {},
