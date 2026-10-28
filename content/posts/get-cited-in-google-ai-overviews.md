@@ -84,7 +84,7 @@ Google's guidance is that normal SEO fundamentals still apply, so treat this as 
 3. **Show who wrote it and why they know.** Add an author, a company page, and cite sources for statistics. Inline links to primary sources make your own claims easier to trust.
 4. **Keep it current.** Update statistics and re-date your screenshots. Stale pages lose to fresh ones that say the same thing.
 5. **Support the page with internal links.** Link the page from related articles using descriptive anchors, so Google sees the cluster, not a lone URL.
-6. **Check your crawlers.** Googlebot needs access. If you also want other AI products to read you, review their crawler rules separately, because they are different bots with separate controls.
+6. **Check your crawlers.** Googlebot needs access. If you also want other AI products to read you, such as Perplexity (see [how to get cited in Perplexity](/blog/get-cited-in-perplexity/)), review their crawler rules separately, because they are different bots with separate controls.
 
 ## How Do You Find the Questions Worth Targeting?
 

@@ -118,7 +118,7 @@ If your goal is to be cited in AI answers, these factors have more evidence behi
 - **Mentions on third-party sites.** In our [lawyer recommendation experiment](/blog/chatgpt-recommendation-experiment/), shortlists were built from directories and other outside sources, not from the firms' own websites.
 - **A clear definition of the topic.** If you are new to the subject, start with [what generative engine optimization is](/blog/what-is-generative-engine-optimization/) and the wider [AI search visibility guide](/blog/ai-search-visibility-guide/).
 
-To see whether AI tools mention your brand at all today, follow the prompt test in [how to check if ChatGPT recommends your brand](/blog/check-if-chatgpt-recommends-your-brand/). Teams that want this tracked across ChatGPT, Claude, Gemini and Perplexity can look at [Rank on AI](/rank-on-ai/).
+For the engine that retrieves live pages for every answer, read [how to get cited in Perplexity](/blog/get-cited-in-perplexity/). To see whether AI tools mention your brand at all today, follow the prompt test in [how to check if ChatGPT recommends your brand](/blog/check-if-chatgpt-recommends-your-brand/). Teams that want this tracked across ChatGPT, Claude, Gemini and Perplexity can look at [Rank on AI](/rank-on-ai/).
 
 ## FAQ
 
