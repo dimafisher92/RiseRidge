@@ -73,7 +73,7 @@ The useful takeaway is the direction: content that is specific, sourced and easy
 
 Start with the foundation, then work down. Each step is small enough to finish in an afternoon.
 
-1. **Confirm the basics.** Your key pages are indexed, return 200, have a canonical tag and are not blocked in robots.txt. Check that AI crawlers you want, such as PerplexityBot, are not blocked either.
+1. **Confirm the basics.** Your key pages are indexed, return 200, have a canonical tag and are not blocked in robots.txt. Check that AI crawlers you want, such as PerplexityBot, are not blocked either (our [guide to getting cited in Perplexity](/blog/get-cited-in-perplexity/) covers that engine in detail).
 2. **Open with the answer.** Put a direct two-sentence answer at the top of each page and under each major heading.
 3. **Write headings as questions.** "How do I..." and "What is..." headings match how people prompt AI tools.
 4. **Add one extractable asset per page.** A comparison table, a numbered checklist or a clear definition list.
