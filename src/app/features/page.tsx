@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'AI SEO Tools & Features',
   description:
-    'Explore RiseRidge\'s AI-powered SEO toolkit: automation engine, content intelligence, rank tracking, technical audits, backlink analysis, LLM visibility monitoring, and more.',
+    'Explore RiseRidge\'s AI SEO toolkit: automation, content intelligence, rank tracking, technical audits, backlink analysis and LLM visibility monitoring.',
   alternates: { canonical: '/features' },
   openGraph: {
     title: 'AI SEO Tools & Features | RiseRidge',

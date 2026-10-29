@@ -8,7 +8,7 @@ import { SeoChecker } from '@/components/seo-checker/SeoChecker';
 export const metadata: Metadata = {
   title: 'Free SEO Website Checker',
   description:
-    'Get a free, instant SEO health check for any website. See your score and a plain-English breakdown of what to fix and why it matters for your business — no jargon, no sign-up to start.',
+    'Get a free, instant SEO health check for any website. See your score and a plain-English list of what to fix and why it matters. No jargon.',
   alternates: { canonical: '/seo-checker' },
   openGraph: {
     title: 'Free SEO Website Checker | RiseRidge',

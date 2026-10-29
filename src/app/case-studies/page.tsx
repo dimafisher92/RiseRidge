@@ -17,7 +17,7 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'SEO Case Studies & Results',
   description:
-    'Real results from real clients. See how RiseRidge\'s AI-powered SEO drives revenue growth, organic traffic increases, and ranking improvements — including +102% organic revenue across two Shopify stores and 71 phone calls for a local auto-glass shop.',
+    'See how RiseRidge\'s AI SEO drives results, including +102% organic revenue across two Shopify stores and 71 phone calls for a local auto-glass shop.',
   alternates: { canonical: '/case-studies' },
   openGraph: {
     title: 'SEO Case Studies & Results | RiseRidge',

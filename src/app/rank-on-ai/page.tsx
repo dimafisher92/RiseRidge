@@ -11,7 +11,7 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'Rank on AI Search — LLM Visibility',
   description:
-    'Optimize your brand visibility across AI search platforms like ChatGPT, Claude, Gemini, and Perplexity. Monitor, measure, and improve how AI recommends your business.',
+    'Improve your brand visibility on AI search platforms like ChatGPT, Claude, Gemini and Perplexity. Monitor and improve how AI recommends your business.',
   alternates: { canonical: '/rank-on-ai' },
   openGraph: {
     title: 'Rank on AI Search — LLM Visibility | RiseRidge',
