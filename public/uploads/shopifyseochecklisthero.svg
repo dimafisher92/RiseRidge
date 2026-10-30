@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="A checklist with ticked items beside a storefront">
+  <rect width="1200" height="630" fill="#FBFAF7"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#A9874E"/>
+
+  <rect x="56" y="54" width="64" height="64" rx="8" fill="none" stroke="rgba(21,20,15,0.15)" stroke-width="2"/>
+  <text x="70" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#1E3A2E">R<tspan fill="#A9874E" dx="-11">R</tspan></text>
+
+  <rect x="190" y="126" width="500" height="378" rx="16" fill="#F4F0E8" stroke="#cfe0d4" stroke-width="2"/>
+  <g>
+    <rect x="230" y="172" width="36" height="36" rx="8" fill="#1E3A2E"/>
+    <path d="M 238 190 L 246 198 L 260 182" fill="none" stroke="#F4F0E8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="290" y="184" width="300" height="12" rx="6" fill="#15140F" opacity="0.22"/>
+  </g>
+  <g>
+    <rect x="230" y="246" width="36" height="36" rx="8" fill="#1E3A2E"/>
+    <path d="M 238 264 L 246 272 L 260 256" fill="none" stroke="#F4F0E8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="290" y="258" width="240" height="12" rx="6" fill="#15140F" opacity="0.22"/>
+  </g>
+  <g>
+    <rect x="230" y="320" width="36" height="36" rx="8" fill="#1E3A2E" stroke="#A9874E" stroke-width="3"/>
+    <path d="M 238 338 L 246 346 L 260 330" fill="none" stroke="#F4F0E8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="290" y="332" width="280" height="12" rx="6" fill="#15140F" opacity="0.35"/>
+  </g>
+  <g>
+    <rect x="230" y="394" width="36" height="36" rx="8" fill="none" stroke="#cfe0d4" stroke-width="3"/>
+    <rect x="290" y="406" width="200" height="12" rx="6" fill="#15140F" opacity="0.22"/>
+  </g>
+
+  <path d="M 760 250 L 1000 250 L 1030 190 L 730 190 Z" fill="#1E3A2E"/>
+  <rect x="750" y="250" width="260" height="190" fill="#F4F0E8" stroke="#1E3A2E" stroke-width="4"/>
+  <rect x="840" y="320" width="80" height="120" fill="#A9874E"/>
+  <rect x="772" y="280" width="50" height="40" fill="#cfe0d4"/>
+  <rect x="938" y="280" width="50" height="40" fill="#cfe0d4"/>
+</svg>

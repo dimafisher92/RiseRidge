@@ -10,6 +10,8 @@ coverImage: /uploads/technicalseoauditchecklisthero.jpg
 
 ## Why Technical SEO Is the Foundation
 
+Running a Shopify store? Pair this audit with our [Shopify SEO checklist](/blog/shopify-seo-checklist/), which covers the platform-specific fixes.
+
 You can publish the best content in your industry and build quality backlinks, but if your site has technical issues — slow load times, crawl errors, duplicate content, broken redirects — you're leaving rankings on the table.
 
 Technical SEO is the foundation everything else is built on. Our AI engine runs over 200 technical checks in a single audit pass. Here are the most critical ones.
