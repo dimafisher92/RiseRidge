@@ -10,6 +10,8 @@ coverImage: /uploads/seocontentclusters2025hero.jpg
 
 ## Why Content Clusters Still Dominate Organic Growth
 
+For ecommerce, the pillar is usually a collection page; our [Shopify SEO checklist](/blog/shopify-seo-checklist/) shows how to build one that supports its cluster.
+
 Search engines have evolved significantly, but the fundamental signal hasn't changed: topical authority wins. When your website comprehensively covers a topic from every angle, Google and AI-powered search engines trust you as the definitive source.
 
 Content clusters — a hub-and-spoke model where a pillar page covers a broad topic and cluster pages go deep on subtopics — remain the highest-leverage SEO investment available to growth-stage brands in 2025.

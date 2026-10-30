@@ -26,7 +26,7 @@ A third point is easy to miss: AI answers rarely run your exact query. They brea
 
 ## What Should You Check First?
 
-Before changing anything, confirm the basics. These four checks take about an hour.
+Before changing anything, confirm the basics. These four checks take about an hour, and they sit on top of the standard [Shopify SEO checklist](/blog/shopify-seo-checklist/) for indexing, product pages and speed.
 
 | Check | Where to look | What good looks like |
 |---|---|---|
