@@ -74,7 +74,7 @@ Structured data helps search engines understand your content and can unlock rich
 
 * **E-commerce:** Product, Offer, Review, BreadcrumbList
 * **Blog:** Article, BlogPosting, BreadcrumbList
-* **Local business:** LocalBusiness, OpeningHours, Review
+* **Local business:** LocalBusiness, OpeningHours, Review (and keep it consistent with your [Google Business Profile](/blog/google-business-profile-optimization/))
 * **SaaS:** Organization, WebSite, FAQPage, SoftwareApplication
 
 Our AI automatically generates and validates schema markup for every page type, then monitors for errors in Google's Rich Results Test.
