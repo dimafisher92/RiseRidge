@@ -22,7 +22,7 @@ The fix is rarely glamorous. It's fixing titles and meta descriptions at scale, 
 
 ## Lesson 2: Local and Map Visibility Is Underinvested Almost Everywhere
 
-For any business with a physical presence, Google's local map pack is often the most underexploited channel. Complete, well-optimized Google Business Profiles, consistent local signals, and location-specific content routinely move the needle faster than broad organic content plays — because the competition for local intent is thinner than the competition for generic head terms.
+For any business with a physical presence, Google's local map pack is often the most underexploited channel. Complete, well-optimized [Google Business Profiles](/blog/google-business-profile-optimization/), consistent local signals, and location-specific content routinely move the needle faster than broad organic content plays — because the competition for local intent is thinner than the competition for generic head terms.
 
 ## Lesson 3: Commercial Terms Move Fastest Once the Foundation Is Fixed
 
