@@ -27,6 +27,13 @@ interface FaqItem {
   answer: string;
 }
 
+interface ServiceData {
+  name: string;
+  serviceType: string;
+  description: string;
+  url: string;
+}
+
 // A byline like "RiseRidge Team" is the organization; anything else is a person.
 function isPersonAuthor(name?: string): name is string {
   return !!name && !/riseridge|team|staff|editorial/i.test(name);
@@ -37,11 +44,13 @@ export function JsonLd({
   breadcrumbs,
   article,
   faqs,
+  service,
 }: {
   type: JsonLdType;
   breadcrumbs?: BreadcrumbItem[];
   article?: ArticleData;
   faqs?: FaqItem[];
+  service?: ServiceData;
 }) {
   const baseUrl = 'https://riseridge.io';
 
@@ -147,30 +156,43 @@ export function JsonLd({
         },
       })),
     },
-    service: {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      serviceType: 'AI-Driven SEO',
-      provider: { '@id': `${baseUrl}/#organization` },
-      areaServed: 'Worldwide',
-      description:
-        'AI-powered SEO services including technical audits, content intelligence, rank tracking, and LLM visibility optimization for ChatGPT, Claude, Gemini, and Perplexity.',
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'SEO Services',
-        itemListElement: [
-          'AI SEO Automation',
-          'Content Intelligence',
-          'Technical SEO Audits',
-          'Rank Tracking & Analytics',
-          'LLM Visibility Monitoring',
-          'Local SEO Management',
-        ].map((name) => ({
-          '@type': 'Offer',
-          itemOffered: { '@type': 'Service', name },
-        })),
-      },
-    },
+    // A single service page passes `service`; without it this describes the
+    // whole offer catalog.
+    service: service
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: service.name,
+          serviceType: service.serviceType,
+          description: service.description,
+          url: `${baseUrl}${service.url}`,
+          provider: { '@id': `${baseUrl}/#organization` },
+          areaServed: { '@type': 'Country', name: 'United States' },
+        }
+      : {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          serviceType: 'AI-Driven SEO',
+          provider: { '@id': `${baseUrl}/#organization` },
+          areaServed: 'Worldwide',
+          description:
+            'AI-powered SEO services including technical audits, content intelligence, rank tracking, and LLM visibility optimization for ChatGPT, Claude, Gemini, and Perplexity.',
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'SEO Services',
+            itemListElement: [
+              'AI SEO Automation',
+              'Content Intelligence',
+              'Technical SEO Audits',
+              'Rank Tracking & Analytics',
+              'LLM Visibility Monitoring',
+              'Local SEO Management',
+            ].map((name) => ({
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name },
+            })),
+          },
+        },
   };
 
   return (
