@@ -62,6 +62,21 @@ Key facts:
 
 - [We asked ChatGPT to recommend a lawyer 15 times](${baseUrl}/blog/chatgpt-recommendation-experiment): 15 recommendation prompts across five US cities. The same firms kept winning, and every shortlist was built from third-party directories, not the firms' own sites.
 
+## Case studies
+
+Full write-ups: [Case Studies](${baseUrl}/case-studies). Clients are anonymized.
+
+- DTC travel-bag brand (two Shopify stores, EN + ES): flagship organic revenue +102%; organic clicks +106% (EN store) and +189% (ES store); product rich-snippet impressions 866 to 34,257.
+- Mobile auto-glass shop, Charlotte, NC (first 90 days): average Google position 15.5 to 10.1; 519 of 1,000 tracked keywords in the top 10; site health 0 to 91/100; 71 phone calls from Google Business Profile.
+- Catering service company (90 days): +76% local map visibility, +37% visits from Maps, site health 61 to 92.
+- Beachfront resort (90 days): 14.9x organic visitors, 8.8x search impressions, site health 50 to 94.
+- E-commerce brand (4 months): $21K/day peak daily revenue, 340% organic traffic growth.
+- DTC beauty brand: 3x ROAS, 185% organic sessions growth, 42% lower customer acquisition cost.
+- SaaS company: 255% organic revenue growth year over year, 420% more top-10 keywords.
+- Multi-location retail (50+ locations): 277% revenue growth, #1-3 local pack rankings.
+- Restricted advertising niche: +969% organic sessions, +1200% checkouts.
+- E-commerce (90 days): +93% organic sessions, +140% checkouts, $115K annual revenue run-rate.
+
 ## Frequently asked questions
 
 - What is RiseRidge? An AI-driven SEO agency founded in 2020 that grows organic revenue and AI search visibility. Details: [About](${baseUrl}/about).
