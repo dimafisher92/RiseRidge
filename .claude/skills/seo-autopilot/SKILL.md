@@ -143,3 +143,5 @@ Backlog Status/PR link.
 Missing credentials, a denied network host or a failed tool → do the parts that
 do not depend on it. Add or refresh a single Needs Human row (Kind "Access /
 setup") naming exactly what is missing. Log it, then stop. Never fake data.
+Exception: a blocked new article does not end the run. Follow the rollover in
+`daily.md` (step 2) and move on to the next Planned row.

@@ -19,6 +19,14 @@ Notes). Set its Status to "Writing" at the start.
   answer.
 - Collect 3–6 authoritative external sources (Google Search Central docs,
   Shopify docs, official studies) for any statistics you use.
+- Open each source page to confirm the number before you cite it: use the
+  WebFetch tool first. If that fails, use `curl`, which only reaches hosts in
+  the cloud environment's allowlist. A number seen only in a search snippet
+  is not verified.
+- If a statistic cannot be verified, prefer another reachable source, or drop
+  the number and make the point without it. Only when the article cannot work
+  without unverifiable data, stop and hand back to `daily.md` ("A blocked
+  article never costs the day").
 
 ## 3. Write `content/posts/<slug>.md`
 Frontmatter:

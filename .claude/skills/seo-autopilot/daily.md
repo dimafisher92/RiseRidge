@@ -61,6 +61,17 @@ Use the New York date:
 - **Mon / Wed / Fri** → take the first Content Calendar row with Type "New",
   Status "Planned" and the earliest Slot date ≤ today, then follow `article.md`.
   If there is none, fall back to Tue/Thu behaviour.
+- **A blocked article never costs the day.** If `article.md` stops before a PR
+  for a reason outside the article itself (a source host is unreachable, a
+  statistic cannot be verified, a tool or credential is missing):
+  1. Set that row back to "Planned", move its Slot date to the same weekday
+     next week, and add a dated Notes line naming the blocker.
+  2. Refresh the single Needs Human row for the blocker (see "When blocked" in
+     `SKILL.md`).
+  3. Take the next Planned "New" row with Slot date ≤ today + 7 days (earliest
+     first) and run `article.md` on it. If that one is blocked as well, or
+     there is none, fall back to Tue/Thu behaviour.
+  Still one PR per day. Never publish the blocked article without its sources.
 - **Tue / Thu** → take the top SEO Backlog row with Auto-eligible ✓ and Status
   "Next" or "Backlog". Order by Priority (P0 first), then Status "Next" before
   "Backlog", then Effort (S first). Follow `refresh.md`.
