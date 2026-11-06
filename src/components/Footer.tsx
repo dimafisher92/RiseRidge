@@ -8,6 +8,12 @@ const EXPLORE = [
   { href: '/blog', label: 'Blog' },
 ];
 
+const SERVICES = [
+  { href: '/ai-seo-agency', label: 'AI SEO (GEO)' },
+  { href: '/shopify-seo', label: 'Shopify SEO' },
+  { href: '/local-seo', label: 'Local SEO' },
+];
+
 const COMPANY = [
   { href: '/about', label: 'About' },
   { href: '/seo-checker', label: 'Free SEO Check' },
@@ -18,7 +24,7 @@ export function Footer() {
   return (
     <footer className="bg-ink text-on-ink-muted" role="contentinfo">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-5">
           {/* Brand */}
           <div className="md:col-span-1">
             <Logo size="small" onDark />
@@ -32,6 +38,20 @@ export function Footer() {
             <h4 className="font-mono text-[10px] tracking-[0.16em] uppercase text-brass mb-4">Explore</h4>
             <ul className="space-y-3">
               {EXPLORE.map(({ href, label }) => (
+                <li key={label}>
+                  <Link href={href} className="text-sm text-on-ink-muted hover:text-brass transition-colors duration-200">
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-mono text-[10px] tracking-[0.16em] uppercase text-brass mb-4">Services</h4>
+            <ul className="space-y-3">
+              {SERVICES.map(({ href, label }) => (
                 <li key={label}>
                   <Link href={href} className="text-sm text-on-ink-muted hover:text-brass transition-colors duration-200">
                     {label}

@@ -56,7 +56,9 @@ Key facts:
 - [Technical SEO Audits](${baseUrl}/features): Core Web Vitals, crawlability, indexation, and structured data analysis with 24/7 monitoring.
 - [Rank Tracking & Analytics](${baseUrl}/features): Real-time keyword position monitoring and competitor tracking.
 - [LLM Visibility Monitoring](${baseUrl}/rank-on-ai): Tracks brand visibility, sentiment, and citations across AI answer engines.
-- [Local SEO Management](${baseUrl}/features): Google Business Profile optimization and service-area targeting.
+- [AI SEO / Generative Engine Optimization](${baseUrl}/ai-seo-agency): Gets brands mentioned and cited by ChatGPT, Perplexity, Gemini, Claude and Google AI Overviews: prompt tracking, citation analysis, answer-first content, structured data, third-party presence.
+- [Shopify SEO](${baseUrl}/shopify-seo): Technical SEO, collection and product pages, product schema and AI shopping visibility for DTC and e-commerce brands.
+- [Local SEO](${baseUrl}/local-seo): Google Business Profile optimization, local landing pages, citations, reviews process and map tracking for service businesses and multi-location brands.
 
 ## Original research
 
