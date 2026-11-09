@@ -145,4 +145,4 @@ Keep it on your store's domain (for example `yourstore.com/blogs/news`). Content
 
 Run your home page, a top collection and a top product page through our free [SEO checker](/seo-checker/), then compare the findings against this list.
 
-Want a second pair of eyes on your store? Start with the free [SEO checker](/seo-checker/) and see which items on this list need attention first.
+Want a second pair of eyes on your store? If you are weighing outside help, [what SEO costs](/blog/how-much-does-seo-cost/) is a good place to set a budget. Start with the free [SEO checker](/seo-checker/) and see which items on this list need attention first.
