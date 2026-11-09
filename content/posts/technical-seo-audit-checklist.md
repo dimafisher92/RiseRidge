@@ -172,4 +172,4 @@ Google lists page experience, including Core Web Vitals, among the signals its r
 
 At minimum: Google Search Console, a site crawler, PageSpeed Insights and the Rich Results Test. Server logs and a rank tracker add useful context. Our free [SEO checker](/seo-checker/) is a quick starting point.
 
-Ready to see what is holding your site back? Run the free [SEO checker](/seo-checker/) or ask us for a full audit.
+Not sure what an audit and fixes should cost? See [how much SEO costs](/blog/how-much-does-seo-cost/). Ready to see what is holding your site back? Run the free [SEO checker](/seo-checker/) or ask us for a full audit.

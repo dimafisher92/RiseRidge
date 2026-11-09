@@ -74,4 +74,4 @@ Based on our client data, brands that implement a full content cluster strategy 
 * **Month 5–6:** Cluster pages drive long-tail traffic; topical authority signals strengthen
 * **Month 7+:** Head terms enter top 3; organic revenue begins compounding
 
-The brands that win aren't publishing more content — they're publishing the *right* content in the right structure, backed by AI that never stops optimizing.
+Content planning is one of the biggest items in an SEO budget, so it helps to know [how much SEO costs](/blog/how-much-does-seo-cost/) before you commit. The brands that win aren't publishing more content — they're publishing the *right* content in the right structure, backed by AI that never stops optimizing.
