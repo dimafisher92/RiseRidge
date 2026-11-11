@@ -87,6 +87,15 @@ export function JsonLd({
         'Link Building',
       ],
       areaServed: 'Worldwide',
+      legalName: 'Golden Stream Media LLC',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1895 Tyler St, STE 404',
+        addressLocality: 'Hollywood',
+        addressRegion: 'FL',
+        postalCode: '33020',
+        addressCountry: 'US',
+      },
       sameAs: [
         'https://www.instagram.com/riseridge_ai/',
       ],

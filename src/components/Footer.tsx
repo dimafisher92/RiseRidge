@@ -117,6 +117,10 @@ export function Footer() {
             Privacy · Terms
           </p>
         </div>
+        <address className="mt-4 not-italic text-center sm:text-left font-mono text-[11px] leading-relaxed tracking-[0.06em] text-subtle">
+          RiseRidge is a registered trade name of Golden Stream Media LLC, a Florida limited liability company.
+          {' '}1895 Tyler St, STE 404, Hollywood, FL 33020, USA
+        </address>
       </div>
     </footer>
   );

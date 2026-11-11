@@ -36,6 +36,7 @@ Summary index: ${baseUrl}/llms.txt
 ## Company facts
 
 - Founded: 2020.
+- Legal entity: RiseRidge is a registered trade name of Golden Stream Media LLC (Florida LLC), 1895 Tyler St, STE 404, Hollywood, FL 33020, USA.
 - Clients served: 250+.
 - Client revenue generated: $25M+.
 - Client retention: 97%.

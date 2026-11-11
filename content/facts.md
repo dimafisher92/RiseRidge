@@ -26,6 +26,8 @@ here. They are allowed in posts only with an inline link to the source.
 - Contact: hello@riseridge.io
 - Social profiles: Instagram only — https://www.instagram.com/riseridge_ai/ (@riseridge_ai). No LinkedIn, X/Twitter or YouTube; never link to them.
 - Founded: 2020 (confirmed by owner, 2026-10-15)
+- Legal entity: RiseRidge is a registered trade name of Golden Stream Media LLC, a Florida limited liability company (owner, 2026-11-11)
+- Registered address (principal office): 1895 Tyler St, STE 404, Hollywood, FL 33020, USA (owner, 2026-11-11)
 
 ## Services
 
