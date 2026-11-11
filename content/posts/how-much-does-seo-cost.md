@@ -129,7 +129,7 @@ Per click, usually yes over time, because organic traffic does not charge for ea
 
 ### Why do SEO agencies charge so much?
 
-Agency fees cover strategy, technical work, content, reporting and account management, often from several specialists. The Ahrefs poll shows agency averages well above freelancer averages for that reason. The right question is what you get for the fee.
+Agency fees cover strategy, technical work, content, reporting and account management, often from several specialists. If you are weighing that against a salaried hire, see our comparison of [an SEO agency vs. in-house SEO](/blog/seo-agency-vs-in-house/). The Ahrefs poll shows agency averages well above freelancer averages for that reason. The right question is what you get for the fee.
 
 ### Can I do SEO myself for free?
 
