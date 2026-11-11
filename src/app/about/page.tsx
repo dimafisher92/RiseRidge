@@ -91,6 +91,7 @@ const AT_A_GLANCE = [
   { label: 'Client retention', value: '97%' },
   { label: 'Engagements', value: 'Month-to-month, no long-term lock-in' },
   { label: 'Award', value: 'TOP 100 USA Entrepreneurs (TOP USA Awards 2023)' },
+  { label: 'Headquarters', value: 'Hollywood, Florida, USA' },
 ];
 
 const FAQS = [
