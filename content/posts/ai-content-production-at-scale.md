@@ -52,4 +52,4 @@ Publishing isn't the finish line. Our system tracks how each piece performs — 
 
 The output isn't more content for its own sake. It's the ability to cover a full topic cluster — pillar page plus every meaningful sub-topic — in months instead of years, without diluting quality on any single page.
 
-Brands working with RiseRidge typically see content velocity increase several times over versus a traditional in-house process, while maintaining (and in most cases improving) the depth and specificity that both readers and AI systems reward. That combination — more coverage, same or better quality — is the actual unlock. Speed alone was never the point.
+Brands working with RiseRidge typically see content velocity increase several times over versus a traditional in-house process (we compare the two set-ups in [SEO agency vs. in-house SEO](/blog/seo-agency-vs-in-house/)), while maintaining (and in most cases improving) the depth and specificity that both readers and AI systems reward. That combination — more coverage, same or better quality — is the actual unlock. Speed alone was never the point.
