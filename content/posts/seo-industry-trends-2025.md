@@ -14,13 +14,13 @@ Every year brings a round of "SEO is dead" takes. Every year, organic search rem
 
 ## 1. Zero-Click Search Is No Longer the Exception
 
-A growing share of searches now resolve without a single click — the answer appears directly in an AI Overview, a featured snippet, or a knowledge panel. For informational queries, this is now common rather than rare.
+A growing share of searches now resolve without a single click — the answer appears directly in an [AI Overview](/blog/get-cited-in-google-ai-overviews/), a featured snippet, or a knowledge panel. For informational queries, this is now common rather than rare.
 
 This doesn't make those queries worthless. Appearing as the cited source inside a zero-click answer still builds brand recognition and trust, and drives the *next* search — the higher-intent, closer-to-purchase query that does convert. The strategic shift is measuring visibility across the full funnel, not just click-through on any single term.
 
 ## 2. AI Answer Engines Are a Distinct Discovery Channel
 
-Perplexity, ChatGPT search, Google's AI Mode, and similar tools are no longer niche. They pull from a narrower, more curated set of sources than a traditional ten-blue-links results page, which means the bar for being cited is higher — but the payoff (a highly-trusted referral) is also higher.
+Perplexity, ChatGPT search, Google's AI Mode, and similar tools are no longer niche. Optimizing for them is often called [generative engine optimization](/blog/what-is-generative-engine-optimization/). They pull from a narrower, more curated set of sources than a traditional ten-blue-links results page, which means the bar for being cited is higher — but the payoff (a highly-trusted referral) is also higher.
 
 Brands investing in clear, well-sourced, structurally simple content — the kind that's easy for a language model to parse and quote directly — are showing up disproportionately often as the cited source across these engines.
 
@@ -32,14 +32,14 @@ Concretely, that means real author identities, first-hand experience and data in
 
 ## 4. Core Web Vitals Keep Raising the Technical Floor
 
-Page experience signals aren't new, but the bar keeps rising. Sites that were "fast enough" in 2023 are frequently falling behind as median load times across the web continue to drop. Technical performance is no longer a one-time fix — it's a maintenance discipline, the same way security patching is.
+Page experience signals aren't new, but the bar keeps rising. Sites that were "fast enough" in 2023 are frequently falling behind as median load times across the web continue to drop. Technical performance is no longer a one-time fix (a recurring [technical SEO audit](/blog/technical-seo-audit-checklist/) catches regressions) — it's a maintenance discipline, the same way security patching is.
 
 ## 5. Local and Vertical Search Are Fragmenting Further
 
-Generic head-term competition keeps getting more expensive, while local map results and vertical-specific search experiences (shopping-focused results, local service ads, map pack placements) continue to offer a comparatively less contested path to visibility — particularly for any business with a physical location or service area.
+Generic head-term competition keeps getting more expensive, while local map results and vertical-specific search experiences (shopping-focused results, local service ads, map pack placements; see our [Google Business Profile optimization guide](/blog/google-business-profile-optimization/)) continue to offer a comparatively less contested path to visibility — particularly for any business with a physical location or service area.
 
 ## What This Means for Growth-Stage Brands
 
 None of these shifts make organic search less valuable — they make it less forgiving of shortcuts. Thin content, weak technical foundations, and unclear authority signals are punished faster and more visibly than they were a few years ago.
 
-The brands pulling ahead are the ones treating SEO as continuous infrastructure rather than a campaign: technical health monitored constantly, content built for genuine depth and citability, and authority signals reinforced across every surface search and AI systems can see. That's the model RiseRidge's AI-driven SEO engine is built around — and it's the one that's holding up as the landscape keeps shifting under everyone's feet.
+The brands pulling ahead are the ones treating SEO as continuous infrastructure rather than a campaign: technical health monitored constantly, content built for genuine depth and citability, and authority signals reinforced across every surface search and AI systems can see. A quick starting point is a free [SEO website check](/seo-checker/). That's the model RiseRidge's AI-driven SEO engine is built around — and it's the one that's holding up as the landscape keeps shifting under everyone's feet.
