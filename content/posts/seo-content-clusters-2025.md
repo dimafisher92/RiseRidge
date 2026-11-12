@@ -25,7 +25,7 @@ Not all topics are created equal. The goal is to map your content clusters to th
 Start by asking:
 
 * What problems does our product solve at each stage of awareness?
-* What questions do our best customers ask before they buy?
+* What questions do our best customers ask before they buy? (AI search expands each one into many sub-questions; see [query fan-out](/blog/query-fan-out-ai-search/).)
 * What terms do competitors rank for that we don't?
 
 Our AI SEO engine runs this analysis in hours, pulling competitor keyword gaps, search volume, and commercial intent signals to build a ranked opportunity list.
@@ -60,7 +60,7 @@ RiseRidge's AI automation engine monitors your entire cluster in real-time, flag
 
 * Pages losing keyword positions
 * Internal linking gaps as content is published
-* Cannibalization issues between cluster pages
+* Cannibalization issues between cluster pages (part of any [technical SEO audit](/blog/technical-seo-audit-checklist/))
 * New keyword opportunities to expand the cluster
 
 The result is a self-optimizing content ecosystem that compounds over time rather than decaying.
@@ -73,5 +73,7 @@ Based on our client data, brands that implement a full content cluster strategy 
 * **Month 3–4:** Pillar page begins ranking in positions 5–15 for head terms
 * **Month 5–6:** Cluster pages drive long-tail traffic; topical authority signals strengthen
 * **Month 7+:** Head terms enter top 3; organic revenue begins compounding
+
+For real timelines from client work, see our [SEO case studies](/case-studies/).
 
 Content planning is one of the biggest items in an SEO budget, so it helps to know [how much SEO costs](/blog/how-much-does-seo-cost/) before you commit. The brands that win aren't publishing more content — they're publishing the *right* content in the right structure, backed by AI that never stops optimizing.
