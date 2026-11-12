@@ -69,6 +69,7 @@ Key facts:
 
 Full write-ups: [Case Studies](${baseUrl}/case-studies). Clients are anonymized.
 
+- DTC accessories brand on Shopify, SEO + GEO (first 40 days, Oct–Nov 2026): organic sales +24.5% ($222.2K to $276.7K); page-one Google rankings for 20 to 63 of 146 tracked keywords; ChatGPT went from $0 to $22.1K in first-time customer sales (43 to 4,387 visits) and became the #2 organic source of new customers after Google; a ChatGPT visit was worth $5.03 vs $2.18 for a Google visit.
 - DTC travel-bag brand (two Shopify stores, EN + ES): flagship organic revenue +102%; organic clicks +106% (EN store) and +189% (ES store); product rich-snippet impressions 866 to 34,257.
 - Mobile auto-glass shop, Charlotte, NC (first 90 days): average Google position 15.5 to 10.1; 519 of 1,000 tracked keywords in the top 10; site health 0 to 91/100; 71 phone calls from Google Business Profile.
 - Catering service company (90 days): +76% local map visibility, +37% visits from Maps, site health 61 to 92.

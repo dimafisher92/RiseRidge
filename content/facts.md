@@ -40,6 +40,22 @@ here. They are allowed in posts only with an inline link to the source.
 
 ## Featured case studies (anonymized; never name the client)
 
+### DTC accessories brand (wallets, trackers, travel gear), Shopify, first 40 days
+Source: owner-supplied client report, Shopify organic channel (last click), Google Search Console, Search Atlas rank tracker. Program 2 Oct – 10 Nov 2026 vs the 40 days before (owner, 2026-11-12). Never name the client, its products or its competitors.
+- Organic sales: +24.5% ($222.2k → $276.7k)
+- First-time customer sales from organic: +22.6% ($179.0k → $219.5k)
+- Organic sessions reaching checkout: +31% (2,801 → 3,663)
+- Store-wide new-customer records over the same period: −13% (21,859 → 19,018)
+- Daily new-customer revenue from organic: $2,982/day (first two weeks) → $10,351/day (latest week)
+- Page-one keywords: 20 → 63 of 146 tracked buying-intent keywords (most of the 6 brands tracked); 13 at #1
+- Monthly search demand on page one: 112k → 314k
+- Non-brand Google clicks: +9% year over year (8,661 vs 7,930, 11 Oct – 7 Nov)
+- ChatGPT: first-time customer sales $0 → $22.1k; visits 43 → 4,387; #2 organic source of new-customer sales after Google; 10% of organic new-customer sales
+- Revenue per ChatGPT visit: $5.03 vs $2.18 per Google visit (2.3x)
+- Google AI-answer impressions: 160,369 in two weeks (Search Atlas, 13–27 Oct)
+- Work shipped: 38 title tags, 186 meta descriptions, alt text on 210 images, Product structured data on 175 pages, Open Graph on 120 pages, site-wide Organization markup, outdated price markup removed, 6 articles (2 live)
+- Attribution: ChatGPT growth is correlated with the GEO work (weekly ChatGPT visits went 16 → 807 the week after the first structured-data round went live); do not claim proven causation.
+
 ### DTC travel-bag brand, two Shopify stores (EN + ES)
 - Flagship organic revenue: +102%
 - Organic clicks: +106% (EN store), +189% (ES store)

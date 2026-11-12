@@ -17,7 +17,7 @@ import { JsonLd } from '@/components/JsonLd';
 export const metadata: Metadata = {
   title: 'SEO Case Studies & Results',
   description:
-    'See how RiseRidge\'s AI SEO drives results, including +102% organic revenue across two Shopify stores and 71 phone calls for a local auto-glass shop.',
+    'RiseRidge SEO and GEO results: ChatGPT became a DTC brand\'s #2 organic sales source in 40 days, +102% Shopify organic revenue, 71 calls for a local shop.',
   alternates: { canonical: '/case-studies' },
   openGraph: {
     title: 'SEO Case Studies & Results | RiseRidge',
@@ -32,8 +32,39 @@ const AGGREGATE_STATS = [
   { value: '97%', label: 'Client Retention' },
 ];
 
-const SHOPIFY_STUDY = {
+const ACCESSORIES_STUDY = {
   number: '01',
+  category: 'E-Commerce · DTC Accessories · Shopify · SEO + GEO',
+  headingId: 'featured-geo',
+  title: 'In 40 days, organic sales rose 24.5% and ChatGPT became the #2 organic source of new customers.',
+  intro:
+    'A premium DTC accessories brand selling wallets, trackers and travel gear on Shopify hired RiseRidge for SEO and GEO (generative engine optimization). It competes with five well-known brands for the same buying-intent searches. Every figure below comes from Shopify\u2019s organic channel (last click), Google Search Console and our rank tracker, comparing the first 40 days of the program (2 Oct \u2013 10 Nov 2026) with the 40 days before.',
+  sections: [
+    {
+      heading: 'The Challenge',
+      body:
+        'The brand was strong, but search did not show it. It held page-one Google rankings for only 20 of the 146 buying-intent keywords we track against five competitors, many title tags were just the brand name, and product pages gave Google and AI assistants no structured facts to work with. Meanwhile the store as a whole was winning fewer new customers, so organic search had to carry more of acquisition.',
+    },
+    {
+      heading: 'What We Did',
+      body:
+        'A full technical audit (crawl, Core Web Vitals, canonicals and international folders, sitemap, robots and 404s) plus an AI-search baseline across ChatGPT, Perplexity and Google AI Overviews. Two on-page rounds: 38 title tags, 186 meta descriptions, alt text on 210 images, Product structured data on 175 pages, Open Graph on 120, site-wide Organization markup, and outdated fixed-price markup removed so AI answers quote real prices. Then a content engine: launch and comparison articles that reached page one within days, and a cannibalization plan for eight key queries.',
+    },
+    {
+      heading: 'AI Search Became a Sales Channel',
+      body:
+        'In the 40 days before the program, ChatGPT sent 43 visits and no first-time sales. Since then it has sent 4,387 visits and $22.1k in first-time customer sales, more than Instagram, YouTube or any search engine except Google. Each ChatGPT visit is worth $5.03 in new-customer revenue, 2.3x a Google visit. AI assistants decide for themselves what to recommend, so we read this as correlation backed by timing: weekly ChatGPT visits jumped from 16 to 807 the week after the first round of product structured data went live.',
+    },
+  ],
+  metrics: [
+    { value: '+24.5%', label: 'Organic Sales · 40 Days' },
+    { value: '$0 → $22.1K', label: 'First-Time Sales From ChatGPT' },
+    { value: '20 → 63', label: 'Page-One Keywords Of 146' },
+  ],
+};
+
+const SHOPIFY_STUDY = {
+  number: '02',
   category: 'E-Commerce · Two Shopify Stores',
   headingId: 'featured-shopify',
   title: '“Is it the ads — or the SEO?” We doubled organic revenue and proved it.',
@@ -64,7 +95,7 @@ const SHOPIFY_STUDY = {
 };
 
 const AUTO_GLASS_STUDY = {
-  number: '02',
+  number: '03',
   category: 'Local Service · Auto Glass · Charlotte, NC',
   headingId: 'featured-auto-glass',
   title: 'From invisible to page one — 71 phone calls in a local shop’s first 90 days.',
@@ -246,8 +277,99 @@ export default function CaseStudiesPage() {
       {/* Aggregate Stats */}
       <StatsBar stats={AGGREGATE_STATS} />
 
-      {/* Featured Case Study 01 — Two Shopify stores */}
-      <FeaturedCaseStudy {...SHOPIFY_STUDY}>
+      {/* Featured Case Study 01 — DTC accessories brand, SEO + GEO */}
+      <FeaturedCaseStudy {...ACCESSORIES_STUDY}>
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <EvidenceCard
+            title="Organic new-customer sales per day"
+            subtitle="Shopify · organic traffic · average per day, by week"
+            badge="$3.0K → $10.4K"
+            footnote="Last bar covers 6–10 Nov (5 days)"
+          >
+            <ComparisonBarsChart
+              axisTicks={['$12K', '$9K', '$6K', '$3K', '$0K']}
+              max={12000}
+              seriesLabel="Per day"
+              bars={[
+                { value: 3000, display: '$3.0K', caption: '2–8 Oct' },
+                { value: 2900, display: '$2.9K', caption: '9–15 Oct' },
+                { value: 5800, display: '$5.8K', caption: '16–22 Oct' },
+                { value: 5700, display: '$5.7K', caption: '23–29 Oct' },
+                { value: 6500, display: '$6.5K', caption: '30 Oct–5 Nov' },
+                { value: 10400, display: '$10.4K', caption: '6–10 Nov', current: true },
+              ]}
+            />
+          </EvidenceCard>
+
+          <EvidenceCard
+            title="Visits from ChatGPT per week"
+            subtitle="Shopify · referring channel ChatGPT"
+            badge="43 → 4,387"
+            footnote="Last bar covers 6–10 Nov (5 days)"
+          >
+            <ComparisonBarsChart
+              axisTicks={['1,500', '1,125', '750', '375', '0']}
+              max={1500}
+              seriesLabel="Visits"
+              bars={[
+                { value: 4, display: '4', caption: '2 Oct' },
+                { value: 16, display: '16', caption: '9 Oct' },
+                { value: 807, display: '807', caption: '16 Oct' },
+                { value: 1246, display: '1,246', caption: '23 Oct' },
+                { value: 1314, display: '1,314', caption: '30 Oct' },
+                { value: 1000, display: '1,000', caption: '6 Nov', current: true },
+              ]}
+            />
+          </EvidenceCard>
+        </div>
+
+        <div className="mt-6">
+          <EvidenceCard
+            title="First 40 days vs the 40 days before"
+            subtitle="2 Oct – 10 Nov 2026 vs 23 Aug – 1 Oct 2026"
+            footnote="Shopify, organic traffic (last click): search engines, AI assistants, social and referral sites; paid excluded"
+          >
+            <CaseStudyTable
+              columns={['Metric', 'Before', 'First 40 days', 'Change']}
+              accentColumns={[3]}
+              rows={[
+                ['Organic sales', '$222.2K', '$276.7K', '+24.5%'],
+                ['First-time customer sales from organic', '$179.0K', '$219.5K', '+22.6%'],
+                ['Organic sessions reaching checkout', '2,801', '3,663', '+31%'],
+                ['Store-wide new customers', '21,859', '19,018', '−13%'],
+                ['Visits from ChatGPT', '43', '4,387', '102x'],
+                ['First-time sales from ChatGPT', '$0', '$22.1K', 'new'],
+              ]}
+            />
+          </EvidenceCard>
+        </div>
+
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <EvidenceCard title="Google rankings" subtitle="146 buying-intent keywords · 6 brands tracked">
+            <CaseStudyStatGrid
+              stats={[
+                { value: '20 → 63', label: 'Page-One Keywords' },
+                { value: '13', label: 'Keywords At #1' },
+                { value: '112K → 314K', label: 'Monthly Searches On Page One' },
+                { value: '+9%', label: 'Non-Brand Clicks YoY' },
+              ]}
+            />
+          </EvidenceCard>
+          <EvidenceCard title="AI search (GEO)" subtitle="ChatGPT and Google AI answers">
+            <CaseStudyStatGrid
+              stats={[
+                { value: '#2', label: 'Organic Source Of New Customers' },
+                { value: '$5.03', label: 'Per ChatGPT Visit (Google: $2.18)' },
+                { value: '10%', label: 'Of Organic New-Customer Sales' },
+                { value: '160,369', label: 'AI-Answer Impressions In 2 Weeks' },
+              ]}
+            />
+          </EvidenceCard>
+        </div>
+      </FeaturedCaseStudy>
+
+      {/* Featured Case Study 02 — Two Shopify stores */}
+      <FeaturedCaseStudy {...SHOPIFY_STUDY} tone="panel">
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <EvidenceCard
             title="Total sales — last click"
@@ -312,8 +434,8 @@ export default function CaseStudiesPage() {
         </div>
       </FeaturedCaseStudy>
 
-      {/* Featured Case Study 02 — Local auto glass */}
-      <FeaturedCaseStudy {...AUTO_GLASS_STUDY} tone="panel">
+      {/* Featured Case Study 03 — Local auto glass */}
+      <FeaturedCaseStudy {...AUTO_GLASS_STUDY}>
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <EvidenceCard
             title="Average position in Google"
@@ -368,7 +490,7 @@ export default function CaseStudiesPage() {
       <section className="py-24" aria-labelledby="case-studies-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <SectionLabel number="03" text="More Case Studies" />
+            <SectionLabel number="04" text="More Case Studies" />
             <h2 id="case-studies-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               More Client Success Stories
             </h2>
@@ -389,7 +511,7 @@ export default function CaseStudiesPage() {
       <section className="border-t border-border bg-surface/30 py-24" aria-labelledby="methodology-heading">
         <div className="mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <SectionLabel number="04" text="Methodology" />
+            <SectionLabel number="05" text="Methodology" />
             <h2 id="methodology-heading" className="mt-4 font-display font-semibold text-3xl md:text-4xl text-ice">
               How We Drive These Results
             </h2>

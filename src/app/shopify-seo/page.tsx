@@ -87,11 +87,13 @@ const CONTENT: ServicePageContent = {
       ],
     },
     {
-      client: 'E-commerce brand',
-      period: 'First 4 months',
+      client: 'DTC accessories brand',
+      period: 'First 40 days',
       stats: [
-        { value: '$21K/day', label: 'Peak daily revenue' },
-        { value: '340%', label: 'Organic traffic growth' },
+        { value: '+24.5%', label: 'Organic sales' },
+        { value: '20 → 63', label: 'Page-one keywords (of 146 tracked)' },
+        { value: '175', label: 'Pages with Product structured data' },
+        { value: '$22.1K', label: 'First-time sales from ChatGPT (from $0)' },
       ],
     },
   ],
@@ -121,7 +123,7 @@ const CONTENT: ServicePageContent = {
     {
       question: 'How long does Shopify SEO take to work?',
       answer:
-        'Technical fixes are picked up as Google recrawls the store; rankings for competitive collection terms take longer. For reference, one e-commerce client reached $21K/day in peak daily revenue within 4 months.',
+        'Technical fixes are picked up as Google recrawls the store; rankings for competitive collection terms take longer. For reference, one DTC accessories client grew organic sales 24.5% and went from 20 to 63 page-one keywords in its first 40 days; another e-commerce client reached $21K/day in peak daily revenue within 4 months.',
     },
     {
       question: 'How do you report Shopify SEO results?',

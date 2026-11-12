@@ -77,12 +77,13 @@ const CONTENT: ServicePageContent = {
   ],
   proof: [
     {
-      client: 'SaaS company',
-      period: 'Year over year',
+      client: 'DTC accessories brand on Shopify',
+      period: 'First 40 days of SEO + GEO',
       stats: [
-        { value: '255%', label: 'Organic revenue growth' },
-        { value: '420%', label: 'More top-10 keywords' },
-        { value: '12x', label: 'Content output' },
+        { value: '$0 → $22.1K', label: 'First-time customer sales from ChatGPT' },
+        { value: '43 → 4,387', label: 'Visits from ChatGPT' },
+        { value: '#2', label: 'Organic source of new customers, after Google' },
+        { value: '$5.03', label: 'Revenue per ChatGPT visit, 2.3x a Google visit' },
       ],
     },
     {
@@ -123,7 +124,7 @@ const CONTENT: ServicePageContent = {
     {
       question: 'How long does it take to show up in ChatGPT or Google AI Overviews?',
       answer:
-        'Engines that search the web live, such as ChatGPT search, Perplexity and Google AI Overviews, can reflect changes once new or updated pages are indexed and start being cited. Answers that come from a model\'s training data change only when the model is updated. We track your prompts every week so you can see movement prompt by prompt.',
+        'Engines that search the web live, such as ChatGPT search, Perplexity and Google AI Overviews, can reflect changes once new or updated pages are indexed and start being cited. Answers that come from a model\'s training data change only when the model is updated. For one DTC accessories client, weekly visits from ChatGPT went from 16 to 807 the week after product structured data went live. We track your prompts every week so you can see movement prompt by prompt.',
     },
     {
       question: 'How do you measure AI visibility?',
