@@ -20,7 +20,7 @@ Every piece starts with a brief, not a prompt. Before content is drafted, our sy
 
 * Search intent data for the target keyword cluster (what searchers actually want to see)
 * Competitor content gaps — what's ranking, and what it's missing
-* Internal linking opportunities from existing pillar and cluster pages
+* Internal linking opportunities from existing [pillar and cluster pages](/blog/seo-content-clusters-2025/)
 * Subject-matter input from the client where domain expertise matters
 
 This is the step most AI-generated content skips entirely, and it's the reason so much of it reads as hollow. Content without a research foundation has nothing original to say.
@@ -40,16 +40,16 @@ Content that doesn't clear this bar gets sent back before it ever reaches a live
 
 ## Step 3: Structure for Both Search Engines and AI Answer Engines
 
-Modern content has two audiences: the person reading it, and the systems — Google's AI Overviews, Perplexity, ChatGPT search — that may summarize or cite it before a human ever clicks through.
+Modern content has two audiences: the person reading it, and the systems — Google's [AI Overviews](/blog/get-cited-in-google-ai-overviews/), [Perplexity](/blog/get-cited-in-perplexity/), ChatGPT search — that may summarize or cite it before a human ever clicks through.
 
 We structure every article with both in mind: clear H2s that map to real questions, scannable bullet points, and direct answers placed early rather than buried under throat-clearing introductions. It's the same discipline that wins featured snippets, applied to a wider set of surfaces.
 
 ## Step 4: Publish, Then Keep Working
 
-Publishing isn't the finish line. Our system tracks how each piece performs — rankings, click-through rate, engagement — and flags content that's underperforming its potential for a refresh. Stale statistics, outdated examples, and thin sections get updated on a cadence, rather than left to decay for years until a full site audit surfaces the problem.
+Publishing isn't the finish line. Our system tracks how each piece performs — rankings, click-through rate, engagement — and flags content that's underperforming its potential for a refresh. Stale statistics, outdated examples, and thin sections get updated on a cadence, rather than left to decay for years until a [full site audit](/blog/technical-seo-audit-checklist/) surfaces the problem.
 
 ## What Scale Actually Buys You
 
 The output isn't more content for its own sake. It's the ability to cover a full topic cluster — pillar page plus every meaningful sub-topic — in months instead of years, without diluting quality on any single page.
 
-Brands working with RiseRidge typically see content velocity increase several times over versus a traditional in-house process, while maintaining (and in most cases improving) the depth and specificity that both readers and AI systems reward. That combination — more coverage, same or better quality — is the actual unlock. Speed alone was never the point.
+Brands working with RiseRidge typically see content velocity increase several times over versus a traditional in-house process (we compare the two set-ups in [SEO agency vs. in-house SEO](/blog/seo-agency-vs-in-house/)), while maintaining (and in most cases improving) the depth and specificity that both readers and AI systems reward. That combination — more coverage, same or better quality — is the actual unlock. Speed alone was never the point.

@@ -29,7 +29,7 @@ Google's AI Overviews appear at the top of search results for an estimated 15–
 
 ## Optimizing for AI-Powered Search Engines
 
-Beyond Google, AI-native search engines are growing rapidly. Perplexity processes millions of queries daily. ChatGPT has a search mode. Claude answers questions directly from the web.
+Beyond Google, AI-native search engines are growing rapidly. [Perplexity](/blog/get-cited-in-perplexity/) processes millions of queries daily. ChatGPT has a search mode, and you can [check whether ChatGPT recommends your brand](/blog/check-if-chatgpt-recommends-your-brand/) in about 15 minutes. Claude answers questions directly from the web.
 
 These systems share common characteristics:
 
@@ -49,7 +49,7 @@ AI systems understand the web through entities — named things: people, places,
 * Maintain a consistent NAP (Name, Address, Phone) across all web properties
 * Build your Google Knowledge Panel through Wikipedia, Wikidata, and authoritative mentions
 * Get cited on high-authority reference sites in your industry
-* Implement Organization schema markup with complete details
+* Implement Organization schema markup with complete details, and consider publishing an [llms.txt file](/blog/llms-txt-explained/) that summarizes your site for AI crawlers
 * Ensure your brand appears consistently across news coverage, social profiles, and industry directories
 
 ## Content That Wins in an AI-First World
@@ -70,4 +70,4 @@ The fundamental goal hasn't changed: be the most authoritative, trustworthy, and
 
 Mediocre content no longer ranks. AI systems are better than any prior generation of search at detecting thin content, recognizing genuine expertise, and surfacing the sources that most comprehensively serve user intent.
 
-At RiseRidge, our AI SEO engine is built for this new reality. We optimize for traditional search signals and AI search signals simultaneously — because in 2025, they're increasingly the same thing.
+At RiseRidge, our AI SEO engine is built for this new reality (see how we approach [ranking on AI search](/rank-on-ai/)). We optimize for traditional search signals and AI search signals simultaneously — because in 2025, they're increasingly the same thing.
