@@ -95,7 +95,7 @@ The profile and your site work as a pair, and prominence includes what exists ac
 - Make sure your business name, address and phone number on the site match the profile.
 - Give each location or service area its own page with unique content.
 - Add `LocalBusiness` structured data that matches the profile. Our [technical SEO audit checklist](/blog/technical-seo-audit-checklist/) explains how to validate schema.
-- Keep your listings on major directories consistent with the profile.
+- Keep your listings on major directories consistent with the profile. In directory-heavy industries this matters even more; our [law firm SEO guide](/blog/law-firm-seo-ai-search/) shows how legal directories feed both Maps and AI answers.
 
 Local intent also shows up in AI answers. Our guide to [checking whether ChatGPT recommends your brand](/blog/check-if-chatgpt-recommends-your-brand/) shows how to test it, and [Rank on AI](/rank-on-ai/) tracks it over time.
 
