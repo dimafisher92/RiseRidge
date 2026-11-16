@@ -85,7 +85,7 @@ The retainer is rarely the whole bill. Plan for these:
 - **Your own time.** Someone has to approve content, share product knowledge and answer questions. Slow approvals slow results.
 - **Link or PR spend.** Ask whether outreach costs are included and how links are earned.
 
-Ask each provider to list what is included, what is extra and what you must supply. Comparing quotes line by line is the fastest way to see why two prices differ.
+Ask each provider to list what is included, what is extra and what you must supply. Comparing quotes line by line is the fastest way to see why two prices differ, and our list of [questions to ask when choosing an SEO agency](/blog/how-to-choose-an-seo-agency/) helps you test what sits behind each number.
 
 ## What Should You Expect in the First Six Months?
 

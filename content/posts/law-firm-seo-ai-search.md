@@ -132,7 +132,7 @@ Some work pays back faster. Fixing a miscategorized Google profile, correcting i
 
 For a sense of what a focused local program can produce, one of our clients, a mobile auto-glass shop in Charlotte, gained 1,747 Google Business Profile views, 82 website clicks and 71 phone calls from the profile in its first 90 days, alongside 6 new local landing pages and 114 technical fixes. It is a different industry, but the mechanics (profile, local pages, technical cleanup, reviews) are the same ones a law firm relies on. See more in our [case studies](/case-studies/).
 
-If you are budgeting, our guides on [what SEO costs](/blog/how-much-does-seo-cost/) and [hiring an agency versus doing it in-house](/blog/seo-agency-vs-in-house/) cover typical price ranges and trade-offs.
+If you are budgeting, our guides on [what SEO costs](/blog/how-much-does-seo-cost/) and [hiring an agency versus doing it in-house](/blog/seo-agency-vs-in-house/) cover typical price ranges and trade-offs, and our guide on [how to choose an SEO agency](/blog/how-to-choose-an-seo-agency/) shows how to vet a provider before you sign.
 
 ## Law Firm SEO Checklist for 2026
 
