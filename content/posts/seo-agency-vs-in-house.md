@@ -134,7 +134,7 @@ Answer these questions honestly. If most answers point one way, you have your ch
 
 ## What Should You Ask Before Hiring an SEO Agency?
 
-If the checklist points to an agency, vet it carefully:
+If the checklist points to an agency, vet it carefully. Our full guide on [how to choose an SEO agency](/blog/how-to-choose-an-seo-agency/) has 12 questions and a scorecard; these are the essentials:
 
 - **Who does the work?** Ask whether the people in the sales call will work on your account. RiseRidge uses a senior-only team for this reason.
 - **What is delivered each month?** Get a written scope, not "ongoing optimization."
