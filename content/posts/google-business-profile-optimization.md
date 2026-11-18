@@ -80,7 +80,7 @@ Reviews feed prominence, and they also decide whether a searcher clicks. Google 
 - **Reply to every review.** Thank people for good ones. Answer bad ones calmly with facts and an offer to fix the problem.
 - **Never buy or invent reviews, and never offer rewards for positive ones.** It breaks Google's policies and can remove your reviews or your listing.
 
-In one of our case studies, a mobile auto-glass shop in Charlotte, NC finished the first 90 days with a 5.0 rating across 138 reviews, and its Google Business Profile recorded 1,747 views, 82 website clicks and 71 phone calls. Reviews were one part of a wider local SEO program. See the full [case studies](/case-studies/).
+In one of our case studies, a mobile auto-glass shop in Charlotte, NC finished the first 90 days with a 5.0 rating across 138 reviews, and its Google Business Profile recorded 1,747 views, 82 website clicks and 71 phone calls. Reviews were one part of a wider local SEO program, which we break down step by step in our guide to [local SEO for auto repair shops](/blog/local-seo-auto-repair-shops/). See the full [case studies](/case-studies/).
 
 ## Should You Post Updates and Answer Questions?
 
