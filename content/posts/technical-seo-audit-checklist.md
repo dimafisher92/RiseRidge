@@ -136,7 +136,7 @@ For the wider picture, see our [AI search visibility guide](/blog/ai-search-visi
 
 ## What does a technical audit look like in practice?
 
-In one RiseRidge engagement with a mobile auto-glass shop in Charlotte, NC, the technical audit surfaced 114 faults in the first 90 days. Fixing them (alongside rewriting 10 pages and labelling 39 images) moved the site health score from 0 to 91 out of 100 and the average Google position from 15.5 to 10.1. The details are on our [case studies](/case-studies/) page. The lesson is the order of work: clear the crawl and indexation blockers first, because everything else depends on them.
+In one RiseRidge engagement with a mobile auto-glass shop in Charlotte, NC, the technical audit surfaced 114 faults in the first 90 days. Fixing them (alongside rewriting 10 pages and labelling 39 images) moved the site health score from 0 to 91 out of 100 and the average Google position from 15.5 to 10.1. The details are on our [case studies](/case-studies/) page, and the full local program is written up in our guide to [local SEO for auto repair shops](/blog/local-seo-auto-repair-shops/). The lesson is the order of work: clear the crawl and indexation blockers first, because everything else depends on them.
 
 ## How often should I repeat a technical audit?
 
