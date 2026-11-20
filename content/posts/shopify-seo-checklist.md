@@ -65,7 +65,7 @@ Use this checklist for every product that matters to revenue, starting with your
 
 ## How Do You Add Structured Data to Shopify?
 
-Structured data is code that labels your content (price, availability, reviews) so search engines can read it without guessing. Most current Shopify themes output basic Product schema. Verify rather than assume.
+Structured data is code that labels your content (price, availability, reviews) so search engines can read it without guessing. Most current Shopify themes output basic Product schema. Verify rather than assume; our [Shopify product schema guide](/blog/shopify-product-schema/) shows how to audit and fix it field by field.
 
 - Paste a product URL into Google's [Rich Results Test](https://search.google.com/test/rich-results) and check that Product is detected with no errors.
 - Confirm `price`, `priceCurrency`, `availability` and `image` are present. Google's [Product structured data documentation](https://developers.google.com/search/docs/appearance/structured-data/product) lists required and recommended fields.

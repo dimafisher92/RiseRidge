@@ -51,7 +51,7 @@ State material, dimensions, capacity, compatibility, care and warranty in plain 
 
 ### Step 3: Add or verify Product schema
 
-Most Shopify themes output basic Product markup, but it is often incomplete. Check that each product page exposes:
+Most Shopify themes output basic Product markup, but it is often incomplete or duplicated by apps (our [Shopify product schema guide](/blog/shopify-product-schema/) walks through the fixes). Check that each product page exposes:
 
 - name, image and a unique description
 - price, currency and availability in the offer
