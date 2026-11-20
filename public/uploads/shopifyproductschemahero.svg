@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="A product card with price and in-stock tag next to a block of structured data code, for Shopify product schema">
+  <rect width="1200" height="675" fill="#FBFAF7"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#A9874E"/>
+
+  <rect x="56" y="54" width="64" height="64" rx="8" fill="none" stroke="rgba(21,20,15,0.15)" stroke-width="2"/>
+  <text x="70" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#1E3A2E">R<tspan fill="#A9874E" dx="-11">R</tspan></text>
+
+  <rect x="230" y="150" width="340" height="400" rx="24" fill="#F4F0E8" stroke="#cfe0d4" stroke-width="2"/>
+  <rect x="262" y="182" width="276" height="190" rx="14" fill="#cfe0d4"/>
+  <path d="M 340 330 L 340 250 C 340 225 360 210 400 210 C 440 210 460 225 460 250 L 460 330 Z" fill="#1E3A2E"/>
+  <rect x="320" y="270" width="160" height="80" rx="10" fill="#1E3A2E"/>
+  <rect x="380" y="290" width="40" height="10" rx="5" fill="#A9874E"/>
+  <rect x="262" y="398" width="200" height="16" rx="8" fill="#1E3A2E"/>
+  <rect x="262" y="430" width="120" height="16" rx="8" fill="#A9874E"/>
+  <rect x="262" y="476" width="132" height="40" rx="20" fill="#1E3A2E"/>
+  <circle cx="290" cy="496" r="8" fill="#F4F0E8"/>
+  <rect x="306" y="490" width="70" height="12" rx="6" fill="#F4F0E8"/>
+
+  <rect x="630" y="150" width="340" height="400" rx="24" fill="#1E3A2E"/>
+  <text x="662" y="210" font-family="'Courier New', monospace" font-size="30" font-weight="700" fill="#A9874E">{</text>
+  <rect x="692" y="236" width="90" height="14" rx="7" fill="#A9874E"/>
+  <rect x="796" y="236" width="130" height="14" rx="7" fill="#F4F0E8"/>
+  <rect x="692" y="276" width="70" height="14" rx="7" fill="#A9874E"/>
+  <rect x="776" y="276" width="110" height="14" rx="7" fill="#F4F0E8"/>
+  <rect x="692" y="316" width="100" height="14" rx="7" fill="#A9874E"/>
+  <rect x="806" y="316" width="80" height="14" rx="7" fill="#F4F0E8"/>
+  <rect x="722" y="356" width="80" height="14" rx="7" fill="#cfe0d4"/>
+  <rect x="816" y="356" width="90" height="14" rx="7" fill="#F4F0E8"/>
+  <rect x="722" y="396" width="110" height="14" rx="7" fill="#cfe0d4"/>
+  <rect x="846" y="396" width="60" height="14" rx="7" fill="#F4F0E8"/>
+  <rect x="692" y="436" width="84" height="14" rx="7" fill="#A9874E"/>
+  <rect x="790" y="436" width="120" height="14" rx="7" fill="#F4F0E8"/>
+  <text x="662" y="510" font-family="'Courier New', monospace" font-size="30" font-weight="700" fill="#A9874E">}</text>
+
+  <path d="M 578 350 L 622 350" stroke="#A9874E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 608 336 L 622 350 L 608 364" fill="none" stroke="#A9874E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -86,7 +86,7 @@ For example, a store owner auditing a Shopify site would check that collection p
 
 ## Which structured data should I implement?
 
-Structured data (schema markup, usually JSON-LD) labels what a page is about so search engines can interpret it and, for some types, show rich results. Match the schema to the page type:
+Structured data (schema markup, usually JSON-LD) labels what a page is about so search engines can interpret it and, for some types, show rich results. Match the schema to the page type (for online stores, see our guide to [Shopify product schema](/blog/shopify-product-schema/)):
 
 | Site type | Schema types to consider |
 |---|---|
