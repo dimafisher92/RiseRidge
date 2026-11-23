@@ -121,7 +121,7 @@ INP replaced First Input Delay as the responsiveness metric in March 2024, so a 
 - **INP:** cut JavaScript execution time, break up long tasks and delay third-party scripts such as chat widgets and tag managers.
 - **CLS:** set width and height on images and embeds, reserve space for ads and banners, and avoid inserting content above what is already on screen.
 
-Check the field data in Search Console first, because it reflects real visitors. Use PageSpeed Insights or Lighthouse to find the cause on a specific URL. Beyond the three metrics, enable Brotli or Gzip compression, set sensible cache headers, minify CSS and JavaScript, and lazy-load images below the fold.
+Check the field data in Search Console first, because it reflects real visitors. Use PageSpeed Insights or Lighthouse to find the cause on a specific URL. On Shopify, apps and theme sections cause most failures; see [how to fix Shopify Core Web Vitals](/blog/shopify-core-web-vitals/). Beyond the three metrics, enable Brotli or Gzip compression, set sensible cache headers, minify CSS and JavaScript, and lazy-load images below the fold.
 
 ## Are AI crawlers allowed to read my site?
 
