@@ -86,7 +86,7 @@ The common Shopify causes, in order of how often they matter:
 4. **Third-party tags.** Chat widgets, pop-ups and tracking pixels slow interaction. Load them late or drop them.
 5. **A bloated theme.** If you have customized a theme for years, test a fresh version of the same theme in a preview and compare scores.
 
-Measure with the Core Web Vitals report in Search Console, which uses real visitor data, and use PageSpeed Insights to find the specific files holding a page back.
+Measure with the Core Web Vitals report in Search Console, which uses real visitor data, and use PageSpeed Insights to find the specific files holding a page back. Our guide to [fixing Core Web Vitals on Shopify](/blog/shopify-core-web-vitals/) walks through each metric step by step.
 
 ## What Content Does a Shopify Store Need?
 
