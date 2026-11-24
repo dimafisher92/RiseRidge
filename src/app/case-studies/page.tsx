@@ -15,12 +15,12 @@ import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'SEO Case Studies & Results',
+  title: 'SEO Case Studies: Shopify & Local Results',
   description:
-    'RiseRidge SEO and GEO results: ChatGPT became a DTC brand\'s #2 organic sales source in 40 days, +102% Shopify organic revenue, 71 calls for a local shop.',
+    'Real RiseRidge results: ChatGPT became a DTC brand\'s #2 organic source of new-customer sales, +102% Shopify organic revenue, 71 calls for a local shop.',
   alternates: { canonical: '/case-studies' },
   openGraph: {
-    title: 'SEO Case Studies & Results | RiseRidge',
+    title: 'SEO Case Studies: Shopify & Local Results | RiseRidge',
     description: 'Proven results: +102% Shopify organic revenue, page-one rankings for local service, $21K/day peak revenue. See our AI SEO case studies.',
   },
 };

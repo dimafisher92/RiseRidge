@@ -6,12 +6,12 @@ import { JsonLd } from '@/components/JsonLd';
 import { SeoChecker } from '@/components/seo-checker/SeoChecker';
 
 export const metadata: Metadata = {
-  title: 'Free SEO Website Checker',
+  title: 'Free SEO Checker: Instant Website Score',
   description:
-    'Get a free, instant SEO health check for any website. See your score and a plain-English list of what to fix and why it matters. No jargon.',
+    'Check any website\'s SEO for free. Get an instant health score and a plain-English list of what to fix first and why it matters, with no jargon.',
   alternates: { canonical: '/seo-checker' },
   openGraph: {
-    title: 'Free SEO Website Checker | RiseRidge',
+    title: 'Free SEO Checker: Instant Website Score | RiseRidge',
     description:
       'Instantly audit any website and discover what is holding back your search rankings — explained in plain business language.',
   },
