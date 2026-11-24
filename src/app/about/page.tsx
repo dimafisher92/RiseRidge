@@ -6,12 +6,12 @@ import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'About RiseRidge — AI-Driven SEO Agency',
+  title: 'About Us: Senior-Only AI SEO Agency Since 2020',
   description:
-    'RiseRidge engineers organic search growth that compounds. AI-powered SEO infrastructure with hands-on strategic execution. Learn about our mission and values.',
+    'Meet RiseRidge, an AI-driven SEO agency founded in 2020: a senior-only team, month-to-month engagements and 250+ clients served. See how we work.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About RiseRidge — AI-Driven SEO Agency',
+    title: 'About RiseRidge: Senior-Only AI SEO Agency Since 2020',
     description: 'We engineer organic search growth that compounds. Meet the AI SEO agency built for measurable growth.',
   },
 };

@@ -9,12 +9,12 @@ import { BookingButton } from '@/components/BookingButton';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Rank on AI Search — LLM Visibility',
+  title: 'Rank on AI: Get Recommended by ChatGPT & Gemini',
   description:
-    'Improve your brand visibility on AI search platforms like ChatGPT, Claude, Gemini and Perplexity. Monitor and improve how AI recommends your business.',
+    'See how ChatGPT, Claude, Gemini and Perplexity describe your brand, then fix what keeps AI answers from recommending you. LLM visibility work by RiseRidge.',
   alternates: { canonical: '/rank-on-ai' },
   openGraph: {
-    title: 'Rank on AI Search — LLM Visibility | RiseRidge',
+    title: 'Rank on AI: Get Recommended by ChatGPT & Gemini | RiseRidge',
     description: 'The future of search is AI. Make sure your brand is visible when AI answers questions about your industry.',
   },
 };
