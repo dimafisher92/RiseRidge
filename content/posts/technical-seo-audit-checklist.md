@@ -64,7 +64,7 @@ Duplicates split ranking signals across several URLs. The common sources:
 - Trailing slash and no trailing slash
 - URL parameters such as `?sort=price` or `?ref=banner`
 - Printer-friendly or AMP versions
-- Product variants with near-identical text
+- Product variants with near-identical text, and on Shopify the same product under several collection paths (see [how to fix duplicate product URLs on Shopify](/blog/shopify-duplicate-product-urls/))
 
 The fix has two parts. First, pick one preferred version of each URL and 301-redirect the others to it. Second, add a self-referencing `rel="canonical"` tag to every indexable page, so parameter and tracking variants point back to the clean URL. Google's guide to [consolidating duplicate URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) covers the methods and their limits.
 
