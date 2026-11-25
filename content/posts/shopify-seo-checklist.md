@@ -35,7 +35,7 @@ Check these three things:
 - **Filter and sort URLs.** Faceted navigation (`?filter.v.price...`, `?sort_by=`) can generate thousands of near-identical pages. Keep them out of internal links where you can.
 - **Variant URLs.** `?variant=123` pages should canonicalize to the main product.
 
-If you see a large gap between the pages in your sitemap and the pages Google has indexed, duplicates are a likely cause.
+If you see a large gap between the pages in your sitemap and the pages Google has indexed, duplicates are a likely cause. Our guide to [fixing duplicate product URLs on Shopify](/blog/shopify-duplicate-product-urls/) walks through the theme change, tag pages and Search Console checks step by step.
 
 ## How Should You Optimize Collection Pages?
 

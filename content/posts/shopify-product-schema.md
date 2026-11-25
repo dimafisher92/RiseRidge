@@ -149,7 +149,7 @@ Use this as a quick audit for any store:
 11. Rich Results Test passes for a simple product, a variant product and an out-of-stock product.
 12. Search Console product reports reviewed monthly.
 
-Schema is one item on a longer list. Our [Shopify SEO checklist](/blog/shopify-seo-checklist/) puts it in context with crawling, collections, speed and content, and the [technical SEO audit checklist](/blog/technical-seo-audit-checklist/) covers how to audit structured data alongside the rest of the site.
+Schema is one item on a longer list. Markup works best when each product has one clear URL, so check for [duplicate product URLs on Shopify](/blog/shopify-duplicate-product-urls/) as well. Our [Shopify SEO checklist](/blog/shopify-seo-checklist/) puts it in context with crawling, collections, speed and content, and the [technical SEO audit checklist](/blog/technical-seo-audit-checklist/) covers how to audit structured data alongside the rest of the site.
 
 ## What Results Can Product Schema Drive?
 
