@@ -19,11 +19,12 @@ export const metadata: Metadata = {
   },
 };
 
+// RiseRidge client results only (content/facts.md); no unsourced market stats.
 const AI_STATS = [
-  { value: '40%', label: 'Searches via AI by 2026' },
-  { value: '4B+', label: 'Monthly AI Search Queries' },
-  { value: '62%', label: 'Users Trust AI Answers' },
-  { value: '5x', label: 'Growth in AI Search YoY' },
+  { value: '$22.1K', label: 'Client sales from ChatGPT in 40 days' },
+  { value: '4,387', label: 'ChatGPT visits (from 43)' },
+  { value: '$5.03', label: 'Per ChatGPT visit vs $2.18 Google' },
+  { value: '#2', label: 'Organic source of new customers' },
 ];
 
 const STEPS = [
@@ -65,7 +66,7 @@ const STEPS = [
 const BENEFITS = [
   {
     title: 'First-Mover Advantage',
-    description: 'Most businesses haven\'t started optimizing for AI search. Getting ahead now means establishing dominance before your competitors even realize the opportunity.',
+    description: 'Many businesses haven\'t started optimizing for AI search yet. Starting now gives you a head start while competitors are still catching up.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
@@ -92,7 +93,7 @@ const BENEFITS = [
   },
   {
     title: 'Future-Proof Strategy',
-    description: 'As AI search continues to grow, brands optimized for LLM visibility will capture an increasing share of high-intent traffic that traditional SEO alone can\'t reach.',
+    description: 'As more buyers ask AI assistants for recommendations, brands that are visible in those answers can reach high-intent shoppers that traditional SEO alone may miss.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -124,8 +125,8 @@ export default function RankOnAIPage() {
             <span className="text-gradient-blue-cyan">is AI</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            Millions of people now use AI assistants like ChatGPT, Claude, Gemini, and Perplexity
-            instead of Google. Is your brand visible when AI answers questions about your industry?
+            More and more people ask AI assistants like ChatGPT, Claude, Gemini, and Perplexity
+            for recommendations alongside Google. Is your brand visible when AI answers questions about your industry?
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <BookingButton
@@ -168,9 +169,9 @@ export default function RankOnAIPage() {
                 <ul className="mt-6 space-y-3">
                   {[
                     'AI gives one synthesized answer, not 10 links',
-                    'Users trust AI responses more than ads',
-                    'AI search is growing 5x year-over-year',
-                    "Most competitors haven't started optimizing",
+                    'Buyers ask AI for a shortlist before visiting any site',
+                    'Answers are built from a handful of cited sources',
+                    "Many brands haven't started optimizing for it yet",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-body">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A9874E" strokeWidth="2" className="mt-0.5 flex-shrink-0">

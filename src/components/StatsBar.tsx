@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { ResultsDisclaimer } from './ResultsDisclaimer';
 
 const DEFAULT_STATS = [
   { value: '250+', label: 'Clients served' },
-  { value: '3x', label: 'Avg ROAS increase' },
+  { value: '3x', label: 'Avg client ROAS' },
   { value: '$25M+', label: 'Revenue generated' },
   { value: '10M+', label: 'Keywords tracked' },
 ];
@@ -65,6 +66,9 @@ export function StatsBar({ stats = DEFAULT_STATS }: { stats?: { value: string; l
             <div className="mt-2 text-xs text-on-dark-muted uppercase tracking-[0.18em] font-mono">{stat.label}</div>
           </motion.div>
         ))}
+      </div>
+      <div className="mx-auto max-w-7xl px-6 pb-6">
+        <ResultsDisclaimer tone="dark" className="text-center" />
       </div>
     </section>
   );

@@ -26,7 +26,7 @@ export async function GET() {
 
   const body = `# RiseRidge
 
-> RiseRidge is an AI-driven SEO agency that engineers organic search growth that compounds. We pair proprietary AI-powered SEO infrastructure with hands-on strategic execution to move businesses from invisible to undeniable — and we prove every gain in the numbers.
+> RiseRidge is an AI-driven SEO agency that engineers organic search growth that compounds. We pair proprietary AI-powered SEO infrastructure with hands-on strategic execution to help businesses get found in Google and AI answers, and we report every result in plain numbers.
 
 RiseRidge helps e-commerce stores, local businesses, startups, and established brands grow organic traffic and revenue through technical SEO, content intelligence, and AI search (LLM) visibility optimization. We track and improve how brands appear across Google as well as AI answer engines like ChatGPT, Claude, Gemini, and Perplexity.
 
@@ -38,7 +38,8 @@ Key facts:
 - Award: TOP 100 USA Entrepreneurs (TOP USA Awards 2023).
 - Service model: senior-only team, month-to-month engagements, no long-term lock-in.
 - Differentiators: proprietary AI SEO automation engine, data-driven (not opinion-driven) strategy, full-funnel focus on revenue rather than vanity metrics.
-- Proven results include scaling organic revenue to $21K/day in 4 months, 255% year-over-year organic revenue growth, and 969% organic traffic growth in a restricted niche.
+- Example client results (results vary; past performance is not indicative of future results): $21K/day peak daily revenue within 4 months for an e-commerce brand, 255% year-over-year organic revenue growth for a SaaS company, and +969% organic sessions in a restricted advertising niche.
+- RiseRidge does not guarantee specific rankings, traffic, leads or revenue.
 - Contact: hello@riseridge.io
 
 ## Core Pages
@@ -49,6 +50,8 @@ Key facts:
 - [Free SEO Checker](${baseUrl}/seo-checker): A free tool that audits any website's on-page and technical SEO and returns a prioritized report.
 - [Case Studies](${baseUrl}/case-studies): Real client results with revenue and traffic outcomes.
 - [About](${baseUrl}/about): Who RiseRidge is, our values, and our approach.
+- [Privacy Policy](${baseUrl}/privacy): What data the site collects and how it is used.
+- [Terms of Service](${baseUrl}/terms): Terms for using the site and the free SEO checker.
 
 ## Services
 
@@ -67,7 +70,7 @@ Key facts:
 
 ## Case studies
 
-Full write-ups: [Case Studies](${baseUrl}/case-studies). Clients are anonymized.
+Full write-ups: [Case Studies](${baseUrl}/case-studies). Clients are anonymized. Results vary; past performance is not indicative of future results.
 
 - DTC accessories brand on Shopify, SEO + GEO (first 40 days, Oct–Nov 2026): organic sales +24.5% ($222.2K to $276.7K); page-one Google rankings for 20 to 63 of 146 tracked keywords; ChatGPT went from $0 to $22.1K in first-time customer sales (43 to 4,387 visits) and became the #2 organic source of new customers after Google; a ChatGPT visit was worth $5.03 vs $2.18 for a Google visit.
 - DTC travel-bag brand (two Shopify stores, EN + ES): flagship organic revenue +102%; organic clicks +106% (EN store) and +189% (ES store); product rich-snippet impressions 866 to 34,257.

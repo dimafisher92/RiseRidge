@@ -4,6 +4,7 @@ import { ScrollReveal } from './ScrollReveal';
 import { CTASection } from './CTASection';
 import { BookingButton } from './BookingButton';
 import { JsonLd } from './JsonLd';
+import { ResultsDisclaimer } from './ResultsDisclaimer';
 
 // Shared layout for the service landing pages (/ai-seo-agency, /shopify-seo,
 // /local-seo). Each page passes its copy; every number about RiseRidge or a
@@ -134,6 +135,7 @@ export function ServicePage({ content }: { content: ServicePageContent }) {
                 Results from client work
               </h2>
               <p className="mt-3 text-sm text-subtle">Clients are anonymized. Figures are from their analytics and Search Console.</p>
+              <ResultsDisclaimer className="mt-2 max-w-3xl" />
             </div>
             <Link href="/case-studies" className="text-sm font-semibold text-forest hover:text-brass transition-colors shrink-0">
               All case studies ↗
