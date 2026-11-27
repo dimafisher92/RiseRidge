@@ -69,7 +69,7 @@ A simple set to upload:
 - Your team at work
 - Finished jobs or products
 
-Use your own photos, not stock images. Add new ones regularly so the profile does not look abandoned.
+Use your own photos, not stock images. Add new ones regularly so the profile does not look abandoned. Restaurants should add their menu to the profile as well; our [restaurant SEO guide](/blog/restaurant-seo/) covers the menu, photo and review routine for food businesses.
 
 ## How Do You Get More Reviews?
 
@@ -80,7 +80,7 @@ Reviews feed prominence, and they also decide whether a searcher clicks. Google 
 - **Reply to every review.** Thank people for good ones. Answer bad ones calmly with facts and an offer to fix the problem.
 - **Never buy or invent reviews, and never offer rewards for positive ones.** It breaks Google's policies and can remove your reviews or your listing.
 
-In one of our case studies, a mobile auto-glass shop in Charlotte, NC finished the first 90 days with a 5.0 rating across 138 reviews, and its Google Business Profile recorded 1,747 views, 82 website clicks and 71 phone calls. Reviews were one part of a wider local SEO program. See the full [case studies](/case-studies/).
+In one of our case studies, a mobile auto-glass shop in Charlotte, NC finished the first 90 days with a 5.0 rating across 138 reviews, and its Google Business Profile recorded 1,747 views, 82 website clicks and 71 phone calls. Reviews were one part of a wider local SEO program, which we break down step by step in our guide to [local SEO for auto repair shops](/blog/local-seo-auto-repair-shops/). See the full [case studies](/case-studies/).
 
 ## Should You Post Updates and Answer Questions?
 
@@ -95,7 +95,7 @@ The profile and your site work as a pair, and prominence includes what exists ac
 - Make sure your business name, address and phone number on the site match the profile.
 - Give each location or service area its own page with unique content.
 - Add `LocalBusiness` structured data that matches the profile. Our [technical SEO audit checklist](/blog/technical-seo-audit-checklist/) explains how to validate schema.
-- Keep your listings on major directories consistent with the profile.
+- Keep your listings on major directories consistent with the profile. In directory-heavy industries this matters even more; our [law firm SEO guide](/blog/law-firm-seo-ai-search/) shows how legal directories feed both Maps and AI answers.
 
 Local intent also shows up in AI answers. Our guide to [checking whether ChatGPT recommends your brand](/blog/check-if-chatgpt-recommends-your-brand/) shows how to test it, and [Rank on AI](/rank-on-ai/) tracks it over time.
 

@@ -6,12 +6,12 @@ import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'AI SEO Tools & Features',
+  title: 'AI SEO Services: Audits, Content & Rank Tracking',
   description:
-    'Explore RiseRidge\'s AI SEO toolkit: automation, content intelligence, rank tracking, technical audits, backlink analysis and LLM visibility monitoring.',
+    'What RiseRidge does: AI SEO automation, technical audits, content intelligence, rank tracking, local SEO and AI visibility monitoring. Month-to-month, no lock-in.',
   alternates: { canonical: '/features' },
   openGraph: {
-    title: 'AI SEO Tools & Features | RiseRidge',
+    title: 'AI SEO Services: Audits, Content & Rank Tracking | RiseRidge',
     description: 'Discover the full suite of AI-powered SEO tools that power our clients\' organic growth.',
   },
 };

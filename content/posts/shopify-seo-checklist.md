@@ -35,7 +35,7 @@ Check these three things:
 - **Filter and sort URLs.** Faceted navigation (`?filter.v.price...`, `?sort_by=`) can generate thousands of near-identical pages. Keep them out of internal links where you can.
 - **Variant URLs.** `?variant=123` pages should canonicalize to the main product.
 
-If you see a large gap between the pages in your sitemap and the pages Google has indexed, duplicates are a likely cause.
+If you see a large gap between the pages in your sitemap and the pages Google has indexed, duplicates are a likely cause. Our guide to [fixing duplicate product URLs on Shopify](/blog/shopify-duplicate-product-urls/) walks through the theme change, tag pages and Search Console checks step by step.
 
 ## How Should You Optimize Collection Pages?
 
@@ -65,7 +65,7 @@ Use this checklist for every product that matters to revenue, starting with your
 
 ## How Do You Add Structured Data to Shopify?
 
-Structured data is code that labels your content (price, availability, reviews) so search engines can read it without guessing. Most current Shopify themes output basic Product schema. Verify rather than assume.
+Structured data is code that labels your content (price, availability, reviews) so search engines can read it without guessing. Most current Shopify themes output basic Product schema. Verify rather than assume; our [Shopify product schema guide](/blog/shopify-product-schema/) shows how to audit and fix it field by field.
 
 - Paste a product URL into Google's [Rich Results Test](https://search.google.com/test/rich-results) and check that Product is detected with no errors.
 - Confirm `price`, `priceCurrency`, `availability` and `image` are present. Google's [Product structured data documentation](https://developers.google.com/search/docs/appearance/structured-data/product) lists required and recommended fields.
@@ -86,7 +86,7 @@ The common Shopify causes, in order of how often they matter:
 4. **Third-party tags.** Chat widgets, pop-ups and tracking pixels slow interaction. Load them late or drop them.
 5. **A bloated theme.** If you have customized a theme for years, test a fresh version of the same theme in a preview and compare scores.
 
-Measure with the Core Web Vitals report in Search Console, which uses real visitor data, and use PageSpeed Insights to find the specific files holding a page back.
+Measure with the Core Web Vitals report in Search Console, which uses real visitor data, and use PageSpeed Insights to find the specific files holding a page back. Our guide to [fixing Core Web Vitals on Shopify](/blog/shopify-core-web-vitals/) walks through each metric step by step.
 
 ## What Content Does a Shopify Store Need?
 

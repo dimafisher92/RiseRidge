@@ -73,7 +73,7 @@ An agency is usually the better fit when:
 1. **You need results to start soon.** Hiring and onboarding a good SEO takes months. An agency can start an audit within weeks.
 2. **You need several skills at once.** A site with technical problems, thin content and a weak Google Business Profile needs three kinds of expertise. One hire rarely has all three.
 3. **Your budget is below a full salary.** If you can spend a few thousand dollars a month but not a full-time salary, a retainer gets more done for the money.
-4. **SEO is not your core business.** A dental practice or a law firm wants leads, not an SEO department to manage.
+4. **SEO is not your core business.** A dental practice or a law firm wants leads, not an SEO department to manage (see our guide to [law firm SEO](/blog/law-firm-seo-ai-search/) for what that work involves).
 5. **You want to test SEO before committing.** A month-to-month agency contract lets you stop if results do not come. RiseRidge, for example, works month-to-month with no long-term lock-in.
 
 Agencies also see many sites, which helps with fast-moving changes such as AI search. If you want to be cited in ChatGPT or Google AI Overviews, a team already doing [generative engine optimization](/blog/what-is-generative-engine-optimization/) for other clients brings that experience with them. Our [Rank on AI service](/rank-on-ai/) covers this work.
@@ -134,7 +134,7 @@ Answer these questions honestly. If most answers point one way, you have your ch
 
 ## What Should You Ask Before Hiring an SEO Agency?
 
-If the checklist points to an agency, vet it carefully:
+If the checklist points to an agency, vet it carefully. Our full guide on [how to choose an SEO agency](/blog/how-to-choose-an-seo-agency/) has 12 questions and a scorecard; these are the essentials:
 
 - **Who does the work?** Ask whether the people in the sales call will work on your account. RiseRidge uses a senior-only team for this reason.
 - **What is delivered each month?** Get a written scope, not "ongoing optimization."

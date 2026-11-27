@@ -38,7 +38,7 @@ Read that again if you are about to commission a homepage redesign. The model wa
 
 Looking at what the consistently-named firms had in common, three things separated them — and none of them is a copywriting exercise.
 
-**Directory dominance.** The winners were present, complete, and well-positioned on exactly the directories the model was citing. Not one directory. The stack of them.
+**Directory dominance.** The winners were present, complete, and well-positioned on exactly the directories the model was citing. Not one directory. The stack of them. (We turned this into a practical playbook in our guide to [law firm SEO in the age of AI search](/blog/law-firm-seo-ai-search/).)
 
 **Review depth, not just review scores.** A high rating on thin volume did nothing. The firms that surfaced repeatedly had both — Hirsch & Lyon, for example, carried 282 Google reviews at a 4.9 average. Volume at a high average reads as evidence; a 5.0 on eleven reviews does not.
 

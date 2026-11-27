@@ -6,6 +6,7 @@ import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 import { Markdown } from '@/components/Markdown';
+import { RelatedPosts } from '@/components/RelatedPosts';
 
 interface Props {
   params: { slug: string };
@@ -154,6 +155,8 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         </section>
       </article>
+
+      <RelatedPosts post={post} />
 
       <CTASection
         heading="Want Results Like These?"

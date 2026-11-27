@@ -64,7 +64,7 @@ Duplicates split ranking signals across several URLs. The common sources:
 - Trailing slash and no trailing slash
 - URL parameters such as `?sort=price` or `?ref=banner`
 - Printer-friendly or AMP versions
-- Product variants with near-identical text
+- Product variants with near-identical text, and on Shopify the same product under several collection paths (see [how to fix duplicate product URLs on Shopify](/blog/shopify-duplicate-product-urls/))
 
 The fix has two parts. First, pick one preferred version of each URL and 301-redirect the others to it. Second, add a self-referencing `rel="canonical"` tag to every indexable page, so parameter and tracking variants point back to the clean URL. Google's guide to [consolidating duplicate URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) covers the methods and their limits.
 
@@ -86,7 +86,7 @@ For example, a store owner auditing a Shopify site would check that collection p
 
 ## Which structured data should I implement?
 
-Structured data (schema markup, usually JSON-LD) labels what a page is about so search engines can interpret it and, for some types, show rich results. Match the schema to the page type:
+Structured data (schema markup, usually JSON-LD) labels what a page is about so search engines can interpret it and, for some types, show rich results. Match the schema to the page type (for online stores, see our guide to [Shopify product schema](/blog/shopify-product-schema/)):
 
 | Site type | Schema types to consider |
 |---|---|
@@ -121,7 +121,7 @@ INP replaced First Input Delay as the responsiveness metric in March 2024, so a 
 - **INP:** cut JavaScript execution time, break up long tasks and delay third-party scripts such as chat widgets and tag managers.
 - **CLS:** set width and height on images and embeds, reserve space for ads and banners, and avoid inserting content above what is already on screen.
 
-Check the field data in Search Console first, because it reflects real visitors. Use PageSpeed Insights or Lighthouse to find the cause on a specific URL. Beyond the three metrics, enable Brotli or Gzip compression, set sensible cache headers, minify CSS and JavaScript, and lazy-load images below the fold.
+Check the field data in Search Console first, because it reflects real visitors. Use PageSpeed Insights or Lighthouse to find the cause on a specific URL. On Shopify, apps and theme sections cause most failures; see [how to fix Shopify Core Web Vitals](/blog/shopify-core-web-vitals/). Beyond the three metrics, enable Brotli or Gzip compression, set sensible cache headers, minify CSS and JavaScript, and lazy-load images below the fold.
 
 ## Are AI crawlers allowed to read my site?
 
@@ -136,7 +136,7 @@ For the wider picture, see our [AI search visibility guide](/blog/ai-search-visi
 
 ## What does a technical audit look like in practice?
 
-In one RiseRidge engagement with a mobile auto-glass shop in Charlotte, NC, the technical audit surfaced 114 faults in the first 90 days. Fixing them (alongside rewriting 10 pages and labelling 39 images) moved the site health score from 0 to 91 out of 100 and the average Google position from 15.5 to 10.1. The details are on our [case studies](/case-studies/) page. The lesson is the order of work: clear the crawl and indexation blockers first, because everything else depends on them.
+In one RiseRidge engagement with a mobile auto-glass shop in Charlotte, NC, the technical audit surfaced 114 faults in the first 90 days. Fixing them (alongside rewriting 10 pages and labelling 39 images) moved the site health score from 0 to 91 out of 100 and the average Google position from 15.5 to 10.1. The details are on our [case studies](/case-studies/) page, and the full local program is written up in our guide to [local SEO for auto repair shops](/blog/local-seo-auto-repair-shops/). The lesson is the order of work: clear the crawl and indexation blockers first, because everything else depends on them.
 
 ## How often should I repeat a technical audit?
 
