@@ -69,7 +69,7 @@ A simple set to upload:
 - Your team at work
 - Finished jobs or products
 
-Use your own photos, not stock images. Add new ones regularly so the profile does not look abandoned.
+Use your own photos, not stock images. Add new ones regularly so the profile does not look abandoned. Restaurants should add their menu to the profile as well; our [restaurant SEO guide](/blog/restaurant-seo/) covers the menu, photo and review routine for food businesses.
 
 ## How Do You Get More Reviews?
 
