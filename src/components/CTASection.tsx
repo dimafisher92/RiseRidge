@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useAuditPopup } from './AuditPopup';
 
 export function CTASection({
-  heading = 'Ready to Dominate Search?',
+  heading = 'Ready to Grow Organic Search?',
   description = 'Get your free AI-powered SEO audit and discover untapped ranking opportunities.',
   primaryLabel = 'Get Your Free Audit',
   secondaryLabel = 'See Our Results',

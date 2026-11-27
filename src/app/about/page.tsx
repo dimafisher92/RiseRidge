@@ -4,6 +4,7 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
+import { ResultsDisclaimer } from '@/components/ResultsDisclaimer';
 
 export const metadata: Metadata = {
   title: 'About Us: Senior-Only AI SEO Agency Since 2020',
@@ -156,8 +157,8 @@ export default function AboutPage() {
             <span className="text-gradient-blue-cyan">We Navigate.</span>
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            RiseRidge engineers organic search growth that compounds. We combine AI-powered SEO
-            infrastructure with hands-on strategic execution to move businesses from invisible to undeniable.
+            RiseRidge builds organic search growth that compounds. We combine AI-powered SEO
+            infrastructure with hands-on strategic execution to help businesses get found in Google and AI answers.
           </p>
         </div>
       </section>
@@ -181,6 +182,7 @@ export default function AboutPage() {
               </div>
             ))}
           </dl>
+          <ResultsDisclaimer className="mt-6 max-w-3xl" />
         </div>
       </section>
 
@@ -194,7 +196,7 @@ export default function AboutPage() {
                 <SectionLabel number="01" text="Mission" />
                 <h2 id="mission-heading" className="mt-4 font-display font-semibold text-2xl md:text-4xl text-ice max-w-3xl leading-tight">
                   We help e-commerce and growth-stage businesses{' '}
-                  <span className="text-gradient-blue-cyan">dominate organic search</span>{' '}
+                  <span className="text-gradient-blue-cyan">grow in organic search</span>{' '}
                   using proprietary AI tooling.
                 </h2>
                 <p className="mt-6 text-muted leading-relaxed max-w-2xl">

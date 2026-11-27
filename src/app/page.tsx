@@ -7,6 +7,7 @@ import { SectionLabel } from '@/components/SectionLabel';
 import { CTASection } from '@/components/CTASection';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { JsonLd } from '@/components/JsonLd';
+import { ResultsDisclaimer } from '@/components/ResultsDisclaimer';
 import { FAQ } from '@/components/FAQ';
 import TestimonialsSection from '@/components/ui/testimonial-v2';
 import { VideoTestimonials } from '@/components/VideoTestimonials';
@@ -14,7 +15,7 @@ import { VideoTestimonials } from '@/components/VideoTestimonials';
 export const metadata: Metadata = {
   title: { absolute: 'RiseRidge — AI-Driven SEO. Measurable Growth.' },
   description:
-    'RiseRidge pairs AI-powered SEO infrastructure with hands-on strategy to move businesses from invisible to undeniable, and proves every gain in the numbers.',
+    'RiseRidge pairs AI-powered SEO infrastructure with hands-on strategy to help businesses get found in Google and AI answers, and reports results in plain numbers.',
   alternates: { canonical: '/' },
 };
 
@@ -79,8 +80,8 @@ const STEPS = [
   },
   {
     number: '03',
-    title: 'Dominate',
-    description: 'Watch your rankings climb as our AI continuously optimizes, monitors, and adapts your SEO strategy in real-time.',
+    title: 'Optimize',
+    description: 'We keep monitoring, testing and adapting your SEO, and report what moved, what didn\'t, and why.',
   },
 ];
 
@@ -255,7 +256,7 @@ export default function HomePage() {
           <ScrollReveal>
             <SectionLabel number="03" text="Results" />
             <h2 id="featured-case-heading" className="mt-4 font-display font-semibold text-4xl md:text-5xl text-ink">
-              Proven results
+              Client results
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
@@ -265,7 +266,7 @@ export default function HomePage() {
                   E-commerce
                 </span>
                 <h3 className="mt-4 font-display font-semibold text-3xl text-ink leading-tight">
-                  Scaled organic revenue to $21K/day in 4 months.
+                  Reached $21K/day in peak daily revenue within 4 months.
                 </h3>
                 <p className="mt-4 text-body leading-relaxed">
                   An e-commerce brand over-reliant on paid ads partnered with RiseRidge. We deployed our AI automation engine for a full technical overhaul, rebuilt site architecture, and implemented strategic content clusters.
@@ -276,13 +277,13 @@ export default function HomePage() {
                 >
                   Read all case studies ↗
                 </Link>
+                <ResultsDisclaimer className="mt-6" />
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {[
                   { value: '$21K/day', label: 'Peak revenue' },
                   { value: '340%', label: 'Traffic growth' },
-                  { value: '4 mo', label: 'Time to results' },
-                  { value: '#1–3', label: 'Avg position' },
+                  { value: '4 mo', label: 'Engagement length' },
                 ].map((stat) => (
                   <div key={stat.label} className="rounded-[6px] bg-panel p-5 text-center border border-line">
                     <div className="font-display text-2xl font-semibold text-brass">{stat.value}</div>

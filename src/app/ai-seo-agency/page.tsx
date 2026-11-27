@@ -134,7 +134,7 @@ const CONTENT: ServicePageContent = {
     {
       question: 'Can you guarantee ChatGPT will recommend my brand?',
       answer:
-        'No one can honestly guarantee what an AI engine will say. What we guarantee is transparency: you see every tracked prompt, every change we ship and the result. Engagements are month-to-month, so we earn each month with results.',
+        'No one can honestly guarantee what an AI engine will say. What we commit to is transparency: you see every tracked prompt, every change we ship and the result. Engagements are month-to-month, so we earn each month with results.',
     },
     {
       question: 'Do you also do traditional SEO?',

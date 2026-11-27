@@ -13,6 +13,7 @@ import {
 import { ComparisonBarsChart, PositionTrendChart } from '@/components/CaseStudyCharts';
 import { CTASection } from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
+import { ResultsDisclaimer } from '@/components/ResultsDisclaimer';
 
 export const metadata: Metadata = {
   title: 'SEO Case Studies: Shopify & Local Results',
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/case-studies' },
   openGraph: {
     title: 'SEO Case Studies: Shopify & Local Results | RiseRidge',
-    description: 'Proven results: +102% Shopify organic revenue, page-one rankings for local service, $21K/day peak revenue. See our AI SEO case studies.',
+    description: 'Client results: +102% Shopify organic revenue, page-one rankings for local service, $21K/day peak revenue. See our AI SEO case studies.',
   },
 };
 
@@ -169,13 +170,13 @@ const CASE_STUDIES = [
     tag: 'DTC Beauty',
     title: '3x ROAS Through Combined SEO & Content Strategy',
     challenge:
-      'A DTC beauty brand was struggling with sky-high customer acquisition costs and diminishing returns from paid channels. Despite having quality products, they were invisible in organic search for key category and informational queries. Content was sporadic and not optimized for search intent.',
+      'A DTC beauty brand was struggling with high customer acquisition costs and diminishing returns from paid channels. Despite having quality products, they were invisible in organic search for key category and informational queries. Content was sporadic and not optimized for search intent.',
     solution:
       'Using our Content Intelligence platform, we built a comprehensive topic authority strategy across skincare education, ingredient guides, and product comparisons. Our AI analyzed top-performing content in the beauty space and generated a 90-day content roadmap. Combined with technical SEO improvements and strategic backlink acquisition, the brand became a topical authority.',
     results: [
       { value: '3x', label: 'ROAS Improvement' },
       { value: '185%', label: 'Organic Sessions Growth' },
-      { value: '-42%', label: 'Customer Acquisition Cost' },
+      { value: '-42%', label: 'CAC, This Client' },
     ],
   },
   {
@@ -261,7 +262,7 @@ export default function CaseStudiesPage() {
         <AnimatedBackground />
         <div className="relative mx-auto max-w-4xl px-6 text-center">
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan mb-6">
-            Proven Results
+            Client Results
           </p>
           <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-ice">
             Real Results.{' '}
@@ -504,6 +505,7 @@ export default function CaseStudiesPage() {
               <CaseStudyCard key={study.title} {...study} index={i} />
             ))}
           </div>
+          <ResultsDisclaimer className="mt-10 max-w-3xl" />
         </div>
       </section>
 

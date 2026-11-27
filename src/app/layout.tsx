@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: '%s | RiseRidge',
   },
   description:
-    'RiseRidge pairs AI-powered SEO infrastructure with hands-on strategy to move businesses from invisible to undeniable — and prove every gain in the numbers.',
+    'RiseRidge pairs AI-powered SEO infrastructure with hands-on strategy to help businesses get found in Google and AI answers, and reports results in plain numbers.',
   openGraph: {
     title: 'RiseRidge — AI-Driven SEO. Measurable Growth.',
     description:

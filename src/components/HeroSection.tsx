@@ -7,7 +7,7 @@ import { useAuditPopup } from './AuditPopup';
 const TRUST_PILLS = [
   'Free audit',
   'Month-to-month, no lock-in',
-  'First results in ~90 days',
+  '90-day roadmap up front',
 ];
 
 export function HeroSection() {
@@ -59,8 +59,8 @@ export function HeroSection() {
             Measurable <span className="italic text-brass">growth.</span>
           </h1>
           <p className="mx-auto mt-7 max-w-2xl text-lg md:text-xl text-body leading-relaxed">
-            RiseRidge pairs AI-powered SEO infrastructure with hands-on strategy to move
-            businesses from invisible to undeniable — and prove every gain in the numbers.
+            RiseRidge pairs AI-powered SEO infrastructure with hands-on strategy to help
+            businesses get found in search and AI answers, and reports every result in plain numbers.
           </p>
         </motion.div>
 

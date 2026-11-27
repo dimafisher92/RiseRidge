@@ -8,7 +8,7 @@ import { JsonLd } from './JsonLd';
 const FAQS = [
   {
     q: 'How fast will I see results?',
-    a: 'Most clients see early movement within 60–90 days and compounding gains from there. We share a 90-day roadmap up front so you always know what to expect.',
+    a: 'It depends on your site, market and competition, so we don\'t promise a date or a ranking. We share a 90-day roadmap up front with the milestones we\'re working toward, and report progress every month.',
   },
   {
     q: 'Do you require long contracts?',

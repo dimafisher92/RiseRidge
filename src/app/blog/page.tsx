@@ -45,7 +45,7 @@ export default function BlogPage() {
           </h1>
           <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
             AI-powered strategies, technical deep-dives, and industry insights to help
-            growth-stage brands dominate organic search.
+            growth-stage brands grow in organic search.
           </p>
         </div>
       </section>
@@ -89,7 +89,7 @@ export default function BlogPage() {
       </section>
 
       <CTASection
-        heading="Ready to Dominate Search?"
+        heading="Ready to Grow Organic Search?"
         description="Let our AI-powered SEO engine do for your business what great content alone can't."
         primaryLabel="Get Your Free Audit"
         secondaryLabel="See Our Results"

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 import { SectionLabel } from '@/components/SectionLabel';
 import { ScrollReveal } from '@/components/ScrollReveal';
+import { ResultsDisclaimer } from '@/components/ResultsDisclaimer';
 
 // --- Types ---
 interface Testimonial {
@@ -186,6 +187,7 @@ const TestimonialsSection = () => {
           <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
           <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
         </div>
+        <ResultsDisclaimer className="mx-auto mt-8 max-w-3xl px-6 text-center" />
       </motion.div>
     </section>
   );

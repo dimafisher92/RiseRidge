@@ -159,8 +159,8 @@ export default function BlogPostPage({ params }: Props) {
       <RelatedPosts post={post} />
 
       <CTASection
-        heading="Want Results Like These?"
-        description="Let RiseRidge's AI-powered SEO put your business on page one — and keep it there."
+        heading="Want Help With Your Search Visibility?"
+        description="Get a free audit and a clear plan for where your site can grow in Google and AI search."
         primaryLabel="Get Your Free Audit"
         secondaryLabel="Read More Posts"
         secondaryHref="/blog"

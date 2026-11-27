@@ -113,14 +113,23 @@ export function Footer() {
           >
             Listed on DesignRush
           </a>
-          <p className="font-mono text-[11px] tracking-[0.1em] uppercase text-subtle">
-            Privacy · Terms
-          </p>
+          <nav aria-label="Legal" className="font-mono text-[11px] tracking-[0.1em] uppercase text-subtle">
+            <Link href="/privacy" className="hover:text-brass transition-colors duration-200">
+              Privacy Policy
+            </Link>
+            {' · '}
+            <Link href="/terms" className="hover:text-brass transition-colors duration-200">
+              Terms of Service
+            </Link>
+          </nav>
         </div>
         <address className="mt-4 not-italic text-center sm:text-left font-mono text-[11px] leading-relaxed tracking-[0.06em] text-subtle">
           RiseRidge is a registered trade name of Golden Stream Media LLC, a Florida limited liability company.
           {' '}1895 Tyler St, STE 404, Hollywood, FL 33020, USA
         </address>
+        <p className="mt-2 text-center sm:text-left font-mono text-[11px] leading-relaxed tracking-[0.06em] text-subtle">
+          Results vary. Past performance is not indicative of future results. RiseRidge does not guarantee specific rankings, traffic, leads or revenue.
+        </p>
       </div>
     </footer>
   );

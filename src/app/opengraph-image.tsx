@@ -105,7 +105,7 @@ export default async function Image() {
         {/* Footer line */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, color: '#56514a', fontSize: 26 }}>
           <div style={{ width: 56, height: 3, backgroundColor: '#A9874E' }} />
-          AI-powered SEO infrastructure with hands-on strategy — proven in the numbers.
+          AI-powered SEO infrastructure with hands-on strategy, measured in the numbers.
         </div>
       </div>
     ),

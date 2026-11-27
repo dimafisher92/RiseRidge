@@ -157,7 +157,7 @@ const FEATURES = [
     number: '09',
     label: 'Local',
     title: 'Local SEO Management',
-    description: 'Manage and optimize your presence across all local search touchpoints. From Google Business Profile optimization to service area targeting, our AI ensures you dominate local search results across every location.',
+    description: 'Manage and optimize your presence across all local search touchpoints. From Google Business Profile optimization to service area targeting, we help each location show up for the searches that matter in its own area.',
     capabilities: [
       'Google Business Profile optimization and management',
       'Multi-location listing management at scale',
